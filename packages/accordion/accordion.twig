@@ -17,12 +17,12 @@
       {% endif %}
       <span class="{{ accordion_label_classes|join(' ') }}">{{ label }}</span>
       <span class="accordion__sprite">
-      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-plus'} only %}
+      {% include '@oe/sprite/sprite.twig' with { name: 'fas-plus'} only %}
     </span>
     </button>
   {% endset %}
   {% if heading_level %}
-    {% include '@psu-ooe/heading/heading.twig' with {
+    {% include '@oe/heading/heading.twig' with {
       level: heading_level,
       size: heading_style,
       classes: ['accordion__heading'],

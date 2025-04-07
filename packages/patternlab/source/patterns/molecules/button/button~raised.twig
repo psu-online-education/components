@@ -1,11 +1,11 @@
-{% include '@psu-ooe/alert/alert.twig' with {
+{% include '@oe/alert/alert.twig' with {
   severity: 'warning',
   content: 'This pattern has some significant limitations!  Auto-contrasting may not work in all situations!',
 } only %}
 
-{{ include('@psu-ooe/background-container/background-container.twig', {
-  content: include('@psu-ooe/callout/callout.twig', {
-    content: include('@psu-ooe/button/button.twig', {
+{{ include('@oe/background-container/background-container.twig', {
+  content: include('@oe/callout/callout.twig', {
+    content: include('@oe/button/button.twig', {
       type: 'button',
       label: 'Raised button',
       classes: [
@@ -15,10 +15,10 @@
   })
 }) }}
 
-{{ include('@psu-ooe/background-container/background-container.twig', {
+{{ include('@oe/background-container/background-container.twig', {
   color: 'light-grey',
-  content: include('@psu-ooe/callout/callout.twig', {
-    content: include('@psu-ooe/button/button.twig', {
+  content: include('@oe/callout/callout.twig', {
+    content: include('@oe/button/button.twig', {
       type: 'button',
       label: 'Raised button (reversed on light-grey)',
       classes: [
@@ -28,10 +28,10 @@
   }),
 }) }}
 
-{{ include('@psu-ooe/background-container/background-container.twig', {
+{{ include('@oe/background-container/background-container.twig', {
   color: 'beaver-blue',
-  content: include('@psu-ooe/callout/callout.twig', {
-    content: include('@psu-ooe/button/button.twig', {
+  content: include('@oe/callout/callout.twig', {
+    content: include('@oe/button/button.twig', {
       type: 'button',
       label: 'Raised button (reversed on beaver-blue)',
       classes: [

@@ -4,7 +4,7 @@
       {{ intro }}
     </div>
   {% endif %}
-  {% include '@psu-ooe/button/button.twig' with {
+  {% include '@oe/button/button.twig' with {
     classes: ['expandable-section__expand', 'button--raised'],
     expand_to_fit: true,
     expanded: expanded,
@@ -15,7 +15,7 @@
   <div class="expandable-section__content"{% if not expanded %} style="height:0;overflow:hidden;"{% endif %}>
     {{ content }}
   </div>
-  {% include '@psu-ooe/button/button.twig' with {
+  {% include '@oe/button/button.twig' with {
     classes: ['expandable-section__collapse', 'button--raised'],
     expand_to_fit: true,
     expanded: expanded,

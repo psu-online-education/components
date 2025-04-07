@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/bio",
+  "name": "@psu-online-education/bio",
   "version": "2.0.1",
   "description": "Provides a bio component.",
   "publishConfig": {
@@ -7,8 +7,8 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/credential": "^1.0 || ^2.0",
-    "@psu-ooe/heading": "^1.0 || ^2.0 || ^3.0",
-    "@psu-ooe/read-more": "^1.0 || ^2.0"
+    "@psu-online-education/credential": "^1.0 || ^2.0",
+    "@psu-online-education/heading": "^1.0 || ^2.0 || ^3.0",
+    "@psu-online-education/read-more": "^1.0 || ^2.0"
   }
 }

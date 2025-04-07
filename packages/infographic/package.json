@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/infographic",
+  "name": "@psu-online-education/infographic",
   "version": "1.0.1",
   "description": "Provides an infographic.",
   "publishConfig": {
@@ -7,6 +7,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0"
+    "@psu-online-education/base": "^2.0"
   }
 }

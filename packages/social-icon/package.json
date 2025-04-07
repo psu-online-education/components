@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/social-icon",
+  "name": "@psu-online-education/social-icon",
   "version": "2.0.1",
   "description": "Provides a social icon link molecule.",
   "publishConfig": {
@@ -7,7 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0",
-    "@psu-ooe/sprite": "^2.0"
+    "@psu-online-education/base": "^2.0",
+    "@psu-online-education/sprite": "^2.0"
   }
 }

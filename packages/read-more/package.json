@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/read-more",
+  "name": "@psu-online-education/read-more",
   "version": "2.0.2",
   "description": "Provides a read more implementation.",
   "publishConfig": {
@@ -7,7 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0",
-    "@psu-ooe/sprite": "^2.0"
+    "@psu-online-education/base": "^2.0",
+    "@psu-online-education/sprite": "^2.0"
   }
 }

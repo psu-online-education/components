@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/slide-toggle",
+  "name": "@psu-online-education/slide-toggle",
   "version": "1.0.0",
   "description": "Provides a light-weight, performant slide toggle replacement.",
   "ooe": {

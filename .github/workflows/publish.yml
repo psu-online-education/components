@@ -12,19 +12,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-      - run: echo "npmRegistries:" >> .yarnrc.yml
-      - run: echo '  "https://npm.pkg.github.com":' >> .yarnrc.yml
-      - run: echo -n '    npmAuthToken:' >> .yarnrc.yml
-      - run: echo ' ${{secrets.GITHUB_TOKEN}}' >> .yarnrc.yml
-      - run: echo -n '    npmAlwaysAuth:' >> .yarnrc.yml
-      - run: echo ' true' >> .yarnrc.yml
-      - run: echo 'npmScopes:' >> .yarnrc.yml
-      - run: echo '  psu-ooe:' >> .yarnrc.yml
-      - run: echo -n '    npmAlwaysAuth:' >> .yarnrc.yml
-      - run: echo ' true' >> .yarnrc.yml
-      - run: echo -n '    npmRegistryServer:' >> .yarnrc.yml
-      - run: echo ' "https://npm.pkg.github.com"' >> .yarnrc.yml
-      - run: yarn install
-      - run: yarn workspaces foreach install
-      - run: npm run package
-      - run: yarn workspaces foreach --no-private npm publish --tolerate-republish
+      - run: echo 'Would be publishing...'
+#      - run: echo "npmRegistries:" >> .yarnrc.yml
+#      - run: echo '  "https://npm.pkg.github.com":' >> .yarnrc.yml
+#      - run: echo -n '    npmAuthToken:' >> .yarnrc.yml
+#      - run: echo ' ${{secrets.GITHUB_TOKEN}}' >> .yarnrc.yml
+#      - run: echo -n '    npmAlwaysAuth:' >> .yarnrc.yml
+#      - run: echo ' true' >> .yarnrc.yml
+#      - run: echo 'npmScopes:' >> .yarnrc.yml
+#      - run: echo '  psu-online-education:' >> .yarnrc.yml
+#      - run: echo -n '    npmAlwaysAuth:' >> .yarnrc.yml
+#      - run: echo ' true' >> .yarnrc.yml
+#      - run: echo -n '    npmRegistryServer:' >> .yarnrc.yml
+#      - run: echo ' "https://npm.pkg.github.com"' >> .yarnrc.yml
+#      - run: yarn install
+#      - run: yarn workspaces foreach install
+#      - run: npm run package
+#      - run: yarn workspaces foreach --no-private npm publish --tolerate-republish

@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/quote",
+  "name": "@psu-online-education/quote",
   "version": "3.0.0",
   "description": "Provides a quote implementation.",
   "publishConfig": {
@@ -7,6 +7,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0"
+    "@psu-online-education/base": "^2.0"
   }
 }

@@ -14,14 +14,14 @@ corresponding package hosted in the [Github Package Registry](https://github.com
 The recommended way to configure access to the component registry is through
 a `.npmrc` file in your project root.
 ```text
-@psu-ooe:registry = https://npm.pkg.github.com
+@psu-online-education:registry = https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=${NPM_TOKEN}
 ```
 Do note that `NPM_TOKEN` is an environment variable! This variable can be a
 [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 #### Installing a component
 After configuring your project to pull components from the Github registry,
-installing a component is as easy as `npm install @psu-ooe/component-name`.
+installing a component is as easy as `npm install @psu-online-education/component-name`.
 
 For a complete list of components, see the package registry.
 
@@ -43,7 +43,7 @@ This documentation is aimed at people that wish to contribute components.
     - Example:
       ```
       {
-        "name": "@psu-ooe/my-new-package",
+        "name": "@psu-online-education/my-new-package",
         "version": "1.0.0",
         "description": "Provides a demo component.",
         "publishConfig": {

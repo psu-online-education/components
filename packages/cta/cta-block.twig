@@ -16,7 +16,7 @@
 >
   {%- if icon_before -%}
     <span class="button__icon">
-      {%- include '@psu-ooe/sprite/sprite.twig' with {
+      {%- include '@oe/sprite/sprite.twig' with {
         name: icon_before
       } only -%}
     </span>
@@ -28,7 +28,7 @@
   <span class="{{ label_classes|join(' ') }}">{{- label -}}</span>
   {%- if icon_after -%}
     <span class="button__icon">
-      {%- include '@psu-ooe/sprite/sprite.twig' with {
+      {%- include '@oe/sprite/sprite.twig' with {
         name: icon_after
       } only -%}
     </span>

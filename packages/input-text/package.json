@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/input-text",
+  "name": "@psu-online-education/input-text",
   "version": "1.0.0",
   "description": "Provides text input element styles.",
   "publishConfig": {
@@ -7,7 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0",
-    "@psu-ooe/input-common": "^1.0"
+    "@psu-online-education/base": "^2.0",
+    "@psu-online-education/input-common": "^1.0"
   }
 }

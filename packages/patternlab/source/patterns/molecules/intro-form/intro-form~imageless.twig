@@ -8,13 +8,13 @@
     <input type="email" id="intro_form_email_4" name="intro_form_email_4"><br><br>
     <label for="intro_form_phone_4">Phone</label><br>
     <input type="tel" id="intro_form_phone_4" name="intro_form_phone_4"><br><br>
-    {% include '@psu-ooe/button/button.twig' with {
+    {% include '@oe/button/button.twig' with {
       type: 'submit',
       label: 'Submit',
     } only %}
   </form>
 {% endset %}
-{% include '@psu-ooe/intro-form/intro-form.twig' with {
+{% include '@oe/intro-form/intro-form.twig' with {
   "title": "Ready to Learn More?",
   "description": "Get the resources you need to make informed decisions about your education. Request information on this program and other programs of interest by completing this form.",
   "form": form

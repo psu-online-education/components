@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/base",
+  "name": "@psu-online-education/base",
   "version": "2.6.0",
   "description": "The base styles for the OOE design system.",
   "ooe": {
@@ -10,6 +10,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/webfonts": "^2.0"
+    "@psu-online-education/webfonts": "^2.0"
   }
 }

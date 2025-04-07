@@ -1,17 +1,17 @@
-{% embed '@psu-ooe/footer/footer.twig' %}
+{% embed '@oe/footer/footer.twig' %}
   {% block top_first %}
     <a href="#" style="display:inline-block; max-width: 22.2rem;color:var(--beaver-blue)">
       <span class="visually-hidden">Penn State World Campus</span>
-      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'wc-mark', expand: true } only %}
+      {% include '@oe/sprite/sprite.twig' with { name: 'wc-mark', expand: true } only %}
     </a>
   {% endblock %}
   {% block top_second %}
-    {% include '@psu-ooe/heading/heading.twig' with {
+    {% include '@oe/heading/heading.twig' with {
       level: 2,
       size: 'medium',
       content: 'A world of possibilities. <span class="text--contrasting">Online.</span>'
     } only %}
-    {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
+    {% include '@oe/vertical-menu/vertical-menu.twig' with {
       menu_name: 'Example',
       items: [
         { title: 'Home', url: '#' },
@@ -25,7 +25,7 @@
     } only %}
   {% endblock %}
   {% block top_third %}
-    {% include '@psu-ooe/list/list.twig' with {
+    {% include '@oe/list/list.twig' with {
       items: [
         '<a href="#" style="display:inline-block;padding:.5rem 0;">Contacts & Help</a>',
         '<a href="#" style="display:inline-block;padding:.5rem 0;">Events</a>',
@@ -38,7 +38,7 @@
         Information For:
         <span class="visually-hidden"> specific groups</span>
       </span>
-      {% include '@psu-ooe/list/list.twig' with {
+      {% include '@oe/list/list.twig' with {
         items: [
           '<a href="#" style="display:inline-block;padding:.25rem 0;">Current Students</a>',
           '<a href="#" style="display:inline-block;padding:.25rem 0;">Alumni and Friends</a>',
@@ -53,12 +53,12 @@
     <address style="white-space: nowrap;font-style: normal">
       <div class="text text--size-msmall text--height-snug text--weight-semibold">
         <span class="visually-hidden">phone</span>
-        {% include '@psu-ooe/sprite/sprite.twig' with { name: 'phone' } only %}&nbsp;
+        {% include '@oe/sprite/sprite.twig' with { name: 'phone' } only %}&nbsp;
         <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold"> 814-865-5403</span></a>
       </div>
       <div class="text text--size-msmall text--height-snug text--weight-semibold">
         <span class="visually-hidden">email</span>
-        {% include '@psu-ooe/sprite/sprite.twig' with { name: 'envelope' } only %}&nbsp;
+        {% include '@oe/sprite/sprite.twig' with { name: 'envelope' } only %}&nbsp;
         <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold">worldcampus@psu.edu</span></a>
       </div>
       <div class="text text--size-msmall text--height-snug text--weight-semibold">
@@ -71,7 +71,7 @@
     </address>
   {% endblock %}
   {% block middle_second %}
-    {% include '@psu-ooe/physical-address/physical-address.twig' with {
+    {% include '@oe/physical-address/physical-address.twig' with {
       name: 'The Pennsylvania State University',
       street: '128 Outreach Building',
       locality: 'University Park',
@@ -83,7 +83,7 @@
     {% set social_icons = [] %}
     {% for icon, label in {instagram: 'Instagram', facebook: 'Facebook', linkedin: 'LinkedIn', twitter: 'Twitter', youtube: 'YouTube', flickr: 'Flickr', pinterest: 'Pinterest', blog: 'Blog'} %}
       {% set social_icon %}
-        {% include '@psu-ooe/social-icon/social-icon.twig' with {
+        {% include '@oe/social-icon/social-icon.twig' with {
           color: 'light',
           icon: icon,
           label: label,
@@ -94,7 +94,7 @@
     {% endfor %}
 
     <div style="width:22rem">
-      {% include '@psu-ooe/social-icons/social-icons.twig' with { social_icons: social_icons } only %}
+      {% include '@oe/social-icons/social-icons.twig' with { social_icons: social_icons } only %}
     </div>
   {% endblock %}
   {% block colophon %}
@@ -102,10 +102,10 @@
     <div style="--link-color: var(--text-color); display:flex;gap:2rem 2.5%">
       <a href="#" style="display:inline-block;min-width:10rem;width:10rem;padding:.25rem 0;">
         <span class="visually-hidden">Penn State</span>
-        {% include '@psu-ooe/sprite/sprite.twig' with { name: 'psu-mark', expand: true } only %}
+        {% include '@oe/sprite/sprite.twig' with { name: 'psu-mark', expand: true } only %}
       </a>
       <div style="font-size: var(--font-size--3xsmall);line-height: var(--line-height--snug)">
-        {% include '@psu-ooe/list/list.twig' with {
+        {% include '@oe/list/list.twig' with {
           orientation: 'horizontal',
           separator: 'dot',
           items: [

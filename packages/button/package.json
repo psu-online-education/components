@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/button",
+  "name": "@psu-online-education/button",
   "version": "1.0.1",
   "description": "Provides a stylized semantic button.",
   "publishConfig": {
@@ -7,6 +7,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/button-base": "^1.0"
+    "@psu-online-education/button-base": "^1.0"
   }
 }

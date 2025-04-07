@@ -1,8 +1,8 @@
 {
-  "name": "@psu-ooe/webfonts",
+  "name": "@psu-online-education/webfonts",
   "version": "2.0.1",
   "description": "Contains the webfonts of the OOE design system",
-  "homepage": "https://github.com/PSU-OOE/monorepo-dev#readme",
+  "homepage": "https://github.com/psu-online-education/monorepo-dev#readme",
   "ooe": {
     "namespace": "global"
   },
@@ -12,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PSU-OOE/monorepo-dev.git"
+    "url": "git+https://github.com/psu-online-education/monorepo-dev.git"
   },
   "bugs": {
-    "url": "https://github.com/PSU-OOE/monorepo-dev/issues"
+    "url": "https://github.com/psu-online-education/monorepo-dev/issues"
   }
 }

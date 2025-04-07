@@ -117,7 +117,7 @@
     "twig": {
       "namespaces": [
         {
-          "id": "psu-ooe",
+          "id": "oe",
           "recursive": false,
           "paths": [
             "packages"

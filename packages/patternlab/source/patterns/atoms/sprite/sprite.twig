@@ -163,7 +163,7 @@
             <th>Preview</th>
             <td>
               <div class="sprite-preview" style="color:var(--beaver-blue); font-size: 5rem; text-align: center;">
-                {% include '@psu-ooe/sprite/sprite.twig' with { name: sprite } %}
+                {% include '@oe/sprite/sprite.twig' with { name: sprite } %}
               </div>
             </td>
           </tr>
@@ -172,6 +172,6 @@
       {% endset %}
       {% set grid_items = grid_items|merge([grid_item]) %}
     {% endfor %}
-    {% include '@psu-ooe/grid/grid.twig' with { items: grid_items, columns: 3 } only %}
+    {% include '@oe/grid/grid.twig' with { items: grid_items, columns: 3 } only %}
   </div>
 {% endfor %}

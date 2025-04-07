@@ -7,7 +7,7 @@
 {% set third_generation %}
   <div style="padding:10rem;">
     <p>Getting deeper...</p>
-    {% include '@psu-ooe/background-container/background-container.twig' with {
+    {% include '@oe/background-container/background-container.twig' with {
         color: 'beaver-blue',
         background_image: 'shield:topleft-bottomright',
         content: content,
@@ -18,7 +18,7 @@
 {% set second_generation %}
   <div style="padding:10rem;">
     <p>Just on the fringes!</p>
-    {% include '@psu-ooe/background-container/background-container.twig' with {
+    {% include '@oe/background-container/background-container.twig' with {
       color: 'light-grey',
       background_image: 'shield:right',
       content: third_generation,
@@ -27,7 +27,7 @@
 {% endset %}
 
 <div class="bg-demo" style="text-align:center;">
-  {% include '@psu-ooe/background-container/background-container.twig' with {
+  {% include '@oe/background-container/background-container.twig' with {
     color: 'beaver-blue',
     background_image: 'shield:left',
     content: second_generation,

@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/smart-datetime",
+  "name": "@psu-online-education/smart-datetime",
   "version": "1.0.1",
   "description": "Provides a date and time implementation.",
   "publishConfig": {
@@ -7,6 +7,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^1.0 || ^2.0"
+    "@psu-online-education/base": "^1.0 || ^2.0"
   }
 }

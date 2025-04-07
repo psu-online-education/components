@@ -1,11 +1,11 @@
-# `@psu-ooe/webfonts`
+# `@oe/webfonts`
 
 > TODO: description
 
 ## Usage
 
 ```
-const webfonts = require('@psu-ooe/webfonts');
+const webfonts = require('@oe/webfonts');
 
 // TODO: DEMONSTRATE API
 ```

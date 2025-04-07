@@ -1,5 +1,5 @@
 {% set menu %}
-  {% include '@psu-ooe/horizontal-menu/horizontal-menu.twig' with {
+  {% include '@oe/horizontal-menu/horizontal-menu.twig' with {
     menu_name: 'Example',
     items: [
       { title: 'Home', url: '#', in_active_trail: true, is_current_page: true },
@@ -20,7 +20,7 @@
   --focus-indicator-color: var(--pa-link);
   --horizontal-menu-link-active-background-color: var(--keystone);
   --horizontal-menu-link-active-foreground-color: var(--nittany-navy);">
-  {% include '@psu-ooe/callout/callout.twig' with {
+  {% include '@oe/callout/callout.twig' with {
     content: menu,
   } only %}
 </div>

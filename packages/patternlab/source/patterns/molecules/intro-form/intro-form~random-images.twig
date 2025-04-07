@@ -8,13 +8,13 @@
     <input type="email" id="intro_form_email_5" name="intro_form_email_5"><br><br>
     <label for="intro_form_phone_5">Phone</label><br>
     <input type="tel" id="intro_form_phone_5" name="intro_form_phone_5"><br><br>
-    {% include '@psu-ooe/button/button.twig' with {
+    {% include '@oe/button/button.twig' with {
       type: 'submit',
       label: 'Submit',
     } only %}
   </form>
 {% endset %}
-{% include '@psu-ooe/intro-form/intro-form.twig' with {
+{% include '@oe/intro-form/intro-form.twig' with {
   "heading_level": "h2",
   "title": "Ready to Learn More?",
   "images": [

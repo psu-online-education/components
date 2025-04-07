@@ -1,5 +1,5 @@
 {% set menu %}
-  {% include '@psu-ooe/horizontal-menu/horizontal-menu.twig' with {
+  {% include '@oe/horizontal-menu/horizontal-menu.twig' with {
     menu_name: 'Example',
     items: [
       { title: 'Home', url: '#' },
@@ -77,7 +77,7 @@
   } only %}
 {% endset %}
 <div style="position: relative;z-index:2">
-  {% include '@psu-ooe/callout/callout.twig' with {
+  {% include '@oe/callout/callout.twig' with {
     background: 'blue-gradient',
     content: menu,
   } only %}

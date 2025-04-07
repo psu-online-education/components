@@ -1,5 +1,5 @@
 {% set vertical_menu %}
-  {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
+  {% include '@oe/vertical-menu/vertical-menu.twig' with {
     menu_name: 'Primary navigation menu',
     density: 'tight',
     items: [
@@ -52,12 +52,12 @@
 {% endset %}
 {% set menu %}
   <div style="display:flex; justify-content: flex-end">
-    {% include '@psu-ooe/compact-menu/compact-menu.twig' with {
+    {% include '@oe/compact-menu/compact-menu.twig' with {
       menu: vertical_menu,
     } only %}
   </div>
 {% endset %}
 
-{% include '@psu-ooe/callout/callout.twig' with {
+{% include '@oe/callout/callout.twig' with {
   content: menu,
 } only %}

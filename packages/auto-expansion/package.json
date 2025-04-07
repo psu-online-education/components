@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/auto-expansion",
+  "name": "@psu-online-education/auto-expansion",
   "version": "1.0.0",
   "description": "Provides automatic expansion capabilities for interactive components.",
   "publishConfig": {

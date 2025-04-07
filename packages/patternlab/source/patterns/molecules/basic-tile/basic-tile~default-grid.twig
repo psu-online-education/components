@@ -1,5 +1,5 @@
 {% set basic_tile %}
-  {% include '@psu-ooe/basic-tile/basic-tile.twig' with {
+  {% include '@oe/basic-tile/basic-tile.twig' with {
     url: '#',
     primary_label: 'Primary Label',
     secondary_label: 'Secondary Label'
@@ -7,13 +7,13 @@
 {% endset %}
 
 {% set basic_tile2 %}
-  {% include '@psu-ooe/basic-tile/basic-tile.twig' with {
+  {% include '@oe/basic-tile/basic-tile.twig' with {
     url: '#',
     primary_label: 'Primary Label that is very long that goes to two lines',
     secondary_label: 'Secondary Label'
   } only %}
 {% endset %}
 
-{% include '@psu-ooe/grid/grid.twig' with {
+{% include '@oe/grid/grid.twig' with {
   items: [basic_tile, basic_tile, basic_tile, basic_tile2],
 } only %}

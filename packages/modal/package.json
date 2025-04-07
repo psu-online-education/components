@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/modal",
+  "name": "@psu-online-education/modal",
   "version": "2.2.1",
   "description": "Provides a modal component.",
   "publishConfig": {
@@ -7,7 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.6.0",
-    "@psu-ooe/sprite": "^2.0"
+    "@psu-online-education/base": "^2.6.0",
+    "@psu-online-education/sprite": "^2.0"
   }
 }

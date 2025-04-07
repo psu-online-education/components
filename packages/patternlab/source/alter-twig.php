@@ -30,7 +30,7 @@ function moveKeyBefore($arr, $find, $move) {
         $manifest_json = json_decode(file_get_contents($manifest), TRUE, 512, JSON_THROW_ON_ERROR);
         $manifests[$manifest_json['name']] = $manifest_json;
       }
-      unset($manifests['@psu-ooe/patternlab']);
+      unset($manifests['@psu-online-education/patternlab']);
 
       // Recursively sort the manifests until dependency order is met...
       while (TRUE) {
@@ -55,7 +55,7 @@ function moveKeyBefore($arr, $find, $move) {
 
       $styles = '';
       foreach (array_keys($manifests) as $manifest) {
-        $component = str_replace('@psu-ooe/', '', $manifest);
+        $component = str_replace('@psu-online-education/', '', $manifest);
         $potential_css_file = "packages/$component/dist/styles.css";
         if (file_exists($potential_css_file)) {
           $file_content = file_get_contents($potential_css_file);

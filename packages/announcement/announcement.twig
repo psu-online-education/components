@@ -2,24 +2,24 @@
 <div class="announcement announcement--{{ severity }}" data-{{ context }} data-announcement-hash="{{ hash }}">
   <button class="announcement__expand" type="button" aria-label="Expand announcements">
     <span class="announcement__expand-icon" aria-hidden="true">
-      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fa-exclamation'} only %}
+      {% include '@oe/sprite/sprite.twig' with { name: 'fa-exclamation'} only %}
     </span>
     <span class="announcement__expand-label">{{ label }}</span>
     <span class="announcement__expand-after">
-      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-chevron-down'} only %}
+      {% include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-down'} only %}
     </span>
   </button>
   <div class="announcement__expanded">
     <div class="announcement__inner">
       <span class="announcement__icon">
-        {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fa-exclamation'} only %}
+        {% include '@oe/sprite/sprite.twig' with { name: 'fa-exclamation'} only %}
       </span>
       <div class="announcement__content">
         {{ content }}
       </div>
     </div>
     <button type="button" aria-label="Collapse announcements" class="announcement__collapse">
-      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fa-times'} only %}
+      {% include '@oe/sprite/sprite.twig' with { name: 'fa-times'} only %}
     </button>
   </div>
 </div>

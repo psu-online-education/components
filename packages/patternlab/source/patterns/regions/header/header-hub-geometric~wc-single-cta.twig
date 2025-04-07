@@ -1,7 +1,7 @@
-{% embed '@psu-ooe/header/header.twig' %}
+{% embed '@oe/header/header.twig' %}
 
   {% set how_to_apply %}
-    {% include '@psu-ooe/cta/cta-block.twig' with {
+    {% include '@oe/cta/cta-block.twig' with {
       label: 'How to Apply',
       url: '#',
       color_on_dark: 'light-blue',
@@ -10,7 +10,7 @@
   {% endset %}
 
   {% set search_horizontal %}
-    {% include '@psu-ooe/compact-search/compact-search.twig' with {
+    {% include '@oe/compact-search/compact-search.twig' with {
       align: 'right',
       orientation: 'horizontal',
       search_form: 'The search form goes here.'
@@ -18,14 +18,14 @@
   {% endset %}
 
   {% set search_vertical %}
-    {% include '@psu-ooe/compact-search/compact-search.twig' with {
+    {% include '@oe/compact-search/compact-search.twig' with {
       align: 'right',
       search_form: 'The search form goes here.'
     } only %}
   {% endset %}
 
   {% set horizontal_menu %}
-    {% include '@psu-ooe/horizontal-menu/horizontal-menu.twig' with {
+    {% include '@oe/horizontal-menu/horizontal-menu.twig' with {
       menu_name: 'Primary navigation menu',
       items: [
         { title: 'Home', url: '#', in_active_trail: true },
@@ -40,7 +40,7 @@
   {% endset %}
 
   {% set vertical_menu %}
-    {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
+    {% include '@oe/vertical-menu/vertical-menu.twig' with {
       menu_name: 'Primary navigation menu',
       density: 'tight',
       items: [
@@ -56,7 +56,7 @@
   {% endset %}
 
   {% set menu %}
-    {% include '@psu-ooe/compact-menu/compact-menu.twig' with {
+    {% include '@oe/compact-menu/compact-menu.twig' with {
       align: 'right',
       menu: vertical_menu
     } only %}
@@ -66,7 +66,7 @@
     <div class="region region--branding">
       <div class="block block--system-branding-block">
         <a href="/">
-          {% include '@psu-ooe/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+          {% include '@oe/sprite/sprite.twig' with { name: 'wc-mark' } only %}
           <span class="visually-hidden">Penn State World Campus</span>
         </a>
       </div>
@@ -91,7 +91,7 @@
   {% endblock %}
   {% block overflow %}
     <div class="region region--cta-small-viewports">
-      {% include '@psu-ooe/cta/cta-group.twig' with {
+      {% include '@oe/cta/cta-group.twig' with {
         ctas: [how_to_apply],
         expand_to_fit: true,
       } only %}

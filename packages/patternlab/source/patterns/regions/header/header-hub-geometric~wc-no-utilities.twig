@@ -1,7 +1,7 @@
-{% embed '@psu-ooe/header/header.twig' %}
+{% embed '@oe/header/header.twig' %}
 
   {% set how_to_apply %}
-    {% include '@psu-ooe/cta/cta-block.twig' with {
+    {% include '@oe/cta/cta-block.twig' with {
       label: 'How to Apply',
       url: '#',
       color_on_dark: 'light-blue',
@@ -9,7 +9,7 @@
     } only %}
   {% endset %}
   {% set request_info %}
-    {% include '@psu-ooe/cta/cta-block.twig' with {
+    {% include '@oe/cta/cta-block.twig' with {
       label: 'Request Info',
       url: '#',
       color: 'alt',
@@ -22,7 +22,7 @@
     <div class="region region--branding">
       <div class="block block--system-branding-block">
         <a href="/">
-          {% include '@psu-ooe/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+          {% include '@oe/sprite/sprite.twig' with { name: 'wc-mark' } only %}
           <span class="visually-hidden">Penn State World Campus</span>
         </a>
       </div>
@@ -39,7 +39,7 @@
   {% block overflow %}
     <div class="region region--cta-small-viewports">
       {% apply spaceless %}
-        {% include '@psu-ooe/cta/cta-group.twig' with {
+        {% include '@oe/cta/cta-group.twig' with {
           ctas: [how_to_apply, request_info],
           expand_to_fit: true,
         } only %}

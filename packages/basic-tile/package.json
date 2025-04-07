@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/basic-tile",
+  "name": "@psu-online-education/basic-tile",
   "version": "2.2.0",
   "description": "Provides a basic tile component.",
   "publishConfig": {
@@ -7,7 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0",
-    "@psu-ooe/cta-tracking": "^1.0"
+    "@psu-online-education/base": "^2.0",
+    "@psu-online-education/cta-tracking": "^1.0"
   }
 }

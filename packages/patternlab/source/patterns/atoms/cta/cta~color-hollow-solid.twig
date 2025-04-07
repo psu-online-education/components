@@ -1,17 +1,17 @@
 {% set cta %}
-  {% include '@psu-ooe/cta/cta-block.twig' with {
+  {% include '@oe/cta/cta-block.twig' with {
     label: 'View Minors',
     url: '#',
     color: 'hollow-solid',
   } only %}
 {% endset %}
 
-{% include '@psu-ooe/background-container/background-container.twig' with {
+{% include '@oe/background-container/background-container.twig' with {
   color: 'white',
   content: cta,
 } only %}
 
-{% include '@psu-ooe/background-container/background-container.twig' with {
+{% include '@oe/background-container/background-container.twig' with {
   color: 'light-grey',
   content: cta,
 } only %}

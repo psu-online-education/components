@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/label",
+  "name": "@psu-online-education/label",
   "version": "1.0.0",
   "description": "Provides label element styles.",
   "publishConfig": {
@@ -7,6 +7,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0"
+    "@psu-online-education/base": "^2.0"
   }
 }

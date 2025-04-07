@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/event-spotlight",
+  "name": "@psu-online-education/event-spotlight",
   "version": "1.0.0",
   "description": "Provides an event spotlight component",
   "publishConfig": {
@@ -7,8 +7,8 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0",
-    "@psu-ooe/read-more": "^2.0",
-    "@psu-ooe/sprite": "^2.0"
+    "@psu-online-education/base": "^2.0",
+    "@psu-online-education/read-more": "^2.0",
+    "@psu-online-education/sprite": "^2.0"
   }
 }
