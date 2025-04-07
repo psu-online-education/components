@@ -88,7 +88,7 @@
         // an API that takes an optional fill property, so we can apply this
         // unique gradient, tightly scoped to this particular context.
         //
-        // @see https://github.com/PSU-OOE/components/blob/bleeding-edge-headers/packages/sprite/src/assets/hub-geometric.svg
+        // @see https://github.com/psu-online-education/components/blob/main/packages/sprite/src/assets/hub-geometric.svg
         --hub-geometric-gradient: url(#hub-geometric-page-title-image-gradient);
 
         inset: _rem(-24.4) 0 0 _rem(-42.5);

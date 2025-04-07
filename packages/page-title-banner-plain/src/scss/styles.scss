@@ -22,7 +22,7 @@
     // The #hub-geometric-page-title-gradient is provided via the accompanying
     // twig template and is served inline in the DOM Response.
     //
-    // @see https://github.com/PSU-OOE/components/blob/bleeding-edge-headers/packages/sprite/src/assets/hub-geometric.svg
+    // @see https://github.com/psu-online-education/components/blob/main/packages/sprite/src/assets/hub-geometric.svg
     --hub-geometric-gradient: url(#hub-geometric-page-title-banner-plain-gradient);
 
     @include bp(m) {

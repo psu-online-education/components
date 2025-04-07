@@ -1,10 +1,10 @@
-# PSU-OOE Components!
+# Penn State Online Education Components!
 The majority of design work is maintained in this CMS-agnostic monorepo.
 ## Using Components
 This documentation is aimed at people that wish to use components.
 
 The recommended way to use components it through NPM. Each component has a
-corresponding package hosted in the [Github Package Registry](https://github.com/orgs/PSU-OOE/packages?repo_name=components).
+corresponding package hosted in the [Github Package Registry](https://github.com/orgs/psu-online-education/packages?repo_name=components).
 
 ### Via CDN
 @TODO: Ask the security office about hosting packages via CDN.
