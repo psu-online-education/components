@@ -1666,6 +1666,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-online-education/blockquote@workspace:packages/blockquote":
+  version: 0.0.0-use.local
+  resolution: "@psu-online-education/blockquote@workspace:packages/blockquote"
+  dependencies:
+    "@psu-online-education/base": ^3.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-online-education/breadcrumbs@*, @psu-online-education/breadcrumbs@workspace:packages/breadcrumbs":
   version: 0.0.0-use.local
   resolution: "@psu-online-education/breadcrumbs@workspace:packages/breadcrumbs"
