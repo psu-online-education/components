@@ -5,13 +5,13 @@
   </div>
 {% endset %}
 {% set primary_band %}
-  {% include '@psu-ooe/band/band.twig' with {
+  {% include '@oe/band/band.twig' with {
     content: primary_content,
     padding: 'medium'
   } only %}
 {% endset %}
 
-{% include '@psu-ooe/sticky-panel/sticky-panel.twig' with {
+{% include '@oe/sticky-panel/sticky-panel.twig' with {
  bands: [primary_band]
 } only %}
 <div style="max-width:87rem;padding:4rem;margin:auto">

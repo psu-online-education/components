@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/layout-two-col",
+  "name": "@psu-online-education/layout-two-col",
   "version": "1.0.2",
   "description": "Provides a two column layout.",
   "publishConfig": {
@@ -7,7 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0",
-    "@psu-ooe/layout-multi-col": "^1.1.0"
+    "@psu-online-education/base": "^2.0 || ^3.0",
+    "@psu-online-education/layout-multi-col": "^1.1.0"
   }
 }

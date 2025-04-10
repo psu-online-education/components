@@ -1570,179 +1570,179 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@psu-ooe/accordion-group@*, @psu-ooe/accordion-group@workspace:packages/accordion-group":
+"@psu-online-education/accordion-group@*, @psu-online-education/accordion-group@workspace:packages/accordion-group":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/accordion-group@workspace:packages/accordion-group"
+  resolution: "@psu-online-education/accordion-group@workspace:packages/accordion-group"
   dependencies:
-    "@psu-ooe/accordion": ^2.0
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/accordion": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/accordion@*, @psu-ooe/accordion@^2.0, @psu-ooe/accordion@workspace:packages/accordion":
+"@psu-online-education/accordion@*, @psu-online-education/accordion@^2.0, @psu-online-education/accordion@workspace:packages/accordion":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/accordion@workspace:packages/accordion"
+  resolution: "@psu-online-education/accordion@workspace:packages/accordion"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/heading": ^2.0 || ^3.0
-    "@psu-ooe/slide-toggle": ^1.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/heading": ^2.0 || ^3.0
+    "@psu-online-education/slide-toggle": ^1.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/alert@*, @psu-ooe/alert@workspace:packages/alert":
+"@psu-online-education/alert@*, @psu-online-education/alert@workspace:packages/alert":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/alert@workspace:packages/alert"
+  resolution: "@psu-online-education/alert@workspace:packages/alert"
   dependencies:
-    "@psu-ooe/base": ^1.0 || ^2.0
-    "@psu-ooe/sprite": ^1.0 || ^2.0
+    "@psu-online-education/base": ^1.0 || ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^1.0 || ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/announcement@*, @psu-ooe/announcement@workspace:packages/announcement":
+"@psu-online-education/announcement@*, @psu-online-education/announcement@workspace:packages/announcement":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/announcement@workspace:packages/announcement"
+  resolution: "@psu-online-education/announcement@workspace:packages/announcement"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/auto-expansion@*, @psu-ooe/auto-expansion@^1.0, @psu-ooe/auto-expansion@workspace:packages/auto-expansion":
+"@psu-online-education/auto-expansion@*, @psu-online-education/auto-expansion@^1.0, @psu-online-education/auto-expansion@workspace:packages/auto-expansion":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/auto-expansion@workspace:packages/auto-expansion"
+  resolution: "@psu-online-education/auto-expansion@workspace:packages/auto-expansion"
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/background-container@*, @psu-ooe/background-container@^3.0, @psu-ooe/background-container@workspace:packages/background-container":
+"@psu-online-education/background-container@*, @psu-online-education/background-container@^3.0, @psu-online-education/background-container@workspace:packages/background-container":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/background-container@workspace:packages/background-container"
+  resolution: "@psu-online-education/background-container@workspace:packages/background-container"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/band@*, @psu-ooe/band@^2.0, @psu-ooe/band@workspace:packages/band":
+"@psu-online-education/band@*, @psu-online-education/band@^2.0, @psu-online-education/band@workspace:packages/band":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/band@workspace:packages/band"
+  resolution: "@psu-online-education/band@workspace:packages/band"
   dependencies:
-    "@psu-ooe/base": ^1.0 || ^2.0
+    "@psu-online-education/base": ^1.0 || ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/base@^1.0 || ^2.0, @psu-ooe/base@^2.0, @psu-ooe/base@^2.0.0, @psu-ooe/base@^2.2, @psu-ooe/base@^2.6.0, @psu-ooe/base@workspace:packages/base":
+"@psu-online-education/base@^1.0 || ^2.0 || ^3.0, @psu-online-education/base@^2.0 || ^3.0, @psu-online-education/base@^2.0.0 || ^3.0, @psu-online-education/base@^2.2 || ^3.0, @psu-online-education/base@^2.6.0 || ^3.0, @psu-online-education/base@^3.0, @psu-online-education/base@workspace:packages/base":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/base@workspace:packages/base"
+  resolution: "@psu-online-education/base@workspace:packages/base"
   dependencies:
-    "@psu-ooe/webfonts": ^2.0
+    "@psu-online-education/webfonts": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/basic-tile@*, @psu-ooe/basic-tile@workspace:packages/basic-tile":
+"@psu-online-education/basic-tile@*, @psu-online-education/basic-tile@workspace:packages/basic-tile":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/basic-tile@workspace:packages/basic-tile"
+  resolution: "@psu-online-education/basic-tile@workspace:packages/basic-tile"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/cta-tracking": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/cta-tracking": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/bio-collection@*, @psu-ooe/bio-collection@workspace:packages/bio-collection":
+"@psu-online-education/bio-collection@*, @psu-online-education/bio-collection@workspace:packages/bio-collection":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/bio-collection@workspace:packages/bio-collection"
+  resolution: "@psu-online-education/bio-collection@workspace:packages/bio-collection"
   dependencies:
-    "@psu-ooe/bio": ^1.0 || 2.0
+    "@psu-online-education/bio": ^1.0 || 2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/bio@*, @psu-ooe/bio@^1.0 || 2.0, @psu-ooe/bio@workspace:packages/bio":
+"@psu-online-education/bio@*, @psu-online-education/bio@^1.0 || 2.0, @psu-online-education/bio@workspace:packages/bio":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/bio@workspace:packages/bio"
+  resolution: "@psu-online-education/bio@workspace:packages/bio"
   dependencies:
-    "@psu-ooe/credential": ^1.0 || ^2.0
-    "@psu-ooe/heading": ^1.0 || ^2.0 || ^3.0
-    "@psu-ooe/read-more": ^1.0 || ^2.0
+    "@psu-online-education/credential": ^1.0 || ^2.0
+    "@psu-online-education/heading": ^1.0 || ^2.0 || ^3.0
+    "@psu-online-education/read-more": ^1.0 || ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/breadcrumbs@*, @psu-ooe/breadcrumbs@workspace:packages/breadcrumbs":
+"@psu-online-education/breadcrumbs@*, @psu-online-education/breadcrumbs@workspace:packages/breadcrumbs":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/breadcrumbs@workspace:packages/breadcrumbs"
+  resolution: "@psu-online-education/breadcrumbs@workspace:packages/breadcrumbs"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/button-base@^1.0, @psu-ooe/button-base@workspace:packages/button-base":
+"@psu-online-education/button-base@^1.0, @psu-online-education/button-base@workspace:packages/button-base":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/button-base@workspace:packages/button-base"
+  resolution: "@psu-online-education/button-base@workspace:packages/button-base"
   dependencies:
-    "@psu-ooe/base": ^2.2
-    "@psu-ooe/sprite": ^2.0.0
+    "@psu-online-education/base": ^2.2 || ^3.0
+    "@psu-online-education/sprite": ^2.0.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/button@*, @psu-ooe/button@^1.0, @psu-ooe/button@workspace:packages/button":
+"@psu-online-education/button@*, @psu-online-education/button@^1.0, @psu-online-education/button@workspace:packages/button":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/button@workspace:packages/button"
+  resolution: "@psu-online-education/button@workspace:packages/button"
   dependencies:
-    "@psu-ooe/button-base": ^1.0
+    "@psu-online-education/button-base": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/callout@*, @psu-ooe/callout@workspace:packages/callout":
+"@psu-online-education/callout@*, @psu-online-education/callout@workspace:packages/callout":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/callout@workspace:packages/callout"
+  resolution: "@psu-online-education/callout@workspace:packages/callout"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/card@*, @psu-ooe/card@^2.0, @psu-ooe/card@workspace:packages/card":
+"@psu-online-education/card@*, @psu-online-education/card@^2.0, @psu-online-education/card@workspace:packages/card":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/card@workspace:packages/card"
+  resolution: "@psu-online-education/card@workspace:packages/card"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/cards-list@*, @psu-ooe/cards-list@workspace:packages/cards-list":
+"@psu-online-education/cards-list@*, @psu-online-education/cards-list@workspace:packages/cards-list":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/cards-list@workspace:packages/cards-list"
+  resolution: "@psu-online-education/cards-list@workspace:packages/cards-list"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/card": ^2.0
-    "@psu-ooe/expandable-section": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/card": ^2.0
+    "@psu-online-education/expandable-section": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/compact-menu@*, @psu-ooe/compact-menu@workspace:packages/compact-menu":
+"@psu-online-education/compact-menu@*, @psu-online-education/compact-menu@workspace:packages/compact-menu":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/compact-menu@workspace:packages/compact-menu"
+  resolution: "@psu-online-education/compact-menu@workspace:packages/compact-menu"
   dependencies:
-    "@psu-ooe/base": ^2.0.0
-    "@psu-ooe/drop-button": ^3.0.0
-    "@psu-ooe/sprite": ^2.0.0
-    "@psu-ooe/vertical-menu": ^2.0.0
+    "@psu-online-education/base": ^2.0.0 || ^3.0
+    "@psu-online-education/drop-button": ^3.0.0
+    "@psu-online-education/sprite": ^2.0.0
+    "@psu-online-education/vertical-menu": ^2.0.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/compact-search@*, @psu-ooe/compact-search@workspace:packages/compact-search":
+"@psu-online-education/compact-search@*, @psu-online-education/compact-search@workspace:packages/compact-search":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/compact-search@workspace:packages/compact-search"
+  resolution: "@psu-online-education/compact-search@workspace:packages/compact-search"
   dependencies:
-    "@psu-ooe/base": ^2.0.0
-    "@psu-ooe/drop-button": ^3.0.0
-    "@psu-ooe/sprite": ^2.0.0
+    "@psu-online-education/base": ^2.0.0 || ^3.0
+    "@psu-online-education/drop-button": ^3.0.0
+    "@psu-online-education/sprite": ^2.0.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/components@workspace:.":
+"@psu-online-education/components@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/components@workspace:."
+  resolution: "@psu-online-education/components@workspace:."
   dependencies:
     "@pattern-lab/cli": ^5.17.0
     "@pattern-lab/core": ^5.17.0
@@ -1764,740 +1764,751 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/credential@*, @psu-ooe/credential@^1.0 || ^2.0, @psu-ooe/credential@workspace:packages/credential":
+"@psu-online-education/credential@*, @psu-online-education/credential@^1.0 || ^2.0, @psu-online-education/credential@workspace:packages/credential":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/credential@workspace:packages/credential"
+  resolution: "@psu-online-education/credential@workspace:packages/credential"
   dependencies:
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/cta-tracking@*, @psu-ooe/cta-tracking@^1.0, @psu-ooe/cta-tracking@workspace:packages/cta-tracking":
+"@psu-online-education/cta-tracking@*, @psu-online-education/cta-tracking@^1.0, @psu-online-education/cta-tracking@workspace:packages/cta-tracking":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/cta-tracking@workspace:packages/cta-tracking"
+  resolution: "@psu-online-education/cta-tracking@workspace:packages/cta-tracking"
   dependencies:
-    "@psu-ooe/gtm": ^1.0
+    "@psu-online-education/gtm": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/cta@*, @psu-ooe/cta@workspace:packages/cta":
+"@psu-online-education/cta@*, @psu-online-education/cta@workspace:packages/cta":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/cta@workspace:packages/cta"
+  resolution: "@psu-online-education/cta@workspace:packages/cta"
   dependencies:
-    "@psu-ooe/button-base": ^1.0
-    "@psu-ooe/cta-tracking": ^1.0
+    "@psu-online-education/button-base": ^1.0
+    "@psu-online-education/cta-tracking": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/details@*, @psu-ooe/details@workspace:packages/details":
+"@psu-online-education/details@*, @psu-online-education/details@workspace:packages/details":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/details@workspace:packages/details"
+  resolution: "@psu-online-education/details@workspace:packages/details"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/divider@*, @psu-ooe/divider@workspace:packages/divider":
+"@psu-online-education/divider@*, @psu-online-education/divider@workspace:packages/divider":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/divider@workspace:packages/divider"
+  resolution: "@psu-online-education/divider@workspace:packages/divider"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/drop-button@*, @psu-ooe/drop-button@^3.0.0, @psu-ooe/drop-button@workspace:packages/drop-button":
+"@psu-online-education/drop-button@*, @psu-online-education/drop-button@^3.0.0, @psu-online-education/drop-button@workspace:packages/drop-button":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/drop-button@workspace:packages/drop-button"
+  resolution: "@psu-online-education/drop-button@workspace:packages/drop-button"
   dependencies:
-    "@psu-ooe/base": ^2.6.0
+    "@psu-online-education/base": ^2.6.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/event-link@*, @psu-ooe/event-link@^2.0, @psu-ooe/event-link@workspace:packages/event-link":
+"@psu-online-education/event-link@*, @psu-online-education/event-link@^2.0, @psu-online-education/event-link@workspace:packages/event-link":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/event-link@workspace:packages/event-link"
+  resolution: "@psu-online-education/event-link@workspace:packages/event-link"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/smart-datetime": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/smart-datetime": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/expandable-section@*, @psu-ooe/expandable-section@^1.0, @psu-ooe/expandable-section@workspace:packages/expandable-section":
+"@psu-online-education/event-spotlight@*, @psu-online-education/event-spotlight@workspace:packages/event-spotlight":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/expandable-section@workspace:packages/expandable-section"
+  resolution: "@psu-online-education/event-spotlight@workspace:packages/event-spotlight"
   dependencies:
-    "@psu-ooe/auto-expansion": ^1.0
-    "@psu-ooe/base": ^2.2
-    "@psu-ooe/button": ^1.0
-    "@psu-ooe/slide-toggle": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/read-more": ^2.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/fieldset@*, @psu-ooe/fieldset@workspace:packages/fieldset":
+"@psu-online-education/expandable-section@*, @psu-online-education/expandable-section@^1.0, @psu-online-education/expandable-section@workspace:packages/expandable-section":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/fieldset@workspace:packages/fieldset"
+  resolution: "@psu-online-education/expandable-section@workspace:packages/expandable-section"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/auto-expansion": ^1.0
+    "@psu-online-education/base": ^2.2 || ^3.0
+    "@psu-online-education/button": ^1.0
+    "@psu-online-education/slide-toggle": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/flex-wrap-listener@*, @psu-ooe/flex-wrap-listener@^1.0, @psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener":
+"@psu-online-education/fieldset@*, @psu-online-education/fieldset@workspace:packages/fieldset":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener"
-  languageName: unknown
-  linkType: soft
-
-"@psu-ooe/footer@*, @psu-ooe/footer@workspace:packages/footer":
-  version: 0.0.0-use.local
-  resolution: "@psu-ooe/footer@workspace:packages/footer"
+  resolution: "@psu-online-education/fieldset@workspace:packages/fieldset"
   dependencies:
-    "@psu-ooe/background-container": ^3.0
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/form@*, @psu-ooe/form@workspace:packages/form":
+"@psu-online-education/flex-wrap-listener@*, @psu-online-education/flex-wrap-listener@^1.0, @psu-online-education/flex-wrap-listener@workspace:packages/flex-wrap-listener":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/form@workspace:packages/form"
+  resolution: "@psu-online-education/flex-wrap-listener@workspace:packages/flex-wrap-listener"
+  languageName: unknown
+  linkType: soft
+
+"@psu-online-education/footer@*, @psu-online-education/footer@workspace:packages/footer":
+  version: 0.0.0-use.local
+  resolution: "@psu-online-education/footer@workspace:packages/footer"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/background-container": ^3.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/grid@*, @psu-ooe/grid@workspace:packages/grid":
+"@psu-online-education/form@*, @psu-online-education/form@workspace:packages/form":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/grid@workspace:packages/grid"
+  resolution: "@psu-online-education/form@workspace:packages/form"
   dependencies:
-    "@psu-ooe/base": ^1.0 || ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/gtm@*, @psu-ooe/gtm@^1.0, @psu-ooe/gtm@workspace:packages/gtm":
+"@psu-online-education/grid@*, @psu-online-education/grid@workspace:packages/grid":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/gtm@workspace:packages/gtm"
-  languageName: unknown
-  linkType: soft
-
-"@psu-ooe/header@*, @psu-ooe/header@workspace:packages/header":
-  version: 0.0.0-use.local
-  resolution: "@psu-ooe/header@workspace:packages/header"
+  resolution: "@psu-online-education/grid@workspace:packages/grid"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^1.0 || ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/heading@*, @psu-ooe/heading@^1.0 || ^2.0 || ^3.0, @psu-ooe/heading@^2.0 || ^3.0, @psu-ooe/heading@^3.0, @psu-ooe/heading@workspace:packages/heading":
+"@psu-online-education/gtm@*, @psu-online-education/gtm@^1.0, @psu-online-education/gtm@workspace:packages/gtm":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/heading@workspace:packages/heading"
-  dependencies:
-    "@psu-ooe/base": ^2.0
+  resolution: "@psu-online-education/gtm@workspace:packages/gtm"
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/highlighted-text@*, @psu-ooe/highlighted-text@workspace:packages/highlighted-text":
+"@psu-online-education/header@*, @psu-online-education/header@workspace:packages/header":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/highlighted-text@workspace:packages/highlighted-text"
+  resolution: "@psu-online-education/header@workspace:packages/header"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/horizontal-menu@*, @psu-ooe/horizontal-menu@workspace:packages/horizontal-menu":
+"@psu-online-education/heading@*, @psu-online-education/heading@^1.0 || ^2.0 || ^3.0, @psu-online-education/heading@^2.0 || ^3.0, @psu-online-education/heading@^3.0, @psu-online-education/heading@workspace:packages/heading":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/horizontal-menu@workspace:packages/horizontal-menu"
+  resolution: "@psu-online-education/heading@workspace:packages/heading"
   dependencies:
-    "@psu-ooe/base": ^2.6.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/icon-list@*, @psu-ooe/icon-list@workspace:packages/icon-list":
+"@psu-online-education/highlighted-text@*, @psu-online-education/highlighted-text@workspace:packages/highlighted-text":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/icon-list@workspace:packages/icon-list"
+  resolution: "@psu-online-education/highlighted-text@workspace:packages/highlighted-text"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/infographic@*, @psu-ooe/infographic@workspace:packages/infographic":
+"@psu-online-education/horizontal-menu@*, @psu-online-education/horizontal-menu@workspace:packages/horizontal-menu":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/infographic@workspace:packages/infographic"
+  resolution: "@psu-online-education/horizontal-menu@workspace:packages/horizontal-menu"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.6.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-checkbox@*, @psu-ooe/input-checkbox@workspace:packages/input-checkbox":
+"@psu-online-education/icon-list@*, @psu-online-education/icon-list@workspace:packages/icon-list":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-checkbox@workspace:packages/input-checkbox"
+  resolution: "@psu-online-education/icon-list@workspace:packages/icon-list"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-color@*, @psu-ooe/input-color@workspace:packages/input-color":
+"@psu-online-education/infographic@*, @psu-online-education/infographic@workspace:packages/infographic":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-color@workspace:packages/input-color"
+  resolution: "@psu-online-education/infographic@workspace:packages/infographic"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-common@*, @psu-ooe/input-common@^1.0, @psu-ooe/input-common@workspace:packages/input-common":
+"@psu-online-education/input-checkbox@*, @psu-online-education/input-checkbox@workspace:packages/input-checkbox":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-common@workspace:packages/input-common"
+  resolution: "@psu-online-education/input-checkbox@workspace:packages/input-checkbox"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-date@*, @psu-ooe/input-date@workspace:packages/input-date":
+"@psu-online-education/input-color@*, @psu-online-education/input-color@workspace:packages/input-color":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-date@workspace:packages/input-date"
+  resolution: "@psu-online-education/input-color@workspace:packages/input-color"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/input-common": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-email@*, @psu-ooe/input-email@workspace:packages/input-email":
+"@psu-online-education/input-common@*, @psu-online-education/input-common@^1.0, @psu-online-education/input-common@workspace:packages/input-common":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-email@workspace:packages/input-email"
+  resolution: "@psu-online-education/input-common@workspace:packages/input-common"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/input-common": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-file@*, @psu-ooe/input-file@workspace:packages/input-file":
+"@psu-online-education/input-date@*, @psu-online-education/input-date@workspace:packages/input-date":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-file@workspace:packages/input-file"
+  resolution: "@psu-online-education/input-date@workspace:packages/input-date"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-number@*, @psu-ooe/input-number@workspace:packages/input-number":
+"@psu-online-education/input-email@*, @psu-online-education/input-email@workspace:packages/input-email":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-number@workspace:packages/input-number"
+  resolution: "@psu-online-education/input-email@workspace:packages/input-email"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/input-common": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-password@*, @psu-ooe/input-password@workspace:packages/input-password":
+"@psu-online-education/input-file@*, @psu-online-education/input-file@workspace:packages/input-file":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-password@workspace:packages/input-password"
+  resolution: "@psu-online-education/input-file@workspace:packages/input-file"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/input-common": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-radio@*, @psu-ooe/input-radio@workspace:packages/input-radio":
+"@psu-online-education/input-number@*, @psu-online-education/input-number@workspace:packages/input-number":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-radio@workspace:packages/input-radio"
+  resolution: "@psu-online-education/input-number@workspace:packages/input-number"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-range@*, @psu-ooe/input-range@workspace:packages/input-range":
+"@psu-online-education/input-password@*, @psu-online-education/input-password@workspace:packages/input-password":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-range@workspace:packages/input-range"
+  resolution: "@psu-online-education/input-password@workspace:packages/input-password"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-search@*, @psu-ooe/input-search@workspace:packages/input-search":
+"@psu-online-education/input-radio@*, @psu-online-education/input-radio@workspace:packages/input-radio":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-search@workspace:packages/input-search"
+  resolution: "@psu-online-education/input-radio@workspace:packages/input-radio"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/input-common": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-tel@*, @psu-ooe/input-tel@workspace:packages/input-tel":
+"@psu-online-education/input-range@*, @psu-online-education/input-range@workspace:packages/input-range":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-tel@workspace:packages/input-tel"
+  resolution: "@psu-online-education/input-range@workspace:packages/input-range"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/input-common": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-text@*, @psu-ooe/input-text@workspace:packages/input-text":
+"@psu-online-education/input-search@*, @psu-online-education/input-search@workspace:packages/input-search":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-text@workspace:packages/input-text"
+  resolution: "@psu-online-education/input-search@workspace:packages/input-search"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/input-common": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-time@*, @psu-ooe/input-time@workspace:packages/input-time":
+"@psu-online-education/input-tel@*, @psu-online-education/input-tel@workspace:packages/input-tel":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-time@workspace:packages/input-time"
+  resolution: "@psu-online-education/input-tel@workspace:packages/input-tel"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/input-common": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-url@*, @psu-ooe/input-url@workspace:packages/input-url":
+"@psu-online-education/input-text@*, @psu-online-education/input-text@workspace:packages/input-text":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/input-url@workspace:packages/input-url"
+  resolution: "@psu-online-education/input-text@workspace:packages/input-text"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/input-common": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/intro-form@*, @psu-ooe/intro-form@workspace:packages/intro-form":
+"@psu-online-education/input-time@*, @psu-online-education/input-time@workspace:packages/input-time":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/intro-form@workspace:packages/intro-form"
+  resolution: "@psu-online-education/input-time@workspace:packages/input-time"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/heading": ^3.0
-    "@psu-ooe/random-item": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/label@*, @psu-ooe/label@workspace:packages/label":
+"@psu-online-education/input-url@*, @psu-online-education/input-url@workspace:packages/input-url":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/label@workspace:packages/label"
+  resolution: "@psu-online-education/input-url@workspace:packages/input-url"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/layout-four-col@*, @psu-ooe/layout-four-col@workspace:packages/layout-four-col":
+"@psu-online-education/intro-form@*, @psu-online-education/intro-form@workspace:packages/intro-form":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/layout-four-col@workspace:packages/layout-four-col"
+  resolution: "@psu-online-education/intro-form@workspace:packages/intro-form"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/layout-multi-col": ^1.1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/heading": ^3.0
+    "@psu-online-education/random-item": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/layout-multi-col@*, @psu-ooe/layout-multi-col@^1.1.0, @psu-ooe/layout-multi-col@workspace:packages/layout-multi-col":
+"@psu-online-education/label@*, @psu-online-education/label@workspace:packages/label":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/layout-multi-col@workspace:packages/layout-multi-col"
+  resolution: "@psu-online-education/label@workspace:packages/label"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/layout-three-col@*, @psu-ooe/layout-three-col@workspace:packages/layout-three-col":
+"@psu-online-education/layout-four-col@*, @psu-online-education/layout-four-col@workspace:packages/layout-four-col":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/layout-three-col@workspace:packages/layout-three-col"
+  resolution: "@psu-online-education/layout-four-col@workspace:packages/layout-four-col"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/layout-multi-col": ^1.1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/layout-multi-col": ^1.1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/layout-two-col@*, @psu-ooe/layout-two-col@workspace:packages/layout-two-col":
+"@psu-online-education/layout-multi-col@*, @psu-online-education/layout-multi-col@^1.1.0, @psu-online-education/layout-multi-col@workspace:packages/layout-multi-col":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/layout-two-col@workspace:packages/layout-two-col"
+  resolution: "@psu-online-education/layout-multi-col@workspace:packages/layout-multi-col"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/layout-multi-col": ^1.1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/legend@*, @psu-ooe/legend@workspace:packages/legend":
+"@psu-online-education/layout-three-col@*, @psu-online-education/layout-three-col@workspace:packages/layout-three-col":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/legend@workspace:packages/legend"
+  resolution: "@psu-online-education/layout-three-col@workspace:packages/layout-three-col"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/layout-multi-col": ^1.1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/list@*, @psu-ooe/list@workspace:packages/list":
+"@psu-online-education/layout-two-col@*, @psu-online-education/layout-two-col@workspace:packages/layout-two-col":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/list@workspace:packages/list"
+  resolution: "@psu-online-education/layout-two-col@workspace:packages/layout-two-col"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/layout-multi-col": ^1.1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/modal@*, @psu-ooe/modal@workspace:packages/modal":
+"@psu-online-education/legend@*, @psu-online-education/legend@workspace:packages/legend":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/modal@workspace:packages/modal"
+  resolution: "@psu-online-education/legend@workspace:packages/legend"
   dependencies:
-    "@psu-ooe/base": ^2.6.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/more-menu@*, @psu-ooe/more-menu@workspace:packages/more-menu":
+"@psu-online-education/list@*, @psu-online-education/list@workspace:packages/list":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/more-menu@workspace:packages/more-menu"
+  resolution: "@psu-online-education/list@workspace:packages/list"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/drop-button": ^3.0.0
-    "@psu-ooe/sprite": ^2.0.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-online-education/modal@*, @psu-online-education/modal@workspace:packages/modal":
+  version: 0.0.0-use.local
+  resolution: "@psu-online-education/modal@workspace:packages/modal"
+  dependencies:
+    "@psu-online-education/base": ^2.6.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-online-education/more-menu@*, @psu-online-education/more-menu@workspace:packages/more-menu":
+  version: 0.0.0-use.local
+  resolution: "@psu-online-education/more-menu@workspace:packages/more-menu"
+  dependencies:
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/drop-button": ^3.0.0
+    "@psu-online-education/sprite": ^2.0.0
   peerDependencies:
-    "@psu-ooe/background-container": ^3.0
+    "@psu-online-education/background-container": ^3.0
   peerDependenciesMeta:
-    "@psu-ooe/background-container":
+    "@psu-online-education/background-container":
       optional: true
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/navigation-tile-image@*, @psu-ooe/navigation-tile-image@workspace:packages/navigation-tile-image":
+"@psu-online-education/navigation-tile-image@*, @psu-online-education/navigation-tile-image@workspace:packages/navigation-tile-image":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/navigation-tile-image@workspace:packages/navigation-tile-image"
+  resolution: "@psu-online-education/navigation-tile-image@workspace:packages/navigation-tile-image"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/navigation-tile@*, @psu-ooe/navigation-tile@workspace:packages/navigation-tile":
+"@psu-online-education/navigation-tile@*, @psu-online-education/navigation-tile@workspace:packages/navigation-tile":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/navigation-tile@workspace:packages/navigation-tile"
+  resolution: "@psu-online-education/navigation-tile@workspace:packages/navigation-tile"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/overlay@*, @psu-ooe/overlay@workspace:packages/overlay":
+"@psu-online-education/overlay@*, @psu-online-education/overlay@workspace:packages/overlay":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/overlay@workspace:packages/overlay"
+  resolution: "@psu-online-education/overlay@workspace:packages/overlay"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/page-title-banner-image@*, @psu-ooe/page-title-banner-image@workspace:packages/page-title-banner-image":
+"@psu-online-education/page-title-banner-image@*, @psu-online-education/page-title-banner-image@workspace:packages/page-title-banner-image":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/page-title-banner-image@workspace:packages/page-title-banner-image"
+  resolution: "@psu-online-education/page-title-banner-image@workspace:packages/page-title-banner-image"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/page-title": ^1.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/page-title": ^1.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/page-title-banner-plain@*, @psu-ooe/page-title-banner-plain@workspace:packages/page-title-banner-plain":
+"@psu-online-education/page-title-banner-plain@*, @psu-online-education/page-title-banner-plain@workspace:packages/page-title-banner-plain":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/page-title-banner-plain@workspace:packages/page-title-banner-plain"
+  resolution: "@psu-online-education/page-title-banner-plain@workspace:packages/page-title-banner-plain"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/page-title": ^1.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/page-title": ^1.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/page-title@*, @psu-ooe/page-title@^1.0, @psu-ooe/page-title@workspace:packages/page-title":
+"@psu-online-education/page-title@*, @psu-online-education/page-title@^1.0, @psu-online-education/page-title@workspace:packages/page-title":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/page-title@workspace:packages/page-title"
+  resolution: "@psu-online-education/page-title@workspace:packages/page-title"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/heading": ^2.0 || ^3.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/heading": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/pager@*, @psu-ooe/pager@workspace:packages/pager":
+"@psu-online-education/pager@*, @psu-online-education/pager@workspace:packages/pager":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/pager@workspace:packages/pager"
+  resolution: "@psu-online-education/pager@workspace:packages/pager"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/parallel-navigation-item@*, @psu-ooe/parallel-navigation-item@^2.0, @psu-ooe/parallel-navigation-item@workspace:packages/parallel-navigation-item":
+"@psu-online-education/parallel-navigation-item@*, @psu-online-education/parallel-navigation-item@^2.0, @psu-online-education/parallel-navigation-item@workspace:packages/parallel-navigation-item":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/parallel-navigation-item@workspace:packages/parallel-navigation-item"
+  resolution: "@psu-online-education/parallel-navigation-item@workspace:packages/parallel-navigation-item"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/parallel-navigation@*, @psu-ooe/parallel-navigation@workspace:packages/parallel-navigation":
+"@psu-online-education/parallel-navigation@*, @psu-online-education/parallel-navigation@workspace:packages/parallel-navigation":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/parallel-navigation@workspace:packages/parallel-navigation"
+  resolution: "@psu-online-education/parallel-navigation@workspace:packages/parallel-navigation"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/parallel-navigation-item": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/parallel-navigation-item": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/patternlab@workspace:packages/patternlab":
+"@psu-online-education/patternlab@workspace:packages/patternlab":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/patternlab@workspace:packages/patternlab"
+  resolution: "@psu-online-education/patternlab@workspace:packages/patternlab"
   dependencies:
     "@pattern-lab/cli": ^5.17.0
     "@pattern-lab/core": ^5.17.0
     "@pattern-lab/engine-twig-php": ^5.17.0
     "@pattern-lab/uikit-workshop": ^5.17.0
-    "@psu-ooe/accordion": "*"
-    "@psu-ooe/accordion-group": "*"
-    "@psu-ooe/alert": "*"
-    "@psu-ooe/announcement": "*"
-    "@psu-ooe/auto-expansion": "*"
-    "@psu-ooe/background-container": "*"
-    "@psu-ooe/band": "*"
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/basic-tile": "*"
-    "@psu-ooe/bio": "*"
-    "@psu-ooe/bio-collection": "*"
-    "@psu-ooe/breadcrumbs": "*"
-    "@psu-ooe/button": "*"
-    "@psu-ooe/callout": "*"
-    "@psu-ooe/card": "*"
-    "@psu-ooe/cards-list": "*"
-    "@psu-ooe/compact-menu": "*"
-    "@psu-ooe/compact-search": "*"
-    "@psu-ooe/credential": "*"
-    "@psu-ooe/cta": "*"
-    "@psu-ooe/cta-tracking": "*"
-    "@psu-ooe/details": "*"
-    "@psu-ooe/divider": "*"
-    "@psu-ooe/drop-button": "*"
-    "@psu-ooe/event-link": "*"
-    "@psu-ooe/expandable-section": "*"
-    "@psu-ooe/fieldset": "*"
-    "@psu-ooe/flex-wrap-listener": "*"
-    "@psu-ooe/footer": "*"
-    "@psu-ooe/form": "*"
-    "@psu-ooe/grid": "*"
-    "@psu-ooe/gtm": "*"
-    "@psu-ooe/header": "*"
-    "@psu-ooe/heading": "*"
-    "@psu-ooe/highlighted-text": "*"
-    "@psu-ooe/horizontal-menu": "*"
-    "@psu-ooe/icon-list": "*"
-    "@psu-ooe/infographic": "*"
-    "@psu-ooe/input-checkbox": "*"
-    "@psu-ooe/input-color": "*"
-    "@psu-ooe/input-common": "*"
-    "@psu-ooe/input-date": "*"
-    "@psu-ooe/input-email": "*"
-    "@psu-ooe/input-file": "*"
-    "@psu-ooe/input-number": "*"
-    "@psu-ooe/input-password": "*"
-    "@psu-ooe/input-radio": "*"
-    "@psu-ooe/input-range": "*"
-    "@psu-ooe/input-search": "*"
-    "@psu-ooe/input-tel": "*"
-    "@psu-ooe/input-text": "*"
-    "@psu-ooe/input-time": "*"
-    "@psu-ooe/input-url": "*"
-    "@psu-ooe/intro-form": "*"
-    "@psu-ooe/label": "*"
-    "@psu-ooe/layout-four-col": "*"
-    "@psu-ooe/layout-multi-col": "*"
-    "@psu-ooe/layout-three-col": "*"
-    "@psu-ooe/layout-two-col": "*"
-    "@psu-ooe/legend": "*"
-    "@psu-ooe/list": "*"
-    "@psu-ooe/modal": "*"
-    "@psu-ooe/more-menu": "*"
-    "@psu-ooe/navigation-tile": "*"
-    "@psu-ooe/navigation-tile-image": "*"
-    "@psu-ooe/overlay": "*"
-    "@psu-ooe/page-title": "*"
-    "@psu-ooe/page-title-banner-image": "*"
-    "@psu-ooe/page-title-banner-plain": "*"
-    "@psu-ooe/pager": "*"
-    "@psu-ooe/parallel-navigation": "*"
-    "@psu-ooe/parallel-navigation-item": "*"
-    "@psu-ooe/physical-address": "*"
-    "@psu-ooe/quote": "*"
-    "@psu-ooe/random-item": "*"
-    "@psu-ooe/read-more": "*"
-    "@psu-ooe/section-view-tracking": "*"
-    "@psu-ooe/select": "*"
-    "@psu-ooe/skip-link": "*"
-    "@psu-ooe/slide-toggle": "*"
-    "@psu-ooe/smart-datetime": "*"
-    "@psu-ooe/social-icon": "*"
-    "@psu-ooe/social-icons": "*"
-    "@psu-ooe/spinner": "*"
-    "@psu-ooe/sprite": "*"
-    "@psu-ooe/sticky-panel": "*"
-    "@psu-ooe/table": "*"
-    "@psu-ooe/tabs": "*"
-    "@psu-ooe/textarea": "*"
-    "@psu-ooe/upcoming-events": "*"
-    "@psu-ooe/vertical-menu": "*"
-    "@psu-ooe/webfonts": "*"
+    "@psu-online-education/accordion": "*"
+    "@psu-online-education/accordion-group": "*"
+    "@psu-online-education/alert": "*"
+    "@psu-online-education/announcement": "*"
+    "@psu-online-education/auto-expansion": "*"
+    "@psu-online-education/background-container": "*"
+    "@psu-online-education/band": "*"
+    "@psu-online-education/base": ^3.0
+    "@psu-online-education/basic-tile": "*"
+    "@psu-online-education/bio": "*"
+    "@psu-online-education/bio-collection": "*"
+    "@psu-online-education/breadcrumbs": "*"
+    "@psu-online-education/button": "*"
+    "@psu-online-education/callout": "*"
+    "@psu-online-education/card": "*"
+    "@psu-online-education/cards-list": "*"
+    "@psu-online-education/compact-menu": "*"
+    "@psu-online-education/compact-search": "*"
+    "@psu-online-education/credential": "*"
+    "@psu-online-education/cta": "*"
+    "@psu-online-education/cta-tracking": "*"
+    "@psu-online-education/details": "*"
+    "@psu-online-education/divider": "*"
+    "@psu-online-education/drop-button": "*"
+    "@psu-online-education/event-link": "*"
+    "@psu-online-education/event-spotlight": "*"
+    "@psu-online-education/expandable-section": "*"
+    "@psu-online-education/fieldset": "*"
+    "@psu-online-education/flex-wrap-listener": "*"
+    "@psu-online-education/footer": "*"
+    "@psu-online-education/form": "*"
+    "@psu-online-education/grid": "*"
+    "@psu-online-education/gtm": "*"
+    "@psu-online-education/header": "*"
+    "@psu-online-education/heading": "*"
+    "@psu-online-education/highlighted-text": "*"
+    "@psu-online-education/horizontal-menu": "*"
+    "@psu-online-education/icon-list": "*"
+    "@psu-online-education/infographic": "*"
+    "@psu-online-education/input-checkbox": "*"
+    "@psu-online-education/input-color": "*"
+    "@psu-online-education/input-common": "*"
+    "@psu-online-education/input-date": "*"
+    "@psu-online-education/input-email": "*"
+    "@psu-online-education/input-file": "*"
+    "@psu-online-education/input-number": "*"
+    "@psu-online-education/input-password": "*"
+    "@psu-online-education/input-radio": "*"
+    "@psu-online-education/input-range": "*"
+    "@psu-online-education/input-search": "*"
+    "@psu-online-education/input-tel": "*"
+    "@psu-online-education/input-text": "*"
+    "@psu-online-education/input-time": "*"
+    "@psu-online-education/input-url": "*"
+    "@psu-online-education/intro-form": "*"
+    "@psu-online-education/label": "*"
+    "@psu-online-education/layout-four-col": "*"
+    "@psu-online-education/layout-multi-col": "*"
+    "@psu-online-education/layout-three-col": "*"
+    "@psu-online-education/layout-two-col": "*"
+    "@psu-online-education/legend": "*"
+    "@psu-online-education/list": "*"
+    "@psu-online-education/modal": "*"
+    "@psu-online-education/more-menu": "*"
+    "@psu-online-education/navigation-tile": "*"
+    "@psu-online-education/navigation-tile-image": "*"
+    "@psu-online-education/overlay": "*"
+    "@psu-online-education/page-title": "*"
+    "@psu-online-education/page-title-banner-image": "*"
+    "@psu-online-education/page-title-banner-plain": "*"
+    "@psu-online-education/pager": "*"
+    "@psu-online-education/parallel-navigation": "*"
+    "@psu-online-education/parallel-navigation-item": "*"
+    "@psu-online-education/physical-address": "*"
+    "@psu-online-education/quote": "*"
+    "@psu-online-education/random-item": "*"
+    "@psu-online-education/read-more": "*"
+    "@psu-online-education/section-view-tracking": "*"
+    "@psu-online-education/select": "*"
+    "@psu-online-education/skip-link": "*"
+    "@psu-online-education/slide-toggle": "*"
+    "@psu-online-education/smart-datetime": "*"
+    "@psu-online-education/social-icon": "*"
+    "@psu-online-education/social-icons": "*"
+    "@psu-online-education/spinner": "*"
+    "@psu-online-education/sprite": "*"
+    "@psu-online-education/sticky-panel": "*"
+    "@psu-online-education/table": "*"
+    "@psu-online-education/tabs": "*"
+    "@psu-online-education/textarea": "*"
+    "@psu-online-education/upcoming-events": "*"
+    "@psu-online-education/vertical-menu": "*"
+    "@psu-online-education/webfonts": "*"
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/physical-address@*, @psu-ooe/physical-address@workspace:packages/physical-address":
+"@psu-online-education/physical-address@*, @psu-online-education/physical-address@workspace:packages/physical-address":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/physical-address@workspace:packages/physical-address"
+  resolution: "@psu-online-education/physical-address@workspace:packages/physical-address"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/quote@*, @psu-ooe/quote@workspace:packages/quote":
+"@psu-online-education/quote@*, @psu-online-education/quote@workspace:packages/quote":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/quote@workspace:packages/quote"
+  resolution: "@psu-online-education/quote@workspace:packages/quote"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/random-item@*, @psu-ooe/random-item@^1.0, @psu-ooe/random-item@workspace:packages/random-item":
+"@psu-online-education/random-item@*, @psu-online-education/random-item@^1.0, @psu-online-education/random-item@workspace:packages/random-item":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/random-item@workspace:packages/random-item"
+  resolution: "@psu-online-education/random-item@workspace:packages/random-item"
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/read-more@*, @psu-ooe/read-more@^1.0 || ^2.0, @psu-ooe/read-more@workspace:packages/read-more":
+"@psu-online-education/read-more@*, @psu-online-education/read-more@^1.0 || ^2.0, @psu-online-education/read-more@^2.0, @psu-online-education/read-more@workspace:packages/read-more":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/read-more@workspace:packages/read-more"
+  resolution: "@psu-online-education/read-more@workspace:packages/read-more"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/section-view-tracking@*, @psu-ooe/section-view-tracking@workspace:packages/section-view-tracking":
+"@psu-online-education/section-view-tracking@*, @psu-online-education/section-view-tracking@workspace:packages/section-view-tracking":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/section-view-tracking@workspace:packages/section-view-tracking"
+  resolution: "@psu-online-education/section-view-tracking@workspace:packages/section-view-tracking"
   dependencies:
-    "@psu-ooe/auto-expansion": ^1.0
+    "@psu-online-education/auto-expansion": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/select@*, @psu-ooe/select@workspace:packages/select":
+"@psu-online-education/select@*, @psu-online-education/select@workspace:packages/select":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/select@workspace:packages/select"
+  resolution: "@psu-online-education/select@workspace:packages/select"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/skip-link@*, @psu-ooe/skip-link@workspace:packages/skip-link":
+"@psu-online-education/skip-link@*, @psu-online-education/skip-link@workspace:packages/skip-link":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/skip-link@workspace:packages/skip-link"
+  resolution: "@psu-online-education/skip-link@workspace:packages/skip-link"
   dependencies:
-    "@psu-ooe/base": ^2.6.0
+    "@psu-online-education/base": ^2.6.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/slide-toggle@*, @psu-ooe/slide-toggle@^1.0, @psu-ooe/slide-toggle@workspace:packages/slide-toggle":
+"@psu-online-education/slide-toggle@*, @psu-online-education/slide-toggle@^1.0, @psu-online-education/slide-toggle@workspace:packages/slide-toggle":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/slide-toggle@workspace:packages/slide-toggle"
+  resolution: "@psu-online-education/slide-toggle@workspace:packages/slide-toggle"
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/smart-datetime@*, @psu-ooe/smart-datetime@^1.0, @psu-ooe/smart-datetime@workspace:packages/smart-datetime":
+"@psu-online-education/smart-datetime@*, @psu-online-education/smart-datetime@^1.0, @psu-online-education/smart-datetime@workspace:packages/smart-datetime":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/smart-datetime@workspace:packages/smart-datetime"
+  resolution: "@psu-online-education/smart-datetime@workspace:packages/smart-datetime"
   dependencies:
-    "@psu-ooe/base": ^1.0 || ^2.0
+    "@psu-online-education/base": ^1.0 || ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/social-icon@*, @psu-ooe/social-icon@^2.0, @psu-ooe/social-icon@workspace:packages/social-icon":
+"@psu-online-education/social-icon@*, @psu-online-education/social-icon@^2.0, @psu-online-education/social-icon@workspace:packages/social-icon":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/social-icon@workspace:packages/social-icon"
+  resolution: "@psu-online-education/social-icon@workspace:packages/social-icon"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/social-icons@*, @psu-ooe/social-icons@workspace:packages/social-icons":
+"@psu-online-education/social-icons@*, @psu-online-education/social-icons@workspace:packages/social-icons":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/social-icons@workspace:packages/social-icons"
+  resolution: "@psu-online-education/social-icons@workspace:packages/social-icons"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/social-icon": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/social-icon": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/spinner@*, @psu-ooe/spinner@workspace:packages/spinner":
+"@psu-online-education/spinner@*, @psu-online-education/spinner@workspace:packages/spinner":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/spinner@workspace:packages/spinner"
+  resolution: "@psu-online-education/spinner@workspace:packages/spinner"
   dependencies:
-    "@psu-ooe/base": ^1.0 || ^2.0
-    "@psu-ooe/sprite": ^1.0 || ^2.0
+    "@psu-online-education/base": ^1.0 || ^2.0 || ^3.0
+    "@psu-online-education/sprite": ^1.0 || ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/sprite@*, @psu-ooe/sprite@^1.0 || ^2.0, @psu-ooe/sprite@^2.0, @psu-ooe/sprite@^2.0.0, @psu-ooe/sprite@workspace:packages/sprite":
+"@psu-online-education/sprite@*, @psu-online-education/sprite@^1.0 || ^2.0, @psu-online-education/sprite@^2.0, @psu-online-education/sprite@^2.0.0, @psu-online-education/sprite@workspace:packages/sprite":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/sprite@workspace:packages/sprite"
+  resolution: "@psu-online-education/sprite@workspace:packages/sprite"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/sticky-panel@*, @psu-ooe/sticky-panel@workspace:packages/sticky-panel":
+"@psu-online-education/sticky-panel@*, @psu-online-education/sticky-panel@workspace:packages/sticky-panel":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/sticky-panel@workspace:packages/sticky-panel"
+  resolution: "@psu-online-education/sticky-panel@workspace:packages/sticky-panel"
   dependencies:
-    "@psu-ooe/band": ^2.0
-    "@psu-ooe/base": ^2.6.0
+    "@psu-online-education/band": ^2.0
+    "@psu-online-education/base": ^2.6.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/table@*, @psu-ooe/table@workspace:packages/table":
+"@psu-online-education/table@*, @psu-online-education/table@workspace:packages/table":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/table@workspace:packages/table"
+  resolution: "@psu-online-education/table@workspace:packages/table"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/tabs@*, @psu-ooe/tabs@workspace:packages/tabs":
+"@psu-online-education/tabs@*, @psu-online-education/tabs@workspace:packages/tabs":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/tabs@workspace:packages/tabs"
+  resolution: "@psu-online-education/tabs@workspace:packages/tabs"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/flex-wrap-listener": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/flex-wrap-listener": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/textarea@*, @psu-ooe/textarea@workspace:packages/textarea":
+"@psu-online-education/textarea@*, @psu-online-education/textarea@workspace:packages/textarea":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/textarea@workspace:packages/textarea"
+  resolution: "@psu-online-education/textarea@workspace:packages/textarea"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/upcoming-events@*, @psu-ooe/upcoming-events@workspace:packages/upcoming-events":
+"@psu-online-education/upcoming-events@*, @psu-online-education/upcoming-events@workspace:packages/upcoming-events":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/upcoming-events@workspace:packages/upcoming-events"
+  resolution: "@psu-online-education/upcoming-events@workspace:packages/upcoming-events"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/event-link": ^2.0
-    "@psu-ooe/expandable-section": ^1.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/event-link": ^2.0
+    "@psu-online-education/expandable-section": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/vertical-menu@*, @psu-ooe/vertical-menu@^2.0.0, @psu-ooe/vertical-menu@workspace:packages/vertical-menu":
+"@psu-online-education/vertical-menu@*, @psu-online-education/vertical-menu@^2.0.0, @psu-online-education/vertical-menu@workspace:packages/vertical-menu":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/vertical-menu@workspace:packages/vertical-menu"
+  resolution: "@psu-online-education/vertical-menu@workspace:packages/vertical-menu"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/slide-toggle": ^1.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/slide-toggle": ^1.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/webfonts@*, @psu-ooe/webfonts@^2.0, @psu-ooe/webfonts@workspace:packages/webfonts":
+"@psu-online-education/webfonts@*, @psu-online-education/webfonts@^2.0, @psu-online-education/webfonts@workspace:packages/webfonts":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/webfonts@workspace:packages/webfonts"
+  resolution: "@psu-online-education/webfonts@workspace:packages/webfonts"
   languageName: unknown
   linkType: soft
 

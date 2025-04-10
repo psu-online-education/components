@@ -1,5 +1,5 @@
 {% set callout_content %}
-  {% include '@psu-ooe/expandable-section/expandable-section.twig' with {
+  {% include '@oe/expandable-section/expandable-section.twig' with {
     id: 'minors',
     toc_label: 'Minors',
     intro: "<div class=\"wysiwyg\"><h2>Minors</h2><p>Penn State World Campus students can optionally supplement their degree with a minor.</p></div>",
@@ -10,12 +10,12 @@
 {% endset %}
 
 {% set background_content %}
-  {% include '@psu-ooe/callout/callout.twig' with {
+  {% include '@oe/callout/callout.twig' with {
     content: callout_content,
   } only %}
 {% endset %}
 
-{% include '@psu-ooe/background-container/background-container.twig' with {
+{% include '@oe/background-container/background-container.twig' with {
   color: 'light-grey',
   content: background_content,
 } only %}

@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/event-link",
+  "name": "@psu-online-education/event-link",
   "version": "2.1.0",
   "description": "Provides an event link implementation.",
   "publishConfig": {
@@ -7,7 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0",
-    "@psu-ooe/smart-datetime": "^1.0"
+    "@psu-online-education/base": "^2.0 || ^3.0",
+    "@psu-online-education/smart-datetime": "^1.0"
   }
 }

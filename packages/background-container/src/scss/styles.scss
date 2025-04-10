@@ -53,9 +53,9 @@
     }
   }
 
-  @each $color, $scss_color in $supported_colors {
+  @each $color, $property in $supported_colors {
     &--#{$color} {
-      --background-color: #{$scss_color};
+      --background-color: #{$property};
       background-color: var(--background-color);
     }
   }

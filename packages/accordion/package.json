@@ -1,18 +1,15 @@
 {
-  "name": "@psu-ooe/accordion",
+  "name": "@psu-online-education/accordion",
   "version": "2.2.0",
   "description": "Provides an accessible accordion implementation.",
-  "ooe": {
-    "namespace": "molecules"
-  },
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0",
-    "@psu-ooe/heading": "^2.0 || ^3.0",
-    "@psu-ooe/slide-toggle": "^1.0",
-    "@psu-ooe/sprite": "^2.0"
+    "@psu-online-education/base": "^2.0 || ^3.0",
+    "@psu-online-education/heading": "^2.0 || ^3.0",
+    "@psu-online-education/slide-toggle": "^1.0",
+    "@psu-online-education/sprite": "^2.0"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/select",
+  "name": "@psu-online-education/select",
   "version": "1.1.0",
   "description": "Provides select element styles.",
   "publishConfig": {
@@ -7,6 +7,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0"
+    "@psu-online-education/base": "^2.0 || ^3.0"
   }
 }

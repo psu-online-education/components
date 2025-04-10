@@ -3,10 +3,10 @@
 .skip-link {
   min-width: _rem(4);
   padding: _rem(2) _rem(2.5);
-  outline: _rem(0.2) solid $sky-blue;
+  outline: _rem(0.2) solid var(--sky-blue);
   outline-offset: 0;
   z-index: var(--z-index--floating);
-  background: $white;
+  background: var(--white);
   position: absolute;
   overflow: hidden;
   clip: rect(_rem(0.1),_rem(0.1),_rem(0.1),_rem(0.1));

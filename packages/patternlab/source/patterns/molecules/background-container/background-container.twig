@@ -10,23 +10,23 @@
 {% endset %}
 
 {% set unbound_short_content %}
-  {% include '@psu-ooe/callout/callout.twig' with {
+  {% include '@oe/callout/callout.twig' with {
     content: short_content,
   } only %}
 {% endset %}
 {% set unbound_tall_content %}
-  {% include '@psu-ooe/callout/callout.twig' with {
+  {% include '@oe/callout/callout.twig' with {
     content: tall_content,
   } only %}
 {% endset %}
 {% set unbound_short_narrow_content %}
-  {% include '@psu-ooe/callout/callout.twig' with {
+  {% include '@oe/callout/callout.twig' with {
     content: short_content,
     width: 'narrow',
   } only %}
 {% endset %}
 {% set unbound_tall_narrow_content %}
-  {% include '@psu-ooe/callout/callout.twig' with {
+  {% include '@oe/callout/callout.twig' with {
     content: tall_content,
     width: 'narrow',
   } only %}
@@ -48,21 +48,21 @@
   {% for color in colors %}
       {% for background in backgrounds %}
           <h2>{{ color }} {{ background }} (Full Width Background)</h2>
-            {% include '@psu-ooe/background-container/background-container.twig' with {
+            {% include '@oe/background-container/background-container.twig' with {
                 color: color,
                 background_image: background,
                 content: unbound_short_content
             } only %}
             <br />
             <br />
-            {% include '@psu-ooe/background-container/background-container.twig' with {
+            {% include '@oe/background-container/background-container.twig' with {
                 color: color,
                 background_image: background,
                 content: unbound_tall_content
             } only %}
             <br />
             <br />
-            {% include '@psu-ooe/background-container/background-container.twig' with {
+            {% include '@oe/background-container/background-container.twig' with {
                 color: color,
                 background_image: background,
                 width: 'narrow',
@@ -70,7 +70,7 @@
             } only %}
             <br />
             <br />
-            {% include '@psu-ooe/background-container/background-container.twig' with {
+            {% include '@oe/background-container/background-container.twig' with {
                 color: color,
                 background_image: background,
                 width: 'narrow',
@@ -85,14 +85,14 @@
       {% for background in backgrounds %}
           <h2>{{ color }} {{ background }} (Limited Width Background)</h2>
               <div style="max-width:119rem;padding:0 var(--page-side-padding);margin:auto;">
-                  {% include '@psu-ooe/background-container/background-container.twig' with {
+                  {% include '@oe/background-container/background-container.twig' with {
                       color: color,
                       background_image: background,
                       content: unbound_short_content
                   } only %}
               <br />
               <br />
-                  {% include '@psu-ooe/background-container/background-container.twig' with {
+                  {% include '@oe/background-container/background-container.twig' with {
                       color: color,
                       background_image: background,
                       content: unbound_tall_content
@@ -102,7 +102,7 @@
               <br />
               <div style="max-width:95rem;padding:0 var(--page-side-padding);margin:auto;">
 
-                  {% include '@psu-ooe/background-container/background-container.twig' with {
+                  {% include '@oe/background-container/background-container.twig' with {
                       color: color,
                       background_image: background,
                       width: 'narrow',
@@ -110,7 +110,7 @@
                   } only %}
               <br />
               <br />
-                  {% include '@psu-ooe/background-container/background-container.twig' with {
+                  {% include '@oe/background-container/background-container.twig' with {
                       color: color,
                       background_image: background,
                       width: 'narrow',
@@ -132,7 +132,7 @@
   {% endset %}
 
   <div style="max-width:119rem;padding:0 4rem;margin-top:6rem;">
-    {% include '@psu-ooe/background-container/background-container.twig' with {
+    {% include '@oe/background-container/background-container.twig' with {
       color: 'beaver-blue',
       background_image: 'shield:right',
       content: overflowing_content

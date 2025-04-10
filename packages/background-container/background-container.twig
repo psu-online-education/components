@@ -29,7 +29,7 @@
     <div class="bg__sprites">
     {% for sprite in background_image_options[background_image] %}
       <div class="bg__sprite bg__sprite--{{sprite}} bg__sprite--{{loop.index}}">
-		    {% include '@psu-ooe/sprite/sprite.twig' with { name: sprite } only %}
+		    {% include '@oe/sprite/sprite.twig' with { name: sprite } only %}
 		  </div>
     {% endfor %}
     </div>

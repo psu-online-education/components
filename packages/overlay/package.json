@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/overlay",
+  "name": "@psu-online-education/overlay",
   "version": "2.2.1",
   "description": "Provides an overlay implementation.",
   "publishConfig": {
@@ -7,6 +7,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0"
+    "@psu-online-education/base": "^2.0 || ^3.0"
   }
 }

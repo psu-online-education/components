@@ -1,44 +1,28 @@
 :root {
-  // Color custom properties for color variables
-  // Basic colors
-  --white: #{ $white };
-  --black: #{ $black };
-
   // Penn State World Campus Colors
-  --beaver-blue: #{ $beaver-blue };
-  --nittany-navy: #{ $nittany-navy };
-  --nittany-navy-faded: #{ $nittany-navy-faded };
-  --sky-blue: #{ $sky-blue };
-  --pugh-blue: #{ $pugh-blue };
-  --light-mauve: #{ $light-mauve };
-
-  --light-grey: #{ $light-grey };
-  --medium-grey: #{ $medium-grey };
-  --medium-dark-grey: #{ $medium-dark-grey };
-  --slate: #{ $slate };
-  --slate-light: #{ $slate-light };
-
-  --limestone: #{ $limestone };
-
-  --keystone: #{ $keystone };
-  --keystone-light: #{ $keystone-light };
-
-  --invent-orange: #{ $invent-orange };
-  --invent-orange-light: #{ $invent-orange-light };
-
-  --penns-forest: #{ $penns-forest };
-  --creek: #{ $creek };
-
-  --pa-link: #{ $pa-link };
-  --pa-link-light: #{ $pa-link-light };
-
+  --white: #fff;
+  --black: #000;
+  --beaver-blue: #1e407c;
+  --nittany-navy: #001e44;
+  --sky-blue: #009cde;
+  --pugh-blue: #96bee6;
+  --light-mauve: #ebecf4;
+  --light-grey: #f2f3f9;
+  --medium-grey: #d8dbea;
+  --medium-dark-grey: #687a8d;
+  --slate: #314d64;
+  --slate-light: #ccdae6;
+  --limestone: #a2aaad;
+  --keystone: #ffd100;
+  --keystone-light: #f9df70;
+  --invent-orange: #e98300;
+  --invent-orange-light: #fca917;
+  --penns-forest: #4a7729;
+  --creek: #3ea39e;
+  --pa-link: #005fa9;
+  --pa-link-light: #cce9ff;
   --futures-calling: #99cc00;
-
-  // Tile nav
-  --tile-nav-image-overlay: #{ $tile-nav-image-overlay };
-  --tile-nav-active: #{ $tile-nav-active };
-
-  --error-red: #{ $error-red };
+  --error-red: #dd3636;
 
   // Brand refresh colors
   --text-color--dark: var(--nittany-navy);
@@ -62,8 +46,6 @@
   --focus-indicator-color--light: var(--sky-blue);
   --focus-indicator-color--dark: var(--sky-blue);
 
-  // @deprecated - to be removed in 3.0.0.
-  --headings-color: var(--text-color--slate);
 }
 
 // Automatically contrasting variables.

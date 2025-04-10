@@ -18,8 +18,9 @@
     text-transform: uppercase;
     white-space: nowrap;
 
+    // @TODO: Remove when color-mix is widely supported.
     @supports not (color: color-mix(in srgb, white, white)) {
-      color: rgba($nittany-navy, .5);
+      color: #001e447f;
     }
   }
 

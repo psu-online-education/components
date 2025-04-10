@@ -23,12 +23,12 @@
 {% endset %}
 
 {% set callout %}
-  {% include '@psu-ooe/callout/callout.twig' with {
+  {% include '@oe/callout/callout.twig' with {
   content: table,
 } only %}
 {% endset %}
 
-{% include '@psu-ooe/background-container/background-container.twig' with {
+{% include '@oe/background-container/background-container.twig' with {
   color: 'light-grey',
   content: callout,
 } only %}

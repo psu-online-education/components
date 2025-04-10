@@ -45,7 +45,7 @@
   }
 
   &--tall-medium-grey-shield {
-    background-color: $medium-grey;
+    background-color: var(--medium-grey);
 
     .divider__top-band {
       background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
@@ -72,7 +72,7 @@
     background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
 
     .divider__top-band {
-      background-color: $nittany-navy;
+      background-color: var(--nittany-navy);
     }
   }
 
@@ -80,7 +80,7 @@
     background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
 
     .divider__top-band {
-      background-color: $nittany-navy;
+      background-color: var(--nittany-navy);
     }
     .divider__rule {
       top: _rem(1);

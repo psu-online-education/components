@@ -5,7 +5,7 @@
     display: block;
     font-size: var(--font-size--large);
     font-weight: var(--font-weight--bold);
-    color: var(--text-color--default);
+    color: var(--text-color);
     border-bottom: _rem(.2) solid var(--pugh-blue);
     text-decoration: none;
     padding: _rem(1.5) 0;
@@ -84,7 +84,7 @@
   }
 
   &__link {
-    color: var(--text-color--default);
+    color: var(--text-color);
     display: block;
     font-weight: var(--font-weight--regular);
     flex: 1;

@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/sticky-panel",
+  "name": "@psu-online-education/sticky-panel",
   "version": "1.0.4",
   "description": "Provides a sticky panel that contains one or more bands.",
   "publishConfig": {
@@ -7,7 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/band": "^2.0",
-    "@psu-ooe/base": "^2.6.0"
+    "@psu-online-education/band": "^2.0",
+    "@psu-online-education/base": "^2.6.0 || ^3.0"
   }
 }

@@ -1,14 +1,14 @@
-{% embed '@psu-ooe/layout-two-col/layout-two-col.twig' %}
+{% embed '@oe/layout-two-col/layout-two-col.twig' %}
   {% block first %}
-    {% embed '@psu-ooe/layout-two-col/layout-two-col.twig' %}
+    {% embed '@oe/layout-two-col/layout-two-col.twig' %}
       {% block first %}
-        {% include '@psu-ooe/callout/callout.twig' with {
+        {% include '@oe/callout/callout.twig' with {
           background: 'light-grey',
           content: 'First inner layout first region content'
         } only %}
       {% endblock %}
       {% block second %}
-        {% include '@psu-ooe/callout/callout.twig' with {
+        {% include '@oe/callout/callout.twig' with {
           background: 'light-grey',
           content: 'First inner layout second region content'
         } only %}
@@ -16,15 +16,15 @@
     {% endembed %}
   {% endblock %}
   {% block second %}
-    {% embed '@psu-ooe/layout-two-col/layout-two-col.twig' %}
+    {% embed '@oe/layout-two-col/layout-two-col.twig' %}
       {% block first %}
-        {% include '@psu-ooe/callout/callout.twig' with {
+        {% include '@oe/callout/callout.twig' with {
           background: 'blue-gradient',
           content: 'Second inner layout first region content',
         } only %}
       {% endblock %}
       {% block second %}
-        {% include '@psu-ooe/callout/callout.twig' with {
+        {% include '@oe/callout/callout.twig' with {
           background: 'blue-gradient',
           content: 'Second inner layout second region content',
         } only %}

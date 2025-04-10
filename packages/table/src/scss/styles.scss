@@ -17,9 +17,8 @@
 }
 
 .a11y-table {
-  container-type: inline-size;
   overflow: visible;
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
 
@@ -31,6 +30,7 @@
 
   &__table {
     border-collapse: collapse;
+    width: 100%;
   }
 
   &__caption {
@@ -50,7 +50,7 @@
     line-height: 1.5;
     scroll-snap-align: start;
     text-align: left;
-        border-bottom: _rem(.1) solid var(--medium-grey);
+    border-bottom: _rem(.1) solid var(--medium-grey);
 
     &:not(:first-child) {
       padding-left: _rem(2);
@@ -59,18 +59,19 @@
 
   &__th {
     font-weight: bold;
+    padding-bottom: _rem(1.5);
+
+    &:not(:first-of-type) {
+      padding-left: _rem(2);
+    }
   }
 
   &__td {
     padding-bottom: _rem(2);
   }
 
-  &__th {
-    padding-bottom: _rem(1.5);
+  &__thead &__th {
     border-bottom: _rem(.3) solid var(--medium-grey);
-
-    &:not(:first-of-type) {
-      padding-left: _rem(2);
-    }
   }
+
 }

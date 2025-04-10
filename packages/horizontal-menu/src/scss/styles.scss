@@ -28,7 +28,7 @@
       width: _rem(23);
 
       @supports not (color: color-mix(in srgb, white, white)) {
-        box-shadow: _rem(.1) _rem(.3) _rem(.5) rgba($nittany-navy, .75);
+        box-shadow: _rem(.1) _rem(.3) _rem(.5) #001e44bf;
       }
     }
   }

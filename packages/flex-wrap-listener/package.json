@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/flex-wrap-listener",
+  "name": "@psu-online-education/flex-wrap-listener",
   "version": "1.0.1",
   "description": "Provides a javascript driven approach to listening for flex wrapping events.",
   "publishConfig": {

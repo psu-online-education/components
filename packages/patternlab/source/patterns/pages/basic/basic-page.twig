@@ -9,17 +9,17 @@
   .utility-menu{display:flex;justify-content:flex-end;align-items:center;gap:1.5rem;margin:0;padding:0;list-style-type:none}@media(min-width: 1024px){.utility-menu{gap:2rem}}.utility-menu__link{color:var(--text-color);text-decoration:none;font-family:var(--font-family--default);font-weight:var(--font-weight--semibold);font-size:var(--font-size--xsmall);line-height:var(--line-height--nospace);letter-spacing:var(--letter-spacing--medium)}@media(min-width: 1280px){.utility-menu__link{font-size:var(--font-size--msmall)}}
 
 </style>
-{% embed '@psu-ooe/header/header.twig' %}
+{% embed '@oe/header/header.twig' %}
 
   {% set how_to_apply %}
-    {% include '@psu-ooe/cta/cta-block.twig' with {
+    {% include '@oe/cta/cta-block.twig' with {
       label: 'How to Apply',
       url: '#',
       color: 'light-blue',
       compact: true,
     } only %}{% endset %}
   {% set request_info %}
-    {% include '@psu-ooe/cta/cta-block.twig' with {
+    {% include '@oe/cta/cta-block.twig' with {
       label: 'Request Info',
       url: '#',
       color: 'reversed',
@@ -28,7 +28,7 @@
   {% endset %}
 
   {% set search_horizontal %}
-    {% include '@psu-ooe/compact-search/compact-search.twig' with {
+    {% include '@oe/compact-search/compact-search.twig' with {
       align: 'right',
       orientation: 'horizontal',
       search_form: 'The search form goes here.'
@@ -36,14 +36,14 @@
   {% endset %}
 
   {% set search_vertical %}
-    {% include '@psu-ooe/compact-search/compact-search.twig' with {
+    {% include '@oe/compact-search/compact-search.twig' with {
       align: 'right',
       search_form: 'The search form goes here.'
     } only %}
   {% endset %}
 
   {% set horizontal_menu %}
-    {% include '@psu-ooe/horizontal-menu/horizontal-menu.twig' with {
+    {% include '@oe/horizontal-menu/horizontal-menu.twig' with {
       menu_name: 'Primary navigation menu',
       items: [
         { title: 'Home', url: '#', in_active_trail: true },
@@ -58,7 +58,7 @@
   {% endset %}
 
   {% set vertical_menu %}
-    {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
+    {% include '@oe/vertical-menu/vertical-menu.twig' with {
       menu_name: 'Primary navigation menu',
       density: 'tight',
       items: [
@@ -74,7 +74,7 @@
   {% endset %}
 
   {% set menu %}
-    {% include '@psu-ooe/compact-menu/compact-menu.twig' with {
+    {% include '@oe/compact-menu/compact-menu.twig' with {
       align: 'right',
       menu: vertical_menu
     } only %}
@@ -115,7 +115,7 @@
   {% block overflow %}
     <div class="region region--cta-small-viewports">
       {% apply spaceless %}
-        {% include '@psu-ooe/cta/cta-group.twig' with {
+        {% include '@oe/cta/cta-group.twig' with {
           ctas: [how_to_apply, request_info],
           expand_to_fit: true,
         } only %}
@@ -127,7 +127,7 @@
   {% endblock %}
 {% endembed %}
 
-{% include '@psu-ooe/page-title-banner-image/page-title-banner-image.twig' with {
+{% include '@oe/page-title-banner-image/page-title-banner-image.twig' with {
   subtitle_before: 'Penn State World Campus',
   title: 'Design System',
   subtitle_after: 'Basic Page',
@@ -136,9 +136,9 @@
 
 <main>
   {% set page_content %}
-  {% embed '@psu-ooe/layout-three-col/layout-three-col.twig' %}
+  {% embed '@oe/layout-three-col/layout-three-col.twig' %}
     {% block first %}
-      {% include '@psu-ooe/heading/heading.twig' with {
+      {% include '@oe/heading/heading.twig' with {
         level: 2,
         size: 'medium',
         content: '200+ programs'
@@ -146,7 +146,7 @@
       <p>Penn State World Campus offers more than 200 programs and certificates to choose from.</p>
     {% endblock %}
     {% block second %}
-      {% include '@psu-ooe/heading/heading.twig' with {
+      {% include '@oe/heading/heading.twig' with {
         level: 2,
         size: 'medium',
         content: '25+ years'
@@ -154,7 +154,7 @@
       <p>Penn State World Campus has been a leader in online education for more than two decades.</p>
     {% endblock %}
     {% block third %}
-      {% include '@psu-ooe/heading/heading.twig' with {
+      {% include '@oe/heading/heading.twig' with {
         level: 2,
         size: 'medium',
         content: 'Nationally Recognized'
@@ -163,13 +163,13 @@
     {% endblock %}
   {% endembed %}
     <br>
-    {% embed '@psu-ooe/layout-two-col/layout-two-col.twig' with { first_width: 33, second_width: 67 } only %}
+    {% embed '@oe/layout-two-col/layout-two-col.twig' with { first_width: 33, second_width: 67 } only %}
       {% block first %}
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed blandit libero volutpat sed cras. Neque gravida in fermentum et sollicitudin ac. Gravida in fermentum et sollicitudin ac. Duis convallis convallis tellus id interdum. Neque volutpat ac tincidunt vitae semper.</p>
       {% endblock %}
 
       {% block second %}
-        {% include '@psu-ooe/quote/quote.twig' with {
+        {% include '@oe/quote/quote.twig' with {
           headshot: "<img src=\"https://test.worldcampus.psu.edu/sites/default/files/2020-08/Carrie-Tilley-quote.jpg\" width=\"400\" height=\"400\" alt=\"carrie tilley and family\">",
           quote: "Being able to work with Penn State World Campus and find not only a degree program I was interested in, but knowing that I had that flexibility made it work perfectly for us.",
           attribution: "Carrie Tilley",
@@ -179,49 +179,49 @@
       {% endblock %}
     {% endembed %}
     <br>
-    {% embed '@psu-ooe/layout-four-col/layout-four-col.twig' %}
-      {% block first %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
-      {% block second %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
-      {% block third %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Third region' } only %} {% endblock %}
-      {% block fourth %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Fourth region' } only %} {% endblock %}
+    {% embed '@oe/layout-four-col/layout-four-col.twig' %}
+      {% block first %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
+      {% block second %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
+      {% block third %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'Third region' } only %} {% endblock %}
+      {% block fourth %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'Fourth region' } only %} {% endblock %}
     {% endembed %}
     <br>
-    {% embed '@psu-ooe/layout-two-col/layout-two-col.twig' with { first_width: 25, second_width: 75 } only %}
-      {% block first %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
-      {% block second %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
+    {% embed '@oe/layout-two-col/layout-two-col.twig' with { first_width: 25, second_width: 75 } only %}
+      {% block first %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
+      {% block second %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
     {% endembed %}
     <br>
-    {% embed '@psu-ooe/layout-two-col/layout-two-col.twig' with { first_width: 75, second_width: 25 } only %}
-      {% block first %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
-      {% block second %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
+    {% embed '@oe/layout-two-col/layout-two-col.twig' with { first_width: 75, second_width: 25 } only %}
+      {% block first %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
+      {% block second %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
     {% endembed %}
     <br>
-    {% embed '@psu-ooe/layout-two-col/layout-two-col.twig' %}
-      {% block first %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
-      {% block second %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
+    {% embed '@oe/layout-two-col/layout-two-col.twig' %}
+      {% block first %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
+      {% block second %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
     {% endembed %}
     <br>
-    {% embed '@psu-ooe/layout-three-col/layout-three-col.twig' %}
-      {% block first %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
-      {% block second %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
-      {% block third %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Third region' } only %} {% endblock %}
+    {% embed '@oe/layout-three-col/layout-three-col.twig' %}
+      {% block first %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
+      {% block second %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
+      {% block third %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'Third region' } only %} {% endblock %}
     {% endembed %}
     <br>
-    {% embed '@psu-ooe/layout-three-col/layout-three-col.twig' with { first_width: 25, second_width: 50, third_width: 25 } only %}
-      {% block first %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
-      {% block second %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
-      {% block third %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Third region' } only %} {% endblock %}
+    {% embed '@oe/layout-three-col/layout-three-col.twig' with { first_width: 25, second_width: 50, third_width: 25 } only %}
+      {% block first %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
+      {% block second %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
+      {% block third %} {% include '@oe/callout/callout.twig' with { background: 'blue-gradient', content: 'Third region' } only %} {% endblock %}
     {% endembed %}
   {% endset %}
 
-  {% include '@psu-ooe/callout/callout.twig' with {
+  {% include '@oe/callout/callout.twig' with {
     background: 'white',
     content: page_content,
   } only %}
 
   {% set tile_nav_content %}
       {% set tile %}
-        {% include '@psu-ooe/navigation-tile/navigation-tile.twig' with {
+        {% include '@oe/navigation-tile/navigation-tile.twig' with {
           link: {
             url: '#',
             label: 'Navigation Title',
@@ -231,7 +231,7 @@
 
       {% endset %}
       {% set tile2 %}
-        {% include '@psu-ooe/navigation-tile/navigation-tile.twig' with {
+        {% include '@oe/navigation-tile/navigation-tile.twig' with {
           link: {
             url: '#',
             label: 'Navigation Title with a really long title that will go to two lines eventually',
@@ -239,15 +239,15 @@
           description: "The Office of the Vice Provost for Online Education is led by Dr. Renata S. Engel and is responsible for all aspects of Penn State World Campus.",
         } only %}
       {% endset %}
-      {% include '@psu-ooe/grid/grid.twig' with {
+      {% include '@oe/grid/grid.twig' with {
         items: [tile, tile2, tile],
       } only %}
   {% endset %}
 
   {% set tile_nav_callout %}
-    {% include '@psu-ooe/callout/callout.twig' with { content: tile_nav_content } only %}
+    {% include '@oe/callout/callout.twig' with { content: tile_nav_content } only %}
   {% endset %}
-  {% include '@psu-ooe/background-container/background-container.twig' with {
+  {% include '@oe/background-container/background-container.twig' with {
     color: 'light-grey',
     background_image: 'hub-geometric:topright',
     padding: 'non',
@@ -257,7 +257,7 @@
     {% set headshot %}
       <img src="https://test.worldcampus.psu.edu/sites/default/files/2020-08/Carrie-Tilley-quote.jpg" width="400" height="400" alt="carrie tilley and family" loading="lazy">
     {% endset %}
-    {% include '@psu-ooe/quote/quote.twig' with {
+    {% include '@oe/quote/quote.twig' with {
       headshot: headshot,
       reverse: true,
       quote: "Being able to work with Penn State World Campus and find not only a degree program I was interested in, but knowing that I had that flexibility made it work perfectly for us.",
@@ -274,7 +274,7 @@
     </picture>
   {% endset %}
 
-  {% include '@psu-ooe/overlay/overlay.twig' with {
+  {% include '@oe/overlay/overlay.twig' with {
     image: overlay_image,
     content: overlay_content,
     overlay_bg_color: "blue-gradient",
@@ -292,20 +292,20 @@
     Footer bottom content
   </div>
 {% endset %}
-{% embed '@psu-ooe/footer/footer.twig' with { bottom_background: 'dark' } only %}
+{% embed '@oe/footer/footer.twig' with { bottom_background: 'dark' } only %}
   {% block top_first %}
     <a href="#" style="display:inline-block;  width: max(13rem, 100%);min-width: 3rem;max-width: 22.2rem;color:var(--beaver-blue)">
       <span class="visually-hidden">Penn State World Campus</span>
-      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'wc-mark', expand: true } only %}
+      {% include '@oe/sprite/sprite.twig' with { name: 'wc-mark', expand: true } only %}
     </a>
   {% endblock %}
   {% block top_second %}
-    {% include '@psu-ooe/heading/heading.twig' with {
+    {% include '@oe/heading/heading.twig' with {
       level: 2,
       size: 'medium',
       content: 'A world of possibilities. <span class="text--contrasting">Online.</span>'
     } only %}
-    {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
+    {% include '@oe/vertical-menu/vertical-menu.twig' with {
       menu_name: 'Example',
       items: [
         { title: 'Home', url: '#' },
@@ -330,7 +330,7 @@
 
   {% endblock %}
   {% block top_third %}
-    {% include '@psu-ooe/list/list.twig' with {
+    {% include '@oe/list/list.twig' with {
       items: [
         '<a href="#" style="display:inline-block;padding:.5rem 0;">Contacts & Help</a>',
         '<a href="#" style="display:inline-block;padding:.5rem 0;">Events</a>',
@@ -343,7 +343,7 @@
         Information For:
         <span class="visually-hidden"> specific groups</span>
       </span>
-      {% include '@psu-ooe/list/list.twig' with {
+      {% include '@oe/list/list.twig' with {
         items: [
           '<a href="#" style="display:inline-block;padding:.25rem 0;">Current Students</a>',
           '<a href="#" style="display:inline-block;padding:.25rem 0;">Alumni and Friends</a>',
@@ -357,12 +357,12 @@
     <h2 class="visually-hidden">Contact information</h2>
     <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;">
       <span class="visually-hidden">phone</span>
-      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'phone' } only %}&nbsp;
+      {% include '@oe/sprite/sprite.twig' with { name: 'phone' } only %}&nbsp;
       <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold":> 814-865-5403</span></a>
     </div>
     <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;">
       <span class="visually-hidden">email</span>
-      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'envelope' } only %}&nbsp;
+      {% include '@oe/sprite/sprite.twig' with { name: 'envelope' } only %}&nbsp;
       <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold">worldcampus@psu.edu</span></a>
     </div>
     <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;">
@@ -374,7 +374,7 @@
     </div>
   {% endblock %}
   {% block middle_second %}
-    {% include '@psu-ooe/physical-address/physical-address.twig' with {
+    {% include '@oe/physical-address/physical-address.twig' with {
       name: 'The Pennsylvania State University',
       street: '128 Outreach Building',
       locality: 'University Park',
@@ -386,7 +386,7 @@
     {% set social_icons = [] %}
     {% for icon, label in {instagram: 'Instagram', facebook: 'Facebook', linkedin: 'LinkedIn', twitter: 'Twitter', youtube: 'YouTube', flickr: 'Flickr', pinterest: 'Pinterest', blog: 'Blog'} %}
       {% set social_icon %}
-        {% include '@psu-ooe/social-icon/social-icon.twig' with {
+        {% include '@oe/social-icon/social-icon.twig' with {
           color: 'light',
           icon: icon,
           label: label,
@@ -397,7 +397,7 @@
     {% endfor %}
 
     <div style="width:22rem">
-      {% include '@psu-ooe/social-icons/social-icons.twig' with { social_icons: social_icons } only %}
+      {% include '@oe/social-icons/social-icons.twig' with { social_icons: social_icons } only %}
     </div>
   {% endblock %}
   {% block colophon %}
@@ -405,10 +405,10 @@
     <div style="--link-color: var(--text-color); display:flex;gap:2rem 2.5%">
       <a href="#" style="display:inline-block;min-width:10rem;width:10rem;padding:.25rem 0;">
         <span class="visually-hidden">Penn State</span>
-        {% include '@psu-ooe/sprite/sprite.twig' with { name: 'psu-mark', expand: true } only %}
+        {% include '@oe/sprite/sprite.twig' with { name: 'psu-mark', expand: true } only %}
       </a>
       <div style="font-size: var(--font-size--3xsmall);line-height: var(--line-height--snug)">
-        {% include '@psu-ooe/list/list.twig' with {
+        {% include '@oe/list/list.twig' with {
           orientation: 'horizontal',
           separator: 'dot',
           items: [

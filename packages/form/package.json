@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/form",
+  "name": "@psu-online-education/form",
   "version": "1.0.0",
   "description": "Provides form element styles.",
   "publishConfig": {
@@ -7,6 +7,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0"
+    "@psu-online-education/base": "^2.0 || ^3.0"
   }
 }

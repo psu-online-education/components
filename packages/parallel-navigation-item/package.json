@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/parallel-navigation-item",
+  "name": "@psu-online-education/parallel-navigation-item",
   "version": "2.1.2",
   "description": "Provides a parallel navigation item component.",
   "publishConfig": {
@@ -7,7 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0",
-    "@psu-ooe/sprite": "^2.0"
+    "@psu-online-education/base": "^2.0 || ^3.0",
+    "@psu-online-education/sprite": "^2.0"
   }
 }

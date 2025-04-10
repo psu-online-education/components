@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/card",
+  "name": "@psu-online-education/card",
   "version": "2.1.1",
   "description": "Provides a card implementation.",
   "publishConfig": {
@@ -7,7 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0",
-    "@psu-ooe/sprite": "^2.0"
+    "@psu-online-education/base": "^2.0 || ^3.0",
+    "@psu-online-education/sprite": "^2.0"
   }
 }

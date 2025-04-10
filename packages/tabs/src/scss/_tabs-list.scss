@@ -128,7 +128,7 @@
 
     // @TODO: Remove fallback when appropriate.
     @supports not (color: color-mix(in srgb, white, white)) {
-      box-shadow: 0 _rem(.1) 0 0 rgba($beaver-blue, calc(1 / 1.5));
+      box-shadow: 0 _rem(.1) 0 0 rgba(#1e407c, calc(1 / 1.5));
     }
 
     @media screen and (prefers-reduced-motion: no-preference) {
@@ -175,7 +175,7 @@
 
       // @TODO: Remove fallback when appropriate.
       @supports not (color: color-mix(in srgb, white, white)) {
-        box-shadow: 0 _rem(.5) 0 0 $beaver-blue;
+        box-shadow: 0 _rem(.5) 0 0 var(--beaver-blue);
       }
     }
 
@@ -186,7 +186,7 @@
 
       // @TODO: Remove fallback when appropriate.
       @supports not (color: color-mix(in srgb, white, white)) {
-        box-shadow: 0 _rem(.5) 0 0 $pa-link;
+        box-shadow: 0 _rem(.5) 0 0 var(--pa-link);
       }
     }
 
@@ -200,7 +200,7 @@
 
       // @TODO: Remove fallback when appropriate.
       @supports not (color: color-mix(in srgb, white, white)) {
-        box-shadow: 0 _rem(.5) 0 0 $beaver-blue;
+        box-shadow: 0 _rem(.5) 0 0 var(--beaver-blue);
       }
     }
   }

@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/breadcrumbs",
+  "name": "@psu-online-education/breadcrumbs",
   "version": "2.0.0",
   "description": "Provides a breadcrumbs implementation.",
   "publishConfig": {
@@ -7,7 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0",
-    "@psu-ooe/sprite": "^2.0"
+    "@psu-online-education/base": "^2.0 || ^3.0",
+    "@psu-online-education/sprite": "^2.0"
   }
 }

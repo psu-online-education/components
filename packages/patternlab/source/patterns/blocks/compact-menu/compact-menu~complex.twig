@@ -1,5 +1,5 @@
 {% set vertical_menu %}
-  {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
+  {% include '@oe/vertical-menu/vertical-menu.twig' with {
     menu_name: 'Primary navigation menu',
     density: 'tight',
     items: [
@@ -51,7 +51,7 @@
   } only %}
 {% endset %}
 {% set menu %}
-  {% embed '@psu-ooe/compact-menu/compact-menu.twig' with {
+  {% embed '@oe/compact-menu/compact-menu.twig' with {
     menu: vertical_menu,
     menu_label: '<em>Awesome</em> Menu',
   } only %}
@@ -62,6 +62,6 @@
   {% endembed %}
 {% endset %}
 
-{% include '@psu-ooe/callout/callout.twig' with {
+{% include '@oe/callout/callout.twig' with {
   content: menu,
 } only %}

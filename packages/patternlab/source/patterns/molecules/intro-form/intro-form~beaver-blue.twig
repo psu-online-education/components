@@ -8,13 +8,13 @@
     <input type="email" id="intro_form_email_2" name="intro_form_email_2"><br><br>
     <label for="intro_form_phone_2">Phone</label><br>
     <input type="tel" id="intro_form_phone_2" name="intro_form_phone_2"><br><br>
-    {% include '@psu-ooe/button/button.twig' with {
+    {% include '@oe/button/button.twig' with {
       type: 'submit',
       label: 'Submit',
     } only %}
   </form>
 {% endset %}
-{% include '@psu-ooe/intro-form/intro-form.twig' with {
+{% include '@oe/intro-form/intro-form.twig' with {
   "color": "beaver-blue",
   "images": [
     "<img src=\"https://via.placeholder.com/800x350\" width=\"800\" height=\"350\" alt=\"\">",

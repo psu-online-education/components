@@ -33,7 +33,7 @@
 
     // @TODO: Remove fallback when appropriate.
     @supports not (background: color-mix(in srgb, white, white)) {
-      background-color: rgba($nittany-navy, 0.85);
+      background-color: #001e44d8;
     }
   }
 

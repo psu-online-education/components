@@ -1,5 +1,5 @@
 {% set menu %}
-  {% include '@psu-ooe/more-menu/more-menu.twig' with {
+  {% include '@oe/more-menu/more-menu.twig' with {
     stacked: true,
     button_label: '<span class="visually-hidden">4</span> More <span class="visually-hidden">options</span>',
     links: [
@@ -11,6 +11,6 @@
   } only %}
 {% endset %}
 
-{% include '@psu-ooe/callout/callout.twig' with {
+{% include '@oe/callout/callout.twig' with {
   content: menu,
 } only %}

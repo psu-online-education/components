@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/section-view-tracking",
+  "name": "@psu-online-education/section-view-tracking",
   "version": "1.1.2",
   "description": "Provides a unified section view tracking algorithm.",
   "publishConfig": {
@@ -7,6 +7,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/auto-expansion": "^1.0"
+    "@psu-online-education/auto-expansion": "^1.0"
   }
 }

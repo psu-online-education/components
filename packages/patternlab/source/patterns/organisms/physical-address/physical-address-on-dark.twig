@@ -1,5 +1,5 @@
 {% set address %}
-  {% include '@psu-ooe/physical-address/physical-address.twig' with {
+  {% include '@oe/physical-address/physical-address.twig' with {
     name: 'The Pennsylvania State University',
     street: '128 Outreach Building',
     locality: 'University Park',
@@ -8,7 +8,7 @@
   } only %}
 {% endset %}
 
-{% include '@psu-ooe/callout/callout.twig' with {
+{% include '@oe/callout/callout.twig' with {
   background: 'blue-gradient',
   content: address,
 } only %}

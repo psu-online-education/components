@@ -38,9 +38,9 @@
 
   &__text {
     display: none;
-    color: $nittany-navy;
+    color: var(--nittany-navy);
     font-weight: bold;
-    text-shadow: _rem(-0.1) _rem(-0.1) 0 $white, _rem(.1) _rem(-0.1) 0 $white, _rem(-0.1) _rem(.1) 0 $white, _rem(.1) _rem(.1) 0 $white;
+    text-shadow: _rem(-0.1) _rem(-0.1) 0 var(--white), _rem(.1) _rem(-0.1) 0 var(--white), _rem(-0.1) _rem(.1) 0 var(--white), _rem(.1) _rem(.1) 0 var(--white);
 
     &--xlarge {
       font-size: _rem(2.2);
@@ -65,14 +65,14 @@
 
   &__notch {
     position: absolute;
-    color: $medium-grey;
+    color: var(--medium-grey);
     .sprite {
       animation: spin 2s linear infinite;
     }
   }
 
   &__third {
-    color: $beaver-blue;
+    color: var(--beaver-blue);
     opacity: 0.61;
     z-index: 2;
 

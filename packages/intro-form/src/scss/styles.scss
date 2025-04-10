@@ -77,7 +77,7 @@
 
     @include bp(s) {
       border-top: _rem(.6) solid var(--sky-blue);
-      box-shadow: _rem(.1) _rem(.2) rgba($nittany-navy, .4);
+      box-shadow: _rem(.1) _rem(.2) color-mix(in srgb, var(--nittany-navy) 40%, transparent);
       flex: 1;
       height: fit-content;
       margin-top: 0;
