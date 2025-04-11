@@ -1,33 +1,37 @@
-&.bg--shield-program-page-at-a-glance {
-  & > .bg__sprites > .bg__sprite .sprite {
-    position: absolute;
-    width: _rem(53.2);
-    height: auto;
-    right: _rem(-32);
-    bottom: _rem(-46);
-    display: none;
+@use "../../../base/src/scss/mixins" as oe;
 
-    //noinspection CssUnknownProperty
-    @supports (container-type: inline-size ) {
-      display: initial;
+.bg {
+  &.bg--shield-program-page-at-a-glance {
+    & > .bg__sprites > .bg__sprite .sprite {
+      position: absolute;
+      width: oe.rem(53.2);
+      height: auto;
+      right: oe.rem(-32);
+      bottom: oe.rem(-46);
+      display: none;
 
-      //noinspection CssInvalidAtRule
-      @container (min-width: 950px) {
-        width: _rem(132.6);
-        right: _rem(-113.8);
-        top: 0;
-        bottom: unset;
-      }
+      //noinspection CssUnknownProperty
+      @supports (container-type: inline-size ) {
+        display: initial;
 
-      //noinspection CssInvalidAtRule
-      @container (min-width: 1280px) {
-        right: calc( ( ( 100% - #{_rem(39.5)} ) / 2 ) - #{_rem(158)} );
+        //noinspection CssInvalidAtRule
+        @container (min-width: 950px) {
+          width: oe.rem(132.6);
+          right: oe.rem(-113.8);
+          top: 0;
+          bottom: unset;
+        }
+
+        //noinspection CssInvalidAtRule
+        @container (min-width: 1280px) {
+          right: calc( ( ( 100% - #{oe.rem(39.5)} ) / 2 ) - #{oe.rem(158)} );
+        }
       }
     }
-  }
 
-  &.bg--beaver-blue > .bg__sprites > .bg__sprite .sprite {
-    opacity: .30;
-    color: var(--sky-blue);
+    &.bg--beaver-blue > .bg__sprites > .bg__sprite .sprite {
+      opacity: .30;
+      color: var(--sky-blue);
+    }
   }
 }

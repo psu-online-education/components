@@ -1,8 +1,8 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .card {
   position: relative;
-  min-width: _rem(15);
+  min-width: oe.rem(15);
 
   &:focus-within,
   &:hover {
@@ -25,12 +25,12 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: _rem(1.5) _rem(3);
+    gap: oe.rem(1.5) oe.rem(3);
   }
 
   &__media {
     aspect-ratio: 16/9;
-    flex: 1 1 _rem(26);
+    flex: 1 1 oe.rem(26);
     position: relative;
     overflow: hidden;
 
@@ -41,10 +41,10 @@
         color: var(--white);
         background: var(--error-red);
         font-family: var(--font-family--display);
-        top: _rem(1);
-        right: _rem(1);
+        top: oe.rem(1);
+        right: oe.rem(1);
         font-size: var(--font-size--default);
-        padding: _rem(.5);
+        padding: oe.rem(.5);
       }
     }
   }
@@ -70,8 +70,8 @@
 
       .sprite {
         transition: color .1s cubic-bezier(0.4,0,1,1), opacity .1s cubic-bezier(0.4,0,1,1);
-        width: calc(13% + _rem(2));
-        height: calc(13% + _rem(2));
+        width: calc(13% + oe.rem(2));
+        height: calc(13% + oe.rem(2));
         opacity: 0.8;
         color: color-mix(in srgb, var(--black) 40%, transparent);
       }
@@ -80,7 +80,7 @@
   }
 
   &__text {
-    flex: 5 1 _rem(26);
+    flex: 5 1 oe.rem(26);
     align-self: center;
   }
 
@@ -108,14 +108,14 @@
   }
 
   &__description {
-    margin-top: _rem(1.5);
+    margin-top: oe.rem(1.5);
   }
 
   &__link {
     position: absolute;
     inset: 0;
-    outline: transparent _rem(.2) solid;
-    outline-offset: _rem(.2);
+    outline: transparent oe.rem(.2) solid;
+    outline-offset: oe.rem(.2);
     transition: outline-color var(--transition-duration--default) linear;
 
     &:focus-visible {
@@ -124,22 +124,22 @@
   }
 
   &--list {
-    border-bottom: _rem(.1) solid var(--medium-grey);
-    padding: _rem(1.5) 0;
+    border-bottom: oe.rem(.1) solid var(--medium-grey);
+    padding: oe.rem(1.5) 0;
 
     .card__content {
       flex-wrap: nowrap;
-      gap: _rem(2);
+      gap: oe.rem(2);
     }
 
     .card__media {
-      max-width: _rem(10);
+      max-width: oe.rem(10);
 
       &--warning {
         &::after {
           font-size: var(--font-size--4xsmall);
-          top: _rem(.25);
-          right: _rem(.25);
+          top: oe.rem(.25);
+          right: oe.rem(.25);
         }
       }
     }

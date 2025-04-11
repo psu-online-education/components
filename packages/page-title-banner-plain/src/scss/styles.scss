@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .page-title-banner-plain {
   background: var(--light-grey);
@@ -8,9 +8,9 @@
   &__geometrics .sprite {
     opacity: .3;
     position: absolute;
-    top: _rem(-34);
-    right: _rem(-30);
-    width: _rem(60);
+    top: oe.rem(-34);
+    right: oe.rem(-30);
+    width: oe.rem(60);
     height: auto;
 
     // The design calls for a white to transparent linear gradient from
@@ -24,21 +24,21 @@
     // @see https://github.com/psu-online-education/components/blob/main/packages/sprite/src/assets/hub-geometric.svg
     --hub-geometric-gradient: url(#hub-geometric-page-title-banner-plain-gradient);
 
-    @include bp(m) {
-      left: calc(max(50%, _rem(59.5)) + _rem(22));
+    @include oe.bp(m) {
+      left: calc(max(50%, oe.rem(59.5)) + oe.rem(22));
       right: unset;
-      width: _rem(67);
+      width: oe.rem(67);
     }
   }
 
   &__content {
     position: relative;
-    max-width: _rem(119);
+    max-width: oe.rem(119);
     margin: 0 auto;
-    padding: _rem(6) _rem(4) _rem(3) _rem(2);
+    padding: oe.rem(6) oe.rem(4) oe.rem(3) oe.rem(2);
 
-    @include bp(m) {
-      padding: _rem(8) _rem(16) _rem(3) _rem(4);
+    @include oe.bp(m) {
+      padding: oe.rem(8) oe.rem(16) oe.rem(3) oe.rem(4);
     }
   }
 }

@@ -1,7 +1,7 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .social-icon {
-  min-width: _rem(4.4);
+  min-width: oe.rem(4.4);
   display: inline-block;
   transition: .3s opacity ease-in;
   opacity: .8;
@@ -30,7 +30,7 @@
   }
 
   .sprite {
-    width: _rem(4.4);
-    height: _rem(4.4);
+    width: oe.rem(4.4);
+    height: oe.rem(4.4);
   }
 }

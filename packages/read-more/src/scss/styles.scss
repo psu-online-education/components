@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .read-more {
   text-decoration: none;
@@ -9,23 +9,23 @@
   font-weight: var(--font-weight--bold);
   position: relative;
   display: inline-block;
-  padding-right: _rem(0.6);
+  padding-right: oe.rem(0.6);
 
   &__chevron {
     position: absolute;
-    font-size: _rem(1);
-    margin-top: _rem(.2);
+    font-size: oe.rem(1);
+    margin-top: oe.rem(.2);
   }
 
 
   &__text {
-    margin-right: _rem(.4);
+    margin-right: oe.rem(.4);
   }
 
   &--small {
     font-size: var(--font-size--3xsmall);
     .read-more__chevron {
-      margin-top: _rem(0.05);
+      margin-top: oe.rem(0.05);
     }
   }
 

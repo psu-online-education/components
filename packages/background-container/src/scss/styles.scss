@@ -1,88 +1,19 @@
 @use "sass:map";
+@use "colors" as *;
+@use "base";
 
-@import "../../../base/src/scss/mixins";
-@import "colors";
+@use "hub-geometric-topleft";
+@use "hub-geometric-topright";
+@use "hub-geometric-bottomleft";
+@use "hub-geometric-bottomright";
 
-.bg {
-  background: none;
-  padding-top: _rem(3);
-  padding-bottom: _rem(3);
-  position: relative;
+@use "shield-left";
+@use "shield-right";
+@use "shield-bottomright";
+@use "shield-topleft-bottomright";
 
-  //noinspection CssUnknownProperty
-  @supports (container-type: inline-size ) {
-    // Might not be needed if a linear scaling function can work now?
-    container-type: inline-size;
-  }
+// @TODO: Figure out what to do with this...
+@use "shield-program-page-banner-top";
 
-  &--padding-none {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  &--padding-large {
-    padding-top: _rem(5);
-    padding-bottom: _rem(5);
-  }
-
-  @include bp(xs) {
-    padding-top: _rem(4);
-    padding-bottom: _rem(4);
-
-    &--padding-none {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-
-    &--padding-small {
-      padding-top: _rem(3);
-      padding-bottom: _rem(3);
-    }
-
-    &--padding-large {
-      padding-top: _rem(5);
-      padding-bottom: _rem(5);
-    }
-  }
-
-  @include bp(m) {
-    &--padding-large {
-      padding-top: _rem(6);
-      padding-bottom: _rem(6);
-    }
-  }
-
-  @each $color, $property in $supported_colors {
-    &--#{$color} {
-      --background-color: #{$property};
-      background-color: var(--background-color);
-    }
-  }
-
-  &__sprites {
-    position: absolute;
-    overflow: hidden;
-    inset: 0 0 0 0;
-  }
-
-  &__content {
-    position: relative;
-    z-index: 1;
-  }
-
-  @import "hub-geometric-topleft";
-  @import "hub-geometric-topright";
-  @import "hub-geometric-bottomleft";
-  @import "hub-geometric-bottomright";
-
-	@import "shield-left";
-	@import "shield-right";
-	@import "shield-bottomright";
-	@import "shield-topleft-bottomright";
-  
-  // @TODO: Figure out what to do with this...
-  @import "shield-program-page-banner-top";
-
-  // @TODO: Figure out what to do with this...
-  @import "shield-program-page-at-a-glance";
-}
+// @TODO: Figure out what to do with this...
+@use "shield-program-page-at-a-glance";

@@ -1,7 +1,8 @@
+@use "sass:string";
 $base-rem-scale: 1 !default;
 
-@function _rem($base) {
-  @return unquote(($base * $base-rem-scale) + 'rem');
+@function rem($base) {
+  @return string.unquote(($base * $base-rem-scale) + 'rem');
 }
 
 // Expose breakpoint values, for edge-case media queries

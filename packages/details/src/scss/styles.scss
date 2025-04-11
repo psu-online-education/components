@@ -1,4 +1,2 @@
-@import "../../../base/src/scss/mixins";
-
-@import 'details';
-@import 'summary';
+@use 'details';
+@use 'summary';

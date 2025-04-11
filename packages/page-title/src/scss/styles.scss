@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .page-title-typography {
   &__content {
@@ -7,7 +7,7 @@
 
     &--reversed {
       color: var(--white);
-      text-shadow: var(--nittany-navy) 0 0 _rem(.6);
+      text-shadow: var(--nittany-navy) 0 0 oe.rem(.6);
     }
   }
 
@@ -20,6 +20,6 @@
   }
 
   &__subtitle-after {
-    margin-top: _rem(.3);
+    margin-top: oe.rem(.3);
   }
 }

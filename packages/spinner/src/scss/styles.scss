@@ -1,7 +1,7 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .spinner {
-  min-width: _rem(2);
+  min-width: oe.rem(2);
   position: relative;
   display: inline-block;
 
@@ -10,29 +10,29 @@
   }
 
   &:focus-visible {
-    outline: _rem(.2) solid var(--focus-indicator-color);
-    outline-offset: _rem(.2);
+    outline: oe.rem(.2) solid var(--focus-indicator-color);
+    outline-offset: oe.rem(.2);
   }
 
   &__animation {
     &--xlarge {
-      font-size: _rem(15);
+      font-size: oe.rem(15);
     }
 
     &--large {
-      font-size: _rem(10);
+      font-size: oe.rem(10);
     }
 
     &--medium {
-      font-size: _rem(5);
+      font-size: oe.rem(5);
     }
 
     &--small {
-      font-size: _rem(2.5);
+      font-size: oe.rem(2.5);
     }
 
     &--xsmall {
-      font-size: _rem(1.6);
+      font-size: oe.rem(1.6);
     }
   }
 
@@ -40,26 +40,26 @@
     display: none;
     color: var(--nittany-navy);
     font-weight: bold;
-    text-shadow: _rem(-0.1) _rem(-0.1) 0 var(--white), _rem(.1) _rem(-0.1) 0 var(--white), _rem(-0.1) _rem(.1) 0 var(--white), _rem(.1) _rem(.1) 0 var(--white);
+    text-shadow: oe.rem(-0.1) oe.rem(-0.1) 0 var(--white), oe.rem(.1) oe.rem(-0.1) 0 var(--white), oe.rem(-0.1) oe.rem(.1) 0 var(--white), oe.rem(.1) oe.rem(.1) 0 var(--white);
 
     &--xlarge {
-      font-size: _rem(2.2);
+      font-size: oe.rem(2.2);
     }
 
     &--large {
-      font-size: _rem(1.8);
+      font-size: oe.rem(1.8);
     }
 
     &--medium {
-      font-size: _rem(1.6);
+      font-size: oe.rem(1.6);
     }
 
     &--small {
-      font-size: _rem(1.2);
+      font-size: oe.rem(1.2);
     }
 
     &--xsmall {
-      font-size: _rem(1.1);
+      font-size: oe.rem(1.1);
     }
   }
 

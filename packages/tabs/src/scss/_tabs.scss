@@ -1,33 +1,33 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .tabs {
   position: relative;
 
   &__intro {
-    margin-bottom: _rem(3);
+    margin-bottom: oe.rem(3);
   }
 
   &__list {
     /* @TODO: Replace with gap when flex-gap is available. */
-    margin-left: _rem(-.4);
-    margin-right: _rem(-.4);
-    margin-bottom: _rem(3);
+    margin-left: oe.rem(-.4);
+    margin-right: oe.rem(-.4);
+    margin-bottom: oe.rem(3);
 
-    @include bp(xs) {
-      margin-bottom: _rem(4);
+    @include oe.bp(xs) {
+      margin-bottom: oe.rem(4);
     }
-    @include bp(s) {
-      margin-left: _rem(-.45);
-      margin-right: _rem(-.45);
-    }
-
-    @include bp(m) {
-      margin-bottom: _rem(5);
+    @include oe.bp(s) {
+      margin-left: oe.rem(-.45);
+      margin-right: oe.rem(-.45);
     }
 
-    @include bp(xl) {
-      margin-left: _rem(-.5);
-      margin-right: _rem(-.5);
+    @include oe.bp(m) {
+      margin-bottom: oe.rem(5);
+    }
+
+    @include oe.bp(xl) {
+      margin-left: oe.rem(-.5);
+      margin-right: oe.rem(-.5);
     }
   }
 
@@ -62,11 +62,11 @@
         content: '';
         inset: 0 100% 0 0;
         position: absolute;
-        border-left: _rem(.4) solid var(--focus-indicator-color);
-        left: _rem(-1);
+        border-left: oe.rem(.4) solid var(--focus-indicator-color);
+        left: oe.rem(-1);
 
-        @include bp(xs) {
-          margin-left: _rem(-2);
+        @include oe.bp(xs) {
+          margin-left: oe.rem(-2);
         }
       }
     }

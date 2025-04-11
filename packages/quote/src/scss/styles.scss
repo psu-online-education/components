@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .quote {
   color: var(--text-color);
@@ -10,11 +10,11 @@
   }
 
   &__headshot {
-    max-width: _rem(20);
+    max-width: oe.rem(20);
     flex: 0 1 25%;
     align-self: flex-start;
 
-    @include bp(s) {
+    @include oe.bp(s) {
       flex: 0 1 33.333%;
     }
 
@@ -28,16 +28,16 @@
   &__figure {
     flex: 1 1 calc(100% - 25%);
 
-    @include bp(s) {
+    @include oe.bp(s) {
       flex: 1 1 calc(100% - 33.333%);
     }
   }
 
   &__after {
-    margin-left: _rem(2.8);
+    margin-left: oe.rem(2.8);
     margin-top: var(--text-element-vertical-space--small);
 
-    @include bp(s) {
+    @include oe.bp(s) {
       margin-top: var(--text-element-vertical-space--default);
     }
   }

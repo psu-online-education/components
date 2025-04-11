@@ -1,5 +1,7 @@
+@use "../../../base/src/scss/mixins" as oe;
+
 details {
-  border-width: _rem(.1);
+  border-width: oe.rem(.1);
   border-top-style: dotted;
   border-bottom-style: dotted;
 
@@ -14,7 +16,7 @@ details {
   }
 
   &[open] > summary {
-    margin-bottom: _rem(1);
+    margin-bottom: oe.rem(1);
 
     & ~ :last-child {
       margin-bottom: var(--form-element-margin--vertical);
@@ -23,7 +25,7 @@ details {
 
   // All children (except the summary) need a left margin.
   & > *:not(summary) {
-    margin-left: _rem(5);
+    margin-left: oe.rem(5);
   }
 
   &, &:is([data-light] *) {

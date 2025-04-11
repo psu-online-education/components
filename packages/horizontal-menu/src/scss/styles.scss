@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .horizontal-menu {
   position: relative;
@@ -20,14 +20,14 @@
       top: 100%;
       opacity: 0;
       visibility: hidden;
-      box-shadow: _rem(.1) _rem(.3) _rem(.5) color-mix(in srgb, var(--nittany-navy) 75%, transparent);
-      border-left: _rem(.3) solid var(--accent-color, var(--sky-blue));
-      padding: _rem(.5) _rem(2);
+      box-shadow: oe.rem(.1) oe.rem(.3) oe.rem(.5) color-mix(in srgb, var(--nittany-navy) 75%, transparent);
+      border-left: oe.rem(.3) solid var(--accent-color, var(--sky-blue));
+      padding: oe.rem(.5) oe.rem(2);
       min-width: 100%;
-      width: _rem(23);
+      width: oe.rem(23);
 
       @supports not (color: color-mix(in srgb, white, white)) {
-        box-shadow: _rem(.1) _rem(.3) _rem(.5) #001e44bf;
+        box-shadow: oe.rem(.1) oe.rem(.3) oe.rem(.5) #001e44bf;
       }
     }
   }
@@ -47,7 +47,7 @@
 
     &--2 {
       &:not(:last-child) {
-        border-bottom: _rem(.1) solid var(--slate-light);
+        border-bottom: oe.rem(.1) solid var(--slate-light);
       }
     }
   }
@@ -65,17 +65,17 @@
       line-height: var(--line-height--nospace);
       letter-spacing: var(--letter-spacing--medium);
       color: var(--text-color);
-      padding: _rem(2.4) _rem(1.1);
+      padding: oe.rem(2.4) oe.rem(1.1);
       transition: background-color var(--transition-duration--default) linear,
                   color var(--transition-duration--default) linear;
 
-      @include bp(l) {
+      @include oe.bp(l) {
         font-size: var(--font-size--small);
       }
 
-      @include bp(xl) {
+      @include oe.bp(xl) {
         font-size: var(--font-size--msmall);
-        padding: _rem(2.4) _rem(1.6);
+        padding: oe.rem(2.4) oe.rem(1.6);
       }
 
       &:focus-within, &:hover, &:has(+ [aria-expanded="true"]) {
@@ -93,13 +93,13 @@
           top: 0;
           bottom: 0;
           left: 0;
-          width: _rem(.3);
+          width: oe.rem(.3);
           background-color: var(--accent-color, var(--sky-blue));
         }
       }
 
       &:focus-visible {
-        outline: _rem(.2) solid var(--focus-indicator-color);
+        outline: oe.rem(.2) solid var(--focus-indicator-color);
         outline-offset: 0;
       }
 
@@ -109,7 +109,7 @@
         &::after {
           content: '';
           position: absolute;
-          inset: calc(100% - _rem(.9)) _rem(.5) _rem(.5) _rem(.5);
+          inset: calc(100% - oe.rem(.9)) oe.rem(.5) oe.rem(.5) oe.rem(.5);
           background-color: var(--accent-color-semantic, var(--sky-blue));
         }
       }
@@ -121,8 +121,8 @@
       font-size: var(--font-size--xsmall);
       line-height: var(--line-height--xsnug);
       letter-spacing: var(--letter-spacing--medium);
-      padding: _rem(1.6) 0;
-      @include bp(xl) {
+      padding: oe.rem(1.6) 0;
+      @include oe.bp(xl) {
         font-size: var(--font-size--msmall);
       }
 
@@ -131,7 +131,7 @@
       }
 
       &:focus-visible {
-        outline-offset: _rem(-.1);
+        outline-offset: oe.rem(-.1);
       }
 
       &.horizontal-menu__link--active-trail {
@@ -144,7 +144,7 @@
     background: var(--horizontal-menu-link-active-background-color, var(--pa-link));
     border: none;
     position: absolute;
-    inset: 0 _rem(-.8) 0 calc(100% - _rem(.8));
+    inset: 0 oe.rem(-.8) 0 calc(100% - oe.rem(.8));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,7 +153,7 @@
 
     &:focus-visible {
       opacity: 1;
-      outline: _rem(.2) solid var(--focus-indicator-color);
+      outline: oe.rem(.2) solid var(--focus-indicator-color);
       outline-offset: 0;
     }
 
@@ -171,7 +171,7 @@
 
   &__chevron .sprite {
     color: var(--horizontal-menu-link-active-foreground-color, var(--text-color));
-    width: _rem(1.6);
+    width: oe.rem(1.6);
     height: auto;
     transition: transform var(--transition-duration--default) linear;
   }

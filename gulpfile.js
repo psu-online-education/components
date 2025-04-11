@@ -1,4 +1,6 @@
 const gulp = require('gulp');
+const sourcemaps = require("gulp-sourcemaps");
+const bulkSass = require("gulp-sass-bulk-import");
 
 /**
  * Updates a file which contains a random build ID.
@@ -28,16 +30,17 @@ const compile_scss = done => {
   components.forEach(function(component) {
     const dist = 'packages/' + component + '/dist';
 
-    gulp.src('packages/' + component + '/src/scss/*.scss')
-      .pipe(sourcemaps.init())
-      .pipe(bulkSass())
-      .pipe(sass({
-        outputStyle: 'compressed',
-        precision: 6,
-        includePaths: ['sass']
-      })).on('error', sass.logError)
-      .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest(dist));
+    if (fs.existsSync('packages/' + component + '/src/scss/styles.scss')) {
+      gulp.src('packages/' + component + '/src/scss/styles.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+          outputStyle: 'compressed',
+          precision: 6,
+          includePaths: ['sass']
+        })).on('error', sass.logError)
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(dist));
+    }
   });
   done();
 };
@@ -98,7 +101,7 @@ const compile_sprites = function(done) {
     .pipe(gulp.dest('packages/sprite/dist'))
     .on('end', () => {
       fs.copyFileSync('packages/sprite/dist/defs/svg/sprite.defs.svg', 'packages/sprite/dist/sprites.svg');
-      fs.rmdirSync('packages/sprite/dist/defs/', { recursive: true });
+      fs.rmSync('packages/sprite/dist/defs/', { recursive: true });
     });
   done();
 };

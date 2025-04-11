@@ -1,7 +1,7 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .parallel-navigation-item {
-  min-width: _rem(10);
+  min-width: oe.rem(10);
   
   &__link {
     color: var(--nittany-navy);
@@ -10,27 +10,27 @@
     font-size: var(--font-size--medium);
     font-weight: var(--font-weight--regular);
     line-height: var(--line-height--xsnug);
-    padding: _rem(1.4) 0;
+    padding: oe.rem(1.4) 0;
     text-decoration: none;
     text-decoration-style: solid;
     text-decoration-color: transparent;
-    text-decoration-thickness: _rem(.1);
+    text-decoration-thickness: oe.rem(.1);
     transition: color  var(--transition-duration--default) linear,
                 outline var(--transition-duration--default) linear;
     align-items: center;
-    gap: _rem(1.9);
+    gap: oe.rem(1.9);
 
     .parallel-navigation-item__title {
       text-decoration: underline;
       text-decoration-style: solid;
       text-decoration-color: transparent;
-      text-decoration-thickness: _rem(.1);
+      text-decoration-thickness: oe.rem(.1);
       transition: text-decoration-color var(--transition-duration--default) linear;
     }
 
-    @include bp(m) {
+    @include oe.bp(m) {
       font-size: var(--font-size--large);
-      padding: _rem(1.7) 0;
+      padding: oe.rem(1.7) 0;
     }
 
     &:hover, &:focus-visible {
@@ -53,7 +53,7 @@
     &--related {
       color: var(--pa-link);
       font-size: var(--font-size--large);
-      padding: _rem(1.7) 0;
+      padding: oe.rem(1.7) 0;
     }
 
     &--related#{&}--active {
@@ -74,13 +74,13 @@
   &__icon {
     color: var(--beaver-blue);
     align-self: baseline;
-    width: _rem(2.1);
-    height: _rem(2.1);
+    width: oe.rem(2.1);
+    height: oe.rem(2.1);
     text-align: center;
   }
 
   &__chevron {
-    margin: 0 _rem(1);
+    margin: 0 oe.rem(1);
     .sprite {
       transition: transform .2s linear;
     }

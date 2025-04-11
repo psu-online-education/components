@@ -1,10 +1,10 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .bio {
   clear: both;
 
   &__title {
-    @include bp(s) {
+    @include oe.bp(s) {
       float: left;
     }
   }
@@ -13,7 +13,7 @@
     font-weight: var(--font-weight--bold);
     line-height: var(--line-height--snug);
 
-    @include bp(s) {
+    @include oe.bp(s) {
       clear: left;
     }
   }
@@ -21,9 +21,9 @@
   &__profile-photo {
     margin-bottom: var(--text-element-vertical-space--default);
 
-    @include bp(s) {
+    @include oe.bp(s) {
       float: right;
-      margin: 0 0 _rem(2.2) _rem(3);
+      margin: 0 0 oe.rem(2.2) oe.rem(3);
     }
   }
 
@@ -32,17 +32,17 @@
     margin: 0 0 var(--text-element-vertical-space--default) 0;
     padding: 0;
 
-    @include bp(s) {
+    @include oe.bp(s) {
       clear: left;
     }
   }
 
   &__credential:not(:last-of-type) {
-    margin-bottom: _rem(.6);
+    margin-bottom: oe.rem(.6);
   }
 
   &__content {
-    @include bp(s) {
+    @include oe.bp(s) {
       clear: left;
     }
   }
@@ -50,7 +50,7 @@
   &__link {
     margin-top: var(--text-element-vertical-space--default);
 
-    @include bp(s) {
+    @include oe.bp(s) {
       clear: left;
     }
   }

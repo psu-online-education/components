@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .sticky-panel {
   position: sticky;
@@ -13,10 +13,10 @@
     &::after {
       content: " ";
       display: block;
-      height: _rem(1.7);
+      height: oe.rem(1.7);
       background: linear-gradient(to bottom,rgba(0,0,0,0.12),rgba(0,0,0,0));
       position: absolute;
-      bottom: _rem(-1.7);
+      bottom: oe.rem(-1.7);
       left: 0;
       width: 100%;
     }

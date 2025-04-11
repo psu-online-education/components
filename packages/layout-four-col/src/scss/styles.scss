@@ -1,9 +1,9 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .layout-four-col {
   flex-direction: column;
 
-  @include bp(xs) {
+  @include oe.bp(xs) {
     flex-direction: row;
 
     & > * {
@@ -11,7 +11,7 @@
     }
   }
 
-  @include bp(m) {
+  @include oe.bp(m) {
     & > * {
       --region-weight: .25;
     }

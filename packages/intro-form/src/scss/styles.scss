@@ -1,9 +1,9 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .intro-form {
-  min-width: _rem(20);
+  min-width: oe.rem(20);
   position: relative;
-  padding: _rem(3) 0;
+  padding: oe.rem(3) 0;
 
   &__geometrics {
     position: absolute;
@@ -30,26 +30,26 @@
     .sprite {
       position: absolute;
       height: auto;
-      width: _rem(60);
+      width: oe.rem(60);
 
-      @include bp(m) {
-        width: _rem(67);
+      @include oe.bp(m) {
+        width: oe.rem(67);
       }
     }
   }
 
   &__sprite:nth-child(2) .sprite {
-    top: _rem(-36.6);
-    right: calc(50% + _rem(30));
+    top: oe.rem(-36.6);
+    right: calc(50% + oe.rem(30));
   }
 
   &__sprite:nth-child(3) .sprite {
-    bottom: _rem(-39);
-    right: _rem(-33);
+    bottom: oe.rem(-39);
+    right: oe.rem(-33);
 
-    @include bp(m) {
-      bottom: _rem(-41);
-      left: calc(50% + _rem(31.9));
+    @include oe.bp(m) {
+      bottom: oe.rem(-41);
+      left: calc(50% + oe.rem(31.9));
       right: unset;
     }
   }
@@ -59,12 +59,12 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: _rem(3);
+    gap: oe.rem(3);
 
-    @include bp(s) {
+    @include oe.bp(s) {
       flex-direction: row;
-      max-width: _rem(97);
-      padding: 0 _rem(4);
+      max-width: oe.rem(97);
+      padding: 0 oe.rem(4);
     }
   }
 
@@ -72,15 +72,15 @@
     background-color: var(--nittany-navy);
     position: relative;
 
-    margin-top: _rem(-3);
+    margin-top: oe.rem(-3);
 
-    @include bp(s) {
-      border-top: _rem(.6) solid var(--sky-blue);
-      box-shadow: _rem(.1) _rem(.2) color-mix(in srgb, var(--nittany-navy) 40%, transparent);
+    @include oe.bp(s) {
+      border-top: oe.rem(.6) solid var(--sky-blue);
+      box-shadow: oe.rem(.1) oe.rem(.2) color-mix(in srgb, var(--nittany-navy) 40%, transparent);
       flex: 1;
       height: fit-content;
       margin-top: 0;
-      margin-bottom: _rem(1);
+      margin-bottom: oe.rem(1);
     }
   }
 
@@ -90,7 +90,7 @@
     &::after {
       content: '';
       position: absolute;
-      inset: calc(100% - _rem(7.5)) 0 0 0;
+      inset: calc(100% - oe.rem(7.5)) 0 0 0;
       background: linear-gradient(to bottom, transparent, var(--nittany-navy));
     }
 
@@ -101,19 +101,19 @@
   }
 
   &__intro {
-    padding: _rem(2.5) _rem(2);
+    padding: oe.rem(2.5) oe.rem(2);
 
-    @include bp(xs) {
-      padding: _rem(3) _rem(4);
+    @include oe.bp(xs) {
+      padding: oe.rem(3) oe.rem(4);
     }
 
-    @include bp(s) {
-      padding: _rem(3) _rem(2)
+    @include oe.bp(s) {
+      padding: oe.rem(3) oe.rem(2)
     }
   }
 
   &__image + &__intro {
-    padding-top: _rem(0);
+    padding-top: oe.rem(0);
   }
 
   &__description {
@@ -122,13 +122,13 @@
   }
 
   &__second {
-    padding: 0 _rem(2) _rem(1) _rem(2);
+    padding: 0 oe.rem(2) oe.rem(1) oe.rem(2);
 
-    @include bp(xs) {
-      padding: 0 _rem(4) _rem(1) _rem(4);
+    @include oe.bp(xs) {
+      padding: 0 oe.rem(4) oe.rem(1) oe.rem(4);
     }
 
-    @include bp(s) {
+    @include oe.bp(s) {
       padding: 0;
       flex: 1;
     }

@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .modal {
   &.show-modal {
@@ -43,19 +43,19 @@
     background-color: var(--white);
     width: fit-content;
     height: auto;
-    padding: _rem(5) _rem(2) _rem(3) _rem(2);
-    margin: _rem(2);
+    padding: oe.rem(5) oe.rem(2) oe.rem(3) oe.rem(2);
+    margin: oe.rem(2);
     overflow: auto;
     max-height: 100%;
 
-    @include bp(xs) {
-      padding: _rem(5);
+    @include oe.bp(xs) {
+      padding: oe.rem(5);
     }
     &:focus {
       outline: none;
     }
     &:focus-visible {
-      outline: _rem(0.2) solid var(--focus-indicator-color);
+      outline: oe.rem(0.2) solid var(--focus-indicator-color);
     }
   }
 
@@ -63,8 +63,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: _rem(5);
-    height: _rem(5);
+    width: oe.rem(5);
+    height: oe.rem(5);
     padding: 0;
     border: none;
     background: none;
@@ -81,16 +81,16 @@
     }
 
     &:focus {
-      outline: solid _rem(0.2) var(--white);
-      outline-offset: _rem(-0.4);
+      outline: solid oe.rem(0.2) var(--white);
+      outline-offset: oe.rem(-0.4);
 
     }
 
     .sprite--fa-times {
       background: none;
       color: var(--pa-link);
-      width: _rem(2.4);
-      height: _rem(2.4);
+      width: oe.rem(2.4);
+      height: oe.rem(2.4);
     }
   }
 }

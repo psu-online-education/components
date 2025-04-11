@@ -1,9 +1,9 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .layout-two-col {
   flex-direction: column;
 
-  @include bp(xs) {
+  @include oe.bp(xs) {
     flex-direction: row;
   }
 }

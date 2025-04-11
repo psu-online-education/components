@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .list {
   margin: 0;
@@ -6,11 +6,11 @@
   list-style-type: none;
 
   &__item {
-    --list-item-density: #{_rem(.5)};
+    --list-item-density: #{oe.rem(.5)};
     color: var(--text-color);
 
     &--density-loose {
-      --list-item-density: #{_rem(1)};
+      --list-item-density: #{oe.rem(1)};
     }
 
     &--horizontal {

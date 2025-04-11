@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 input:not([type]),
 input[type="text"],
@@ -21,12 +21,12 @@ input[type="password"] {
   line-height: var(--form-element-line-height);
   border-color: var(--form-element-border-color);
   border-style: solid none none none;
-  border-width: _rem(.1);
+  border-width: oe.rem(.1);
   max-width: 100%;
 
   &:focus-visible {
-    outline: _rem(.2) solid var(--focus-indicator-color);
-    outline-offset: _rem(.2);
+    outline: oe.rem(.2) solid var(--focus-indicator-color);
+    outline-offset: oe.rem(.2);
   }
 
   &:disabled {

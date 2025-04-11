@@ -1,9 +1,9 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .expandable-section {
 
   &__intro {
-    margin-bottom: _rem(2);
+    margin-bottom: oe.rem(2);
   }
 
   &__content {
@@ -18,7 +18,7 @@
 
   &__expand[aria-expanded="true"] + .expandable-section__content {
     visibility: visible;
-    margin-bottom: _rem(3);
+    margin-bottom: oe.rem(3);
     overflow: visible;
   }
 

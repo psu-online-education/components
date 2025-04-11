@@ -1,22 +1,22 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .skip-link {
-  min-width: _rem(4);
-  padding: _rem(2) _rem(2.5);
-  outline: _rem(0.2) solid var(--sky-blue);
+  min-width: oe.rem(4);
+  padding: oe.rem(2) oe.rem(2.5);
+  outline: oe.rem(0.2) solid var(--sky-blue);
   outline-offset: 0;
   z-index: var(--z-index--floating);
   background: var(--white);
   position: absolute;
   overflow: hidden;
-  clip: rect(_rem(0.1),_rem(0.1),_rem(0.1),_rem(0.1));
+  clip: rect(oe.rem(0.1),oe.rem(0.1),oe.rem(0.1),oe.rem(0.1));
   text-decoration: none;
 
   &:focus {
-    left: _rem(1);
-    top: _rem(1);
+    left: oe.rem(1);
+    top: oe.rem(1);
     clip: auto;
     overflow: visible;
-    outline-offset: _rem(-.4);
+    outline-offset: oe.rem(-.4);
   }
 }

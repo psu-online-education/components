@@ -1,14 +1,14 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .upcoming-events {
 
   &__featured {
     display: flex;
     flex-direction: column;
-    gap: var(--text-element-vertical-space--default) _rem(3);
+    gap: var(--text-element-vertical-space--default) oe.rem(3);
     width: 100%;
 
-    @include bp(s) {
+    @include oe.bp(s) {
       flex-direction: row;
     }
   }
@@ -16,7 +16,7 @@
   &__overflow {
     margin-top: var(--text-element-vertical-space--medium);
 
-    @include bp(s) {
+    @include oe.bp(s) {
       margin-top: var(--text-element-vertical-space--large);
     }
   }

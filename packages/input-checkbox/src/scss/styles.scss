@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 input[type="checkbox"] {
   appearance: none;
@@ -6,8 +6,8 @@ input[type="checkbox"] {
   padding: 0;
   margin: 0;
   background: transparent;
-  width: _rem(2.4);
-  height: _rem(2.4);
+  width: oe.rem(2.4);
+  height: oe.rem(2.4);
   position: relative;
 
   &:focus {
@@ -15,17 +15,17 @@ input[type="checkbox"] {
   }
 
   &:focus-visible {
-    outline: _rem(.2) solid var(--focus-indicator-color);
-    outline-offset: _rem(.2);
+    outline: oe.rem(.2) solid var(--focus-indicator-color);
+    outline-offset: oe.rem(.2);
   }
 
   &::before {
     position: absolute;
     content: '';
     inset: 0;
-    border-width: _rem(.1);
+    border-width: oe.rem(.1);
     border-style: solid;
-    border-radius: _rem(.5);
+    border-radius: oe.rem(.5);
     transition: background-color var(--transition-duration--default) linear,
                 border-color var(--transition-duration--default) linear;
   }
@@ -36,8 +36,8 @@ input[type="checkbox"] {
     inset: 0;
     background-color: transparent;
     // @TODO: Keep an eye on the need for -webkit-mask.
-    -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439 105c12 13 12 33 0 46L183 407a32 32 0 0 1-46 0L9 279a32 32 0 0 1 46-46l105 106 233-234c13-12 33-12 46 0z"/></svg>') no-repeat center/ _rem(1.4) auto;
-    mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439 105c12 13 12 33 0 46L183 407a32 32 0 0 1-46 0L9 279a32 32 0 0 1 46-46l105 106 233-234c13-12 33-12 46 0z"/></svg>') no-repeat center/ _rem(1.4) auto;
+    -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439 105c12 13 12 33 0 46L183 407a32 32 0 0 1-46 0L9 279a32 32 0 0 1 46-46l105 106 233-234c13-12 33-12 46 0z"/></svg>') no-repeat center/ oe.rem(1.4) auto;
+    mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439 105c12 13 12 33 0 46L183 407a32 32 0 0 1-46 0L9 279a32 32 0 0 1 46-46l105 106 233-234c13-12 33-12 46 0z"/></svg>') no-repeat center/ oe.rem(1.4) auto;
     transition: background-color var(--transition-duration--default) linear;
   }
 
@@ -76,7 +76,7 @@ input[type="checkbox"] {
     &:disabled {
       &::before {
         background-color: var(--form-element-disabled-background-color);
-        border:  _rem(.1) solid var(--form-element-border-color);
+        border:  oe.rem(.1) solid var(--form-element-border-color);
       }
 
       &:checked {

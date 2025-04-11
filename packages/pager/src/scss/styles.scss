@@ -1,11 +1,11 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .pager {
   text-align: center;
 
   &__items {
     display: inline-flex;
-    gap: _rem(1);
+    gap: oe.rem(1);
     margin: 0 auto;
     flex-wrap: wrap;
     list-style-type:none;
@@ -19,8 +19,8 @@
     text-decoration: none;
     display: flex;
     text-align: center;
-    width: _rem(4);
-    height: _rem(4);
+    width: oe.rem(4);
+    height: oe.rem(4);
     align-items: center;
     justify-content: center;
     transition: background-color var(--transition-duration--default) linear,
@@ -38,7 +38,7 @@
       &::before {
         content: '';
         position: absolute;
-        inset: _rem(.2) _rem(.2) calc(100% - #{_rem(.4)}) _rem(.2);
+        inset: oe.rem(.2) oe.rem(.2) calc(100% - #{oe.rem(.4)}) oe.rem(.2);
         background-color: var(--keystone);
       }
     }

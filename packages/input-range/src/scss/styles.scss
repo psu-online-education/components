@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 @mixin range-thumb {
   &::-webkit-slider-thumb {
@@ -31,23 +31,23 @@ input[type="range"] {
   @include range-container {
     appearance: none;
     -webkit-appearance: none;
-    height: _rem(.6);
+    height: oe.rem(.6);
   }
 
   @include range-thumb {
     appearance: none;
     -webkit-appearance: none;
-    width: _rem(2.8);
-    height: _rem(2.8);
-    border: _rem(.2) solid var(--white);
+    width: oe.rem(2.8);
+    height: oe.rem(2.8);
+    border: oe.rem(.2) solid var(--white);
     border-radius: 50%;
   }
 
   &:focus-visible {
 
     @include range-thumb {
-      outline: _rem(.2) solid var(--focus-indicator-color);
-      outline-offset: _rem(.2);
+      outline: oe.rem(.2) solid var(--focus-indicator-color);
+      outline-offset: oe.rem(.2);
     }
   }
 
@@ -66,7 +66,7 @@ input[type="range"] {
 
     @include range-thumb {
       background-color: var(--pa-link);
-      box-shadow: color-mix(in srgb, transparent, var(--nittany-navy) 30%) 0 _rem(.3) _rem(.6);
+      box-shadow: color-mix(in srgb, transparent, var(--nittany-navy) 30%) 0 oe.rem(.3) oe.rem(.6);
     }
 
     &:disabled {
@@ -76,7 +76,7 @@ input[type="range"] {
 
       @include range-thumb {
         background-color: var(--limestone);
-        box-shadow: color-mix(in srgb, transparent, var(--nittany-navy) 30%) 0 _rem(.3) _rem(.6);
+        box-shadow: color-mix(in srgb, transparent, var(--nittany-navy) 30%) 0 oe.rem(.3) oe.rem(.6);
       }
     }
   }
@@ -88,7 +88,7 @@ input[type="range"] {
 
     @include range-thumb {
       background-color: var(--white);
-      box-shadow: color-mix(in srgb, transparent, var(--nittany-navy) 70%) 0 _rem(.3) _rem(.6);
+      box-shadow: color-mix(in srgb, transparent, var(--nittany-navy) 70%) 0 oe.rem(.3) oe.rem(.6);
     }
 
     &:disabled {
@@ -98,7 +98,7 @@ input[type="range"] {
 
       @include range-thumb {
         background-color: var(--limestone);
-        box-shadow: color-mix(in srgb, transparent, var(--nittany-navy) 70%) 0 _rem(.3) _rem(.6);
+        box-shadow: color-mix(in srgb, transparent, var(--nittany-navy) 70%) 0 oe.rem(.3) oe.rem(.6);
       }
     }
   }

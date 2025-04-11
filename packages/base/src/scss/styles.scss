@@ -1,5 +1,14 @@
-// A couple remaining SASS artifacts.
-@import "mixins";
+// Custom properties.
+@use "variables/buttons";
+@use "variables/colors";
+@use "variables/spacing";
+@use "variables/transitions";
+@use "variables/typography" as psu-online-education-typography;
+@use "variables/forms";
+@use "variables/layers";
+
+@use "normalize";
+@use "typography";
 
 // Custom properties are amazing...but often times with newer technology,
 // often alien at the same time.  To understand this mechanism, one first
@@ -35,15 +44,3 @@
   --if-dark: initial;
   --if-light: ;
 }
-
-// Custom properties.
-@import "variables/buttons";
-@import "variables/colors";
-@import "variables/spacing";
-@import "variables/transitions";
-@import "variables/typography";
-@import "variables/forms";
-@import "variables/layers";
-
-@import "normalize";
-@import "typography";

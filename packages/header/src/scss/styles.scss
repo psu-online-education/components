@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .header {
   // Straight beaver blue from 0% to 44rem left of center, then transition
@@ -7,8 +7,8 @@
   --header-background: #{linear-gradient(
     to right,
     var(--beaver-blue) 0%,
-    var(--beaver-blue) calc(50% - _rem(44)),
-    var(--nittany-navy) calc(50% + _rem(44)),
+    var(--beaver-blue) calc(50% - oe.rem(44)),
+    var(--nittany-navy) calc(50% + oe.rem(44)),
     var(--nittany-navy) 100%
   )};
 
@@ -30,7 +30,7 @@
     --dogear-right-color: color-mix(in srgb, var(--beaver-blue), var(--nittany-navy) 25%);
     --hub-geometrics-opacity: .2;
 
-    @include bp(s) {
+    @include oe.bp(s) {
       --dogear-right-color: color-mix(in srgb, var(--beaver-blue), var(--nittany-navy) 50%);
     }
   }
@@ -54,33 +54,33 @@
     // positions.
     .sprite {
       position: absolute;
-      width: _rem(71.8);
-      top: _rem(-42.7);
+      width: oe.rem(71.8);
+      top: oe.rem(-42.7);
       height: auto;
       opacity: var(--hub-geometrics-opacity);
 
       &:nth-child(2) {
-        left: calc(50% - #{_rem(33)});
+        left: calc(50% - #{oe.rem(33)});
       }
 
       &:nth-child(3) {
-        left: calc(50% + #{_rem(38)});
+        left: calc(50% + #{oe.rem(38)});
       }
     }
   }
 
   &__inner {
-    max-width: _rem(122);
+    max-width: oe.rem(122);
     margin: 0 auto;
-    padding: 0 _rem(2);
+    padding: 0 oe.rem(2);
     display: grid;
     grid-template-areas:
       "dogear content"
       "overflow overflow";
-    grid-template-columns: min(50%, _rem(24)) auto;
+    grid-template-columns: min(50%, oe.rem(24)) auto;
 
-    @include bp(s) {
-      padding: 0 _rem(4);
+    @include oe.bp(s) {
+      padding: 0 oe.rem(4);
     }
   }
 
@@ -91,7 +91,7 @@
 
     // Quote the calc in order to prevent SCSS from evaluating it.  Instead,
     // we want the browser to run the calculation to prevent rounding errors.
-    padding: _rem(1) clamp(_rem(5), #{'calc(100% / 3)'}, _rem(7.5)) _rem(1) 0;
+    padding: oe.rem(1) clamp(oe.rem(5), #{'calc(100% / 3)'}, oe.rem(7.5)) oe.rem(1) 0;
 
     // This clip path forms the "45 degree" part of the dogear.  There are a
     // few unique things going on here.  First off, the top of the clip path
@@ -106,32 +106,32 @@
     // here is that the lower-left end of the clip-path should be taller and
     // wider than the dogear.  A length of 100vw should ensure this.
     clip-path: polygon(
-      _rem(-2) _rem(-.1),
-      100% _rem(-.1),
+      oe.rem(-2) oe.rem(-.1),
+      100% oe.rem(-.1),
       calc(100% - 100vw) 100vw
     );
 
-    @include bp(s) {
+    @include oe.bp(s) {
       // Update the clip-path to extend -4rem to the left to account for the
       // increased padding on the container.
       clip-path: polygon(
-          _rem(-4) _rem(-.1),
-          100% _rem(-.1),
+          oe.rem(-4) oe.rem(-.1),
+          100% oe.rem(-.1),
           calc(100% - 100vw) 100vw
       );
     }
 
-    @include bp(m) {
-      padding-top: _rem(1.5);
-      padding-bottom: _rem(1.5);
+    @include oe.bp(m) {
+      padding-top: oe.rem(1.5);
+      padding-bottom: oe.rem(1.5);
     }
 
     @media screen and (min-width: 1180px) {
       // Update the clip path to extend to the ege of the viewport using the
       // same math as the ::before pseudo-element of the dogear element.
       clip-path: polygon(
-        calc((-100vw + _rem(110)) / 2) _rem(-.1),
-        100% _rem(-.1),
+        calc((-100vw + oe.rem(110)) / 2) oe.rem(-.1),
+        100% oe.rem(-.1),
         calc(100% - 100vw) 100vw
       );
     }
@@ -142,7 +142,7 @@
       position: absolute;
 
       // Extend the pseudo-element -2rem to the left to meet the viewport edge.
-      inset: 0 0 0 _rem(-2);
+      inset: 0 0 0 oe.rem(-2);
 
       background: linear-gradient(
         to right,
@@ -150,9 +150,9 @@
         var(--dogear-right-color) 100%
       );
 
-      @include bp(s) {
+      @include oe.bp(s) {
         // Extend the pseudo-element -4rem to compensate for the wider padding.
-        inset: 0 0 0 _rem(-4);
+        inset: 0 0 0 oe.rem(-4);
       }
 
       @media screen and (min-width: 1180px) {
@@ -162,7 +162,7 @@
         // containing element, and dividing that by 2.  It's important not to
         // overshoot the viewport on the left due to the gradient that must
         // be applied to the dogear.
-        inset: 0 0 0 calc((-100vw + #{_rem(110)}) / 2);
+        inset: 0 0 0 calc((-100vw + #{oe.rem(110)}) / 2);
       }
     }
   }
@@ -172,10 +172,10 @@
     grid-area: content;
     display: flex;
     align-items: center;
-    padding: _rem(.5) 0;
+    padding: oe.rem(.5) 0;
 
-    @include bp(m) {
-      padding: _rem(1) 0;
+    @include oe.bp(m) {
+      padding: oe.rem(1) 0;
     }
   }
 
@@ -184,21 +184,21 @@
     grid-area: overflow;
 
     &:empty {
-      padding: _rem(.6) 0;
+      padding: oe.rem(.6) 0;
     }
   }
   
   &--tall &__inner {
-    @include bp(l) {
-      grid-template-columns: min(50%, _rem(25.5)) auto;
+    @include oe.bp(l) {
+      grid-template-columns: min(50%, oe.rem(25.5)) auto;
     }
   }
 
   &--tall &__dogear {
-    @include bp(l) {
-      padding-top: _rem(2);
-      padding-bottom: _rem(2);
-      padding-right: _rem(9);
+    @include oe.bp(l) {
+      padding-top: oe.rem(2);
+      padding-bottom: oe.rem(2);
+      padding-right: oe.rem(9);
     }
   }
 }

@@ -1,42 +1,42 @@
-@import "../../../base/src/scss/mixins";
+@use "../../../base/src/scss/mixins" as oe;
 
 .icon-list {
   list-style-type: none;
-  margin: 0 0 _rem(-2) 0;
+  margin: 0 0 oe.rem(-2) 0;
   padding: 0;
 
   &--two-col {
     column-count: 2;
-    column-width: _rem(32);
-    column-gap: _rem(3);
+    column-width: oe.rem(32);
+    column-gap: oe.rem(3);
   }
 
   &--three-col {
     column-count: 3;
-    column-width: _rem(21);
-    column-gap: _rem(3);
+    column-width: oe.rem(21);
+    column-gap: oe.rem(3);
   }
 
   &__item {
     break-inside: avoid;
 
-    padding-bottom: _rem(2);
+    padding-bottom: oe.rem(2);
   }
 
   &__content {
     display: flex;
     align-items: baseline;
     flex-wrap: nowrap;
-    gap: _rem(1.5);
+    gap: oe.rem(1.5);
   }
 
   &__icon {
     color: var(--beaver-blue);
 
     .sprite {
-      width: _rem(3);
+      width: oe.rem(3);
       height: auto;
-      max-height: _rem(3);
+      max-height: oe.rem(3);
     }
   }
 }
