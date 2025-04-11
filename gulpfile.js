@@ -1,6 +1,4 @@
 const gulp = require('gulp');
-const sourcemaps = require("gulp-sourcemaps");
-const bulkSass = require("gulp-sass-bulk-import");
 
 /**
  * Updates a file which contains a random build ID.
@@ -20,7 +18,6 @@ const update_build_id = done => {
  */
 const compile_scss = done => {
   const fs = require('fs');
-  const bulkSass = require('gulp-sass-bulk-import');
   const sass = require('gulp-sass')(require('sass'));
   const sourcemaps = require('gulp-sourcemaps');
   const components = fs.readdirSync('packages').filter(function(file) {
