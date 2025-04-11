@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/patternlab",
-  "version": "2.0.47",
+  "version": "2.0.48",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -17,7 +17,7 @@
     "@psu-online-education/auto-expansion": "*",
     "@psu-online-education/background-container": "*",
     "@psu-online-education/band": "*",
-    "@psu-online-education/base": "^2.0",
+    "@psu-online-education/base": "^3.0",
     "@psu-online-education/basic-tile": "*",
     "@psu-online-education/bio": "*",
     "@psu-online-education/bio-collection": "*",
@@ -97,6 +97,7 @@
     "@psu-online-education/spinner": "*",
     "@psu-online-education/sprite": "*",
     "@psu-online-education/sticky-panel": "*",
+    "@psu-online-education/table": "*",
     "@psu-online-education/tabs": "*",
     "@psu-online-education/textarea": "*",
     "@psu-online-education/upcoming-events": "*",

@@ -1,4 +1,4 @@
-@import '../../../base/src/scss/imports/variables';
+@use "../../../base/src/scss/mixins" as oe;
 
 // @TODO: This is not part of the component API.
 .button--raised {
@@ -10,10 +10,10 @@
   --focus-indicator-color-light: var(--nittany-navy);
 
   transition: color .3s linear, background-color .3s linear, box-shadow .3s linear;
-  box-shadow: _rem(.1) _rem(.1) 0 0 color-mix(in srgb, var(--nittany-navy) 50%, transparent);
+  box-shadow: oe.rem(.1) oe.rem(.1) 0 0 color-mix(in srgb, var(--nittany-navy) 50%, transparent);
 
   &:focus-visible, &:hover {
-    box-shadow: _rem(.1) _rem(.1) 0 0 color-mix(in srgb, var(--nittany-navy) 100%, transparent);
+    box-shadow: oe.rem(.1) oe.rem(.1) 0 0 color-mix(in srgb, var(--nittany-navy) 100%, transparent);
     background-color: var(--pugh-blue);
   }
 

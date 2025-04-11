@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/imports/variables";
+@use "../../../base/src/scss/mixins" as oe;
 
 input[type="radio"] {
   appearance: none;
@@ -6,8 +6,8 @@ input[type="radio"] {
   padding: 0;
   margin: 0;
   background: transparent;
-  width: _rem(2.4);
-  height: _rem(2.4);
+  width: oe.rem(2.4);
+  height: oe.rem(2.4);
   position: relative;
 
   &:disabled {
@@ -19,15 +19,15 @@ input[type="radio"] {
   }
 
   &:focus-visible {
-    outline: _rem(.2) solid var(--focus-indicator-color);
-    outline-offset: _rem(.2);
+    outline: oe.rem(.2) solid var(--focus-indicator-color);
+    outline-offset: oe.rem(.2);
   }
 
   &::before {
     position: absolute;
     content: '';
     inset: 0;
-    border: _rem(.1) solid var(--form-element-border-color);
+    border: oe.rem(.1) solid var(--form-element-border-color);
     border-radius: 50%;
     transition: background-color var(--transition-duration--default) linear,
     border-color var(--transition-duration--default) linear;
@@ -36,7 +36,7 @@ input[type="radio"] {
   &::after {
     content: '';
     position: absolute;
-    inset: _rem(.5);
+    inset: oe.rem(.5);
     transition: background-color var(--transition-duration--default) linear;
     border-radius: 50%;
   }

@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/imports/variables";
+@use "../../../base/src/scss/mixins" as oe;
 
 .navigation-tile-image {
   display: flex;
@@ -6,8 +6,8 @@
   justify-content: flex-end;
   position: relative;
   aspect-ratio: 16/9;
-  outline: solid _rem(.2) transparent;
-  outline-offset: _rem(.2);
+  outline: solid oe.rem(.2) transparent;
+  outline-offset: oe.rem(.2);
   transition: outline-color var(--transition-duration--default) linear;
   overflow: hidden;
   text-decoration: none;
@@ -26,7 +26,7 @@
 
   &:focus-visible {
     outline-color: var(--focus-indicator-color);
-    outline-offset: _rem(.2);
+    outline-offset: oe.rem(.2);
   }
 
   &__img {
@@ -36,7 +36,7 @@
 
   &__overlay {
     position: relative;
-    height: min(20%, _rem(7.5));
+    height: min(20%, oe.rem(7.5));
     background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
 
     &::after {
@@ -57,11 +57,11 @@
     font-size: var(--font-size--large);
     line-height: var(--line-height--2xsnug);
     font-weight: var(--font-weight--medium);
-    padding: _rem(1) _rem(2) _rem(2) _rem(2);
+    padding: oe.rem(1) oe.rem(2) oe.rem(2) oe.rem(2);
     transition: background var(--transition-duration--default) linear;
     display: flex;
     align-items: center;
-    gap: _rem(1.5);
+    gap: oe.rem(1.5);
   }
 
   &__chevron {

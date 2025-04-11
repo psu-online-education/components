@@ -1,7 +1,7 @@
-@import "../../../base/src/scss/imports/variables";
+@use "../../../base/src/scss/mixins" as oe;
 
 .social-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: _rem(1);
+  gap: oe.rem(1);
 }

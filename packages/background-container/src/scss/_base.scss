@@ -1,0 +1,72 @@
+@use "../../../base/src/scss/mixins" as oe;
+@use "colors" as *;
+
+.bg {
+  background: none;
+  padding-top: oe.rem(3);
+  padding-bottom: oe.rem(3);
+  position: relative;
+
+  //noinspection CssUnknownProperty
+  @supports (container-type: inline-size ) {
+    // Might not be needed if a linear scaling function can work now?
+    container-type: inline-size;
+  }
+
+  &--padding-none {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &--padding-large {
+    padding-top: oe.rem(5);
+    padding-bottom: oe.rem(5);
+  }
+
+  @include oe.bp(xs) {
+    padding-top: oe.rem(4);
+    padding-bottom: oe.rem(4);
+
+    &--padding-none {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    &--padding-small {
+      padding-top: oe.rem(3);
+      padding-bottom: oe.rem(3);
+    }
+
+    &--padding-large {
+      padding-top: oe.rem(5);
+      padding-bottom: oe.rem(5);
+    }
+  }
+
+  @include oe.bp(m) {
+    &--padding-large {
+      padding-top: oe.rem(6);
+      padding-bottom: oe.rem(6);
+    }
+  }
+
+  @each $color, $property in $supported_colors {
+    &--#{$color} {
+      --background-color: #{$property};
+      background-color: var(--background-color);
+    }
+  }
+
+  &__sprites {
+    position: absolute;
+    overflow: hidden;
+    inset: 0 0 0 0;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+
+}

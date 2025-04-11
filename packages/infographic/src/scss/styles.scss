@@ -1,8 +1,7 @@
-@import "../../../base/src/scss/imports/variables";
-@import "../../../base/src/scss/imports/layout";
+@use "../../../base/src/scss/mixins" as oe;
 
 .infographic {
-  min-width: _rem(23);
+  min-width: oe.rem(23);
   display: flex;
   flex-wrap: nowrap;
   margin: 0;
@@ -18,13 +17,14 @@
     text-transform: uppercase;
     white-space: nowrap;
 
+    // @TODO: Remove when color-mix is widely supported.
     @supports not (color: color-mix(in srgb, white, white)) {
-      color: rgba($nittany-navy, .5);
+      color: #001e447f;
     }
   }
 
   &__emphasis + &__stacked {
-    margin-left: _rem(1.5);
+    margin-left: oe.rem(1.5);
   }
 
   &__stacked {
@@ -51,29 +51,29 @@
 
   // Draw primary back to the left a bit...
   &__preliminary + &__primary {
-    margin-left: _rem(-.25);
+    margin-left: oe.rem(-.25);
   }
 
   // Tweak margins when emphasis + stacked is in use.
   &__emphasis + &__stacked {
     .infographic__preliminary {
-      margin-top: _rem(.8);
+      margin-top: oe.rem(.8);
 
-      @include bp(s) {
-        margin-top: _rem(.9);
+      @include oe.bp(s) {
+        margin-top: oe.rem(.9);
       }
 
       & + .infographic__primary {
-        margin-top: _rem(-.3);
+        margin-top: oe.rem(-.3);
 
-        @include bp(s) {
-          margin-top: _rem(-.1);
+        @include oe.bp(s) {
+          margin-top: oe.rem(-.1);
         }
       }
     }
 
     .infographic__primary {
-      margin-top: _rem(.3);
+      margin-top: oe.rem(.3);
     }
   }
 }

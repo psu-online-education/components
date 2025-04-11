@@ -1,7 +1,6 @@
 @use "sass:color";
 
-@import "../../../base/src/scss/imports/variables";
-@import "../../../base/src/scss/imports/layout";
+@use "../../../base/src/scss/mixins" as oe;
 
 .band {
   background-color: var(--beaver-blue);
@@ -16,8 +15,8 @@
     background: linear-gradient(
         to right,
         var(--beaver-blue) 0%,
-        var(--beaver-blue) calc(50% - _rem(44)),
-        var(--nittany-navy) calc(50% + _rem(44)),
+        var(--beaver-blue) calc(50% - oe.rem(44)),
+        var(--nittany-navy) calc(50% + oe.rem(44)),
         var(--nittany-navy) 100%
     );
 
@@ -40,17 +39,17 @@
       // positions.
       .sprite {
         position: absolute;
-        width: _rem(71.8);
-        top: _rem(-42.7);
+        width: oe.rem(71.8);
+        top: oe.rem(-42.7);
         height: auto;
         opacity: .3;
 
         &:nth-child(2) {
-          left: calc(50% - #{_rem(33)});
+          left: calc(50% - #{oe.rem(33)});
         }
 
         &:nth-child(3) {
-          left: calc(50% + #{_rem(38)});
+          left: calc(50% + #{oe.rem(38)});
         }
       }
     }
@@ -58,27 +57,27 @@
 
   &__content {
     position: relative;
-    padding: _rem(1.2) 2.6%;
+    padding: oe.rem(1.2) 2.6%;
 
-    @include bp(m) {
-      padding: _rem(1.6) _rem(4);
+    @include oe.bp(m) {
+      padding: oe.rem(1.6) oe.rem(4);
     }
   }
 
   &--padding-compact .band__content {
-    padding-top: _rem(.8);
-    padding-bottom: _rem(.8);
+    padding-top: oe.rem(.8);
+    padding-bottom: oe.rem(.8);
 
-    @include bp(m) {
-      padding-top: _rem(.8);
-      padding-bottom: _rem(.8);
+    @include oe.bp(m) {
+      padding-top: oe.rem(.8);
+      padding-bottom: oe.rem(.8);
     }
   }
 
   &--padding-none .band__content {
     padding: 0;
 
-    @include bp(m) {
+    @include oe.bp(m) {
       padding: 0;
     }
   }

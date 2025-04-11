@@ -1,26 +1,26 @@
-@import '../../../base/src/scss/imports/variables';
+@use "../../../base/src/scss/mixins" as oe;
 
 .vertical-menu {
   &__parent {
     display: block;
     font-size: var(--font-size--large);
     font-weight: var(--font-weight--bold);
-    color: var(--text-color--default);
-    border-bottom: _rem(.2) solid var(--pugh-blue);
+    color: var(--text-color);
+    border-bottom: oe.rem(.2) solid var(--pugh-blue);
     text-decoration: none;
-    padding: _rem(1.5) 0;
+    padding: oe.rem(1.5) 0;
 
     &--tight {
-      padding: _rem(1) 0;
+      padding: oe.rem(1) 0;
     }
 
     &--loose {
-      padding: _rem(2) 0;
+      padding: oe.rem(2) 0;
     }
   }
 
   &__menu:not(&__menu--1) {
-    margin-left: _rem(2);
+    margin-left: oe.rem(2);
     flex-basis: 100%;
     visibility: hidden;
     transition: height var(--transition-duration--default) ease-in-out,
@@ -31,11 +31,11 @@
     background: transparent;
     color: var(--pa-link);
     border: none;
-    font-size: _rem(1.6);
+    font-size: oe.rem(1.6);
     cursor: pointer;
 
     &:focus-visible {
-      outline: _rem(.2) solid var(--focus-indicator-color);
+      outline: oe.rem(.2) solid var(--focus-indicator-color);
       outline-offset: 0;
     }
 
@@ -58,15 +58,15 @@
     flex-wrap: wrap;
 
     &--1 {
-      border-bottom: _rem(.1) solid var(--pugh-blue);
+      border-bottom: oe.rem(.1) solid var(--pugh-blue);
     }
 
     &:not(&--1):first-child {
-      border-top: _rem(.1) solid var(--slate-light);
+      border-top: oe.rem(.1) solid var(--slate-light);
     }
 
     &:not(&--1):not(:last-child) {
-      border-bottom: _rem(.1) solid var(--slate-light);
+      border-bottom: oe.rem(.1) solid var(--slate-light);
     }
 
     &--1#{&}--highlight {
@@ -84,35 +84,35 @@
   }
 
   &__link {
-    color: var(--text-color--default);
+    color: var(--text-color);
     display: block;
     font-weight: var(--font-weight--regular);
     flex: 1;
     text-decoration: none;
 
     &--1 {
-      padding: _rem(1.5) 0;
+      padding: oe.rem(1.5) 0;
     }
 
     &:not(&--1) {
-      padding: _rem(1) 0;
+      padding: oe.rem(1) 0;
       font-size: var(--font-size--msmall);
     }
 
     &--tight#{&}--1 {
-      padding: _rem(1) 0;
+      padding: oe.rem(1) 0;
     }
 
     &--tight#{&}:not(&--1) {
-      padding: _rem(.7) 0;
+      padding: oe.rem(.7) 0;
     }
 
     &--loose#{&}--1 {
-      padding: _rem(2) 0;
+      padding: oe.rem(2) 0;
     }
 
     &--loose#{&}:not(&--1) {
-      padding: _rem(1.5) 0;
+      padding: oe.rem(1.5) 0;
     }
 
     &:hover, &:focus-visible {

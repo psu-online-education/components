@@ -1,17 +1,16 @@
-@import "../../../base/src/scss/imports/variables";
-@import "../../../base/src/scss/imports/layout";
+@use "../../../base/src/scss/mixins" as oe;
 
 .parallel-navigation {
   &__intro {
-    margin-bottom: _rem(.8);
+    margin-bottom: oe.rem(.8);
 
-    @include bp(m) {
-      margin-bottom: _rem(1.5);
+    @include oe.bp(m) {
+      margin-bottom: oe.rem(1.5);
     }
   }
 
   &__heading {
-    margin-bottom: _rem(.8);
+    margin-bottom: oe.rem(.8);
   }
 
   &__text {
@@ -23,26 +22,25 @@
   &__list {
     margin: 0;
     padding: 0;
-    font-family: $open-sans;
 
     &--two-col {
       column-count: 2;
-      column-gap: _rem(2);
-      column-width: _rem(29);
+      column-gap: oe.rem(2);
+      column-width: oe.rem(29);
     }
 
     &--three-col {
       column-count: 3;
-      column-gap: _rem(2);
-      column-width: _rem(27);
+      column-gap: oe.rem(2);
+      column-width: oe.rem(27);
     }
   }
 
   &__item {
-    border-bottom: _rem(.1) solid var(--medium-grey);
+    border-bottom: oe.rem(.1) solid var(--medium-grey);
     display: inline-block;
     list-style-type: none;
-    padding: _rem(.4) 0;
+    padding: oe.rem(.4) 0;
     width: 100%;
     margin: 0;
     &::before {

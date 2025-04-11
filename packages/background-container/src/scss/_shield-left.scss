@@ -1,90 +1,90 @@
-&.bg--shield-left {
-  & > .bg__sprites > .bg__sprite .sprite {
-    position: absolute;
-    height: auto;
-    width: _rem(70);
-    left: _rem(-62);
-    top: _rem(-42);
-    display: none; // @TODO: When container query support is more mainstream, simplify this.
+@use "../../../base/src/scss/mixins" as oe;
 
-    //noinspection CssUnknownProperty
+.bg {
+  &.bg--shield-left {
+    & > .bg__sprites > .bg__sprite .sprite {
+      position: absolute;
+      height: auto;
+      width: oe.rem(70);
+      left: oe.rem(-62);
+      top: oe.rem(-42);
+      display: none; // @TODO: When container query support is more mainstream, simplify this.
+
+      //noinspection CssUnknownProperty
+      @supports (container-type: inline-size ) {
+        display: initial;
+
+        //noinspection CssInvalidAtRule
+        @container (min-width: 550px) {
+          width: oe.rem(90);
+          left: oe.rem(-78);
+          top: oe.rem(-49);
+        }
+
+        //noinspection CssInvalidAtRule
+        @container (min-width: 800px) {
+          width: oe.rem(110);
+          left: oe.rem(-98);
+          top: oe.rem(-63);
+        }
+
+        //noinspection CssInvalidAtRule
+        @container (min-width: 950px) {
+          width: oe.rem(130);
+          left: oe.rem(-112);
+          top: oe.rem(-76);
+        }
+
+        //noinspection CssInvalidAtRule
+        @container (min-width: 1280px) {
+          left: oe.rem(-98);
+        }
+
+        //noinspection CssInvalidAtRule
+        @container (min-width: 1500px) {
+          left: oe.rem(-95);
+        }
+
+        //noinspection CssInvalidAtRule
+        @container (min-width: 1800px) {
+          left: oe.rem(-83);
+        }
+      }
+    }
+
+    &.bg--beaver-blue > .bg__sprites > .bg__sprite .sprite {
+      opacity: .30;
+      color: var(--sky-blue);
+    }
+  }
+
+  &.bg--shield-left.bg--narrow > .bg__sprites > .bg__sprite .sprite {
     @supports (container-type: inline-size ) {
-      display: initial;
-
-      //noinspection CssInvalidAtRule
-      @container (min-width: 550px) {
-        width: _rem(90);
-        left: _rem(-78);
-        top: _rem(-49);
-      }
-
-      //noinspection CssInvalidAtRule
-      @container (min-width: 800px) {
-        width: _rem(110);
-        left: _rem(-98);
-        top: _rem(-63);
-      }
 
       //noinspection CssInvalidAtRule
       @container (min-width: 950px) {
-        width: _rem(130);
-        left: _rem(-112);
-        top: _rem(-76);
+        left: oe.rem(-110);
+      }
+
+      //noinspection CssInvalidAtRule
+      @container (min-width: 1024px) {
+        left: oe.rem(-105);
       }
 
       //noinspection CssInvalidAtRule
       @container (min-width: 1280px) {
-        left: _rem(-98);
+        left: oe.rem(-90);
       }
 
       //noinspection CssInvalidAtRule
       @container (min-width: 1500px) {
-        left: _rem(-95);
+        left: oe.rem(-85);
       }
 
       //noinspection CssInvalidAtRule
       @container (min-width: 1800px) {
-        left: _rem(-83);
+        left: oe.rem(-70);
       }
-    }
-  }
-
-  &.bg--primary-blue > .bg__sprites > .bg__sprite .sprite {
-    opacity: .25;
-  }
-
-  &.bg--beaver-blue > .bg__sprites > .bg__sprite .sprite {
-    opacity: .30;
-    color: var(--sky-blue);
-  }
-}
-
-&.bg--shield-left.bg--narrow > .bg__sprites > .bg__sprite .sprite {
-  @supports (container-type: inline-size ) {
-
-    //noinspection CssInvalidAtRule
-    @container (min-width: 950px) {
-      left: _rem(-110);
-    }
-
-    //noinspection CssInvalidAtRule
-    @container (min-width: 1024px) {
-      left: _rem(-105);
-    }
-
-    //noinspection CssInvalidAtRule
-    @container (min-width: 1280px) {
-      left: _rem(-90);
-    }
-
-    //noinspection CssInvalidAtRule
-    @container (min-width: 1500px) {
-      left: _rem(-85);
-    }
-
-    //noinspection CssInvalidAtRule
-    @container (min-width: 1800px) {
-      left: _rem(-70);
     }
   }
 }

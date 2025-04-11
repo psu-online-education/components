@@ -1,17 +1,17 @@
-@import "../../../base/src/scss/imports/variables";
+@use "../../../base/src/scss/mixins" as oe;
 
 .basic-tile {
-  min-width: _rem(12);
+  min-width: oe.rem(12);
   font-size: var(--font-size--default);
   line-height: var(--line-height--xsnug);
   font-family: var(--font-family--default);
   color: var(--text-color--light);
   background: var(--pa-link);
-  padding: _rem(1.5) _rem(2);
+  padding: oe.rem(1.5) oe.rem(2);
   transition: background var(--transition-duration--default) linear,
               outline-color var(--transition-duration--default) linear;
-  outline: solid _rem(.2) transparent;
-  outline-offset: _rem(-0.4);
+  outline: solid oe.rem(.2) transparent;
+  outline-offset: oe.rem(-0.4);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +25,7 @@
 
   &:focus-visible {
     outline-color: var(--focus-indicator-color);
-    outline-offset: _rem(-0.4);
+    outline-offset: oe.rem(-0.4);
   }
 
   &__primary-label {
@@ -37,8 +37,8 @@
   }
 
   &--light {
-    border: _rem(.1) solid var(--slate-light);
-    box-shadow: _rem(.1) _rem(.2) _rem(.3)  color-mix(in srgb, var(--nittany-navy) 25%, transparent);
+    border: oe.rem(.1) solid var(--slate-light);
+    box-shadow: oe.rem(.1) oe.rem(.2) oe.rem(.3)  color-mix(in srgb, var(--nittany-navy) 25%, transparent);
     background: var(--white);
     color: var(--pa-link);
 

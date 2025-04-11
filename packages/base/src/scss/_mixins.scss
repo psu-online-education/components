@@ -1,5 +1,11 @@
+@use "sass:string";
+$base-rem-scale: 1 !default;
+
+@function rem($base) {
+  @return string.unquote(($base * $base-rem-scale) + 'rem');
+}
+
 // Expose breakpoint values, for edge-case media queries
-// @TODO: Rename breakpoints to something that makes sense again...bp_smaller?  Come on...
 $bp_xxs: 320px;
 $bp_xs: 550px;
 $bp_smaller: 675px;

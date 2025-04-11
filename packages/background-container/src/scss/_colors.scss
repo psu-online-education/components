@@ -1,5 +1,4 @@
 $supported_colors: (
-  'light-grey': $light-grey,
-  'primary-blue': $primary-blue,
-  'beaver-blue': $beaver-blue,
+  'light-grey': var(--light-grey),
+  'beaver-blue': var(--beaver-blue),
 );

@@ -1,9 +1,9 @@
-@import '../../../base/src/scss/imports/variables';
+@use "../../../base/src/scss/mixins" as oe;
 
 .layout-multi-column {
-  --layout-column-gap-min: calc(#{_rem(.5)} * var(--layout-column-gap-multipler, 1));
+  --layout-column-gap-min: calc(#{oe.rem(.5)} * var(--layout-column-gap-multipler, 1));
   --layout-column-gap-percentage: calc(2.87% * var(--layout-column-gap-multipler, 1));
-  --layout-column-gap-max: calc(#{_rem(1.25)} * var(--layout-column-gap-multipler, 1));
+  --layout-column-gap-max: calc(#{oe.rem(1.25)} * var(--layout-column-gap-multipler, 1));
 
   --layout-column-gap: clamp(
     var(--layout-column-gap-min),

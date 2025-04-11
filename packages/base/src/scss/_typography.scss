@@ -1,14 +1,3 @@
-p, .paragraph--default {
-  color: var(--text-color);
-  font-size: var(--font-size--default);
-  line-height: var(--line-height--default);
-  margin: 0 0 var(--text-element-vertical-space--default);
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
 .text {
   color: var(--text-color);
   font-size: var(--font-size--default);
@@ -18,8 +7,8 @@ p, .paragraph--default {
 }
 
 .text--contrasting {
-  font-weight: 800;
-  color: rgba($nittany-navy, .5);
+  font-weight: var(--font-weight--extrabold);
+  color: color-mix(in srgb, var(--nittany-navy) 50%, transparent);
 }
 
 // Font weight modifiers.
@@ -97,7 +86,6 @@ p, .paragraph--default {
 }
 
 // Line height modifiers.
-
 .text--height-default {
   line-height: var(--line-height--default);
 }
@@ -124,17 +112,4 @@ p, .paragraph--default {
 
 .text--height-nospace {
   line-height: var(--line-height--nospace);
-}
-
-// Color modifiers
-.text--color-default {
-  color: var(--text-color--default);
-}
-
-.text--color-slate {
-  color: var(--text-color--slate);
-}
-
-.text--color-reversed {
-  color: var(--text-color--light);
 }
