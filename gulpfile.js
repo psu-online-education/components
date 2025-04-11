@@ -19,7 +19,6 @@ const update_build_id = done => {
 const compile_scss = done => {
   const fs = require('fs');
   const sass = require('gulp-sass')(require('sass'));
-  const sourcemaps = require('gulp-sourcemaps');
   const components = fs.readdirSync('packages').filter(function(file) {
     return file !== 'patternlab';
   });
@@ -29,13 +28,11 @@ const compile_scss = done => {
 
     if (fs.existsSync('packages/' + component + '/src/scss/styles.scss')) {
       gulp.src('packages/' + component + '/src/scss/styles.scss')
-        .pipe(sourcemaps.init())
         .pipe(sass({
           outputStyle: 'compressed',
           precision: 6,
           includePaths: ['sass']
         })).on('error', sass.logError)
-        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(dist));
     }
   });
