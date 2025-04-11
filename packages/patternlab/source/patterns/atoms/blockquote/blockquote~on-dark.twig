@@ -1,9 +1,9 @@
-{% set quote %}
-  <figure>
-    <blockquote>The question isn't who is going to let me; it's who is going to stop me.</blockquote>
-    <figcaption>—Ayn Rand</figcaption>
-  </figure>
-{% endset %}
+{%- set quote -%}
+  {{- include('@oe/blockquote/blockquote.twig', {
+    quote: 'The question isn\'t who is going to let me; it\'s who is going to stop me.',
+    attribution: 'Ayn Rand'
+  }) -}}
+{%- endset -%}
 {% include '@oe/callout/callout.twig' with {
   background: 'blue-gradient',
   content: quote,

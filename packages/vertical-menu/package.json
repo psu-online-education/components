@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/vertical-menu",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Provides a vertical menu.",
   "publishConfig": {
     "access": "public",

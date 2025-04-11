@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/parallel-navigation-item",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Provides a parallel navigation item component.",
   "publishConfig": {
     "access": "public",

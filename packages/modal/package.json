@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/modal",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Provides a modal component.",
   "publishConfig": {
     "access": "public",

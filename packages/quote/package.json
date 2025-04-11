@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/quote",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Provides a quote implementation.",
   "publishConfig": {
     "access": "public",

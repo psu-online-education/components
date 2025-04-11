@@ -1,4 +1,4 @@
-@import '../../../base/src/scss/imports/variables';
+@import "../../../base/src/scss/mixins";
 
 .layout-multi-column {
   --layout-column-gap-min: calc(#{_rem(.5)} * var(--layout-column-gap-multipler, 1));

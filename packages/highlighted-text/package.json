@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/highlighted-text",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Provides on-brand text highlighting capabilities.",
   "publishConfig": {
     "access": "public",

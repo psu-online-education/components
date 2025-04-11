@@ -1,7 +1,6 @@
 @use "sass:math";
 
-@import "../../../base/src/scss/imports/variables";
-@import "../../../base/src/scss/imports/layout";
+@import "../../../base/src/scss/mixins";
 
 .drop-button {
   position: relative;

@@ -1,4 +1,4 @@
-@import '../../../base/src/scss/imports/variables';
+@import "../../../base/src/scss/mixins";
 
 input[type="date"] {
   // Android, in particular, renders native date inputs with a chevron versus

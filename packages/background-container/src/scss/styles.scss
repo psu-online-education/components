@@ -1,7 +1,6 @@
 @use "sass:map";
 
-@import "../../../base/src/scss/imports/variables";
-@import "../../../base/src/scss/imports/layout";
+@import "../../../base/src/scss/mixins";
 @import "colors";
 
 .bg {

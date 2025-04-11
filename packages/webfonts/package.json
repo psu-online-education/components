@@ -1,17 +1,9 @@
 {
   "name": "@psu-online-education/webfonts",
-  "version": "2.0.1",
-  "description": "Contains the webfonts of the OOE design system",
-  "homepage": "https://github.com/psu-online-education/monorepo-dev#readme",
+  "version": "2.0.2",
+  "description": "Contains the webfonts of the Penn State Online Education design system",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/psu-online-education/monorepo-dev.git"
-  },
-  "bugs": {
-    "url": "https://github.com/psu-online-education/monorepo-dev/issues"
   }
 }

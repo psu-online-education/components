@@ -1,7 +1,6 @@
 @use "sass:color";
 
-@import "../../../base/src/scss/imports/variables";
-@import "../../../base/src/scss/imports/layout";
+@import "../../../base/src/scss/mixins";
 
 .band {
   background-color: var(--beaver-blue);

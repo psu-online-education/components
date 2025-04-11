@@ -2,6 +2,30 @@ strong {
   font-weight: var(--font-weight--bold);
 }
 
+a {
+  color: var(--link-color);
+  font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: inherit;
+  text-decoration-thickness: _rem(0.1);
+  outline: solid _rem(.2) transparent;
+  outline-offset: _rem(0.2);
+  transition: outline-color var(--transition-duration--default) linear;
+  text-underline-offset: .2em;
+
+  &:hover, &:focus-visible {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: _rem(.1);
+  }
+
+  &:focus-visible {
+    outline-color: var(--focus-indicator-color);
+    outline-offset: _rem(0.2);
+  }
+}
+
 p, .paragraph--default {
   color: var(--text-color);
   font-size: var(--font-size--default);

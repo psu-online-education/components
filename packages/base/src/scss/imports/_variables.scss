@@ -1,7 +1,0 @@
-$base-rem-scale: 1 !default;
-// @TODO: Delete me...
-$invent-orange: #e98300;
-
-@function _rem($base) {
-  @return unquote(($base * $base-rem-scale) + 'rem');
-}

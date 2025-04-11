@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/event-link",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Provides an event link implementation.",
   "publishConfig": {
     "access": "public",

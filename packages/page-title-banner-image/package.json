@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/page-title-banner-image",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a page title banner component with an image background.",
   "publishConfig": {
     "access": "public",

@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/overlay",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Provides an overlay implementation.",
   "publishConfig": {
     "access": "public",

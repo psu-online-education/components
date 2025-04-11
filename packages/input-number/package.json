@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/input-number",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides number input element styles.",
   "publishConfig": {
     "access": "public",

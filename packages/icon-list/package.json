@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/icon-list",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Provides an icon list component.",
   "publishConfig": {
     "access": "public",

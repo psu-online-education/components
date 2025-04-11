@@ -1,3 +1,11 @@
+$base-rem-scale: 1 !default;
+// @TODO: Delete me...
+$invent-orange: #e98300;
+
+@function _rem($base) {
+  @return unquote(($base * $base-rem-scale) + 'rem');
+}
+
 // Expose breakpoint values, for edge-case media queries
 // @TODO: Rename breakpoints to something that makes sense again...bp_smaller?  Come on...
 $bp_xxs: 320px;

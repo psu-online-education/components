@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/skip-link",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Provides a skip link element.",
   "publishConfig": {
     "access": "public",

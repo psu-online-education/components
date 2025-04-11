@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/textarea",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Provides textarea element styles.",
   "publishConfig": {
     "access": "public",

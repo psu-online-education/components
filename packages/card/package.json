@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/card",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Provides a card implementation.",
   "publishConfig": {
     "access": "public",

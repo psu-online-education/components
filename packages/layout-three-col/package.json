@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/layout-three-col",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Provides a three column layout.",
   "publishConfig": {
     "access": "public",

@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/slide-toggle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a light-weight, performant slide toggle replacement.",
   "publishConfig": {
     "access": "public",

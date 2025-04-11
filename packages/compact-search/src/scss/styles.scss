@@ -1,5 +1,4 @@
-@import '../../../base/src/scss/imports/variables';
-@import '../../../base/src/scss/imports/layout';
+@import "../../../base/src/scss/mixins";
 
 :root {
   --compact-search-icon-color--light: var(--pugh-blue);

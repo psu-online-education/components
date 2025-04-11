@@ -1,0 +1,46 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+  background: var(--nittany-navy);
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion) {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  font-size: var(--font-size--default);
+  font-family: var(--font-family--default);
+  color: var(--text-color);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+nav {
+  ul {
+    border: medium none;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+figure {
+  margin: 0;
+}

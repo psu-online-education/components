@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/details",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides details element styles.",
   "publishConfig": {
     "access": "public",

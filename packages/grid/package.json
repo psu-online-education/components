@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/grid",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Provides a grid component.",
   "publishConfig": {
     "access": "public",

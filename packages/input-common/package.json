@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/input-common",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Provides common input element styles.",
   "publishConfig": {
     "access": "public",

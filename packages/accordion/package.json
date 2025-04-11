@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/accordion",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Provides an accessible accordion implementation.",
   "publishConfig": {
     "access": "public",

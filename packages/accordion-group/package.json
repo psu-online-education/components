@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/accordion-group",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a special layout that groups accordions together.",
   "publishConfig": {
     "access": "public",

@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/compact-menu",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Provides a compact menu block.",
   "publishConfig": {
     "access": "public",

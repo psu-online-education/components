@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/page-title-banner-plain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a plain page title banner component.",
   "publishConfig": {
     "access": "public",

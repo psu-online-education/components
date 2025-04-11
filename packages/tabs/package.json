@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/tabs",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Provides an accessible tabs implementation.",
   "publishConfig": {
     "access": "public",

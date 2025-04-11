@@ -1614,7 +1614,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-online-education/background-container@*, @psu-online-education/background-container@^3.0, @psu-online-education/background-container@workspace:packages/background-container":
+"@psu-online-education/background-container@*, @psu-online-education/background-container@^3.0 || ^4.0, @psu-online-education/background-container@workspace:packages/background-container":
   version: 0.0.0-use.local
   resolution: "@psu-online-education/background-container@workspace:packages/background-container"
   dependencies:
@@ -1870,7 +1870,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/footer@workspace:packages/footer"
   dependencies:
-    "@psu-online-education/background-container": ^3.0
+    "@psu-online-education/background-container": ^3.0 || ^4.0
     "@psu-online-education/base": ^2.0 || ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
@@ -2164,7 +2164,7 @@ __metadata:
     "@psu-online-education/drop-button": ^3.0.0
     "@psu-online-education/sprite": ^2.0.0
   peerDependencies:
-    "@psu-online-education/background-container": ^3.0
+    "@psu-online-education/background-container": ^3.0 || ^4.0
   peerDependenciesMeta:
     "@psu-online-education/background-container":
       optional: true

@@ -21,33 +21,35 @@
   'invent orange light': { hex_code:  '#fca917', variable: 'var(--invent-orange-light)' },
   'invent orange': { hex_code:  '#e98300', variable: 'var(--invent-orange)' },
   'error red': { hex_code:  '#dd3636', variable: 'var(--error-red)' },
-  'futures calling': { hex_code: '#99cc00', variable: 'n/a' }
+  'futures calling': { hex_code: '#99cc00', variable: 'var(--futures-calling)' }
 } %}
 
 {% set items = [] %}
 {% for name, properties in colors %}
   {% set color %}
-    <div style="display:block;aspect-ratio:4;border-radius: .5rem .5rem 0 0; background: {{ properties.variable }};"></div>
-    <div style="padding:1rem">
-      <div class="a11y-table">
-        <table class="a11y-table__table">
-          <thead class="a11y-table__thead">
-            <tr class="a11y-table__tr">
-                {# @TODO: Fix table styles. #}
-              <th class="a11y-table__th">Name</th>
-              <th class="a11y-table__th">Hex color</th>
-              <th class="a11y-table__th">Scss variable</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-                {# @TODO: Fix table styles. #}
-                <td class="a11y-table__td">{{ name }}</td>
-                <td class="a11y-table__td">{{ properties.hex_code }}</td>
-                <td class="a11y-table__td">{{ properties.variable }}</td>
-            </tr>
-          </tbody>
-        </table>
+    <div style="border:.2rem solid var(--medium-grey);border-radius: .5rem;">
+      <div style="display:block;aspect-ratio:4; background: {{ properties.variable }};border-bottom:.2rem solid var(--medium-grey)"></div>
+      <div style="padding:1rem;">
+        <div class="a11y-table">
+          <table class="a11y-table__table">
+            <thead class="a11y-table__thead">
+              <tr class="a11y-table__tr">
+                  {# @TODO: Fix table styles. #}
+                <th class="a11y-table__th">Name</th>
+                <th class="a11y-table__th">Hex color</th>
+                <th class="a11y-table__th">Scss variable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  {# @TODO: Fix table styles. #}
+                  <td class="a11y-table__td">{{ name }}</td>
+                  <td class="a11y-table__td">{{ properties.hex_code }}</td>
+                  <td class="a11y-table__td">{{ properties.variable }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   {% endset %}

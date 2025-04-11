@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/event-spotlight",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides an event spotlight component",
   "publishConfig": {
     "access": "public",

@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/input-tel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides telephone input element styles.",
   "publishConfig": {
     "access": "public",
