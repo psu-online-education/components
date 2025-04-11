@@ -95,7 +95,7 @@
     cursor: pointer;
     border-bottom: 0.1rem solid transparent;
     & > * {
-      font-weight: 700;
+      font-weight: var(--font-weight--bold);
       margin: auto 0;
     }
 
