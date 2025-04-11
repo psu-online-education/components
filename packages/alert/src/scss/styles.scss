@@ -65,7 +65,12 @@
     border-top: _rem(1) solid var(--keystone);
 
     .sprite {
-      color: darken($invent-orange, 3.5%);
+      color: hsl(from var(--invent-orange) h s calc(l - 4.5));
+
+      // @TODO: Remove when relative colors are supported.
+      @supports not (color: hsl(from white h s l)) {
+        color: #d27600;
+      }
     }
   }
 
