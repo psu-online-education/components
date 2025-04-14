@@ -8,10 +8,10 @@
     ]
   },
   "devDependencies": {
-    "@pattern-lab/cli": "^5.17.0",
-    "@pattern-lab/core": "^5.17.0",
-    "@pattern-lab/engine-twig-php": "^5.17.0",
-    "@pattern-lab/uikit-workshop": "^5.17.0",
+    "@pattern-lab/cli": "^6.1.0",
+    "@pattern-lab/core": "^6.1.0",
+    "@pattern-lab/engine-twig-php": "^6.1.0",
+    "@pattern-lab/uikit-workshop": "^6.1.0",
     "gulp": "^5.0.0",
     "gulp-cli": "^3.0.0",
     "gulp-concat": "^2.6.1",
@@ -20,6 +20,8 @@
     "gulp-sass": "^6.0.1",
     "gulp-svg-sprite": "^2.0.3",
     "gulp-uglify-es": "^3.0.0",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "sass": "^1.69.5",
     "svg-sprite": "^2.0.2",
     "yarn": "^1.22.19"
@@ -30,6 +32,6 @@
     "package": "gulp compile_all"
   },
   "default": {
-    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+    "postinstall": "patch-package && find node_modules/ -name '*.info' -type f -delete"
   }
 }

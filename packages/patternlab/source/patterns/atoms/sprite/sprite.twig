@@ -123,7 +123,7 @@
     },
   },
 } %}
-<form style="position: sticky;z-index:var(--z-index--floating);top:0; background: #fff; padding:2rem; box-shadow: 0 0.5rem 0.5rem #888;">
+<form style="position: sticky;top:0; background: #fff; padding:2rem; box-shadow: 0 0.5rem 0.5rem #888;">
   <label for="sprite-color" style="display: block;font-weight: bold;margin-bottom: 1rem;">Preview Sprite Color</label>
   <select id="sprite-color">
     <option value="--beaver-blue" selected>Beaver Blue</option>
@@ -149,28 +149,26 @@
     {% set grid_items = [] %}
     {% for sprite, label in sprite_group.sprites %}
       {% set grid_item %}
-        <div class="a11y-table">
-          <table class="a11y-table__table">
-            <tbody class="a11y-table__tbody">
-              <tr class="a11y-table__tr">
-                <th class="a11y-table__th">Name</th>
-                <td class="a11y-table__td">{{ label }}</td>
-              </tr>
-              <tr class="a11y-table__tr">
-                <th class="a11y-table__th">Code</th>
-                <td class="a11y-table__td">{{ sprite }}</td>
-              </tr>
-              <tr class="a11y-table__tr">
-                <th class="a11y-table__th">Preview</th>
-                <td class="a11y-table__td">
-                  <div class="sprite-preview" style="color:var(--beaver-blue); font-size: 5rem; text-align: center;">
-                    {% include '@oe/sprite/sprite.twig' with { name: sprite } %}
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <table style="margin: 0;padding: 0;">
+          <tbody>
+          <tr>
+            <th>Name</th>
+            <td>{{ label }}</td>
+          </tr>
+          <tr>
+            <th>Code</th>
+            <td>{{ sprite }}</td>
+          </tr>
+          <tr>
+            <th>Preview</th>
+            <td>
+              <div class="sprite-preview" style="color:var(--beaver-blue); font-size: 5rem; text-align: center;">
+                {% include '@oe/sprite/sprite.twig' with { name: sprite } %}
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
       {% endset %}
       {% set grid_items = grid_items|merge([grid_item]) %}
     {% endfor %}

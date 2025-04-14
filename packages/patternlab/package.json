@@ -6,10 +6,10 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@pattern-lab/cli": "^5.17.0",
-    "@pattern-lab/core": "^5.17.0",
-    "@pattern-lab/engine-twig-php": "^5.17.0",
-    "@pattern-lab/uikit-workshop": "^5.17.0",
+    "@pattern-lab/cli": "^6.1.0",
+    "@pattern-lab/core": "^6.1.0",
+    "@pattern-lab/engine-twig-php": "^6.1.0",
+    "@pattern-lab/uikit-workshop": "^6.1.0",
     "@psu-online-education/accordion": "*",
     "@psu-online-education/accordion-group": "*",
     "@psu-online-education/alert": "*",
