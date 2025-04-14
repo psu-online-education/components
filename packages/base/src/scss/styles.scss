@@ -3,12 +3,12 @@
 @use "variables/colors";
 @use "variables/spacing";
 @use "variables/transitions";
-@use "variables/typography" as psu-online-education-typography;
+@use "variables/typography";
 @use "variables/forms";
 @use "variables/layers";
 
 @use "normalize";
-@use "typography";
+@use "typography-utility";
 
 // Custom properties are amazing...but often times with newer technology,
 // often alien at the same time.  To understand this mechanism, one first
