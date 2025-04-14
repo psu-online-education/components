@@ -1513,7 +1513,7 @@ __metadata:
   resolution: "@psu-online-education/accordion-group@workspace:packages/accordion-group"
   dependencies:
     "@psu-online-education/accordion": ^2.0
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1521,7 +1521,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/accordion@workspace:packages/accordion"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/heading": ^2.0 || ^3.0
     "@psu-online-education/slide-toggle": ^1.0
     "@psu-online-education/sprite": ^2.0
@@ -1532,7 +1532,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/alert@workspace:packages/alert"
   dependencies:
-    "@psu-online-education/base": ^1.0 || ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^1.0 || ^2.0
   languageName: unknown
   linkType: soft
@@ -1541,7 +1541,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/announcement@workspace:packages/announcement"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -1556,7 +1556,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/background-container@workspace:packages/background-container"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -1565,11 +1565,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/band@workspace:packages/band"
   dependencies:
-    "@psu-online-education/base": ^1.0 || ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
-"@psu-online-education/base@^1.0 || ^2.0 || ^3.0, @psu-online-education/base@^2.0 || ^3.0, @psu-online-education/base@^2.0.0 || ^3.0, @psu-online-education/base@^2.2 || ^3.0, @psu-online-education/base@^2.6.0 || ^3.0, @psu-online-education/base@^3.0, @psu-online-education/base@workspace:packages/base":
+"@psu-online-education/base@^3.0, @psu-online-education/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@psu-online-education/base@workspace:packages/base"
   dependencies:
@@ -1581,7 +1581,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/basic-tile@workspace:packages/basic-tile"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/cta-tracking": ^1.0
   languageName: unknown
   linkType: soft
@@ -1616,7 +1616,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/breadcrumbs@workspace:packages/breadcrumbs"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -1625,7 +1625,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/button-base@workspace:packages/button-base"
   dependencies:
-    "@psu-online-education/base": ^2.2 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0.0
   languageName: unknown
   linkType: soft
@@ -1642,7 +1642,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/callout@workspace:packages/callout"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1650,7 +1650,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/card@workspace:packages/card"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -1659,7 +1659,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/cards-list@workspace:packages/cards-list"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/card": ^2.0
     "@psu-online-education/expandable-section": ^1.0
   languageName: unknown
@@ -1669,7 +1669,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/compact-menu@workspace:packages/compact-menu"
   dependencies:
-    "@psu-online-education/base": ^2.0.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/drop-button": ^3.0.0
     "@psu-online-education/sprite": ^2.0.0
     "@psu-online-education/vertical-menu": ^2.0.0
@@ -1680,7 +1680,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/compact-search@workspace:packages/compact-search"
   dependencies:
-    "@psu-online-education/base": ^2.0.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/drop-button": ^3.0.0
     "@psu-online-education/sprite": ^2.0.0
   languageName: unknown
@@ -1739,7 +1739,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/details@workspace:packages/details"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1747,7 +1747,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/divider@workspace:packages/divider"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -1756,7 +1756,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/drop-button@workspace:packages/drop-button"
   dependencies:
-    "@psu-online-education/base": ^2.6.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1764,7 +1764,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/event-link@workspace:packages/event-link"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/smart-datetime": ^1.0
   languageName: unknown
   linkType: soft
@@ -1773,7 +1773,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/event-spotlight@workspace:packages/event-spotlight"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/read-more": ^2.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
@@ -1784,7 +1784,7 @@ __metadata:
   resolution: "@psu-online-education/expandable-section@workspace:packages/expandable-section"
   dependencies:
     "@psu-online-education/auto-expansion": ^1.0
-    "@psu-online-education/base": ^2.2 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/button": ^1.0
     "@psu-online-education/slide-toggle": ^1.0
   languageName: unknown
@@ -1794,7 +1794,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/fieldset@workspace:packages/fieldset"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1809,7 +1809,7 @@ __metadata:
   resolution: "@psu-online-education/footer@workspace:packages/footer"
   dependencies:
     "@psu-online-education/background-container": ^3.0 || ^4.0
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -1818,7 +1818,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/form@workspace:packages/form"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1826,7 +1826,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/grid@workspace:packages/grid"
   dependencies:
-    "@psu-online-education/base": ^1.0 || ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1840,7 +1840,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/header@workspace:packages/header"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -1849,7 +1849,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/heading@workspace:packages/heading"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1857,7 +1857,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/highlighted-text@workspace:packages/highlighted-text"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1865,7 +1865,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/horizontal-menu@workspace:packages/horizontal-menu"
   dependencies:
-    "@psu-online-education/base": ^2.6.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -1874,7 +1874,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/icon-list@workspace:packages/icon-list"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -1883,7 +1883,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/infographic@workspace:packages/infographic"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1891,7 +1891,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-checkbox@workspace:packages/input-checkbox"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1899,7 +1899,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-color@workspace:packages/input-color"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1907,7 +1907,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-common@workspace:packages/input-common"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1915,7 +1915,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-date@workspace:packages/input-date"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
@@ -1924,7 +1924,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-email@workspace:packages/input-email"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
@@ -1933,7 +1933,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-file@workspace:packages/input-file"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1941,7 +1941,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-number@workspace:packages/input-number"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
@@ -1950,7 +1950,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-password@workspace:packages/input-password"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
@@ -1959,7 +1959,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-radio@workspace:packages/input-radio"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1967,7 +1967,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-range@workspace:packages/input-range"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -1975,7 +1975,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-search@workspace:packages/input-search"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
@@ -1984,7 +1984,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-tel@workspace:packages/input-tel"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
@@ -1993,7 +1993,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-text@workspace:packages/input-text"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
@@ -2002,7 +2002,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-time@workspace:packages/input-time"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
@@ -2011,7 +2011,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/input-url@workspace:packages/input-url"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/input-common": ^1.0
   languageName: unknown
   linkType: soft
@@ -2020,7 +2020,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/intro-form@workspace:packages/intro-form"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/heading": ^3.0
     "@psu-online-education/random-item": ^1.0
   languageName: unknown
@@ -2030,7 +2030,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/label@workspace:packages/label"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -2038,7 +2038,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/layout-four-col@workspace:packages/layout-four-col"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/layout-multi-col": ^1.1.0
   languageName: unknown
   linkType: soft
@@ -2047,7 +2047,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/layout-multi-col@workspace:packages/layout-multi-col"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -2055,7 +2055,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/layout-three-col@workspace:packages/layout-three-col"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/layout-multi-col": ^1.1.0
   languageName: unknown
   linkType: soft
@@ -2064,7 +2064,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/layout-two-col@workspace:packages/layout-two-col"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/layout-multi-col": ^1.1.0
   languageName: unknown
   linkType: soft
@@ -2073,7 +2073,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/legend@workspace:packages/legend"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -2081,7 +2081,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/list@workspace:packages/list"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -2089,7 +2089,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/modal@workspace:packages/modal"
   dependencies:
-    "@psu-online-education/base": ^2.6.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -2098,7 +2098,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/more-menu@workspace:packages/more-menu"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/drop-button": ^3.0.0
     "@psu-online-education/sprite": ^2.0.0
   peerDependencies:
@@ -2113,7 +2113,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/navigation-tile-image@workspace:packages/navigation-tile-image"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -2121,7 +2121,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/navigation-tile@workspace:packages/navigation-tile"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -2130,7 +2130,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/overlay@workspace:packages/overlay"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -2138,7 +2138,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/page-title-banner-image@workspace:packages/page-title-banner-image"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/page-title": ^1.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
@@ -2148,7 +2148,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/page-title-banner-plain@workspace:packages/page-title-banner-plain"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/page-title": ^1.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
@@ -2158,7 +2158,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/page-title@workspace:packages/page-title"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/heading": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
@@ -2167,7 +2167,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/pager@workspace:packages/pager"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -2176,7 +2176,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/parallel-navigation-item@workspace:packages/parallel-navigation-item"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -2185,7 +2185,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/parallel-navigation@workspace:packages/parallel-navigation"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/parallel-navigation-item": ^2.0
   languageName: unknown
   linkType: soft
@@ -2298,7 +2298,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/physical-address@workspace:packages/physical-address"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -2306,7 +2306,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/quote@workspace:packages/quote"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -2320,7 +2320,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/read-more@workspace:packages/read-more"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -2337,7 +2337,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/select@workspace:packages/select"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -2345,7 +2345,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/skip-link@workspace:packages/skip-link"
   dependencies:
-    "@psu-online-education/base": ^2.6.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -2359,7 +2359,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/smart-datetime@workspace:packages/smart-datetime"
   dependencies:
-    "@psu-online-education/base": ^1.0 || ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -2367,7 +2367,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/social-icon@workspace:packages/social-icon"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
@@ -2376,7 +2376,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/social-icons@workspace:packages/social-icons"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/social-icon": ^2.0
   languageName: unknown
   linkType: soft
@@ -2385,7 +2385,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/spinner@workspace:packages/spinner"
   dependencies:
-    "@psu-online-education/base": ^1.0 || ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/sprite": ^1.0 || ^2.0
   languageName: unknown
   linkType: soft
@@ -2394,7 +2394,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/sprite@workspace:packages/sprite"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -2403,7 +2403,7 @@ __metadata:
   resolution: "@psu-online-education/sticky-panel@workspace:packages/sticky-panel"
   dependencies:
     "@psu-online-education/band": ^2.0
-    "@psu-online-education/base": ^2.6.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -2419,7 +2419,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/tabs@workspace:packages/tabs"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/flex-wrap-listener": ^1.0
   languageName: unknown
   linkType: soft
@@ -2428,7 +2428,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/textarea@workspace:packages/textarea"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
   languageName: unknown
   linkType: soft
 
@@ -2436,7 +2436,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/upcoming-events@workspace:packages/upcoming-events"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/event-link": ^2.0
     "@psu-online-education/expandable-section": ^1.0
   languageName: unknown
@@ -2446,7 +2446,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/vertical-menu@workspace:packages/vertical-menu"
   dependencies:
-    "@psu-online-education/base": ^2.0 || ^3.0
+    "@psu-online-education/base": ^3.0
     "@psu-online-education/slide-toggle": ^1.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown

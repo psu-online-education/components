@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@psu-online-education/auto-expansion": "^1.0",
-    "@psu-online-education/base": "^2.2 || ^3.0",
+    "@psu-online-education/base": "^3.0",
     "@psu-online-education/button": "^1.0",
     "@psu-online-education/slide-toggle": "^1.0"
   }

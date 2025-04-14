@@ -7,7 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-online-education/base": "^2.0 || ^3.0",
+    "@psu-online-education/base": "^3.0",
     "@psu-online-education/page-title": "^1.0",
     "@psu-online-education/sprite": "^2.0"
   }

@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "@psu-online-education/band": "^2.0",
-    "@psu-online-education/base": "^2.6.0 || ^3.0"
+    "@psu-online-education/base": "^3.0"
   }
 }
