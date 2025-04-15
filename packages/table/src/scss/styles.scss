@@ -6,14 +6,19 @@
     linear-gradient(to right, color-mix(in srgb, transparent, var(--nittany-navy) 20%), transparent) left,
     linear-gradient(to left, var(--background-color) 70%, transparent) right,
     linear-gradient(to left, color-mix(in srgb, transparent, var(--nittany-navy) 20%), transparent) right;
+
+  --a11y-table-border-color: color-mix(in srgb, var(--medium-dark-grey) 25%, transparent);
 }
 
 [data-dark] {
   --a11y-table-shadows:
     linear-gradient(to right, var(--background-color) 30%, rgba(255, 255, 255, 0)) left,
-    linear-gradient(to right, color-mix(in srgb, transparent, var(--black) 33%), transparent) left,
+    linear-gradient(to right, color-mix(in srgb, transparent, var(--black) 70%), transparent) left,
     linear-gradient(to left, var(--background-color) 70%, transparent) right,
-    linear-gradient(to left, color-mix(in srgb, transparent, var(--black) 33%), transparent) right;
+    linear-gradient(to left, color-mix(in srgb, transparent, var(--black) 70%), transparent) right;
+
+  --a11y-table-border-color: color-mix(in srgb, var(--slate-light) 30%, transparent);
+
 }
 
 .a11y-table {
@@ -49,7 +54,7 @@
     line-height: 1.5;
     scroll-snap-align: start;
     text-align: left;
-    border-bottom: oe.rem(.1) solid var(--medium-grey);
+    border-bottom: oe.rem(.1) solid var(--a11y-table-border-color);
 
     &:not(:first-child) {
       padding-left: oe.rem(2);
@@ -71,7 +76,7 @@
   }
 
   &__thead &__th {
-    border-bottom: oe.rem(.3) solid var(--medium-grey);
+    border-bottom: oe.rem(.3) solid var(--a11y-table-border-color);
     vertical-align: bottom;
   }
 
