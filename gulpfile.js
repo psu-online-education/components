@@ -29,9 +29,8 @@ const compile_scss = done => {
     if (fs.existsSync('packages/' + component + '/src/scss/styles.scss')) {
       gulp.src('packages/' + component + '/src/scss/styles.scss')
         .pipe(sass({
-          outputStyle: 'compressed',
+          style: 'compressed',
           precision: 6,
-          includePaths: ['sass']
         })).on('error', sass.logError)
         .pipe(gulp.dest(dist));
     }
