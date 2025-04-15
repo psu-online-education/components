@@ -1,7 +1,7 @@
 (cms => {
 
   let drop_button_registry = [];
-  const px_tooe.rems_conversion = parseFloat(getComputedStyle(document.documentElement).fontSize);
+  const px_to_rems_conversion = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
   // Under certain circumstances the drop-button panels are required to span
   // across the entire viewport horizontal dimension.  Since the panel is
@@ -15,8 +15,8 @@
       const panel = drop_button.querySelector('.drop-button__content');
       const bounds = drop_button.getBoundingClientRect();
       if (viewport_width < 800) {
-        panel.style.setProperty('--drop-button--left', -((bounds.left - 5) / px_tooe.rems_conversion) + 'rem');
-        panel.style.setProperty('--drop-button--right', -((viewport_width - bounds.right - 5) / px_tooe.rems_conversion) + 'rem');
+        panel.style.setProperty('--drop-button--left', -((bounds.left - 5) / px_to_rems_conversion) + 'rem');
+        panel.style.setProperty('--drop-button--right', -((viewport_width - bounds.right - 5) / px_to_rems_conversion) + 'rem');
       }
       else {
         const viewport_center = viewport_width / 2;
@@ -24,12 +24,12 @@
         // If the center of the dropbutton is further left than the center of
         // the viewport, then the panel must open to the right.
         if (dropbutton_center < viewport_center) {
-          panel.style.setProperty('--drop-button--left', (-35 / px_tooe.rems_conversion) + 'rem');
-          panel.style.setProperty('--drop-button--right', 'calc(-1 * (var(--drop-button-panel-width, 28rem) - ' + ((bounds.width + 35) / px_tooe.rems_conversion) + 'rem))');
+          panel.style.setProperty('--drop-button--left', (-35 / px_to_rems_conversion) + 'rem');
+          panel.style.setProperty('--drop-button--right', 'calc(-1 * (var(--drop-button-panel-width, 28rem) - ' + ((bounds.width + 35) / px_to_rems_conversion) + 'rem))');
         }
         else {
-          panel.style.setProperty('--drop-button--left', 'calc(-1 * (var(--drop-button-panel-width, 28rem) - ' + ((bounds.width + 35) / px_tooe.rems_conversion) + 'rem))');
-          panel.style.setProperty('--drop-button--right', (-35 / px_tooe.rems_conversion) + 'rem');
+          panel.style.setProperty('--drop-button--left', 'calc(-1 * (var(--drop-button-panel-width, 28rem) - ' + ((bounds.width + 35) / px_to_rems_conversion) + 'rem))');
+          panel.style.setProperty('--drop-button--right', (-35 / px_to_rems_conversion) + 'rem');
         }
       }
     });

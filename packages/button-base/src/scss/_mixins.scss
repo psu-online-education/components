@@ -1,4 +1,4 @@
-@mixin button-color-light($name, $background, $foreground, $background-active, $foreground-active, $outline) {
+@mixin color-light($name, $background, $foreground, $background-active, $foreground-active, $outline) {
   .button--#{$name} {
     --button-background-color-light: #{$background};
     --button-background-color-active-light: #{$background-active};
@@ -8,7 +8,7 @@
   }
 }
 
-@mixin button-color-dark($name, $background, $foreground, $background-active, $foreground-active, $outline) {
+@mixin color-dark($name, $background, $foreground, $background-active, $foreground-active, $outline) {
   .button--on-dark-#{$name} {
     --button-background-color-dark: #{$background};
     --button-background-color-active-dark: #{$background-active};

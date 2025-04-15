@@ -21,6 +21,7 @@
     "@psu-online-education/basic-tile": "*",
     "@psu-online-education/bio": "*",
     "@psu-online-education/bio-collection": "*",
+    "@psu-online-education/blockquote": "*",
     "@psu-online-education/breadcrumbs": "*",
     "@psu-online-education/button": "*",
     "@psu-online-education/callout": "*",

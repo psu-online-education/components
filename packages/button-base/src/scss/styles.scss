@@ -1,5 +1,5 @@
 @use "../../../base/src/scss/mixins" as oe;
-@use "mixins" as *;
+@use "mixins" as button;
 
 .button {
 
@@ -142,14 +142,14 @@
   border-style: dotted;
 }
 
-@include button-color-light('alt', var(--beaver-blue), var(--white), var(--nittany-navy), var(--white), var(--sky-blue));
-@include button-color-light('keystone', var(--keystone), var(--nittany-navy), var(--invent-orange-light), var(--nittany-navy), var(--nittany-navy));
-@include button-color-light('keystone-light', var(--keystone-light), var(--nittany-navy), var(--keystone), var(--nittany-navy), var(--nittany-navy));
-@include button-color-light('hollow-solid', transparent, var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
-@include button-color-light('hollow-dotted', transparent, var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
-@include button-color-light('light-blue', var(--pa-link-light), var(--beaver-blue), var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
+@include button.color-light('alt', var(--beaver-blue), var(--white), var(--nittany-navy), var(--white), var(--sky-blue));
+@include button.color-light('keystone', var(--keystone), var(--nittany-navy), var(--invent-orange-light), var(--nittany-navy), var(--nittany-navy));
+@include button.color-light('keystone-light', var(--keystone-light), var(--nittany-navy), var(--keystone), var(--nittany-navy), var(--nittany-navy));
+@include button.color-light('hollow-solid', transparent, var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
+@include button.color-light('hollow-dotted', transparent, var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
+@include button.color-light('light-blue', var(--pa-link-light), var(--beaver-blue), var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
 
-@include button-color-dark('keystone', var(--keystone), var(--nittany-navy), var(--invent-orange-light), var(--black), var(--nittany-navy));
-@include button-color-dark('keystone-light', var(--keystone-light), var(--nittany-navy), var(--keystone), var(--nittany-navy), var(--nittany-navy));
-@include button-color-dark('reversed', var(--white), var(--beaver-blue),var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
-@include button-color-dark('light-blue', var(--pa-link-light), var(--beaver-blue), var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
+@include button.color-dark('keystone', var(--keystone), var(--nittany-navy), var(--invent-orange-light), var(--black), var(--nittany-navy));
+@include button.color-dark('keystone-light', var(--keystone-light), var(--nittany-navy), var(--keystone), var(--nittany-navy), var(--nittany-navy));
+@include button.color-dark('reversed', var(--white), var(--beaver-blue),var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
+@include button.color-dark('light-blue', var(--pa-link-light), var(--beaver-blue), var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
