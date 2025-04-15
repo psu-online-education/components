@@ -33,12 +33,12 @@
   background-attachment: local, scroll, local, scroll;
   position: relative;
 
-  // Retina displays can cut off half a pixel.
-  padding-bottom: oe.rem(.1);
-
   &__table {
     border-collapse: collapse;
     width: 100%;
+
+    // Retina displays can cut off half a pixel.
+    margin-bottom: oe.rem(.1);
   }
 
   &__caption {
