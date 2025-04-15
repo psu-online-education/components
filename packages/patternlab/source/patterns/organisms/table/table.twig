@@ -1,7 +1,31 @@
-{% set table %}
+{% set tables %}
   <div class="a11y-table">
     <table class="a11y-table__table">
-      <caption class="a11y-table__caption">The table caption that is pretty darn long...probably longer than it ever would be in "real" content?</caption>
+      <caption class="a11y-table__caption">Tuition rates for the fall 2024, spring 2025, and summer 2025 semesters.</caption>
+      <thead class="a11y-table__thead">
+        <tr class="a11y-table__tr">
+          <th class="a11y-table__th">How many credits do you plan to take per semester?</th>
+          <th class="a11y-table__th"><strong>If you have 59 or fewer credits</strong></th>
+          <th class="a11y-table__th"><strong>If you have 60 or more credits</strong></th>
+        </tr>
+      </thead>
+      <tbody class="a11y-table__tbody">
+      <tr class="a11y-table__tr">
+        <td class="a11y-table__td">11 or fewer</td>
+        <td class="a11y-table__td">$632 per credit</td>
+        <td class="a11y-table__td">$678 per credit</td>
+      </tr>
+      <tr class="a11y-table__tr">
+        <td class="a11y-table__td">12–19</td>
+        <td class="a11y-table__td">$7,678 per semester</td>
+        <td class="a11y-table__td">$8,288 per semester</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <br><br>
+  <div class="a11y-table">
+    <table class="a11y-table__table">
       <thead class="a11y-table__thead">
         <tr class="a11y-table__tr">
           {% for i in 1..15 %}
@@ -23,5 +47,5 @@
 {% endset %}
 
 {% include '@oe/callout/callout.twig' with {
-  content: table,
+  content: tables,
 } only %}

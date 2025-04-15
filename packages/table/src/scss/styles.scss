@@ -24,7 +24,7 @@
 
   background: var(--a11y-table-shadows);
   background-repeat: no-repeat;
-  background-size: 3rem 100%, 1.5rem 100%, 3rem 100%, 1.5rem 100%;
+  background-size: oe.rem(3) 100%, oe.rem(1.5) 100%, oe.rem(3) 100%, oe.rem(1.5) 100%;
   background-attachment: local, scroll, local, scroll;
   position: relative;
 
@@ -45,7 +45,6 @@
 
   &__th, &__td {
     color: var(--text-color);
-    padding-top: oe.rem(2);
     font-size: oe.rem(1.6);
     line-height: 1.5;
     scroll-snap-align: start;
@@ -59,7 +58,7 @@
 
   &__th {
     font-weight: bold;
-    padding-bottom: oe.rem(1.5);
+    padding-bottom: oe.rem(2);
 
     &:not(:first-of-type) {
       padding-left: oe.rem(2);
@@ -67,12 +66,22 @@
   }
 
   &__td {
+    padding-top: oe.rem(2);
     padding-bottom: oe.rem(2);
   }
 
   &__thead &__th {
     border-bottom: oe.rem(.3) solid var(--medium-grey);
     vertical-align: bottom;
+  }
+
+  &__tbody &__th {
+    padding-top: oe.rem(2);
+  }
+
+  &:not(:has(&__thead)) &__tr:first-child &__td,
+  &:not(:has(&__thead)) &__tr:first-child &__th {
+    padding-top: 0;
   }
 
 }
