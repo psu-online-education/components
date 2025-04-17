@@ -36,8 +36,10 @@
 
   &::after {
     content: "";
-    position: absolute;
-    inset: calc(100% - oe.rem(.2)) 0 oe.rem(.1) 0;
+    position: sticky;
+    left: 0;
+    display: block;
+    height: oe.rem(.1);
     background-color: var(--a11y-table-border-color);
   }
 
