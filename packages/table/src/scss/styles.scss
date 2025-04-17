@@ -34,6 +34,9 @@
   background-attachment: local, scroll, local, scroll;
   position: relative;
 
+  border-top-left-radius: oe.rem(.3);
+  border-top-right-radius: oe.rem(.3);
+
   &::after {
     content: "";
     position: sticky;
