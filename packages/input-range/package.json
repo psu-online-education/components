@@ -1,12 +1,12 @@
 {
   "name": "@psu-online-education/input-range",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Provides range element styles.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-online-education/base": "^2.0"
+    "@psu-online-education/base": "^3.0"
   }
 }

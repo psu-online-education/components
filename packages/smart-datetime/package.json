@@ -1,12 +1,12 @@
 {
   "name": "@psu-online-education/smart-datetime",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides a date and time implementation.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-online-education/base": "^1.0 || ^2.0"
+    "@psu-online-education/base": "^3.0"
   }
 }

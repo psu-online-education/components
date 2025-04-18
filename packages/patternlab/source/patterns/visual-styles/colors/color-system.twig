@@ -1,63 +1,62 @@
-{%
-    set colors = {
-    'white': { hex_code: '#fff', scss_variable: '$white' },
-    'light grey': { hex_code:  '#f2f3f9', scss_variable: '$light-grey' },
-    'light mauve': { hex_code:  '#ebecf4', scss_variable: '$light-mauve' },
-    'medium grey': { hex_code:  '#d8dbea', scss_variable: '$medium-grey' },
-    'slate light': { hex_code:  '#ccdae6', scss_variable: '$slate-light' },
-    'limestone': { hex_code: '#a2aaad', scss_variable: '$limestone' },
-    'medium dark grey': { hex_code:  '#687a8d', scss_variable: '$medium-dark-grey' },
-    'slate': { hex_code:  '#314d64', scss_variable: '$slate' },
-    'nittany navy': { hex_code:  '#001e44', scss_variable: '$nittany-navy' },
-    'nittany navy (faded)': { hex_code: '#001e4480', scss_variable: '$nittany-navy-faded'},
-    'black': { hex_code: '#000', scss_variable: '$black' },
-    'beaver blue': { hex_code:  '#1e407c', scss_variable: '$beaver-blue' },
-    'sky blue': { hex_code: '#009cde', scss_variable: '$sky-blue' },
-    'pugh blue': { hex_code:  '#96bee6', scss_variable: '$pugh-blue' },
-    'pa link': { hex_code:  '#005fa9', scss_variable: '$pa-link' },
-    'pa link light': { hex_code:  '#cce9ff', scss_variable: '$pa-link-light' },
-    'creek': { hex_code: '#3ea39e', scss_variable: '$creek' },
-    'penns forest': { hex_code: '#4A7729', scss_variable: '$penns-forest' },
-    'keystone light': { hex_code: '#f9df70', scss_variable: '$keystone-light' },
-    'keystone': { hex_code:  '#ffd100', scss_variable: '$keystone' },
-    'invent orange light': { hex_code:  '#fca917', scss_variable: '$invent-orange-light' },
-    'invent orange': { hex_code:  '#e98300', scss_variable: '$invent-orange' },
-    'error red': { hex_code:  '#dd3636', scss_variable: '$error-red' },
-    'primary blue (DEPRECIATED)': { hex_code:  '#0064bf', scss_variable: '$primary-blue' },
-    'true blue (DEPRECIATED)': { hex_code:  '#0056ae', scss_variable: '$true-blue' },
-    'futures calling': { hex_code: '#99cc00', scss_variable: 'n/a' }
-}
-%}
+{% set colors = {
+  'white': { hex_code: '#fff', variable: 'var(--white)' },
+  'light grey': { hex_code:  '#f2f3f9', variable: 'var(--light-grey)' },
+  'light mauve': { hex_code:  '#ebecf4', variable: 'var(--light-mauve)' },
+  'medium grey': { hex_code:  '#d8dbea', variable: 'var(--medium-grey)' },
+  'slate light': { hex_code:  '#ccdae6', variable: 'var(--slate-light)' },
+  'limestone': { hex_code: '#a2aaad', variable: 'var(--limestone)' },
+  'medium dark grey': { hex_code:  '#687a8d', variable: 'var(--medium-dark-grey)' },
+  'slate': { hex_code:  '#314d64', variable: 'var(--slate)' },
+  'nittany navy': { hex_code:  '#001e44', variable: 'var(--nittany-navy)' },
+  'black': { hex_code: '#000', variable: 'var(--black)' },
+  'beaver blue': { hex_code:  '#1e407c', variable: 'var(--beaver-blue)' },
+  'sky blue': { hex_code: '#009cde', variable: 'var(--sky-blue)' },
+  'pugh blue': { hex_code:  '#96bee6', variable: 'var(--pugh-blue)' },
+  'pa link': { hex_code:  '#005fa9', variable: 'var(--pa-link)' },
+  'pa link light': { hex_code:  '#cce9ff', variable: 'var(--pa-link-light)' },
+  'creek': { hex_code: '#3ea39e', variable: 'var(--creek)' },
+  'penns forest': { hex_code: '#4A7729', variable: 'var(--penns-forest)' },
+  'keystone light': { hex_code: '#f9df70', variable: 'var(--keystone-light)' },
+  'keystone': { hex_code:  '#ffd100', variable: 'var(--keystone)' },
+  'invent orange light': { hex_code:  '#fca917', variable: 'var(--invent-orange-light)' },
+  'invent orange': { hex_code:  '#e98300', variable: 'var(--invent-orange)' },
+  'error red': { hex_code:  '#dd3636', variable: 'var(--error-red)' },
+  'futures calling': { hex_code: '#99cc00', variable: 'var(--futures-calling)' }
+} %}
 
 {% set items = [] %}
 {% for name, properties in colors %}
   {% set color %}
-    <div style="text-align:center;">
-      <span style="display:block;aspect-ratio:4;border-radius: .5rem .5rem 0 0; background: {{ properties.hex_code }};"></span>
-      <table style="max-width: 100%;margin:0">
-        <thead>
-          <tr>
-              {# @TODO: Fix table styles. #}
-            <th style="min-width: revert">Name</th>
-            <th style="min-width: revert">Hex color</th>
-            <th style="min-width: revert">Scss variable</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-              {# @TODO: Fix table styles. #}
-              <td style="min-width: revert">{{ name }}</td>
-              <td style="min-width: revert">{{ properties.hex_code }}</td>
-              <td style="min-width: revert">{{ properties.scss_variable }}</td>
-          </tr>
-        </tbody>
-      </table>
+    <div style="border:.2rem solid var(--medium-grey);border-radius: .5rem;">
+      <div style="display:block;aspect-ratio:4; background: {{ properties.variable }};border-bottom:.2rem solid var(--medium-grey)"></div>
+      <div style="padding:1rem;">
+        <div class="a11y-table">
+          <table class="a11y-table__table">
+            <thead class="a11y-table__thead">
+              <tr class="a11y-table__tr">
+                  {# @TODO: Fix table styles. #}
+                <th class="a11y-table__th">Name</th>
+                <th class="a11y-table__th">Hex color</th>
+                <th class="a11y-table__th">Scss variable</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  {# @TODO: Fix table styles. #}
+                  <td class="a11y-table__td">{{ name }}</td>
+                  <td class="a11y-table__td">{{ properties.hex_code }}</td>
+                  <td class="a11y-table__td">{{ properties.variable }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   {% endset %}
   {% set items = items|merge([color]) %}
 {% endfor %}
 
-<p>The color foundation of Penn State Outreach and Online Education, based on Penn State branding guidelines.</p>
+<p>The color foundation of Penn State Online Education, based on Penn State branding guidelines.</p>
 {% include '@oe/grid/grid.twig' with {
   items: items
 } only %}

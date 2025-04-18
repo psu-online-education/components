@@ -1,18 +1,18 @@
 {
   "name": "@psu-online-education/more-menu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A more menu block.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-online-education/base": "^2.0",
+    "@psu-online-education/base": "^3.0",
     "@psu-online-education/drop-button": "^3.0.0",
     "@psu-online-education/sprite": "^2.0.0"
   },
   "peerDependencies": {
-    "@psu-online-education/background-container": "^3.0"
+    "@psu-online-education/background-container": "^3.0 || ^4.0"
   },
   "peerDependenciesMeta": {
     "@psu-online-education/background-container": {

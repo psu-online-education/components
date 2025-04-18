@@ -1,12 +1,12 @@
 {
   "name": "@psu-online-education/band",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Provides a simple band container.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-online-education/base": "^1.0 || ^2.0"
+    "@psu-online-education/base": "^3.0"
   }
 }

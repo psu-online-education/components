@@ -1,13 +1,13 @@
 {
   "name": "@psu-online-education/breadcrumbs",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Provides a breadcrumbs implementation.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-online-education/base": "^2.0",
+    "@psu-online-education/base": "^3.0",
     "@psu-online-education/sprite": "^2.0"
   }
 }

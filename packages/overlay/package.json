@@ -1,12 +1,12 @@
 {
   "name": "@psu-online-education/overlay",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Provides an overlay implementation.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-online-education/base": "^2.0"
+    "@psu-online-education/base": "^3.0"
   }
 }

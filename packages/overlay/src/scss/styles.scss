@@ -1,12 +1,11 @@
-@import "../../../base/src/scss/imports/variables";
-@import "../../../base/src/scss/imports/layout";
+@use "../../../base/src/scss/mixins" as oe;
 
 .overlay {
-  min-width: _rem(20);
+  min-width: oe.rem(20);
   
-  @include bp(s) {
+  @include oe.bp(s) {
     position: relative;
-    min-height: _rem(50);
+    min-height: oe.rem(50);
   }
 
   .overlay__image {
@@ -16,20 +15,20 @@
       object-position: top center;
       width: 100%;
 
-      @include bp(s) {
+      @include oe.bp(s) {
         position: absolute;
       }
     }
   }
 
   .overlay__column {
-    @include bp(s) {
+    @include oe.bp(s) {
       margin-left: auto;
       margin-right: auto;
-      padding-left: _rem(4);
-      padding-right: _rem(4);
-      max-width: _rem(119);
-      min-height: _rem(50);
+      padding-left: oe.rem(4);
+      padding-right: oe.rem(4);
+      max-width: oe.rem(119);
+      min-height: oe.rem(50);
       display: flex;
       justify-content: flex-end;
     }
@@ -39,17 +38,17 @@
     background: var(--white);
     color: var(--text-color);
     width: auto;
-    padding: _rem(2);
+    padding: oe.rem(2);
 
-    @include bp(xs) {
-      padding: _rem(4);
+    @include oe.bp(xs) {
+      padding: oe.rem(4);
     }
 
-    @include bp(s) {
-      width: _rem(37.5);
-      padding: _rem(3);
-      margin-top: _rem(4);
-      margin-bottom: _rem(4);
+    @include oe.bp(s) {
+      width: oe.rem(37.5);
+      padding: oe.rem(3);
+      margin-top: oe.rem(4);
+      margin-bottom: oe.rem(4);
       align-self: center;
       z-index: 1;
     }
@@ -65,16 +64,16 @@
 
   &--column-width-narrow {
     .overlay__column {
-      @include bp(s) {
-        max-width: _rem(95);
+      @include oe.bp(s) {
+        max-width: oe.rem(95);
       }
     }
   }
 
   &--content-width-wide {
     .overlay__content {
-      @include bp(s) {
-        width: _rem(57.5);
+      @include oe.bp(s) {
+        width: oe.rem(57.5);
       }
     }
   }

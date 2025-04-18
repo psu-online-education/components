@@ -1,0 +1,16 @@
+diff --git a/node_modules/@basalt/twig-renderer/dist/server--async.php b/node_modules/@basalt/twig-renderer/dist/server--async.php
+index 2db839b..c82aa5a 100644
+--- a/node_modules/@basalt/twig-renderer/dist/server--async.php
++++ b/node_modules/@basalt/twig-renderer/dist/server--async.php
+@@ -59,7 +59,10 @@ function formatResponseBody($msgs = [], $ok = false, $html = ''): string
+     ], JSON_THROW_ON_ERROR);
+ }
+ 
+-$server = new HttpServer(static function (ServerRequestInterface $request) use ($twigRenderer, &$counter): Response|Promise {
++// Increase request body buffer size...
++$server = new HttpServer(new React\Http\Middleware\StreamingRequestMiddleware(),
++    new React\Http\Middleware\LimitConcurrentRequestsMiddleware(100),
++    new React\Http\Middleware\RequestBodyBufferMiddleware(2 * 1024 * 1024), static function (ServerRequestInterface $request) use ($twigRenderer, &$counter): Response|Promise {
+     $headers = [
+         'Content-Type' => 'application/json',
+         'Access-Control-Allow-Origin' => '*',

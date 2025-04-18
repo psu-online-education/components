@@ -1,4 +1,2 @@
-@import "../../../base/src/scss/imports/variables";
-
-@import 'details';
-@import 'summary';
+@use 'details';
+@use 'summary';
