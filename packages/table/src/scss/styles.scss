@@ -68,6 +68,7 @@
     line-height: 1.5;
     scroll-snap-align: start;
     text-align: left;
+    vertical-align: top;
 
     &:not(:first-child) {
       padding-left: oe.rem(2);
