@@ -1,10 +1,7 @@
 {
   "name": "@psu-online-education/base",
-  "version": "2.6.0",
+  "version": "3.0.0",
   "description": "The base styles for the OOE design system.",
-  "ooe": {
-    "namespace": "global"
-  },
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"

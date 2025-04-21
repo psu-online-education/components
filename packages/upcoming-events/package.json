@@ -1,13 +1,13 @@
 {
   "name": "@psu-online-education/upcoming-events",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Provides an upcoming events block implementation.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-online-education/base": "^2.0",
+    "@psu-online-education/base": "^3.0",
     "@psu-online-education/event-link": "^2.0",
     "@psu-online-education/expandable-section": "^1.0"
   }

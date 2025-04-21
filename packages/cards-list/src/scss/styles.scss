@@ -1,15 +1,14 @@
-@import '../../../base/src/scss/imports/layout';
-@import '../../../base/src/scss/imports/variables';
+@use "../../../base/src/scss/mixins" as oe;
 
 .cards-list {
   &__featured {
     display: flex;
     flex-flow: column wrap;
-    gap: _rem(2) 2%;
+    gap: oe.rem(2) 2%;
 
     &--2,
     &--4 {
-      @include bp(xs) {
+      @include oe.bp(xs) {
         flex-direction: row;
 
         .cards-list__card {
@@ -19,7 +18,7 @@
     }
 
     &--3 {
-      @include bp(s) {
+      @include oe.bp(s) {
         flex-direction: row;
 
         .cards-list__card {
@@ -29,7 +28,7 @@
     }
 
     &--4 {
-      @include bp(m) {
+      @include oe.bp(m) {
         .cards-list__card {
           max-width: 23.5%;
         }
@@ -37,12 +36,12 @@
     }
 
     & + .cards-list__overflow {
-      margin-top: _rem(3);
+      margin-top: oe.rem(3);
     }
   }
 
   &__overflow-cards {
     display: grid;
-    gap: _rem(.5);
+    gap: oe.rem(.5);
   }
 }

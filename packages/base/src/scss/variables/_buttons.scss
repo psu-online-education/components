@@ -1,0 +1,5 @@
+@use "../mixins" as oe;
+
+:root {
+  --button-border-radius--default: #{oe.rem(0.5)};
+}

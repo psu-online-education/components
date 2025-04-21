@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/sticky-panel",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Provides a sticky panel that contains one or more bands.",
   "publishConfig": {
     "access": "public",
@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "@psu-online-education/band": "^2.0",
-    "@psu-online-education/base": "^2.6.0"
+    "@psu-online-education/base": "^3.0"
   }
 }

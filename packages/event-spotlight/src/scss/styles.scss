@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/imports/variables";
+@use "../../../base/src/scss/mixins" as oe;
 
 .event-spotlight {
   container-type: inline-size;
@@ -9,7 +9,7 @@
       .event-spotlight__container {
         display: flex;
         flex-direction: row-reverse;
-        min-height: _rem(20);
+        min-height: oe.rem(20);
       }
     }
   }
@@ -26,7 +26,7 @@
     @supports (container-type: inline-size ) {
       @container (min-width: 410px) {
         img {
-          width: _rem(17.5);
+          width: oe.rem(17.5);
           height: 100%;
         }
       }
@@ -36,14 +36,14 @@
       width: 100%;
       position: absolute;
       bottom: 0;
-      height: _rem(6);
+      height: oe.rem(6);
       background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
     }
     @supports (container-type: inline-size ) {
       @container (min-width: 410px) {
         .event-spotlight__image-overlay {
           height: 100%;
-          width: _rem(6);
+          width: oe.rem(6);
           background: linear-gradient(to right, var(--beaver-blue) 0%, transparent 100%);
         }
       }
@@ -51,12 +51,12 @@
   }
 
   &__content {
-    padding: 0 _rem(2) _rem(2) _rem(2);
+    padding: 0 oe.rem(2) oe.rem(2) oe.rem(2);
 
     .event-spotlight__link {
       display: inline-block;
       text-decoration: none;
-      margin-bottom: _rem(3);
+      margin-bottom: oe.rem(3);
 
       &:hover,
       &:focus-visible {
@@ -69,7 +69,7 @@
   @supports (container-type: inline-size ) {
     @container (min-width: 410px) {
       .event-spotlight__content {
-        padding: _rem(2.5) 0 _rem(2.5) _rem(2.5);
+        padding: oe.rem(2.5) 0 oe.rem(2.5) oe.rem(2.5);
         flex: 1;
       }
     }
@@ -81,18 +81,18 @@
     font-weight: var(--font-weight--medium);
     line-height: var(--line-height--2xsnug);
     color: var(--text-color);
-    margin-bottom: _rem(0.8);
+    margin-bottom: oe.rem(0.8);
   }
 
   &__date-time {
     font-size: var(--font-size--xsmall);
     color: var(--text-color);
-    margin-bottom: _rem(0.8);
+    margin-bottom: oe.rem(0.8);
 
     .event-spotlight__date {
       display: inline-block;
       font-weight: var(--font-weight--bold);
-      margin-right: _rem(1);
+      margin-right: oe.rem(1);
     }
 
     .event-spotlight__time {

@@ -1,13 +1,13 @@
 {
   "name": "@psu-online-education/navigation-tile",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Provides a navigation tile component.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-online-education/base": "^2.0",
+    "@psu-online-education/base": "^3.0",
     "@psu-online-education/sprite": "^2.0"
   }
 }

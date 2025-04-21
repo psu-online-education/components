@@ -1,4 +1,4 @@
-@import "../../../base/src/scss/imports/variables";
+@use "../../../base/src/scss/mixins" as oe;
 
 .divider {
   width: auto;
@@ -6,17 +6,17 @@
   position: relative;
 
   &--thin-slate-light {
-    height: _rem(.1);
+    height: oe.rem(.1);
     background-color: var(--slate-light);
   }
 
   &--standard-light-grey {
-    height: _rem(2);
+    height: oe.rem(2);
     background-color: var(--light-grey);
   }
 
   &--standard-white {
-    height: _rem(2);
+    height: oe.rem(2);
     background-color: var(--white);
   }
 
@@ -24,28 +24,28 @@
   &--tall-medium-grey-geometric,
   &--tall-blue-gradient-shield,
   &--tall-blue-gradient-geometric {
-    height: _rem(8);
+    height: oe.rem(8);
 
     .divider__top-band {
       position: absolute;
       top: 0;
       width: 100%;
-      height: _rem(1);
+      height: oe.rem(1);
 
     }
 
     .sprite {
       color: var(--white);
-      width: _rem(130);
+      width: oe.rem(130);
       height: auto;
       margin-left: 35.1%;
-      margin-top: _rem(-6);
+      margin-top: oe.rem(-6);
       position: absolute;
     }
   }
 
   &--tall-medium-grey-shield {
-    background-color: $medium-grey;
+    background-color: var(--medium-grey);
 
     .divider__top-band {
       background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
@@ -61,7 +61,7 @@
     }
     
     .divider__rule {
-      top: _rem(1);
+      top: oe.rem(1);
       height: 100%;
       background: linear-gradient(90deg, var(--medium-grey) 0, transparent 100%);
       margin: 0;
@@ -72,7 +72,7 @@
     background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
 
     .divider__top-band {
-      background-color: $nittany-navy;
+      background-color: var(--nittany-navy);
     }
   }
 
@@ -80,10 +80,10 @@
     background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
 
     .divider__top-band {
-      background-color: $nittany-navy;
+      background-color: var(--nittany-navy);
     }
     .divider__rule {
-      top: _rem(1);
+      top: oe.rem(1);
       height: 100%;
       background: linear-gradient(90deg, var(--beaver-blue) 0, transparent 100%);
       margin: 0;
@@ -95,17 +95,17 @@
     .divider__sprite_1 {
       .sprite {
         position: absolute;
-        right: _rem(71);
-        margin-top: _rem(-19);
-        width: _rem(67);
+        right: oe.rem(71);
+        margin-top: oe.rem(-19);
+        width: oe.rem(67);
       }
     }
     .divider__sprite_2 {
       .sprite {
         position: absolute;
-        right: _rem(-1);
-        margin-top: _rem(-33);
-        width: _rem(67);
+        right: oe.rem(-1);
+        margin-top: oe.rem(-33);
+        width: oe.rem(67);
       }
     }
   }
@@ -116,5 +116,6 @@
     border: none;
     position: absolute;
     top: 0;
+    width: 100%;
   }
 }

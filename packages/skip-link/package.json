@@ -1,12 +1,12 @@
 {
   "name": "@psu-online-education/skip-link",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Provides a skip link element.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-online-education/base": "^2.6.0"
+    "@psu-online-education/base": "^3.0"
   }
 }

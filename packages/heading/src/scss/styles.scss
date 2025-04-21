@@ -1,5 +1,4 @@
-@import "../../../base/src/scss/imports/variables";
-@import "../../../base/src/scss/imports/layout";
+@use "../../../base/src/scss/mixins" as oe;
 
 :root {
   --headings-color--light: var(--white);
@@ -45,10 +44,10 @@ h1, .heading--xlarge {
   line-height: var(--line-height--3xsnug);
 
   &.heading--no-overline.heading--flush {
-    margin-top: _rem(-0.65);
+    margin-top: oe.rem(-0.65);
 
-    @include bp(s) {
-      margin-top: _rem(-0.75);
+    @include oe.bp(s) {
+      margin-top: oe.rem(-0.75);
     }
   }
 
@@ -66,10 +65,10 @@ h2, .heading--large {
   letter-spacing: var(--letter-spacing--msnug);
 
   &.heading--no-overline.heading--flush {
-    margin-top: _rem(-0.5);
+    margin-top: oe.rem(-0.5);
 
-    @include bp(s) {
-      margin-top: _rem(-0.55);
+    @include oe.bp(s) {
+      margin-top: oe.rem(-0.55);
     }
   }
 }
@@ -83,7 +82,7 @@ h3, .heading--medium {
   line-height: var(--line-height--xsnug);
 
   &.heading--flush {
-    margin-top: _rem(-0.55);
+    margin-top: oe.rem(-0.55);
   }
 }
 
@@ -96,7 +95,7 @@ h4, .heading--small {
   line-height: var(--line-height--snug);
 
   &.heading--flush {
-    margin-top: _rem(-0.5);
+    margin-top: oe.rem(-0.5);
   }
 }
 
@@ -109,7 +108,7 @@ h5, .heading--xsmall {
   line-height: var(--line-height--snug);
 
   &.heading--flush {
-    margin-top: _rem(-0.4);
+    margin-top: oe.rem(-0.4);
   }
 }
 
@@ -122,7 +121,7 @@ h6, .heading--2xsmall {
   line-height: var(--line-height--snug);
 
   &.heading--flush {
-    margin-top: _rem(-0.4);
+    margin-top: oe.rem(-0.4);
   }
 }
 
@@ -135,21 +134,21 @@ h2, .heading--large {
     width: 100%;
     height: .125em;
     background-color: var(--accent-color);
-    max-width: _rem(8);
+    max-width: oe.rem(8);
   }
 }
 
 // Styles specific to <h1> elements.
 h1, .heading--xlarge {
   &:not(.heading--no-overline)::before {
-    margin-bottom: _rem(1);
+    margin-bottom: oe.rem(1);
   }
 }
 
 // Styles specific to <h2> elements.
 h2, .heading--large {
   &:not(.heading--no-overline)::before {
-    margin-bottom: _rem(1.5);
+    margin-bottom: oe.rem(1.5);
   }
 }
 
@@ -180,8 +179,8 @@ h6, .heading--2xsmall {
     letter-spacing: 0.02em;
     text-transform: uppercase;
     &:not(.heading-no-overline)::before {
-      margin-bottom: _rem(0.5);
-      height: _rem(0.2);
+      margin-bottom: oe.rem(0.5);
+      height: oe.rem(0.2);
     }
     .text--contrasting {
       font-weight: var(--font-weight--extrabold);

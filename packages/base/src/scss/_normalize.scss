@@ -1,0 +1,87 @@
+@use "../../../base/src/scss/mixins" as oe;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+  background: var(--nittany-navy);
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion) {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  font-size: var(--font-size--default);
+  font-family: var(--font-family--default);
+  color: var(--text-color);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+nav {
+  ul {
+    border: medium none;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+a {
+  color: var(--link-color);
+  font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: inherit;
+  text-decoration-thickness: oe.rem(0.1);
+  outline: solid oe.rem(.2) transparent;
+  outline-offset: oe.rem(0.2);
+  transition: outline-color var(--transition-duration--default) linear;
+  text-underline-offset: .2em;
+
+  &:hover, &:focus-visible {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: oe.rem(.1);
+  }
+
+  &:focus-visible {
+    outline-color: var(--focus-indicator-color);
+    outline-offset: oe.rem(0.2);
+  }
+}
+
+p {
+  color: var(--text-color);
+  font-size: var(--font-size--default);
+  line-height: var(--line-height--default);
+  margin: 0 0 var(--text-element-vertical-space--default);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+strong {
+  font-weight: var(--font-weight--bold);
+}

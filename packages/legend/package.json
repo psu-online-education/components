@@ -1,12 +1,12 @@
 {
   "name": "@psu-online-education/legend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides legend element styles.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-online-education/base": "^2.0"
+    "@psu-online-education/base": "^3.0"
   }
 }

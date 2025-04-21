@@ -1,11 +1,11 @@
-@import "../../../base/src/scss/imports/variables";
+@use "../../../base/src/scss/mixins" as oe;
 
 input[type="color"] {
   background: none;
   height: 100%;
   aspect-ratio: 1;
   padding: 0;
-  border: _rem(.1) solid var(--form-element-border-color);
+  border: oe.rem(.1) solid var(--form-element-border-color);
   cursor: pointer;
 
   &:disabled {

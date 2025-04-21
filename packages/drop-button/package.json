@@ -1,15 +1,12 @@
 {
   "name": "@psu-online-education/drop-button",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "An accessible drop-button component.",
-  "ooe": {
-    "namespace": "global"
-  },
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-online-education/base": "^2.6.0"
+    "@psu-online-education/base": "^3.0"
   }
 }

@@ -1,13 +1,13 @@
 {
   "name": "@psu-online-education/modal",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Provides a modal component.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-online-education/base": "^2.6.0",
+    "@psu-online-education/base": "^3.0",
     "@psu-online-education/sprite": "^2.0"
   }
 }

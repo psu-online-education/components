@@ -1,12 +1,12 @@
-@import "../../../base/src/scss/imports/_variables.scss";
+@use "../../../base/src/scss/mixins" as oe;
 
 .accordion {
-  min-width: _rem(15);
+  min-width: oe.rem(15);
 
   &:not(.accordion--borderless) {
 
-    border-top: _rem(.1) solid var(--medium-grey);
-    border-bottom: _rem(.1) solid var(--medium-grey);
+    border-top: oe.rem(.1) solid var(--medium-grey);
+    border-bottom: oe.rem(.1) solid var(--medium-grey);
 
     + .accordion {
       border-top: none;
@@ -35,7 +35,7 @@
     font-weight: var(--font-weight--semibold);
     line-height: var(--line-height--snug);
     color: var(--beaver-blue);
-    padding: _rem(2) 0;
+    padding: oe.rem(2) 0;
     width: 100%;
     text-align: left;
 
@@ -56,8 +56,8 @@
     }
 
     &:focus-visible {
-      outline: _rem(.2) solid var(--focus-indicator-color);
-      outline-offset: _rem(.2);
+      outline: oe.rem(.2) solid var(--focus-indicator-color);
+      outline-offset: oe.rem(.2);
     }
 
     .accordion__label--label-underline {
@@ -68,7 +68,7 @@
   &__label {
     flex: 1 1 0;
     text-decoration-color: transparent;
-    text-decoration-thickness: _rem(.1);
+    text-decoration-thickness: oe.rem(.1);
     text-decoration-line: underline;
     text-decoration-style: dotted;
     text-underline-offset: .2em;
@@ -77,8 +77,8 @@
 
   .accordion__sprite .sprite {
     color: var(--pa-link);
-    height: _rem(1.6);
-    margin: auto _rem(1.5);
+    height: oe.rem(1.6);
+    margin: auto oe.rem(1.5);
     transition-property: transform;
     transition-timing-function: linear;
     transition-duration: .2s;
@@ -109,12 +109,12 @@
       }
 
       &:focus-visible {
-        margin-bottom: _rem(.3);
+        margin-bottom: oe.rem(.3);
       }
     }
 
    > .accordion__expandable-content {
-      margin-bottom: _rem(2);
+      margin-bottom: oe.rem(2);
       visibility: inherit;
     }
   }

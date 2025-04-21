@@ -18,9 +18,7 @@ const update_build_id = done => {
  */
 const compile_scss = done => {
   const fs = require('fs');
-  const bulkSass = require('gulp-sass-bulk-import');
   const sass = require('gulp-sass')(require('sass'));
-  const sourcemaps = require('gulp-sourcemaps');
   const components = fs.readdirSync('packages').filter(function(file) {
     return file !== 'patternlab';
   });
@@ -28,16 +26,14 @@ const compile_scss = done => {
   components.forEach(function(component) {
     const dist = 'packages/' + component + '/dist';
 
-    gulp.src('packages/' + component + '/src/scss/*.scss')
-      .pipe(sourcemaps.init())
-      .pipe(bulkSass())
-      .pipe(sass({
-        outputStyle: 'compressed',
-        precision: 6,
-        includePaths: ['sass']
-      })).on('error', sass.logError)
-      .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest(dist));
+    if (fs.existsSync('packages/' + component + '/src/scss/styles.scss')) {
+      gulp.src('packages/' + component + '/src/scss/styles.scss')
+        .pipe(sass({
+          style: 'compressed',
+          precision: 6,
+        })).on('error', sass.logError)
+        .pipe(gulp.dest(dist));
+    }
   });
   done();
 };
@@ -98,7 +94,7 @@ const compile_sprites = function(done) {
     .pipe(gulp.dest('packages/sprite/dist'))
     .on('end', () => {
       fs.copyFileSync('packages/sprite/dist/defs/svg/sprite.defs.svg', 'packages/sprite/dist/sprites.svg');
-      fs.rmdirSync('packages/sprite/dist/defs/', { recursive: true });
+      fs.rmSync('packages/sprite/dist/defs/', { recursive: true });
     });
   done();
 };

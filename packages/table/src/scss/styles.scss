@@ -1,0 +1,127 @@
+@use "../../../base/src/scss/mixins" as oe;
+
+:root, [data-light] {
+  --a11y-table-shadows:
+    linear-gradient(to right, var(--background-color) 30%, rgba(255, 255, 255, 0)) left,
+    linear-gradient(to right, color-mix(in srgb, transparent, var(--nittany-navy) 20%), transparent) left,
+    linear-gradient(to left, var(--background-color) 70%, transparent) right,
+    linear-gradient(to left, color-mix(in srgb, transparent, var(--nittany-navy) 20%), transparent) right;
+
+  --a11y-table-border-color: color-mix(in srgb, var(--medium-dark-grey) 25%, transparent);
+}
+
+[data-dark] {
+  --a11y-table-shadows:
+    linear-gradient(to right, var(--background-color) 30%, rgba(255, 255, 255, 0)) left,
+    linear-gradient(to right, color-mix(in srgb, transparent, var(--black) 70%), transparent) left,
+    linear-gradient(to left, var(--background-color) 70%, transparent) right,
+    linear-gradient(to left, color-mix(in srgb, transparent, var(--black) 70%), transparent) right;
+
+  --a11y-table-border-color: color-mix(in srgb, var(--slate-light) 30%, transparent);
+
+}
+
+.a11y-table {
+  container-type: inline-size;
+  overflow: visible;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+
+  background: var(--a11y-table-shadows);
+  background-repeat: no-repeat;
+  background-size: oe.rem(3) 100%, oe.rem(1.5) 100%, oe.rem(3) 100%, oe.rem(1.5) 100%;
+  background-attachment: local, scroll, local, scroll;
+  position: relative;
+
+  border-top-left-radius: oe.rem(.3);
+  border-top-right-radius: oe.rem(.3);
+
+  &::after {
+    content: "";
+    position: sticky;
+    bottom: oe.rem(.1);
+    left: 0;
+    display: block;
+    height: oe.rem(.1);
+    background-color: var(--a11y-table-border-color);
+  }
+
+  &__table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  &__caption {
+    color: var(--text-color);
+    font-size: var(--font-size--large);
+    line-height: var(--line-height--xsnug);
+    font-weight: var(--font-weight--bold);
+    text-align: left;
+    max-width: 100cqw;
+    padding-bottom: var(--text-element-vertical-space--default);
+  }
+
+  &__th, &__td {
+    color: var(--text-color);
+    font-size: oe.rem(1.6);
+    line-height: 1.5;
+    scroll-snap-align: start;
+    text-align: left;
+    vertical-align: top;
+
+    &:not(:first-child) {
+      padding-left: oe.rem(2);
+    }
+  }
+
+  &__th {
+    font-weight: bold;
+    padding-bottom: oe.rem(2);
+
+    &:not(:first-of-type) {
+      padding-left: oe.rem(2);
+    }
+  }
+
+  &__td {
+    padding-top: oe.rem(2);
+    padding-bottom: oe.rem(2);
+  }
+
+  &__thead &__th {
+    border-bottom: oe.rem(.3) solid transparent;
+    position: relative;
+    vertical-align: bottom;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: calc(100% - oe.rem(.3)) 0 0 0;
+      background: var(--a11y-table-border-color);
+    }
+  }
+
+  &__tbody &__th {
+    padding-top: oe.rem(2);
+  }
+
+  &:not(:has(&__thead)) &__tr:first-child &__td,
+  &:not(:has(&__thead)) &__tr:first-child &__th {
+    padding-top: 0;
+  }
+
+  &__tbody &__tr:not(:last-child) &__th,
+  &__tbody &__tr:not(:last-child) &__td {
+    border-bottom: oe.rem(.1) solid transparent;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: calc(100% - oe.rem(.1)) 0 0 0;
+      background: var(--a11y-table-border-color);
+    }
+  }
+
+}
