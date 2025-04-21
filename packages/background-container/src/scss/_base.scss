@@ -7,6 +7,11 @@
   padding-bottom: oe.rem(3);
   position: relative;
 
+  @include oe.bp(xs) {
+    padding-top: oe.rem(4);
+    padding-bottom: oe.rem(4);
+  }
+
   //noinspection CssUnknownProperty
   @supports (container-type: inline-size ) {
     // Might not be needed if a linear scaling function can work now?
@@ -24,22 +29,9 @@
   }
 
   @include oe.bp(xs) {
-    padding-top: oe.rem(4);
-    padding-bottom: oe.rem(4);
-
-    &--padding-none {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-
     &--padding-small {
       padding-top: oe.rem(3);
       padding-bottom: oe.rem(3);
-    }
-
-    &--padding-large {
-      padding-top: oe.rem(5);
-      padding-bottom: oe.rem(5);
     }
   }
 
