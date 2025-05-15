@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/cta",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Provides a CTA button.",
   "publishConfig": {
     "access": "public",
