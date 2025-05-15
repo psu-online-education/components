@@ -11,7 +11,6 @@
   }
 
   &--expand-to-fit {
-    //display:flex;
     width: 100%;
     justify-content: space-between;
 
@@ -19,8 +18,4 @@
       flex: 1 1 auto;
     }
   }
-
-  //& > .cta-block:not(:last-of-type) {
-  //  margin-right: clamp(oe.rem(.5), 1.25vw, oe.rem(1));
-  //}
 }
