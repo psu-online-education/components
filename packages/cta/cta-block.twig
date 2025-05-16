@@ -2,7 +2,7 @@
 {%- set classes = classes|default([])|merge([
   'cta-block',
   'button',
-  color in ['alt', 'keystone', 'keystone-light', 'hollow-solid', 'hollow-dotted', 'light-blue', 'expand'] ? 'button--' ~ color,
+  color in ['alt', 'keystone', 'keystone-light', 'reversed', 'hollow-solid', 'hollow-dotted', 'light-blue', 'expand'] ? 'button--' ~ color,
   color_on_dark in ['keystone', 'keystone-light', 'reversed', 'light-blue'] ? 'button--on-dark-' ~ color_on_dark,
   expand_to_fit ? 'button--expand-to-fit',
   font_weight in ['bold'] ? 'button--' ~ font_weight,
