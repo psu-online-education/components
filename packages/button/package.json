@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/button",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides a stylized semantic button.",
   "publishConfig": {
     "access": "public",
