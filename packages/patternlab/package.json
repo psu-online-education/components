@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/patternlab",
-  "version": "2.0.48",
+  "version": "2.0.49",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
