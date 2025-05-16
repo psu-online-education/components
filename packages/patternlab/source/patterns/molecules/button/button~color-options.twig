@@ -25,6 +25,14 @@
 
   {%- include '@oe/button/button.twig' with {
     type: 'button',
+    label: 'Light blue',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+    color: 'reversed',
+  } only -%}
+
+  {%- include '@oe/button/button.twig' with {
+    type: 'button',
     label: 'Keystone',
     icon_before: 'fa-chevron-left',
     icon_after: 'fas-chevron-right',
