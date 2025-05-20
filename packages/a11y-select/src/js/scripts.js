@@ -14,7 +14,7 @@
           combobox.setAttribute('aria-controls', 'a11y-select-listbox');
           a11y_select.appendChild(combobox);
 
-          const listbox = document.createElement('div');
+          const listbox = document.createElement('ul');
           listbox.setAttribute('id', 'a11y-select-listbox');
           listbox.setAttribute('role', 'listbox');
           listbox.setAttribute('aria-label', 'Demo options');
@@ -22,7 +22,7 @@
 
           options.forEach(option => {
             if (option.tagName.toLowerCase() === 'option') {
-              const listbox_option = document.createElement('div');
+              const listbox_option = document.createElement('li');
               listbox_option.setAttribute('role', 'option');
               listbox_option.setAttribute('id', option.value);
               listbox_option.setAttribute('aria-selected', 'false');
