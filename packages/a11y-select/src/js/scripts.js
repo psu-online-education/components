@@ -32,7 +32,12 @@
             else {
               const listbox_group = document.createElement('ul');
               listbox_group.setAttribute('role', 'group');
-              listbox_group.setAttribute('aria-label', option.getAttribute('label'));
+              listbox_group.setAttribute('aria-labelledby', 'optgroup-label');
+              const presentation_option = document.createElement('li');
+              presentation_option.setAttribute('role', 'presentation');
+              presentation_option.setAttribute('id', 'optgroup-label');
+              presentation_option.textContent = option.getAttribute('label');
+              listbox_group.appendChild(presentation_option);
               const suboptions = option.querySelectorAll('option');
               suboptions.forEach(subption => {
                 const listbox_option = document.createElement('li');
@@ -68,7 +73,7 @@
                 new_option = listbox.querySelector('[role="option"]:first-child');
               }
               if (new_option && new_option.getAttribute('role') === 'group') {
-                new_option = new_option.querySelector('[role="option"]:first-child');
+                new_option = new_option.querySelector('[role="option"]:nth-child(2)');
               }
             }
             else if (e.key === 'ArrowUp') {
@@ -79,6 +84,9 @@
               new_option = selected_option.previousElementSibling;
               if (!new_option) {
                 new_option = listbox.querySelector('[role="option"]:last-child');
+              }
+              if (new_option && new_option.getAttribute('role') === 'presentation') {
+                new_option = new_option.parentElement.previousElementSibling;
               }
               if (new_option && new_option.getAttribute('role') === 'group') {
                 new_option = new_option.querySelector('[role="option"]:last-child');
