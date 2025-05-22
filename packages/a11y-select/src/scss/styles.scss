@@ -8,27 +8,31 @@
   --a11y-select--selected-bg: #000;
   --a11y-select--selected-fg: #fff;
 
+  --a11y-select-listbox-padding: 2rem;
+  --a11y-select-listbox-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+
+  --a11y-select-option-padding: 1rem;
+
   // Made visible with javascript.
   &__enhanced {
     display: none;
+  }
+
+  &__listbox {
+    margin: 0;
+    padding: var(--a11y-select-listbox-padding);
+    box-shadow: var(--a11y-select-listbox-shadow);
+    list-style-type: none;
   }
 
   &__combobox[aria-expanded="false"] ~ &__listbox {
     display: none;
   }
 
-  &__status {
-    opacity: 0;
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    z-index: -1;
-    pointer-events: none;
-  }
-
   &__option {
     background-color: var(--a11y-select--bg);
     color: var(--a11y-select--fg);
+    padding: var(--a11y-select-option-padding);
 
     &--hidden {
       display: none;

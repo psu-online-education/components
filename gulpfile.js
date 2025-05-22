@@ -171,12 +171,12 @@ gulp.task('default', gulp.series(
     compile_sprites,
     compile_twig
   ),
-  update_build_id,
+  //update_build_id,
   gulp.parallel(
-    watch_scss,
-    watch_js,
-    watch_sprites,
-    watch_twig,
+  //  watch_scss,
+  //  watch_js,
+   // watch_sprites,
+    //watch_twig,
     watch_patternlab
   )
 ));
