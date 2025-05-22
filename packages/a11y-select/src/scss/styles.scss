@@ -1,5 +1,34 @@
 .a11y-select {
-  [aria-expanded="false"] + [role="listbox"] {
+  --a11y-select--bg: #fff;
+  --a11y-select--fg: #000;
+
+  --a11y-select--hovered-bg: #111;
+  --a11y-select--hovered-fg: #ddd;
+
+  --a11y-select--selected-bg: #000;
+  --a11y-select--selected-fg: #fff;
+
+  // Made visible with javascript.
+  &__enhanced {
     display: none;
+  }
+
+  &__combobox[aria-expanded="false"] ~ &__listbox {
+    display: none;
+  }
+
+  &__option {
+    background-color: var(--a11y-select--bg);
+    color: var(--a11y-select--fg);
+
+    &[aria-selected="true"] {
+      background-color: var(--a11y-select--selected-bg);
+      color: var(--a11y-select--selected-fg);
+    }
+
+    &:hover {
+      background-color: var(--a11y-select--hovered-bg);
+      color: var(--a11y-select--hovered-fg);
+    }
   }
 }

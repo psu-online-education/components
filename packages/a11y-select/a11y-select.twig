@@ -1,0 +1,25 @@
+<div class="a11y-select">
+  <div class="a11y-select__fallback">
+    <label class="a11y-select__fallback-label" for="a11y-select--fallback-select">
+    {{ label }}
+    </label>
+    <select class="a11y-select__fallback-select" id="a11y-select--fallback-select">
+      {% for option in options %}
+        <option class="a11y-select__option" value="{{ option.value }}">{{ option.label }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="a11y-select__enhanced">
+    <label class="a11y-select__label" for="a11y-select--enhanced-combobox">
+      {{ label }}
+    </label>
+    <input class="a11y-select__combobox" id="a11y-select--enhanced-combobox" type="text" aria-describedby="a11y-select--enhanced-description" aria-activedescendant="" aria-autocomplete="list" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+    <span class="a11y-select__description" id="a11y-select--enhanced-description">{{ description }}</span>
+    <ul class="a11y-select__listbox" role="listbox">
+      {% for option in options %}
+        <li class="a11y-select__option" id="{{ 'a11y-select--' ~ option.value }}" role="option" aria-selected="false">{{ option.label }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

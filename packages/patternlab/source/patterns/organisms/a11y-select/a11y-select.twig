@@ -1,17 +1,12 @@
-<div class="a11y-select">
-  <label>
-    Demo options
-    <select class="a11y-select__select">
-      <optgroup label="Optgroup 1">
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-      </optgroup>
-      <optgroup label="Optgroup 2">
-        <option value="4">Option 4</option>
-        <option value="5">Option 5</option>
-        <option value="6">Option 6</option>
-      </optgroup>
-    </select>
-  </label>
-</div>
+{% include '@oe/a11y-select/a11y-select.twig' with {
+  label: 'Select an option',
+  description: 'You may search for options by typing in this combobox',
+  options: [
+    { value: '1', label: 'Option 1' },
+    { value: '2', label: 'Option 2' },
+    { value: '3', label: 'Option 3' },
+    { value: '4', label: 'Option 4' },
+    { value: '5', label: 'Option 5' },
+    { value: '6', label: 'Option 6' },
+  ],
+} only %}

@@ -2,105 +2,76 @@
   cms.attach('a11y-select', context => {
     const a11y_selects = cms.once('a11y-select', '.a11y-select', context);
     a11y_selects.forEach(a11y_select => {
-      const select = a11y_select.querySelector('.a11y-select__select');
-      if (select) {
-        const options = select.querySelectorAll(':scope > option, :scope > optgroup');
-        if (options.length) {
-          const combobox = document.createElement('input');
-          combobox.setAttribute('type', 'text');
-          combobox.setAttribute('role', 'combobox');
-          combobox.setAttribute('aria-autocomplete', 'both');
+
+      // Apply the combobox treatment as a progressive enhancement.
+      a11y_select.querySelector('.a11y-select__fallback').style.display = 'none';
+      a11y_select.querySelector('.a11y-select__enhanced').style.display = 'initial';
+
+      const combobox = a11y_select.querySelector('.a11y-select__combobox');
+      const listbox = a11y_select.querySelector('.a11y-select__listbox');
+
+      const options = a11y_select.querySelectorAll('.a11y-select__option');
+      options.forEach(option => {
+
+        option.addEventListener('click', () => {
+          a11y_select.querySelector('.a11y-select__option[aria-selected="true"]')?.setAttribute('aria-selected', 'false');
+          option.setAttribute('aria-selected', 'true');
+          combobox.setAttribute('aria-activedescendant', option.getAttribute('id'));
           combobox.setAttribute('aria-expanded', 'false');
-          combobox.setAttribute('aria-controls', 'a11y-select-listbox');
-          a11y_select.appendChild(combobox);
+          combobox.value = option.textContent;
+        });
+      });
 
-          const listbox = document.createElement('ul');
-          listbox.setAttribute('id', 'a11y-select-listbox');
-          listbox.setAttribute('role', 'listbox');
-          listbox.setAttribute('aria-label', 'Demo options');
-          a11y_select.appendChild(listbox);
+      // Toggle the aria-expanded attribute on click.
+      combobox.addEventListener('click', () => {
+        combobox.setAttribute('aria-expanded', combobox.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+      });
 
-          options.forEach(option => {
-            if (option.tagName.toLowerCase() === 'option') {
-              const listbox_option = document.createElement('li');
-              listbox_option.setAttribute('role', 'option');
-              listbox_option.setAttribute('id', option.value);
-              listbox_option.setAttribute('aria-selected', 'false');
-              listbox_option.textContent = option.textContent;
-              listbox.appendChild(listbox_option);
-            }
-            else {
-              const listbox_group = document.createElement('ul');
-              listbox_group.setAttribute('role', 'group');
-              listbox_group.setAttribute('aria-labelledby', 'optgroup-label');
-              const presentation_option = document.createElement('li');
-              presentation_option.setAttribute('role', 'presentation');
-              presentation_option.setAttribute('id', 'optgroup-label');
-              presentation_option.textContent = option.getAttribute('label');
-              listbox_group.appendChild(presentation_option);
-              const suboptions = option.querySelectorAll('option');
-              suboptions.forEach(subption => {
-                const listbox_option = document.createElement('li');
-                listbox_option.setAttribute('role', 'option');
-                listbox_option.setAttribute('id', subption.value);
-                listbox_option.setAttribute('aria-selected', 'false');
-                listbox_option.textContent = subption.textContent;
-                listbox_group.appendChild(listbox_option);
-              });
-              listbox.appendChild(listbox_group);
-            }
-          });
+      // Respond to various keydown events.
+      combobox.addEventListener('keydown', e => {
+        let selected_option = listbox.querySelector('[aria-selected="true"]');
+        let new_option = selected_option;
 
-          combobox.addEventListener('click', () => {
-            if (combobox.getAttribute('aria-expanded') === 'true') {
-              combobox.setAttribute('aria-expanded', 'false');
-            }
-            else {
-              combobox.setAttribute('aria-expanded', 'true');
-            }
-          });
-
-          combobox.addEventListener('keydown', e => {
-            let selected_option = listbox.querySelector('[aria-selected="true"]');
-            let new_option = null;
-            if (e.key === 'ArrowDown') {
-              if (!selected_option) {
-                selected_option = listbox.querySelector('[role="option"]:first-child');
-              }
-
-              new_option = selected_option.nextElementSibling;
-              if (!new_option) {
-                new_option = listbox.querySelector('[role="option"]:first-child');
-              }
-              if (new_option && new_option.getAttribute('role') === 'group') {
-                new_option = new_option.querySelector('[role="option"]:nth-child(2)');
-              }
-            }
-            else if (e.key === 'ArrowUp') {
-              if (!selected_option) {
-                selected_option = listbox.querySelector('[role="option"]:last-child');
-              }
-
-              new_option = selected_option.previousElementSibling;
-              if (!new_option) {
-                new_option = listbox.querySelector('[role="option"]:last-child');
-              }
-              if (new_option && new_option.getAttribute('role') === 'presentation') {
-                new_option = new_option.parentElement.previousElementSibling;
-              }
-              if (new_option && new_option.getAttribute('role') === 'group') {
-                new_option = new_option.querySelector('[role="option"]:last-child');
-              }
-            }
-            if (new_option) {
-              selected_option.setAttribute('aria-selected', 'false');
-              new_option.setAttribute('aria-selected', 'true');
-              combobox.setAttribute('aria-activedescendant', new_option.getAttribute('id'));
-            }
-          });
-
+        if (e.key === 'Enter' || e.key === 'Escape') {
+          combobox.click();
         }
-      }
+        if (e.key === 'Home') {
+          new_option = listbox.querySelector('[role="option"]:first-child');
+        }
+        else if (e.key === 'ArrowDown') {
+          if (!selected_option) {
+            new_option = listbox.querySelector('[role="option"]:first-child');
+          }
+          else {
+            new_option = selected_option.nextElementSibling
+            if (!new_option) {
+              new_option = listbox.querySelector('[role="option"]:first-child');
+            }
+          }
+        }
+        else if (e.key === 'ArrowUp') {
+          if (!selected_option) {
+            new_option = listbox.querySelector('[role="option"]:last-child');
+          }
+          else {
+            new_option = selected_option.previousElementSibling;
+            if (!new_option) {
+              new_option = listbox.querySelector('[role="option"]:last-child');
+            }
+          }
+        }
+        else if (e.key === 'End') {
+          new_option = listbox.querySelector('[role="option"]:last-child');
+        }
+        else {
+          return;
+        }
+        e.preventDefault();
+        combobox.setAttribute('aria-activedescendant', new_option?.getAttribute('id'));
+        selected_option?.setAttribute('aria-selected', 'false');
+        new_option.setAttribute('aria-selected', 'true');
+        combobox.value = listbox.querySelector('[aria-selected="true"]')?.textContent ?? combobox.value;
+      })
     });
   });
 })(cms);
