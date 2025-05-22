@@ -16,6 +16,7 @@
     </label>
     <input class="a11y-select__combobox" id="a11y-select--enhanced-combobox" type="text" aria-describedby="a11y-select--enhanced-description" aria-activedescendant="" aria-autocomplete="list" aria-expanded="false" aria-haspopup="listbox" role="combobox">
     <span class="a11y-select__description" id="a11y-select--enhanced-description">{{ description }}</span>
+    <span class="a11y-select__status" aria-live="polite"></span>
     <ul class="a11y-select__listbox" role="listbox">
       {% for option in options %}
         <li class="a11y-select__option" id="{{ 'a11y-select--' ~ option.value }}" role="option" aria-selected="false">{{ option.label }}</li>

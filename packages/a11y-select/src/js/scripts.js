@@ -22,6 +22,17 @@
         });
       });
 
+      combobox.addEventListener('input', e => {
+        const value = combobox.value;
+        listbox.querySelectorAll('[role="option"]').forEach(option => {
+          option.classList.toggle('a11y-select__option--hidden', value && !option.textContent.toLowerCase().includes(value.toLowerCase()));
+        });
+        if (value) {
+          const results = listbox.querySelectorAll('[role="option"]:not(.a11y-select__option--hidden)');
+          a11y_select.querySelector('.a11y-select__status').textContent = `${results.length} ${results.length > 1 ? 'options found that match' : 'option found that matches'}  "${value}"`;
+        }
+      });
+
       // Toggle the aria-expanded attribute on click.
       combobox.addEventListener('click', () => {
         combobox.setAttribute('aria-expanded', combobox.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');

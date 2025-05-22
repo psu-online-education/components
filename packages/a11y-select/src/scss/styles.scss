@@ -17,9 +17,22 @@
     display: none;
   }
 
+  &__status {
+    opacity: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    z-index: -1;
+    pointer-events: none;
+  }
+
   &__option {
     background-color: var(--a11y-select--bg);
     color: var(--a11y-select--fg);
+
+    &--hidden {
+      display: none;
+    }
 
     &[aria-selected="true"] {
       background-color: var(--a11y-select--selected-bg);
