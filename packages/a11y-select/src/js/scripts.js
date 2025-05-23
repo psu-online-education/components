@@ -26,7 +26,7 @@
           combobox.removeAttribute('aria-activedescendant');
           combobox.setAttribute('aria-expanded', 'false');
           combobox.textContent = option.textContent;
-          native_select.value = option.getAttribute('data-native-value');
+          //native_select.value = option.getAttribute('data-native-value');
         });
       });
 
