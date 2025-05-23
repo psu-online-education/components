@@ -11,7 +11,7 @@
 
       // Apply the combobox treatment as a progressive enhancement.
       a11y_select.querySelector('.a11y-select__fallback').style.display = 'none';
-      a11y_select.querySelector('.a11y-select__enhanced').style.display = 'initial';
+      a11y_select.querySelector('.a11y-select__enhanced').style.display = 'block';
 
       const combobox = a11y_select.querySelector('.a11y-select__combobox');
       const listbox = a11y_select.querySelector('.a11y-select__listbox');
