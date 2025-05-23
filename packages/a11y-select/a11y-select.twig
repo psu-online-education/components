@@ -18,7 +18,16 @@
       <div class="a11y-select__combobox-value">{{ empty_label }}</div>
       <div class="a11y-select__listbox" id="a11y-select--listbox" role="listbox" aria-labelledby="a11y-select--label" tabindex="-1">
         {% for option in [{value: '', label: empty_label }]|merge(options) %}
-          <div class="a11y-select__option" id="{{ 'a11y-select--' ~ (option.value ?: 'empty-option') }}" {# data-native-value="{{ option.value }}" #} role="option" aria-selected="{{ loop.first ? 'true' : 'false' }}">{{ option.label }}</div>
+          {% if option.children %}
+            <ul class="a11y-select__group" role="group" aria-labelledby="a11y-select--group-{{ option.value }}">
+              <li role="presentation" id="a11y-select--group-{{ option.value }}">{{ option.label }}</li>
+              {% for suboption in option.children %}
+                <li class="a11y-select__option" id="{{ 'a11y-select--' ~ (suboption.value ?: 'empty-option') }}" {# data-native-value="{{ suboption.value }}" #} role="option" aria-selected="false">{{ suboption.label }}</li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <div class="a11y-select__option" id="{{ 'a11y-select--' ~ (option.value ?: 'empty-option') }}" {# data-native-value="{{ option.value }}" #} role="option" aria-selected="{{ loop.first ? 'true' : 'false' }}">{{ option.label }}</div>
+          {% endif %}
         {% endfor %}
       </div>
     </div>

@@ -3,12 +3,16 @@
   description: 'You may search for options by typing in this combobox',
   empty_label: 'Select an option',
   options: [
-    { value: '1', label: 'Option 1' },
-    { value: '2', label: 'Option 2' },
-    { value: '3', label: 'Option 3' },
-    { value: '4', label: 'Option 4' },
-    { value: '5', label: 'Option 5' },
-    { value: '6', label: 'Option 6' },
+    { value: 'option-group-1', label: 'Option group 1', children: [
+      { value: '1', label: 'Option 1' },
+      { value: '2', label: 'Option 2' },
+      { value: '3', label: 'Option 3' },
+    ]},
+    { value: 'option-group-2', label: 'Option group 2', children: [
+      { value: '4', label: 'Option 4' },
+      { value: '5', label: 'Option 5' },
+      { value: '6', label: 'Option 6' },
+    ]},
     { value: '123456', label: 'Option 123456' },
   ],
 } only %}

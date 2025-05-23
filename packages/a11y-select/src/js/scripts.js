@@ -7,7 +7,6 @@
     const a11y_selects = cms.once('a11y-select', '.a11y-select', context);
     a11y_selects.forEach(a11y_select => {
 
-      const native_select = a11y_select.querySelector('.a11y-select__fallback-select');
 
       // Apply the combobox treatment as a progressive enhancement.
       a11y_select.querySelector('.a11y-select__fallback').style.display = 'none';
@@ -26,7 +25,6 @@
           combobox.removeAttribute('aria-activedescendant');
           combobox.setAttribute('aria-expanded', 'false');
           combobox.querySelector('.a11y-select__combobox-value').textContent = option.textContent;
-          //native_select.value = option.getAttribute('data-native-value');
         });
       });
 
@@ -75,7 +73,26 @@
           new_option?.classList.add('a11y-select__option--activedescendant');
         }
         else if (e.key === 'ArrowDown') {
-          new_option = (combobox.getAttribute('aria-expanded') === 'false' && e.altKey) ? selected_option : selected_option.nextElementSibling
+          if (e.altKey) {
+            new_option = selected_option;
+          }
+          else {
+            // Get the next option if available...
+            if (selected_option.nextElementSibling && selected_option.nextElementSibling.getAttribute('role') === 'option' ) {
+              new_option = selected_option.nextElementSibling;
+            }
+            else if (selected_option.nextElementSibling && selected_option.nextElementSibling.getAttribute('role') === 'group' ) {
+              new_option = selected_option.nextElementSibling.querySelector('[role="option"]');
+            }
+            else if (selected_option.parentElement.getAttribute('role') === 'group' && selected_option.parentElement.nextElementSibling) {
+              if (selected_option.parentElement.nextElementSibling.getAttribute('role') === 'group') {
+                new_option = selected_option.parentElement.nextElementSibling.querySelector('[role="option"]');
+              }
+              else {
+                new_option = selected_option.parentElement.nextElementSibling;
+              }
+            }
+          }
           combobox.setAttribute('aria-expanded', 'true');
           if (new_option) {
             selected_option?.classList.remove('a11y-select__option--activedescendant');
@@ -84,7 +101,26 @@
           }
         }
         else if (e.key === 'ArrowUp') {
-          new_option = (combobox.getAttribute('aria-expanded') === 'false' && e.altKey) ? selected_option : selected_option.previousElementSibling;
+          if (e.altKey) {
+            new_option = selected_option;
+          }
+          else {
+            // Get the next option if available...
+            if (selected_option.previousElementSibling && selected_option.previousElementSibling.getAttribute('role') === 'option' ) {
+              new_option = selected_option.previousElementSibling;
+            }
+            else if (selected_option.previousElementSibling && selected_option.previousElementSibling.getAttribute('role') === 'group' ) {
+              new_option = selected_option.previousElementSibling.querySelector('[role="option"]:last-child');
+            }
+            else if (selected_option.parentElement.getAttribute('role') === 'group' && selected_option.parentElement.previousElementSibling) {
+              if (selected_option.parentElement.previousElementSibling.getAttribute('role') === 'group') {
+                new_option = selected_option.parentElement.previousElementSibling.querySelector('[role="option"]:last-child');
+              }
+              else {
+                new_option = selected_option.parentElement.previousElementSibling;
+              }
+            }
+          }
           combobox.setAttribute('aria-expanded', 'true');
           if (new_option) {
             selected_option?.classList.remove('a11y-select__option--activedescendant');
