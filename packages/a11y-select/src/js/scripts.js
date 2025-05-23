@@ -23,7 +23,7 @@
           a11y_select.querySelector('.a11y-select__option[aria-selected="true"]')?.setAttribute('aria-selected', 'false');
           option.setAttribute('aria-selected', 'true');
           option.classList.remove('a11y-select__option--activedescendant');
-          combobox.setAttribute('aria-activedescendant', '');
+          combobox.removeAttribute('aria-activedescendant');
           combobox.setAttribute('aria-expanded', 'false');
           combobox.textContent = option.textContent;
           native_select.value = option.getAttribute('data-native-value');
@@ -33,7 +33,7 @@
       // Toggle the aria-expanded attribute on click.
       combobox.addEventListener('click', () => {
         if (combobox.getAttribute('aria-expanded') === 'true') {
-          combobox.setAttribute('aria-activedescendant', '');
+          combobox.removeAttribute('aria-activedescendant');
           combobox.setAttribute('aria-expanded', 'false');
         }
         else {
@@ -46,11 +46,12 @@
         let selected_option = document.getElementById(combobox.getAttribute('aria-activedescendant')) ??
           listbox.querySelector('[role="option"][aria-selected="true"]') ??
           listbox.querySelector('[role="option"]:first-child');
+        console.log(selected_option);
         let new_option = null;
 
         if (e.key === 'Enter') {
           if (combobox.getAttribute('aria-expanded') === 'true') {
-            document.getElementById(combobox.getAttribute('aria-activedescendant'))?.click();
+            selected_option?.click();
             selected_option?.classList.remove('a11y-select__option--activedescendant');
           }
           else {
