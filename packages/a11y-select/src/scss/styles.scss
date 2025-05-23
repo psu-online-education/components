@@ -2,11 +2,13 @@
   --a11y-select--bg: #fff;
   --a11y-select--fg: #000;
 
-  --a11y-select--hovered-bg: #111;
-  --a11y-select--hovered-fg: #ddd;
+  --a11y-select--hovered-bg: #333;
+  --a11y-select--hovered-fg: #fff;
 
   --a11y-select--selected-bg: #000;
   --a11y-select--selected-fg: #fff;
+
+  --a11y-select--active-outline: var(--sky-blue);
 
   --a11y-select-combobox-padding: 1rem;
   --a11y-select-combobox-border: .2rem solid #000;
@@ -24,6 +26,10 @@
   [role="combobox"] {
     padding: var(--a11y-select-combobox-padding);
     border: var(--a11y-select-combobox-border);
+
+    &:focus {
+      outline: .2rem solid var(--a11y-select--active-outline);
+    }
   }
 
   [role="listbox"] {
@@ -34,7 +40,7 @@
   }
 
   [role="combobox"][aria-expanded="true"] + [role="listbox"] {
-    display: initial;
+    display: block;
   }
 
   &__option {
@@ -42,7 +48,10 @@
     color: var(--a11y-select--fg);
     padding: var(--a11y-select-option-padding);
 
-    &--activedescendant,
+    &--activedescendant {
+      outline: .2rem solid var(--a11y-select--active-outline);
+    }
+
     &[aria-selected="true"] {
       background-color: var(--a11y-select--selected-bg);
       color: var(--a11y-select--selected-fg);
