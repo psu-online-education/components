@@ -11,10 +11,10 @@
   </div>
 
   <div class="a11y-select__enhanced">
-    <label class="a11y-select__label" for="a11y-select--enhanced-combobox">
+    <label class="a11y-select__label" id="a11y-select--label">
       {{ label }}
     </label>
-    <div class="a11y-select__combobox" id="a11y-select--enhanced-combobox" tabindex="0" aria-controls="a11y-select--listbox" aria-activedescendant="" aria-haspopup="listbox" role="combobox" aria-expanded="false">
+    <div class="a11y-select__combobox" aria-labelledby="a11y-select--label" id="a11y-select--enhanced-combobox" tabindex="0" aria-controls="a11y-select--listbox" aria-haspopup="listbox" role="combobox" aria-expanded="false">
       {{ empty_label }}
     </div>
     <ul class="a11y-select__listbox" id="a11y-select--listbox" role="listbox">
