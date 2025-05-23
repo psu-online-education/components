@@ -20,7 +20,7 @@
         {% for option in [{value: '', label: empty_label }]|merge(options) %}
           {% if option.children %}
             <div class="a11y-select__group" role="group" aria-labelledby="a11y-select--group-{{ option.value }}">
-              <div role="presentation" id="a11y-select--group-{{ option.value }}">{{ option.label }}</div>
+              <div aria-hidden="true" role="presentation" id="a11y-select--group-{{ option.value }}">{{ option.label }}</div>
               {% for suboption in option.children %}
                 <div class="a11y-select__option" id="{{ 'a11y-select--' ~ (suboption.value ?: 'empty-option') }}" {# data-native-value="{{ suboption.value }}" #} role="option" aria-selected="false">{{ suboption.label }}</div>
               {% endfor %}
