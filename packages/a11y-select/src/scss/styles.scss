@@ -29,6 +29,7 @@
 
     &:focus {
       outline: .2rem solid var(--a11y-select--active-outline);
+      outline-offset: .2rem;
     }
   }
 
