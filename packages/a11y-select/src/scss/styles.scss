@@ -24,12 +24,21 @@
   }
 
   [role="combobox"] {
-    padding: var(--a11y-select-combobox-padding);
-    border: var(--a11y-select-combobox-border);
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    .a11y-select__combobox-value {
+      padding: var(--a11y-select-combobox-padding);
+      border: var(--a11y-select-combobox-border);
+    }
 
     &:focus {
-      outline: .2rem solid var(--a11y-select--active-outline);
-      outline-offset: .2rem;
+      .a11y-select__combobox-value {
+        outline: .2rem solid var(--a11y-select--active-outline);
+        outline-offset: .2rem;
+      }
     }
   }
 
@@ -40,7 +49,7 @@
     display: none;
   }
 
-  [role="combobox"][aria-expanded="true"] + [role="listbox"] {
+  [role="combobox"][aria-expanded="true"] > [role="listbox"] {
     display: block;
   }
 

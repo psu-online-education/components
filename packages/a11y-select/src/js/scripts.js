@@ -25,21 +25,25 @@
           option.classList.remove('a11y-select__option--activedescendant');
           combobox.removeAttribute('aria-activedescendant');
           combobox.setAttribute('aria-expanded', 'false');
-          combobox.textContent = option.textContent;
-          combobox.focus();
+          combobox.querySelector('.a11y-select__combobox-value').textContent = option.textContent;
           //native_select.value = option.getAttribute('data-native-value');
         });
       });
 
       // Toggle the aria-expanded attribute on click.
-      combobox.addEventListener('click', () => {
+      combobox.querySelector('.a11y-select__combobox-value').addEventListener('click', e => {
         if (combobox.getAttribute('aria-expanded') === 'true') {
           combobox.removeAttribute('aria-activedescendant');
-          combobox.focus();
           combobox.setAttribute('aria-expanded', 'false');
         }
         else {
           combobox.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      combobox.addEventListener('focusout', e => {
+        if (!combobox.contains(e.relatedTarget)) {
+          combobox.setAttribute('aria-expanded', 'false');
         }
       });
 
