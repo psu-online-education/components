@@ -25,9 +25,9 @@
     padding: var(--a11y-select-combobox-padding);
     border: var(--a11y-select-combobox-border);
 
-//    &[aria-expanded="false"] + [role="listbox"] {
-//      display: none;
-//    }
+    &[aria-expanded="false"] + [role="listbox"] {
+      display: none;
+    }
   }
 
   [role="listbox"] {
