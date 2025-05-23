@@ -61,7 +61,8 @@
         }
         else if (e.key === 'Escape') {
           selected_option?.classList.remove('a11y-select__option--activedescendant');
-          combobox.click();
+          combobox.setAttribute('aria-expanded', 'false');
+          combobox.focus();
         }
         if (e.key === 'Home') {
           combobox.setAttribute('aria-expanded', 'true');
