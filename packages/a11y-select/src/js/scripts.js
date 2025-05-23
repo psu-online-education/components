@@ -26,6 +26,7 @@
           combobox.removeAttribute('aria-activedescendant');
           combobox.setAttribute('aria-expanded', 'false');
           combobox.textContent = option.textContent;
+          combobox.focus();
           //native_select.value = option.getAttribute('data-native-value');
         });
       });
@@ -34,6 +35,7 @@
       combobox.addEventListener('click', () => {
         if (combobox.getAttribute('aria-expanded') === 'true') {
           combobox.removeAttribute('aria-activedescendant');
+          combobox.focus();
           combobox.setAttribute('aria-expanded', 'false');
         }
         else {
@@ -46,7 +48,6 @@
         let selected_option = document.getElementById(combobox.getAttribute('aria-activedescendant')) ??
           listbox.querySelector('[role="option"][aria-selected="true"]') ??
           listbox.querySelector('[role="option"]:first-child');
-        console.log(selected_option);
         let new_option = null;
 
         if (e.key === 'Enter') {
