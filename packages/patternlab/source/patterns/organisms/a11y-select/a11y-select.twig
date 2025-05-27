@@ -1,4 +1,4 @@
-{% include '@oe/a11y-select/a11y-select.twig' with {
+{# {% include '@oe/a11y-select/a11y-select.twig' with {
   label: 'Select an option',
   description: 'You may search for options by typing in this combobox',
   empty_label: 'Select an option',
@@ -15,4 +15,42 @@
     ]},
     { value: '123456', label: 'Option 123456' },
   ],
-} only %}
+} only %} #}
+<label> a11y-select demo <select id="a11y-select-demo">
+    <option value=""> - Select a Program - </option>
+    <optgroup label="Bachelor Degrees">
+      <option value="SEBCBS">Software Engineering (Bachelor of Science)</option>
+    </optgroup>
+    <optgroup label="Masters Degrees">
+      <option value="ACS">Acoustics (Master of Engineering)</option>
+      <option value="AMDMENG">Additive Manufacturing and Design (Master of Engineering)</option>
+      <option value="EEMEN">Electrical Engineering (Master of Engineering)</option>
+      <option value="ENGMT">Engineering Management (Master's Degree)</option>
+      <option value="IEMENG">Industrial Engineering (Master of Engineering)</option>
+      <option value="MSME">Mechanical Engineering (Master of Science)</option>
+      <option value="NUC E">Nuclear Engineering (Master of Engineering)</option>
+      <option value="SWENG">Software Engineering (Master's Degree)</option>
+      <option value="SYSEN">Systems Engineering (Master of Engineering)</option>
+    </optgroup>
+    <optgroup label="Doctoral Degrees">
+      <option value="ENGRDENG">Engineering (Doctor of Engineering)</option>
+    </optgroup>
+    <optgroup label="Graduate Certificates">
+      <option value="AMDGCT">Additive Manufacturing and Design (Graduate Certificate)</option>
+      <option value="MSEAIEGCT">AI Engineering (Graduate Certificate)</option>
+      <option value="MSEDAEGCT">Data Analytics and Engineering (Graduate Certificate)</option>
+      <option value="EEPCT">Electrical Engineering (Postbaccalaureate Certificate)</option>
+      <option value="ELIMGCT">Engineering Leadership and Innovation Management (Graduate Certificate)</option>
+      <option value="MEMLCDGCT">Life-Cycle System Design (Graduate Certificate)</option>
+      <option value="MSEPQMGCT">Project Quality Management (Graduate Certificate)</option>
+      <option value="MEMQMGCT">Quality Management Across Product Lifecycle (Graduate Certificate)</option>
+      <option value="MEMQDMGCT">Quantitative Decision-Making for Engineering Managers (Graduate Certificate)</option>
+      <option value="MSESADGCT">Software Architecture and Design (Graduate Certificate)</option>
+      <option value="MENGSMGCT">System Modeling and Analysis (Graduate Certificate)</option>
+      <option value="MENGSQGCT">System Quality &amp; Risk Evaluation (Graduate Certificate)</option>
+      <option value="MENGTMGCT">Technical Management (Graduate Certificate)</option>
+      <option value="MEMTMLGCT">Technical Management and Leadership Essentials (Graduate Certificate)</option>
+    </optgroup>
+    <optgroup label=""></optgroup>
+  </select>
+</label>

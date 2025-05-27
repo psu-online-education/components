@@ -1,144 +1,311 @@
 (cms => {
 
+  const a11ySelect = ((native_select, unique_id) => {
+
+  function maintainScrollVisibility(activeElement, scrollParent) {
+    const { offsetHeight, offsetTop } = activeElement;
+    const { offsetHeight: parentOffsetHeight, scrollTop } = scrollParent;
+
+    const isAbove = offsetTop < scrollTop;
+    const isBelow = offsetTop + offsetHeight > scrollTop + parentOffsetHeight;
+
+    if (isAbove) {
+      scrollParent.scrollTo(0, offsetTop);
+    } else if (isBelow) {
+      scrollParent.scrollTo(0, offsetTop - parentOffsetHeight + offsetHeight);
+    }
+  }
+
+  const options = [];
+  let selected_option = null;
+  let aria_active_descendant_index = 0;
+
+  const wrapping_element = Object.assign(document.createElement('div'), {
+    className: 'a11y-select',
+  });
+
+  // If there is a label wrapping the native select, move the entire label inside.
+  const wrapping_label = native_select.closest('label');
+  if (wrapping_label) {
+    wrapping_label.insertAdjacentElement('beforebegin', wrapping_element);
+    wrapping_element.appendChild(wrapping_label);
+  }
+  else {
+    native_select.insertAdjacentElement('beforebegin', wrapping_element);
+    wrapping_element.appendChild(native_select);
+  }
+
+  const combobox = Object.assign(document.createElement('div'), {
+    className: 'a11y-select__combobox',
+    tabIndex: '0',
+    ariaControls: [`a11y-select-${unique_id}--listbox`],
+    ariaHasPopup: 'listbox',
+    role: 'combobox',
+    ariaExpanded: 'false',
+  });
+
+  const combobox_value = Object.assign(document.createElement('div'), {
+    className: 'a11y-select__value',
+  });
+  combobox.appendChild(combobox_value);
+
+  const listbox = Object.assign(document.createElement('div'), {
+    className: 'a11y-select__listbox',
+    id: `a11y-select-${unique_id}--listbox`,
+    role: 'listbox',
+    tabIndex: '-1',
+  });
+
+  let group_counter = 0;
+  let option_counter = 0;
+  native_select.querySelectorAll(':scope > option, :scope > optgroup').forEach(native_element =>  {
+    if (native_element.tagName.toLowerCase() === 'optgroup') {
+      ++group_counter;
+
+      const group_accessible_name = Object.assign(document.createElement('div'), {
+        className: 'a11y-select__group-accessible-name',
+        role: 'presentation',
+        id: `a11y-select-${unique_id}--optgroup-${group_counter}`,
+        textContent: native_element.getAttribute('label'),
+      });
+
+      const group = Object.assign(document.createElement('div'), {
+        className: 'a11y-select__group',
+        role: 'group',
+      });
+      if (native_element.hasAttribute('disabled')) {
+        group.setAttribute('aria-disabled', 'true');
+      }
+
+      group.appendChild(group_accessible_name);
+      group.setAttribute('aria-labelledby', `a11y-select-${unique_id}--optgroup-${group_counter}`);
+      native_element.querySelectorAll('option').forEach(native_subelement => {
+        ++option_counter;
+        const option = Object.assign(document.createElement('div'), {
+          className: 'a11y-select__option',
+          id: `a11y-select-${unique_id}--option-${option_counter}`,
+          role: 'option',
+          ariaSelected: native_subelement.hasAttribute('selected') ? 'true' : 'false',
+          textContent: native_subelement.textContent,
+        });
+        if (native_subelement.hasAttribute('selected')) {
+          selected_option = option;
+        }
+        option.setAttribute('data-native-option-value', native_subelement.getAttribute('value'));
+        if (native_subelement.hasAttribute('disabled')) {
+          option.setAttribute('aria-disabled', 'true');
+        }
+        else {
+          option.addEventListener('click', () => {
+            selected_option?.classList.remove('a11y-select__option--active-descendant', 'a11y-select__option--selected');
+            selected_option.setAttribute('aria-selected', 'false');
+
+            selected_option = option;
+
+            selected_option.setAttribute('aria-selected', 'true');
+            selected_option.classList.add('a11y-select__option--selected');
+            combobox.setAttribute('aria-expanded', 'false');
+            combobox.removeAttribute('aria-activedescendant');
+            combobox_value.textContent = selected_option.textContent;
+          });
+        }
+        options.push(option);
+        group.appendChild(option);
+      });
+
+      listbox.appendChild(group);
+    }
+    else {
+      ++option_counter;
+      const option = Object.assign(document.createElement('div'), {
+        className: `a11y-select__option${native_element.hasAttribute('selected') ? ' a11y-select__option--selected' : ''}`,
+        id: `a11y-select-${unique_id}--option-${option_counter}`,
+        role: 'option',
+        ariaSelected: native_element.hasAttribute('selected') ? 'true' : 'false',
+        textContent: native_element.textContent,
+      });
+      if (native_element.hasAttribute('selected')) {
+        selected_option = option;
+      }
+      option.setAttribute('data-native-option-value', native_element.getAttribute('value'));
+      if (native_element.hasAttribute('disabled')) {
+        option.setAttribute('aria-disabled', 'true');
+      }
+      else {
+        option.addEventListener('click', () => {
+          selected_option?.classList.remove('a11y-select__option--active-descendant', 'a11y-select__option--selected');
+          selected_option.setAttribute('aria-selected', 'false');
+
+          selected_option = option;
+
+          selected_option.setAttribute('aria-selected', 'true');
+          selected_option.classList.add('a11y-select__option--selected');
+          combobox.setAttribute('aria-expanded', 'false');
+          combobox.removeAttribute('aria-activedescendant');
+          combobox_value.textContent = selected_option.textContent;
+        });
+      }
+      options.push(option);
+      listbox.appendChild(option);
+    }
+  });
+  if (!selected_option) {
+    selected_option = options[0];
+    selected_option.setAttribute('aria-selected', 'true');
+    selected_option.classList.add('a11y-select__option--selected');
+  }
+  combobox_value.textContent = selected_option.textContent;
+
+  aria_active_descendant_index = options.indexOf(selected_option);
+
+  combobox.appendChild(listbox);
+  wrapping_element.appendChild(combobox);
+
+  combobox.addEventListener('click', e => {
+    if (e.target === combobox.querySelector('.a11y-select__value')) {
+      if (combobox.getAttribute('aria-expanded') === 'true') {
+        combobox.setAttribute('aria-expanded', 'false');
+        document.getElementById(combobox.getAttribute('aria-activedescendant'))?.classList.remove('a11y-select__option--active-descendant');
+        combobox.removeAttribute('aria-activedescendant');
+      }
+      else {
+        combobox.setAttribute('aria-expanded', 'true');
+        combobox.setAttribute('aria-activedescendant', selected_option?.getAttribute('id') ?? options[0].getAttribute('id'));
+        selected_option?.classList.add('a11y-select__option--active-descendant');
+        aria_active_descendant_index = options.indexOf(selected_option);
+      }
+    }
+  });
+
+  combobox.addEventListener('focusout', e => {
+    if (!combobox.contains(e.relatedTarget)) {
+      options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
+      combobox.removeAttribute('aria-activedescendant');
+      combobox.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  combobox.addEventListener('keydown', e => {
+    if (e.key === 'Tab' && options[aria_active_descendant_index]?.getAttribute('aria-disabled') !== 'true') {
+      selected_option?.classList.remove('a11y-select__option--selected');
+      selected_option?.setAttribute('aria-selected', 'false');
+
+      selected_option = options[aria_active_descendant_index];
+
+      selected_option?.classList.add('a11y-select__option--selected');
+      selected_option.setAttribute('aria-selected', 'true');
+      combobox_value.textContent = selected_option.textContent;
+    }
+    else if (e.key === 'Escape') {
+      options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
+      combobox.removeAttribute('aria-activedescendant');
+      combobox.setAttribute('aria-expanded', 'false');
+    }
+    else if (e.key === 'Enter') {
+      if (combobox.getAttribute('aria-expanded') === 'true') {
+        if (options[aria_active_descendant_index]?.getAttribute('aria-disabled') !== 'true') {
+          selected_option?.classList.remove('a11y-select__option--selected');
+          selected_option?.setAttribute('aria-selected', 'false');
+
+          selected_option = options[aria_active_descendant_index];
+
+          selected_option?.classList.add('a11y-select__option--selected');
+          selected_option.setAttribute('aria-selected', 'true');
+
+          combobox.setAttribute('aria-expanded', 'false');
+          combobox_value.textContent = selected_option.textContent;
+        }
+      }
+      else {
+        if (aria_active_descendant_index === null) {
+          aria_active_descendant_index = selected_option ? options.indexOf(selected_option) : 0;
+        }
+        combobox.setAttribute('aria-activedescendant', options[aria_active_descendant_index].getAttribute('id'));
+        options[aria_active_descendant_index].classList.add('a11y-select__option--active-descendant');
+        combobox.setAttribute('aria-expanded', 'true');
+      }
+    }
+    else if (e.key === 'Home') {
+      options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
+      aria_active_descendant_index = 0;
+      combobox.setAttribute('aria-activedescendant', options[aria_active_descendant_index].getAttribute('id'));
+      options[aria_active_descendant_index].classList.add('a11y-select__option--active-descendant');
+      maintainScrollVisibility(options[aria_active_descendant_index], listbox);
+    }
+    else if (e.key === 'End') {
+      options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
+      aria_active_descendant_index = options.length - 1;
+      combobox.setAttribute('aria-activedescendant', options[aria_active_descendant_index].getAttribute('id'));
+      options[aria_active_descendant_index].classList.add('a11y-select__option--active-descendant');
+      maintainScrollVisibility(options[aria_active_descendant_index], listbox);
+    }
+    else if (e.key === 'PageDown') {
+      if (combobox.getAttribute('aria-expanded') === 'true') {
+        options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
+        aria_active_descendant_index = Math.min(aria_active_descendant_index + 10, options.length - 1);
+        if (combobox.getAttribute('aria-expanded') === 'false') {
+          combobox.setAttribute('aria-expanded', 'true');
+        }
+        combobox.setAttribute('aria-activedescendant', options[aria_active_descendant_index].getAttribute('id'));
+        options[aria_active_descendant_index].classList.add('a11y-select__option--active-descendant');
+        maintainScrollVisibility(options[aria_active_descendant_index], listbox);
+      }
+    }
+    else if (e.key === 'ArrowDown') {
+      options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
+
+      if (combobox.getAttribute('aria-expanded') === 'true' || (combobox.getAttribute('aria-expanded') === 'false' && !e.altKey)) {
+        aria_active_descendant_index = Math.min(aria_active_descendant_index + 1, options.length - 1);
+      }
+      if (combobox.getAttribute('aria-expanded') === 'false') {
+        combobox.setAttribute('aria-expanded', 'true');
+      }
+      combobox.setAttribute('aria-activedescendant', options[aria_active_descendant_index].getAttribute('id'));
+      options[aria_active_descendant_index].classList.add('a11y-select__option--active-descendant');
+      maintainScrollVisibility(options[aria_active_descendant_index], listbox);
+    }
+    else if (e.key === 'PageUp') {
+      if (combobox.getAttribute('aria-expanded') === 'true') {
+        options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
+        aria_active_descendant_index = Math.max(0, aria_active_descendant_index - 10);
+        if (combobox.getAttribute('aria-expanded') === 'false') {
+          combobox.setAttribute('aria-expanded', 'true');
+        }
+        combobox.setAttribute('aria-activedescendant', options[aria_active_descendant_index].getAttribute('id'));
+        options[aria_active_descendant_index].classList.add('a11y-select__option--active-descendant');
+        maintainScrollVisibility(options[aria_active_descendant_index], listbox);
+      }
+    }
+    else if (e.key === 'ArrowUp') {
+      options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
+      if (combobox.getAttribute('aria-expanded') === 'true' || (combobox.getAttribute('aria-expanded') === 'false' && !e.altKey)) {
+        aria_active_descendant_index = Math.max(0, aria_active_descendant_index - 1);
+      }
+      if (combobox.getAttribute('aria-expanded') === 'false') {
+        combobox.setAttribute('aria-expanded', 'true');
+      }
+      combobox.setAttribute('aria-activedescendant', options[aria_active_descendant_index].getAttribute('id'));
+      options[aria_active_descendant_index].classList.add('a11y-select__option--active-descendant');
+      maintainScrollVisibility(options[aria_active_descendant_index], listbox);
+    }
+  });
+
+  native_select.style.display = 'none';
+
+  // Next up, determine the accessible name for the native select.
+  // @see https://www.w3.org/TR/accname-1.2/
+  if (native_select.hasAttribute('aria-describedby')) {
+
+  }
+});
+
   /**
    * Adds event listeners to all a11y-select elements in context.
    */
   cms.attach('a11y-select', context => {
-    const a11y_selects = cms.once('a11y-select', '.a11y-select', context);
-    a11y_selects.forEach(a11y_select => {
-
-
-      // Apply the combobox treatment as a progressive enhancement.
-      a11y_select.querySelector('.a11y-select__fallback').style.display = 'none';
-      a11y_select.querySelector('.a11y-select__enhanced').style.display = 'block';
-
-      const combobox = a11y_select.querySelector('.a11y-select__combobox');
-      const listbox = a11y_select.querySelector('.a11y-select__listbox');
-
-      const options = a11y_select.querySelectorAll('.a11y-select__option');
-      options.forEach(option => {
-
-        option.addEventListener('click', () => {
-          a11y_select.querySelector('.a11y-select__option[aria-selected="true"]')?.setAttribute('aria-selected', 'false');
-          option.setAttribute('aria-selected', 'true');
-          option.classList.remove('a11y-select__option--activedescendant');
-          combobox.removeAttribute('aria-activedescendant');
-          combobox.setAttribute('aria-expanded', 'false');
-          combobox.querySelector('.a11y-select__combobox-value').textContent = option.textContent;
-        });
-      });
-
-      // Toggle the aria-expanded attribute on click.
-      combobox.querySelector('.a11y-select__combobox-value').addEventListener('click', e => {
-        if (combobox.getAttribute('aria-expanded') === 'true') {
-          combobox.removeAttribute('aria-activedescendant');
-          combobox.setAttribute('aria-expanded', 'false');
-        }
-        else {
-          combobox.setAttribute('aria-expanded', 'true');
-        }
-      });
-
-      combobox.addEventListener('focusout', e => {
-        if (!combobox.contains(e.relatedTarget)) {
-          combobox.setAttribute('aria-expanded', 'false');
-        }
-      });
-
-      // Respond to various keydown events.
-      combobox.addEventListener('keydown', e => {
-        let selected_option = document.getElementById(combobox.getAttribute('aria-activedescendant')) ??
-          listbox.querySelector('[role="option"][aria-selected="true"]') ??
-          listbox.querySelector('[role="option"]:first-child');
-        let new_option = null;
-
-        if (e.key === 'Enter') {
-          if (combobox.getAttribute('aria-expanded') === 'true') {
-            selected_option?.click();
-            selected_option?.classList.remove('a11y-select__option--activedescendant');
-          }
-          else {
-            combobox.setAttribute('aria-expanded', 'true');
-          }
-        }
-        else if (e.key === 'Escape') {
-          selected_option?.classList.remove('a11y-select__option--activedescendant');
-          combobox.setAttribute('aria-expanded', 'false');
-          combobox.focus();
-        }
-        if (e.key === 'Home') {
-          combobox.setAttribute('aria-expanded', 'true');
-          new_option = listbox.querySelector('[role="option"]:first-child');
-          selected_option?.classList.remove('a11y-select__option--activedescendant');
-          new_option?.classList.add('a11y-select__option--activedescendant');
-        }
-        else if (e.key === 'ArrowDown') {
-          if (e.altKey) {
-            new_option = selected_option;
-          }
-          else {
-            // Get the next option if available...
-            if (selected_option.nextElementSibling && selected_option.nextElementSibling.getAttribute('role') === 'option' ) {
-              new_option = selected_option.nextElementSibling;
-            }
-            else if (selected_option.nextElementSibling && selected_option.nextElementSibling.getAttribute('role') === 'group' ) {
-              new_option = selected_option.nextElementSibling.querySelector('[role="option"]');
-            }
-            else if (selected_option.parentElement.getAttribute('role') === 'group' && selected_option.parentElement.nextElementSibling) {
-              if (selected_option.parentElement.nextElementSibling.getAttribute('role') === 'group') {
-                new_option = selected_option.parentElement.nextElementSibling.querySelector('[role="option"]');
-              }
-              else {
-                new_option = selected_option.parentElement.nextElementSibling;
-              }
-            }
-          }
-          combobox.setAttribute('aria-expanded', 'true');
-          if (new_option) {
-            selected_option?.classList.remove('a11y-select__option--activedescendant');
-            new_option.classList.add('a11y-select__option--activedescendant');
-            combobox.setAttribute('aria-activedescendant', new_option.getAttribute('id'));
-          }
-        }
-        else if (e.key === 'ArrowUp') {
-          if (e.altKey) {
-            new_option = selected_option;
-          }
-          else {
-            // Get the next option if available...
-            if (selected_option.previousElementSibling && selected_option.previousElementSibling.getAttribute('role') === 'option' ) {
-              new_option = selected_option.previousElementSibling;
-            }
-            else if (selected_option.previousElementSibling && selected_option.previousElementSibling.getAttribute('role') === 'group' ) {
-              new_option = selected_option.previousElementSibling.querySelector('[role="option"]:last-child');
-            }
-            else if (selected_option.parentElement.getAttribute('role') === 'group' && selected_option.parentElement.previousElementSibling) {
-              if (selected_option.parentElement.previousElementSibling.getAttribute('role') === 'group') {
-                new_option = selected_option.parentElement.previousElementSibling.querySelector('[role="option"]:last-child');
-              }
-              else {
-                new_option = selected_option.parentElement.previousElementSibling;
-              }
-            }
-          }
-          combobox.setAttribute('aria-expanded', 'true');
-          if (new_option) {
-            selected_option?.classList.remove('a11y-select__option--activedescendant');
-            new_option.classList.add('a11y-select__option--activedescendant');
-            combobox.setAttribute('aria-activedescendant', new_option.getAttribute('id'));
-          }
-        }
-        else if (e.key === 'End') {
-          combobox.setAttribute('aria-expanded', 'true');
-          new_option = listbox.querySelector('[role="option"]:last-child');
-          selected_option?.classList.remove('a11y-select__option--activedescendant');
-          new_option?.classList.add('a11y-select__option--activedescendant');
-        }
-        else {
-          return;
-        }
-        e.preventDefault();
-      });
+    const selects = cms.once('a11y-select', '#a11y-select-demo', context);
+    selects.forEach(select => {
+      a11ySelect(select, 'demo');
     });
   });
 })(cms);
