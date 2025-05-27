@@ -163,7 +163,7 @@
   wrapping_element.appendChild(combobox);
 
   combobox.addEventListener('click', e => {
-   // if (e.target === combobox.querySelector('.a11y-select__value')) {
+    if (e.target === combobox.querySelector('.a11y-select__value')) {
 /*      if (combobox.getAttribute('aria-expanded') === 'true') {
         combobox.setAttribute('aria-expanded', 'false');
         document.getElementById(combobox.getAttribute('aria-activedescendant'))?.classList.remove('a11y-select__option--active-descendant');
@@ -180,7 +180,7 @@
         selected_option?.classList.add('a11y-select__option--active-descendant');
         aria_active_descendant_index = options.indexOf(selected_option);
 //      }
-  //  }
+    }
   });
 
 /*  combobox.addEventListener('focusout', e => {
