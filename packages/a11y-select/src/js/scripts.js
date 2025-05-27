@@ -183,7 +183,7 @@
     }
   });
 
-  combobox.addEventListener('focusout', e => {
+/*  combobox.addEventListener('focusout', e => {
     if (!combobox.contains(e.relatedTarget)) {
       options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
       combobox.removeAttribute('aria-activedescendant');
@@ -194,7 +194,7 @@
       last_selected_option?.classList.add('a11y-select__option--selected');
       selected_option = last_selected_option;
     }
-  });
+  });*/
 
   combobox.addEventListener('keydown', e => {
     if (e.key === 'Tab' && options[aria_active_descendant_index]?.getAttribute('aria-disabled') !== 'true') {
