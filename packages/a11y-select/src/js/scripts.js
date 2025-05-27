@@ -17,6 +17,7 @@
   }
 
   const options = [];
+  let last_selected_option = null;
   let selected_option = null;
   let aria_active_descendant_index = 0;
 
@@ -89,7 +90,7 @@
           textContent: native_subelement.textContent,
         });
         if (native_subelement.hasAttribute('selected')) {
-          selected_option = option;
+          last_selected_option = selected_option = option;
         }
         option.setAttribute('data-native-option-value', native_subelement.getAttribute('value'));
         if (native_subelement.hasAttribute('disabled')) {
@@ -97,10 +98,10 @@
         }
         else {
           option.addEventListener('click', () => {
-            selected_option?.classList.remove('a11y-select__option--active-descendant', 'a11y-select__option--selected');
-            selected_option.setAttribute('aria-selected', 'false');
+            last_selected_option?.classList.remove('a11y-select__option--active-descendant', 'a11y-select__option--selected');
+            last_selected_option?.setAttribute('aria-selected', 'false');
 
-            selected_option = option;
+            last_selected_option = selected_option = option;
 
             selected_option.setAttribute('aria-selected', 'true');
             selected_option.classList.add('a11y-select__option--selected');
@@ -125,7 +126,7 @@
         textContent: native_element.textContent,
       });
       if (native_element.hasAttribute('selected')) {
-        selected_option = option;
+        last_selected_option = selected_option = option;
       }
       option.setAttribute('data-native-option-value', native_element.getAttribute('value'));
       if (native_element.hasAttribute('disabled')) {
@@ -133,10 +134,10 @@
       }
       else {
         option.addEventListener('click', () => {
-          selected_option?.classList.remove('a11y-select__option--active-descendant', 'a11y-select__option--selected');
-          selected_option.setAttribute('aria-selected', 'false');
+          last_selected_option?.classList.remove('a11y-select__option--active-descendant', 'a11y-select__option--selected');
+          last_selected_option?.setAttribute('aria-selected', 'false');
 
-          selected_option = option;
+          last_selected_option = selected_option = option;
 
           selected_option.setAttribute('aria-selected', 'true');
           selected_option.classList.add('a11y-select__option--selected');
@@ -150,7 +151,7 @@
     }
   });
   if (!selected_option) {
-    selected_option = options[0];
+    last_selected_option = selected_option = options[0];
     selected_option.setAttribute('aria-selected', 'true');
     selected_option.classList.add('a11y-select__option--selected');
   }
@@ -167,6 +168,11 @@
         combobox.setAttribute('aria-expanded', 'false');
         document.getElementById(combobox.getAttribute('aria-activedescendant'))?.classList.remove('a11y-select__option--active-descendant');
         combobox.removeAttribute('aria-activedescendant');
+        selected_option?.setAttribute('aria-selected', 'false');
+        selected_option?.classList.remove('a11y-select__option--selected');
+        last_selected_option?.setAttribute('aria-selected', 'true');
+        last_selected_option?.classList.add('a11y-select__option--selected');
+        selected_option = last_selected_option;
       }
       else {
         combobox.setAttribute('aria-expanded', 'true');
@@ -182,15 +188,20 @@
       options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
       combobox.removeAttribute('aria-activedescendant');
       combobox.setAttribute('aria-expanded', 'false');
+      selected_option?.setAttribute('aria-selected', 'false');
+      selected_option?.classList.remove('a11y-select__option--selected');
+      last_selected_option?.setAttribute('aria-selected', 'true');
+      last_selected_option?.classList.add('a11y-select__option--selected');
+      selected_option = last_selected_option;
     }
   });
 
   combobox.addEventListener('keydown', e => {
     if (e.key === 'Tab' && options[aria_active_descendant_index]?.getAttribute('aria-disabled') !== 'true') {
-      selected_option?.classList.remove('a11y-select__option--selected');
-      selected_option?.setAttribute('aria-selected', 'false');
+      last_selected_option?.classList.remove('a11y-select__option--selected');
+      last_selected_option?.setAttribute('aria-selected', 'false');
 
-      selected_option = options[aria_active_descendant_index];
+      last_selected_option = selected_option = options[aria_active_descendant_index];
 
       selected_option?.classList.add('a11y-select__option--selected');
       selected_option.setAttribute('aria-selected', 'true');
@@ -200,14 +211,19 @@
       options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
       combobox.removeAttribute('aria-activedescendant');
       combobox.setAttribute('aria-expanded', 'false');
+      selected_option?.setAttribute('aria-selected', 'false');
+      selected_option?.classList.remove('a11y-select__option--selected');
+      last_selected_option?.setAttribute('aria-selected', 'true');
+      last_selected_option?.classList.add('a11y-select__option--selected');
+      selected_option = last_selected_option;
     }
     else if (e.key === 'Enter') {
       if (combobox.getAttribute('aria-expanded') === 'true') {
         if (options[aria_active_descendant_index]?.getAttribute('aria-disabled') !== 'true') {
-          selected_option?.classList.remove('a11y-select__option--selected');
-          selected_option?.setAttribute('aria-selected', 'false');
+          last_selected_option?.classList.remove('a11y-select__option--selected');
+          last_selected_option?.setAttribute('aria-selected', 'false');
 
-          selected_option = options[aria_active_descendant_index];
+          last_selected_option = selected_option = options[aria_active_descendant_index];
 
           selected_option?.classList.add('a11y-select__option--selected');
           selected_option.setAttribute('aria-selected', 'true');
@@ -240,8 +256,11 @@
         e.preventDefault();
         options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
         aria_active_descendant_index = options.length - 1;
-        combobox.setAttribute('aria-activedescendant', options[aria_active_descendant_index].getAttribute('id'));
-        options[aria_active_descendant_index].classList.add('a11y-select__option--active-descendant');
+        selected_option?.setAttribute('aria-selected', 'false');
+        selected_option = options[aria_active_descendant_index];
+        combobox.setAttribute('aria-activedescendant', selected_option.getAttribute('id'));
+        selected_option.classList.add('a11y-select__option--active-descendant');
+        selected_option.setAttribute('aria-selected', 'true');
         maintainScrollVisibility(options[aria_active_descendant_index], listbox);
       }
     }
@@ -250,6 +269,11 @@
         e.preventDefault();
         options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
         aria_active_descendant_index = Math.min(aria_active_descendant_index + 10, options.length - 1);
+        selected_option?.setAttribute('aria-selected', 'false');
+        selected_option = options[aria_active_descendant_index];
+        combobox.setAttribute('aria-activedescendant', selected_option.getAttribute('id'));
+        selected_option.classList.add('a11y-select__option--active-descendant');
+        selected_option.setAttribute('aria-selected', 'true');
         if (combobox.getAttribute('aria-expanded') === 'false') {
           combobox.setAttribute('aria-expanded', 'true');
         }
@@ -265,6 +289,11 @@
       if (combobox.getAttribute('aria-expanded') === 'true' || (combobox.getAttribute('aria-expanded') === 'false' && !e.altKey)) {
         aria_active_descendant_index = Math.min(aria_active_descendant_index + 1, options.length - 1);
       }
+      selected_option?.setAttribute('aria-selected', 'false');
+      selected_option = options[aria_active_descendant_index];
+      combobox.setAttribute('aria-activedescendant', selected_option.getAttribute('id'));
+      selected_option.classList.add('a11y-select__option--active-descendant');
+      selected_option.setAttribute('aria-selected', 'true');
       if (combobox.getAttribute('aria-expanded') === 'false') {
         combobox.setAttribute('aria-expanded', 'true');
       }
@@ -277,6 +306,11 @@
         e.preventDefault();
         options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
         aria_active_descendant_index = Math.max(0, aria_active_descendant_index - 10);
+        selected_option?.setAttribute('aria-selected', 'false');
+        selected_option = options[aria_active_descendant_index];
+        combobox.setAttribute('aria-activedescendant', selected_option.getAttribute('id'));
+        selected_option.classList.add('a11y-select__option--active-descendant');
+        selected_option.setAttribute('aria-selected', 'true');
         if (combobox.getAttribute('aria-expanded') === 'false') {
           combobox.setAttribute('aria-expanded', 'true');
         }
@@ -291,6 +325,11 @@
       if (combobox.getAttribute('aria-expanded') === 'true' || (combobox.getAttribute('aria-expanded') === 'false' && !e.altKey)) {
         aria_active_descendant_index = Math.max(0, aria_active_descendant_index - 1);
       }
+      selected_option?.setAttribute('aria-selected', 'false');
+      selected_option = options[aria_active_descendant_index];
+      combobox.setAttribute('aria-activedescendant', selected_option.getAttribute('id'));
+      selected_option.classList.add('a11y-select__option--active-descendant');
+      selected_option.setAttribute('aria-selected', 'true');
       if (combobox.getAttribute('aria-expanded') === 'false') {
         combobox.setAttribute('aria-expanded', 'true');
       }
