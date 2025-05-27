@@ -313,9 +313,14 @@
    * Adds event listeners to all a11y-select elements in context.
    */
   cms.attach('a11y-select', context => {
-    const selects = cms.once('a11y-select', '#a11y-select-demo', context);
-    selects.forEach(select => {
-      a11ySelect(select, 'demo');
-    });
+
+    // Only enhance select elements in non-Safari, or Safari 18+.
+    if (navigator.vendor !== 'Apple Computer, Inc.' ||
+    'contentVisibility' in document.documentElement.style) {
+      const selects = cms.once('a11y-select', '#a11y-select-demo', context);
+      selects.forEach(select => {
+        a11ySelect(select, 'demo');
+      });
+    }
   });
 })(cms);
