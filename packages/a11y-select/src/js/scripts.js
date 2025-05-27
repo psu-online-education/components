@@ -174,12 +174,12 @@
         last_selected_option?.classList.add('a11y-select__option--selected');
         selected_option = last_selected_option;
       }
-      else {
-        combobox.setAttribute('aria-expanded', 'true');
-        combobox.setAttribute('aria-activedescendant', selected_option?.getAttribute('id') ?? options[0].getAttribute('id'));
-        selected_option?.classList.add('a11y-select__option--active-descendant');
-        aria_active_descendant_index = options.indexOf(selected_option);
-      }
+//      else {
+//        combobox.setAttribute('aria-expanded', 'true');
+//        combobox.setAttribute('aria-activedescendant', selected_option?.getAttribute('id') ?? options[0].getAttribute('id'));
+//        selected_option?.classList.add('a11y-select__option--active-descendant');
+//        aria_active_descendant_index = options.indexOf(selected_option);
+//      }
     }
   });
 
