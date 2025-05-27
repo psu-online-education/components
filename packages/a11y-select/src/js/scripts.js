@@ -226,21 +226,28 @@
       }
     }
     else if (e.key === 'Home') {
-      options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
-      aria_active_descendant_index = 0;
-      combobox.setAttribute('aria-activedescendant', options[aria_active_descendant_index].getAttribute('id'));
-      options[aria_active_descendant_index].classList.add('a11y-select__option--active-descendant');
-      maintainScrollVisibility(options[aria_active_descendant_index], listbox);
+      if (combobox.getAttribute('aria-expanded') === 'true') {
+        e.preventDefault();
+        options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
+        aria_active_descendant_index = 0;
+        combobox.setAttribute('aria-activedescendant', options[aria_active_descendant_index].getAttribute('id'));
+        options[aria_active_descendant_index].classList.add('a11y-select__option--active-descendant');
+        maintainScrollVisibility(options[aria_active_descendant_index], listbox);
+      }
     }
     else if (e.key === 'End') {
-      options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
-      aria_active_descendant_index = options.length - 1;
-      combobox.setAttribute('aria-activedescendant', options[aria_active_descendant_index].getAttribute('id'));
-      options[aria_active_descendant_index].classList.add('a11y-select__option--active-descendant');
-      maintainScrollVisibility(options[aria_active_descendant_index], listbox);
+      if (combobox.getAttribute('aria-expanded') === 'true') {
+        e.preventDefault();
+        options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
+        aria_active_descendant_index = options.length - 1;
+        combobox.setAttribute('aria-activedescendant', options[aria_active_descendant_index].getAttribute('id'));
+        options[aria_active_descendant_index].classList.add('a11y-select__option--active-descendant');
+        maintainScrollVisibility(options[aria_active_descendant_index], listbox);
+      }
     }
     else if (e.key === 'PageDown') {
       if (combobox.getAttribute('aria-expanded') === 'true') {
+        e.preventDefault();
         options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
         aria_active_descendant_index = Math.min(aria_active_descendant_index + 10, options.length - 1);
         if (combobox.getAttribute('aria-expanded') === 'false') {
@@ -252,6 +259,7 @@
       }
     }
     else if (e.key === 'ArrowDown') {
+      e.preventDefault();
       options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
 
       if (combobox.getAttribute('aria-expanded') === 'true' || (combobox.getAttribute('aria-expanded') === 'false' && !e.altKey)) {
@@ -266,6 +274,7 @@
     }
     else if (e.key === 'PageUp') {
       if (combobox.getAttribute('aria-expanded') === 'true') {
+        e.preventDefault();
         options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
         aria_active_descendant_index = Math.max(0, aria_active_descendant_index - 10);
         if (combobox.getAttribute('aria-expanded') === 'false') {
@@ -277,6 +286,7 @@
       }
     }
     else if (e.key === 'ArrowUp') {
+      e.preventDefault();
       options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
       if (combobox.getAttribute('aria-expanded') === 'true' || (combobox.getAttribute('aria-expanded') === 'false' && !e.altKey)) {
         aria_active_descendant_index = Math.max(0, aria_active_descendant_index - 1);
