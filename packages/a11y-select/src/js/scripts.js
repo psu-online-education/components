@@ -97,7 +97,8 @@
           option.setAttribute('aria-disabled', 'true');
         }
         else {
-          option.addEventListener('click', () => {
+          option.addEventListener('click', e => {
+            e.preventDefault();
             last_selected_option?.classList.remove('a11y-select__option--active-descendant', 'a11y-select__option--selected');
             last_selected_option?.setAttribute('aria-selected', 'false');
 
@@ -133,7 +134,8 @@
         option.setAttribute('aria-disabled', 'true');
       }
       else {
-        option.addEventListener('click', () => {
+        option.addEventListener('click', e => {
+          e.preventDefault();
           last_selected_option?.classList.remove('a11y-select__option--active-descendant', 'a11y-select__option--selected');
           last_selected_option?.setAttribute('aria-selected', 'false');
 
@@ -163,8 +165,8 @@
   wrapping_element.appendChild(combobox);
 
   combobox.addEventListener('click', e => {
-    if (e.target === combobox.querySelector('.a11y-select__value')) {
-/*      if (combobox.getAttribute('aria-expanded') === 'true') {
+    if (e.target === combobox) {
+      if (combobox.getAttribute('aria-expanded') === 'true') {
         combobox.setAttribute('aria-expanded', 'false');
         document.getElementById(combobox.getAttribute('aria-activedescendant'))?.classList.remove('a11y-select__option--active-descendant');
         combobox.removeAttribute('aria-activedescendant');
@@ -173,17 +175,17 @@
         last_selected_option?.setAttribute('aria-selected', 'true');
         last_selected_option?.classList.add('a11y-select__option--selected');
         selected_option = last_selected_option;
-      }*/
-//      else {
+      }
+      else {
         combobox.setAttribute('aria-expanded', 'true');
         combobox.setAttribute('aria-activedescendant', selected_option?.getAttribute('id') ?? options[0].getAttribute('id'));
         selected_option?.classList.add('a11y-select__option--active-descendant');
         aria_active_descendant_index = options.indexOf(selected_option);
-//      }
+      }
     }
   });
 
-/*  combobox.addEventListener('focusout', e => {
+  combobox.addEventListener('focusout', e => {
     if (!combobox.contains(e.relatedTarget)) {
       options[aria_active_descendant_index].classList.remove('a11y-select__option--active-descendant');
       combobox.removeAttribute('aria-activedescendant');
@@ -194,7 +196,7 @@
       last_selected_option?.classList.add('a11y-select__option--selected');
       selected_option = last_selected_option;
     }
-  });*/
+  });
 
   combobox.addEventListener('keydown', e => {
     if (e.key === 'Tab' && options[aria_active_descendant_index]?.getAttribute('aria-disabled') !== 'true') {
