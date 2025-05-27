@@ -165,7 +165,7 @@
   wrapping_element.appendChild(combobox);
 
   combobox.addEventListener('click', e => {
-    if (e.target === combobox) {
+    if (e.target?.getAttribute('role') !== 'option') {
       if (combobox.getAttribute('aria-expanded') === 'true') {
         combobox.setAttribute('aria-expanded', 'false');
         document.getElementById(combobox.getAttribute('aria-activedescendant'))?.classList.remove('a11y-select__option--active-descendant');
