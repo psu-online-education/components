@@ -355,9 +355,10 @@
    */
   cms.attach('a11y-select', context => {
 
-    // Only enhance select elements in non-Safari, or Safari 18+.
+    // Only enhance select elements in non-Safari, non-MacOS, or Safari 18+.
     if (navigator.vendor !== 'Apple Computer, Inc.' ||
-    'contentVisibility' in document.documentElement.style) {
+      navigator.platform !== 'MacIntel' ||
+      'contentVisibility' in document.documentElement.style) {
       const selects = cms.once('a11y-select', '#a11y-select-demo', context);
       selects.forEach(select => {
         a11ySelect(select, 'demo');
