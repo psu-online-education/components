@@ -157,6 +157,20 @@ const a11ySelect = (native_select, unique_id) => {
   let active_descendant = null;
 
   /**
+   * A buffer that holds recent keystrokes.
+   *
+   * @type {string}
+   */
+  let search_buffer = '';
+
+  /**
+   * The id of the search buffer timeout function.
+   *
+   * @type {number|null}
+   */
+  let search_buffer_timeout_id = null;
+
+  /**
    * Ensures that the activeElement remains visible within the scrollParent.
    *
    * This was adapted from the WAI combobox select only example.
@@ -286,6 +300,7 @@ const a11ySelect = (native_select, unique_id) => {
     combobox.setAttribute('aria-expanded', 'false');
     if (update_selection) {
       last_selected_option = selected_option = active_descendant;
+      native_select.value = selected_option.getAttribute('data-native-option-value');
     }
     else {
       selected_option = last_selected_option;
@@ -447,6 +462,31 @@ const a11ySelect = (native_select, unique_id) => {
         revalidateState();
         maintainScrollVisibility();
       }
+    }
+    else if (e.key.length === 1) {
+      if (combobox.getAttribute('aria-expanded') === 'false') {
+        openCombobox();
+      }
+
+      if (search_buffer_timeout_id !== null) {
+        clearTimeout(search_buffer_timeout_id);
+      }
+      search_buffer_timeout_id = setTimeout(() => {
+        search_buffer = '';
+        search_buffer_timeout_id = null;
+      }, 500);
+
+      search_buffer += e.key;
+
+      const matching_options = options
+        .filter(option => option.textContent.toLowerCase().indexOf(search_buffer) === 0);
+
+      if (matching_options.length) {
+        active_descendant = matching_options[0];
+        maintainScrollVisibility();
+      }
+
+      revalidateState()
     }
   });
 
