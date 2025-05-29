@@ -477,9 +477,12 @@ const a11ySelect = (native_select, unique_id) => {
    * Adds event listeners to all a11y-select elements in context.
    */
   cms.attach('a11y-select', context => {
-  const selects = cms.once('a11y-select', '#a11y-select-demo', context);
-    selects.forEach(select => {
+    cms.once('a11y-select', '#a11y-select-demo', context).forEach(select => {
       a11ySelect(select, 'demo');
+    });
+
+    cms.once('a11y-select', '#a11y-select-demo-no-optgroups', context).forEach(select => {
+      a11ySelect(select, 'demo-no-optgroups');
     });
   });
 })(cms);

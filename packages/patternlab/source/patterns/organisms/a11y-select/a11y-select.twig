@@ -1,21 +1,3 @@
-{# {% include '@oe/a11y-select/a11y-select.twig' with {
-  label: 'Select an option',
-  description: 'You may search for options by typing in this combobox',
-  empty_label: 'Select an option',
-  options: [
-    { value: 'option-group-1', label: 'Option group 1', children: [
-      { value: '1', label: 'Option 1' },
-      { value: '2', label: 'Option 2' },
-      { value: '3', label: 'Option 3' },
-    ]},
-    { value: 'option-group-2', label: 'Option group 2', children: [
-      { value: '4', label: 'Option 4' },
-      { value: '5', label: 'Option 5' },
-      { value: '6', label: 'Option 6' },
-    ]},
-    { value: '123456', label: 'Option 123456' },
-  ],
-} only %} #}
 <label> a11y-select demo <select id="a11y-select-demo">
     <option value=""> - Select a Program - </option>
     <optgroup label="Bachelor Degrees">
@@ -51,5 +33,35 @@
       <option value="MENGTMGCT">Technical Management (Graduate Certificate)</option>
       <option value="MEMTMLGCT">Technical Management and Leadership Essentials (Graduate Certificate)</option>
     </optgroup>
+  </select>
+</label>
+<br><br>
+<label> a11y-select demo (un-opt-grouped) <select id="a11y-select-demo-no-optgroups">
+    <option value=""> - Select a Program - </option>
+    <option value="SEBCBS">Software Engineering (Bachelor of Science)</option>
+    <option value="ACS">Acoustics (Master of Engineering)</option>
+    <option value="AMDMENG">Additive Manufacturing and Design (Master of Engineering)</option>
+    <option value="EEMEN">Electrical Engineering (Master of Engineering)</option>
+    <option value="ENGMT">Engineering Management (Master's Degree)</option>
+    <option value="IEMENG">Industrial Engineering (Master of Engineering)</option>
+    <option value="MSME">Mechanical Engineering (Master of Science)</option>
+    <option value="NUC E">Nuclear Engineering (Master of Engineering)</option>
+    <option value="SWENG">Software Engineering (Master's Degree)</option>
+    <option value="SYSEN">Systems Engineering (Master of Engineering)</option>
+    <option value="ENGRDENG">Engineering (Doctor of Engineering)</option>
+    <option value="AMDGCT">Additive Manufacturing and Design (Graduate Certificate)</option>
+    <option value="MSEAIEGCT">AI Engineering (Graduate Certificate)</option>
+    <option value="MSEDAEGCT">Data Analytics and Engineering (Graduate Certificate)</option>
+    <option value="EEPCT">Electrical Engineering (Postbaccalaureate Certificate)</option>
+    <option value="ELIMGCT">Engineering Leadership and Innovation Management (Graduate Certificate)</option>
+    <option value="MEMLCDGCT">Life-Cycle System Design (Graduate Certificate)</option>
+    <option value="MSEPQMGCT">Project Quality Management (Graduate Certificate)</option>
+    <option value="MEMQMGCT">Quality Management Across Product Lifecycle (Graduate Certificate)</option>
+    <option value="MEMQDMGCT">Quantitative Decision-Making for Engineering Managers (Graduate Certificate)</option>
+    <option value="MSESADGCT">Software Architecture and Design (Graduate Certificate)</option>
+    <option value="MENGSMGCT">System Modeling and Analysis (Graduate Certificate)</option>
+    <option value="MENGSQGCT">System Quality &amp; Risk Evaluation (Graduate Certificate)</option>
+    <option value="MENGTMGCT">Technical Management (Graduate Certificate)</option>
+    <option value="MEMTMLGCT">Technical Management and Leadership Essentials (Graduate Certificate)</option>
   </select>
 </label>
