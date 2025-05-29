@@ -243,7 +243,7 @@ const a11ySelect = (native_select, unique_id) => {
     });
 
     combobox_group.appendChild(group_accessible_name);
-    combobox_group.setAttribute('aria-labelledby', `a11y-select-${unique_id}--optgroup-${group_counter}`);
+    combobox_group.setAttribute('aria-labelledby', `a11y-select-${unique_id}--optgroup-${unique_counter}`);
     group.querySelectorAll('option:not([disabled])').forEach(option => {
       create_combobox_option(option, combobox_group, ++option_counter);
     });
