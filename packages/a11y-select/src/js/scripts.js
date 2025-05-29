@@ -477,15 +477,9 @@ const a11ySelect = (native_select, unique_id) => {
    * Adds event listeners to all a11y-select elements in context.
    */
   cms.attach('a11y-select', context => {
-
-    // Only enhance select elements in non-Safari, non-MacOS, or Safari 18+.
-    if (navigator.vendor !== 'Apple Computer, Inc.' ||
-      navigator.platform !== 'MacIntel' ||
-      'contentVisibility' in document.documentElement.style) {
-      const selects = cms.once('a11y-select', '#a11y-select-demo', context);
-      selects.forEach(select => {
-        a11ySelect(select, 'demo');
-      });
-    }
+  const selects = cms.once('a11y-select', '#a11y-select-demo', context);
+    selects.forEach(select => {
+      a11ySelect(select, 'demo');
+    });
   });
 })(cms);
