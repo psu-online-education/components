@@ -185,7 +185,7 @@ const a11ySelect = (native_select, unique_id) => {
   // if detected, a console warning was previously emitted by this library.
 
   // Set up some counters in order to keep the option ID values unique.
-  let group_counter, option_counter = 0;
+  let group_counter = 0, option_counter = 0;
 
   /**
    * Transforms a native option element to a combobox option.
@@ -254,6 +254,7 @@ const a11ySelect = (native_select, unique_id) => {
   native_select.querySelectorAll(':scope > option:not([disabled]), :scope > optgroup:not([disabled])').forEach(native_element =>  {
     if (native_element.tagName.toLowerCase() === 'optgroup') {
       create_combobox_group(native_element, ++group_counter);
+      console.log(group_counter);
     }
     else {
       create_combobox_option(native_element, listbox, ++option_counter);
