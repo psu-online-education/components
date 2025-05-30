@@ -1,4 +1,5 @@
-<label> a11y-select demo <select id="a11y-select-demo">
+<label for="a11y-select-demo">a11y-select demo</label>
+<select id="a11y-select-demo">
     <option value=""> - Select a Program - </option>
     <optgroup label="Bachelor Degrees">
       <option value="SEBCBS">Software Engineering (Bachelor of Science)</option>
@@ -34,9 +35,11 @@
       <option value="MEMTMLGCT">Technical Management and Leadership Essentials (Graduate Certificate)</option>
     </optgroup>
   </select>
-</label>
+
 <br><br>
-<label> a11y-select demo (un-opt-grouped) <select id="a11y-select-demo-no-optgroups">
+
+<label for="a11y-select-demo-no-optgroups">a11y-select demo (un-opt-grouped)</label>
+<select id="a11y-select-demo-no-optgroups">
     <option value=""> - Select a Program - </option>
     <option value="SEBCBS">Software Engineering (Bachelor of Science)</option>
     <option value="ACS">Acoustics (Master of Engineering)</option>
@@ -64,47 +67,47 @@
     <option value="MENGTMGCT">Technical Management (Graduate Certificate)</option>
     <option value="MEMTMLGCT">Technical Management and Leadership Essentials (Graduate Certificate)</option>
   </select>
-</label>
+
 <br><br>
-<label>Degree level
-  <select id="a11y-select-degree-level">
-    <option value="All">All</option>
-    <option value="bachelors">Bachelor Degrees</option>
-    <option value="masters">Masters Degrees</option>
-    <option value="doctoral">Doctoral Degrees</option>
-    <option value="gradcerts">Graduate Certificates</option>
-  </select>
-</label>
-<label>Program
-  <select id="a11y-select-programs">
-    <option value="">Select a Program</option>
-    <option value="SEBCBS">Software Engineering (Bachelor of Science)</option>
-    <option value="ACS">Acoustics (Master of Engineering)</option>
-    <option value="AMDMENG">Additive Manufacturing and Design (Master of Engineering)</option>
-    <option value="EEMEN">Electrical Engineering (Master of Engineering)</option>
-    <option value="ENGMT">Engineering Management (Master's Degree)</option>
-    <option value="IEMENG">Industrial Engineering (Master of Engineering)</option>
-    <option value="MSME">Mechanical Engineering (Master of Science)</option>
-    <option value="NUC E">Nuclear Engineering (Master of Engineering)</option>
-    <option value="SWENG">Software Engineering (Master's Degree)</option>
-    <option value="SYSEN">Systems Engineering (Master of Engineering)</option>
-    <option value="ENGRDENG">Engineering (Doctor of Engineering)</option>
-    <option value="AMDGCT">Additive Manufacturing and Design (Graduate Certificate)</option>
-    <option value="MSEAIEGCT">AI Engineering (Graduate Certificate)</option>
-    <option value="MSEDAEGCT">Data Analytics and Engineering (Graduate Certificate)</option>
-    <option value="EEPCT">Electrical Engineering (Postbaccalaureate Certificate)</option>
-    <option value="ELIMGCT">Engineering Leadership and Innovation Management (Graduate Certificate)</option>
-    <option value="MEMLCDGCT">Life-Cycle System Design (Graduate Certificate)</option>
-    <option value="MSEPQMGCT">Project Quality Management (Graduate Certificate)</option>
-    <option value="MEMQMGCT">Quality Management Across Product Lifecycle (Graduate Certificate)</option>
-    <option value="MEMQDMGCT">Quantitative Decision-Making for Engineering Managers (Graduate Certificate)</option>
-    <option value="MSESADGCT">Software Architecture and Design (Graduate Certificate)</option>
-    <option value="MENGSMGCT">System Modeling and Analysis (Graduate Certificate)</option>
-    <option value="MENGSQGCT">System Quality &amp; Risk Evaluation (Graduate Certificate)</option>
-    <option value="MENGTMGCT">Technical Management (Graduate Certificate)</option>
-    <option value="MEMTMLGCT">Technical Management and Leadership Essentials (Graduate Certificate)</option>
-  </select>
-</label>
+
+<label for="a11y-select-degree-level">Degree level</label>
+<select id="a11y-select-degree-level">
+  <option value="All">All</option>
+  <option value="bachelors">Bachelor Degrees</option>
+  <option value="masters">Masters Degrees</option>
+  <option value="doctoral">Doctoral Degrees</option>
+  <option value="gradcerts">Graduate Certificates</option>
+</select>
+
+<label for="a11y-select-programs">Program</label>
+<select id="a11y-select-programs">
+  <option value="">Select a Program</option>
+  <option value="SEBCBS">Software Engineering (Bachelor of Science)</option>
+  <option value="ACS">Acoustics (Master of Engineering)</option>
+  <option value="AMDMENG">Additive Manufacturing and Design (Master of Engineering)</option>
+  <option value="EEMEN">Electrical Engineering (Master of Engineering)</option>
+  <option value="ENGMT">Engineering Management (Master's Degree)</option>
+  <option value="IEMENG">Industrial Engineering (Master of Engineering)</option>
+  <option value="MSME">Mechanical Engineering (Master of Science)</option>
+  <option value="NUC E">Nuclear Engineering (Master of Engineering)</option>
+  <option value="SWENG">Software Engineering (Master's Degree)</option>
+  <option value="SYSEN">Systems Engineering (Master of Engineering)</option>
+  <option value="ENGRDENG">Engineering (Doctor of Engineering)</option>
+  <option value="AMDGCT">Additive Manufacturing and Design (Graduate Certificate)</option>
+  <option value="MSEAIEGCT">AI Engineering (Graduate Certificate)</option>
+  <option value="MSEDAEGCT">Data Analytics and Engineering (Graduate Certificate)</option>
+  <option value="EEPCT">Electrical Engineering (Postbaccalaureate Certificate)</option>
+  <option value="ELIMGCT">Engineering Leadership and Innovation Management (Graduate Certificate)</option>
+  <option value="MEMLCDGCT">Life-Cycle System Design (Graduate Certificate)</option>
+  <option value="MSEPQMGCT">Project Quality Management (Graduate Certificate)</option>
+  <option value="MEMQMGCT">Quality Management Across Product Lifecycle (Graduate Certificate)</option>
+  <option value="MEMQDMGCT">Quantitative Decision-Making for Engineering Managers (Graduate Certificate)</option>
+  <option value="MSESADGCT">Software Architecture and Design (Graduate Certificate)</option>
+  <option value="MENGSMGCT">System Modeling and Analysis (Graduate Certificate)</option>
+  <option value="MENGSQGCT">System Quality &amp; Risk Evaluation (Graduate Certificate)</option>
+  <option value="MENGTMGCT">Technical Management (Graduate Certificate)</option>
+  <option value="MEMTMLGCT">Technical Management and Leadership Essentials (Graduate Certificate)</option>
+</select>
 <script>
   const dependent_degrees_model = {
     bachelors: {
@@ -166,13 +169,13 @@
     programs.innerHTML = new_html;
   });
 </script>
+
 <br><br>
-<label>
-  Required select
-  <select id="a11y-select-required" required>
-    <option>Select an option</option>
-    <option value="option-1">Option 1</option>
-    <option value="option-2">Option 2</option>
-    <option value="option-3">Option 3</option>
-  </select>
-</label>
+
+<label for="a11y-select-required">Required select</label>
+<select id="a11y-select-required" required>
+  <option>Select an option</option>
+  <option value="option-1">Option 1</option>
+  <option value="option-2">Option 2</option>
+  <option value="option-3">Option 3</option>
+</select>
