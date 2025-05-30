@@ -143,6 +143,7 @@
   };
   const programs = document.getElementById('a11y-select-programs');
   document.getElementById('a11y-select-degree-level').addEventListener('change', e => {
+
     let options = new Map();
     options.set(programs.options[programs.selectedIndex].value, programs.options[programs.selectedIndex].text)
     options.set('', 'Select a program');
