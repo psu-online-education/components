@@ -322,6 +322,7 @@ const a11ySelect = (native_select, unique_id) => {
       last_selected_option = selected_option = active_descendant;
       observer.disconnect();
       native_select.value = selected_option.getAttribute('data-native-option-value');
+      native_select.dispatchEvent(new Event('change'));
       observer.observe(native_select, {attributes: true, childList: true, subtree: true, characterData: true});
     }
     else {
@@ -537,6 +538,10 @@ const a11ySelect = (native_select, unique_id) => {
 
     cms.once('a11y-select', '#a11y-select-demo-no-optgroups', context).forEach(select => {
       a11ySelect(select, 'demo-no-optgroups');
+    });
+
+    cms.once('a11y-select', '#a11y-select-degree-level', context).forEach(select => {
+      a11ySelect(select, 'demo-dependent-options-controller');
     });
 
     cms.once('a11y-select', '#a11y-select-programs', context).forEach(select => {
