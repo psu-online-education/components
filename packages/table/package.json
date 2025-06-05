@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/table",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides table styles.",
   "publishConfig": {
     "access": "public",

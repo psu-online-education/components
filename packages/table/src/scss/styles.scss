@@ -53,13 +53,15 @@
   }
 
   &__caption {
-    color: var(--text-color);
-    font-size: var(--font-size--large);
+    font-family: var(--font-family--headings);
+    font-size: var(--font-size--xlarge);
+    font-weight: var(--font-weight--medium);
+    letter-spacing: var(--letter-spacing--medium);
     line-height: var(--line-height--xsnug);
-    font-weight: var(--font-weight--bold);
+    color: var(--headings-color);
     text-align: left;
     max-width: 100cqw;
-    padding-bottom: var(--text-element-vertical-space--default);
+    padding-bottom: oe.rem(1.5);
   }
 
   &__th, &__td {
@@ -77,7 +79,7 @@
 
   &__th {
     font-weight: bold;
-    padding-bottom: oe.rem(2);
+    padding-bottom: oe.rem(1.5);
 
     &:not(:first-of-type) {
       padding-left: oe.rem(2);
@@ -85,8 +87,8 @@
   }
 
   &__td {
-    padding-top: oe.rem(2);
-    padding-bottom: oe.rem(2);
+    padding-top: oe.rem(1.5);
+    padding-bottom: oe.rem(1.5);
   }
 
   &__thead &__th {
@@ -103,7 +105,7 @@
   }
 
   &__tbody &__th {
-    padding-top: oe.rem(2);
+    padding-top: oe.rem(1.5);
   }
 
   &:not(:has(&__thead)) &__tr:first-child &__td,
