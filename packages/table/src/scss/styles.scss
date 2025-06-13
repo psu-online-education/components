@@ -53,12 +53,12 @@
   }
 
   &__caption {
-    font-family: var(--font-family--headings);
-    font-size: var(--font-size--xlarge);
-    font-weight: var(--font-weight--medium);
-    letter-spacing: var(--letter-spacing--medium);
-    line-height: var(--line-height--xsnug);
+    font-family: var(--font-family--default);
+    font-weight: var(--font-weight--regular);
     color: var(--headings-color);
+    font-size: var(--font-size--large);
+    letter-spacing: var(--letter-spacing--default);
+    line-height: var(--line-height--xsnug);
     text-align: left;
     max-width: 100cqw;
     padding-bottom: oe.rem(1.5);
