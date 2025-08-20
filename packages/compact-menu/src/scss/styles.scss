@@ -86,9 +86,11 @@
       .compact-menu__toggle-sprite .sprite {
         width: oe.rem(2.1);
         height: auto;
+        min-height: oe.rem(2.1);
 
         @include oe.bp(xs) {
           width: oe.rem(2.6);
+          min-height: oe.rem(2.6);
         }
       }
 
