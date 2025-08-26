@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/button-base",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Provides generic button-like element styles.",
   "publishConfig": {
     "access": "public",
