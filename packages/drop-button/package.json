@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/drop-button",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "description": "An accessible drop-button component.",
   "publishConfig": {
     "access": "public",
