@@ -1,21 +1,21 @@
 {% apply spaceless %}
   <footer class="footer">
     {% set top_first %}
-      {% block top_first %}
-        {{ top_first }}
-      {% endblock %}
-    {% endset %}
+      {%- block top_first -%}
+        {{- top_first -}}
+      {%- endblock -%}
+    {%- endset -%}
 
     {% set top_second %}
-      {% block top_second %}
-        {{ top_second }}
-      {% endblock %}
+      {%- block top_second -%}
+        {{- top_second -}}
+      {%- endblock -%}
     {% endset %}
 
     {% set top_third %}
-      {% block top_third %}
-        {{ top_third }}
-      {% endblock %}
+      {%- block top_third -%}
+        {{- top_third -}}
+      {%- endblock -%}
     {% endset %}
     {% if top_first or top_second or top_third %}
       {% set footer_top %}
@@ -39,26 +39,26 @@
       } only %}
     {% endif %}
     {% set middle_first %}
-      {% block middle_first %}
-        {{ middle_first }}
-      {% endblock %}
+      {%- block middle_first -%}
+        {{- middle_first -}}
+      {%- endblock -%}
     {% endset %}
 
     {% set middle_second %}
-      {% block middle_second %}
-        {{ middle_second }}
-      {% endblock %}
+      {%- block middle_second -%}
+        {{- middle_second -}}
+      {%- endblock -%}
     {% endset %}
 
     {% set middle_third %}
-      {% block middle_third %}
-        {{ middle_third }}
-      {% endblock %}
+      {%- block middle_third -%}
+        {{- middle_third -}}
+      {%- endblock -%}
     {% endset %}
     {% set colophon %}
-      {% block colophon %}
-        {{ colophon }}
-      {% endblock %}
+      {%- block colophon -%}
+        {{- colophon -}}
+      {%- endblock -%}
     {% endset %}
     {% if middle_first or middle_second or middle_third or colophon %}
       {% set footer_bottom_content %}

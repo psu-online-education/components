@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/footer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides a footer region.",
   "publishConfig": {
     "access": "public",
