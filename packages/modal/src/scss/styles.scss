@@ -1,24 +1,27 @@
 @use "../../../base/src/scss/mixins" as oe;
 
 .modal {
-  //content-visibility: auto;
+  content-visibility: hidden;
   &.show-modal {
+    content-visibility: visible;
     .modal__overlay,
     .modal__container {
       display: flex;
+      //content-visibility: visible;
     }
   }
 
   &.hide-modal {
     .modal__overlay,
     .modal__container {
-      display: none;
-      //content-visibility: auto;
+      //display: none;
+      //content-visibility: hidden;
     }
   }
 
   .modal__overlay {
-    display: none;
+    //display: none;
+    //content-visibility: hidden;
     align-items: center;
     justify-content: center;
     position: fixed;
