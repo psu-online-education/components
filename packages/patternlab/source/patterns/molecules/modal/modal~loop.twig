@@ -4,26 +4,30 @@
 
   {% set title = 'Modal Title' %}
 
-  <button id="modal-trigger" class="modal__trigger">Click me to open the modal</button>
+  {% set modal_trigger = 'modal-trigger-' ~ i %}
+
+  {% set modal_id = 'modal-id-' ~ i %}
+
+  <button id="{{ modal_trigger }}" class="modal__trigger">Click me to open the modal</button>
 
   {% include '@oe/modal/modal.twig' with {
     content: content,
-    id: 'modal',
+    id: modal_id,
     title: title
   } only %}
-{% endfor %}
 
-<script>
-  (() => {
-      const modal = document.getElementById('modal');
-      const trigger = document.getElementById('modal-trigger');
-      // Showing modal when clicking triggering element and moving focus to modal container
-      trigger.addEventListener("click", (e) => {
-          modal.dispatchEvent(new CustomEvent('component:activate', {
-              detail: {
-                  modal_trigger: trigger,
-              }
-          }));
-      });
-  })();
-</script>
+  <script>
+    (() => {
+        const modal = document.getElementById('{{ modal_id }}');
+        const trigger = document.getElementById('{{ modal_trigger }}');
+        // Showing modal when clicking triggering element and moving focus to modal container
+        trigger.addEventListener("click", (e) => {
+            modal.dispatchEvent(new CustomEvent('component:activate', {
+                detail: {
+                    modal_trigger: trigger,
+                }
+            }));
+        });
+    })();
+  </script>
+{% endfor %}

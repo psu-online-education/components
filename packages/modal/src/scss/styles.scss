@@ -1,6 +1,7 @@
 @use "../../../base/src/scss/mixins" as oe;
 
 .modal {
+  //content-visibility: auto;
   &.show-modal {
     .modal__overlay,
     .modal__container {
@@ -12,6 +13,7 @@
     .modal__overlay,
     .modal__container {
       display: none;
+      //content-visibility: auto;
     }
   }
 
