@@ -1,9 +1,9 @@
 @use "../../../base/src/scss/mixins" as oe;
 
 .modal {
-  //content-visibility: hidden;
+  content-visibility: hidden;
   &.show-modal {
-    //content-visibility: visible;
+    content-visibility: visible;
     .modal__overlay,
     .modal__container {
       display: flex;
@@ -13,12 +13,12 @@
   &.hide-modal {
     .modal__overlay,
     .modal__container {
-      display: none;
+      //display: none;
     }
   }
 
   .modal__overlay {
-    display: none;
+    //display: none;
     align-items: center;
     justify-content: center;
     position: fixed;
