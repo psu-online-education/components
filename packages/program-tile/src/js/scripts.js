@@ -7,7 +7,14 @@
 
       element.addEventListener('component:activate', e => {
         content.removeAttribute('inert');
-        cms.expand(content);
+        if (e?.detail?.disable_animation || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          content.style['transition-duration'] = '0ms';
+          content.style['height'] = null;
+        }
+        else {
+          content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 800) + 'ms';
+          cms.expand(content);
+        }
       });
 
       element.addEventListener('component:deactivate', e => {
@@ -17,6 +24,14 @@
         }
         content.addEventListener('transitionend', afterCollapse);
         content.setAttribute('inert', '');
+        if (e?.detail?.disable_animation || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          content.style['transition-duration'] = '1ms';
+          content.style['height'] = '5rem';
+        }
+        else {
+          content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 800) + 'ms';
+          cms.collapse(content);
+        }
         cms.collapse(content);
       });
 
