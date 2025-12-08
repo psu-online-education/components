@@ -1,0 +1,75 @@
+{#
+  Available variables:
+    icon
+    intro_label
+    url
+    subject
+    degree_type
+    summary
+    info_bullets
+    expand_label
+    collapse_label
+    view_degree_label
+#}
+<div class="program-tile">
+  {%- if icon or intro_label -%}
+    <div class="program-tile__intro">
+      {%- if icon -%}
+        <div class="program-tile__intro-icon">
+          {%- include '@oe/sprite/sprite.twig' with { name: icon } only -%}
+        </div>
+      {%- endif -%}
+      {%- if intro_label -%}
+        <div class="program-tile__intro-label">
+          {{- intro_label -}}
+        </div>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+  <a class="program-tile__link" href="{{- url -}}">
+    <span class="program-tile__subject">{{- subject -}}</span>
+    <span class="program-tile__degree-type">{{- degree_type -}}</span>
+  </a>
+  {%- if not minimal -%}
+    <div class="program-tile__collapsed-operations">
+      <button class="program-tile__expand" type="button" aria-expanded="false">
+        <span class="program-tile__expand-icon">
+          {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-down', expand: true } only -%}
+        </span>
+        <span class="program-tile__expand-label">{{- expand_label|default('Show Details') -}}</span>
+      </button>
+      <a class="program-tile__view-degree" href="{{- url -}}">
+        <span class="program-tile__view-degree-label">{{- view_degree_label|default('View Degree') -}}</span>
+        <span class="program-tile__view-degree-icon">
+          {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-right', expand: true } only -%}
+        </span>
+      </a>
+    </div>
+    <div class="program-tile__content" style="height: 5rem" data-min-height="5rem" inert>
+      <div class="program-tile__summary">
+        {{- summary -}}
+      </div>
+      {%- if info_bullets is iterable -%}
+        <ul class="program-tile__info-bullets" role="list">
+          {%- for info_bullet in info_bullets -%}
+            <li class="program-tile__info-bullet">{{- info_bullet -}}</li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+    <div class="program-tile__expanded-operations">
+      <button class="program-tile__collapse" type="button" aria-expanded="true">
+        <span class="program-tile__collapse-icon">
+          {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-up', expand: true } only -%}
+        </span>
+        <span class="program-tile__collapse-label">{{- collapse_label|default('Hide Details') -}}</span>
+      </button>
+      <a class="program-tile__view-degree" href="{{- url -}}">
+        <span class="program-tile__view-degree-label">{{- view_degree_label|default('View Degree') -}}</span>
+        <span class="program-tile__view-degree-icon">
+          {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-right', expand: true } only -%}
+        </span>
+      </a>
+    </div>
+  {%- endif -%}
+</div>

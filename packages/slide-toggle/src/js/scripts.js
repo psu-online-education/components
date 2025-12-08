@@ -38,7 +38,12 @@
       target.style.transition = transition;
 
       requestAnimationFrame(function() {
-        target.style.height = '0px';
+        if (target.hasAttribute('data-min-height')) {
+          target.style.height = target.getAttribute('data-min-height');
+        }
+        else {
+          target.style.height = '0px';
+        }
       });
     });
   };

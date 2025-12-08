@@ -1,0 +1,13 @@
+{
+  "name": "@psu-online-education/program-tile",
+  "version": "1.0.0",
+  "description": "Provides a program tile implementation.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-online-education/base": "^3.0",
+    "@psu-online-education/slide-toggle": "^1.1"
+  }
+}

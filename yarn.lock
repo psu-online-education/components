@@ -2303,6 +2303,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-online-education/program-tile@workspace:packages/program-tile":
+  version: 0.0.0-use.local
+  resolution: "@psu-online-education/program-tile@workspace:packages/program-tile"
+  dependencies:
+    "@psu-online-education/base": ^3.0
+    "@psu-online-education/slide-toggle": ^1.1
+  languageName: unknown
+  linkType: soft
+
 "@psu-online-education/quote@*, @psu-online-education/quote@workspace:packages/quote":
   version: 0.0.0-use.local
   resolution: "@psu-online-education/quote@workspace:packages/quote"
@@ -2350,7 +2359,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-online-education/slide-toggle@*, @psu-online-education/slide-toggle@^1.0, @psu-online-education/slide-toggle@workspace:packages/slide-toggle":
+"@psu-online-education/slide-toggle@*, @psu-online-education/slide-toggle@^1.0, @psu-online-education/slide-toggle@^1.1, @psu-online-education/slide-toggle@workspace:packages/slide-toggle":
   version: 0.0.0-use.local
   resolution: "@psu-online-education/slide-toggle@workspace:packages/slide-toggle"
   languageName: unknown
