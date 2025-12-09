@@ -32,7 +32,7 @@
   </a>
   {%- if not minimal -%}
     <div class="program-tile__collapsed-operations">
-      <button class="program-tile__expand" type="button" aria-expanded="false">
+      <button class="program-tile__expand" type="button" aria-expanded="false" aria-controls="{{ id }}">
         <span class="program-tile__expand-icon">
           {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-down', expand: true } only -%}
         </span>
@@ -45,7 +45,7 @@
         </span>
       </a>
     </div>
-    <div class="program-tile__content" style="height: 5rem" data-min-height="5rem" inert>
+    <div class="program-tile__content" id="{{ id }}" style="height: 5rem" data-min-height="5rem" inert>
       <div class="program-tile__summary">
         {{- summary -}}
       </div>
@@ -58,7 +58,7 @@
       {%- endif -%}
     </div>
     <div class="program-tile__expanded-operations">
-      <button class="program-tile__collapse" type="button" aria-expanded="true">
+      <button class="program-tile__collapse" type="button" aria-expanded="true" aria-controls="{{ id }}">
         <span class="program-tile__collapse-icon">
           {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-up', expand: true } only -%}
         </span>
