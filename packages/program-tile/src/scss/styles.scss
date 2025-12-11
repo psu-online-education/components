@@ -59,13 +59,13 @@
 
   &__degree-type {
     display: block;
-    font-size: var(--font-size--medium)
+    font-size: var(--font-size--medium);
   }
 
   &__content {
     color: var(--text-color);
     display: flex;
-    margin: 0 oe.rem(2.5);
+    margin: 0 oe.rem(2.5) oe.rem(.4) oe.rem(2.5);
     flex-direction: column;
     gap: oe.rem(1);
     font-size: var(--font-size--2xsmall);
@@ -77,8 +77,8 @@
     }
 
     &:focus-visible {
-      padding: oe.rem(.2);
       outline: oe.rem(.2) solid var(--focus-indicator-color);
+      outline-offset: oe.rem(.2);
     }
   }
 
@@ -93,7 +93,7 @@
 
   &__info-bullet::before {
     margin-right: oe.rem(.5);
-    content: '•';
+    content: "•";
     color: var(--accent-color);
   }
 
@@ -104,10 +104,14 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       inset: oe.rem(-1.5) 0 100% 0;
-      background: linear-gradient(to top, var(--program-tile-operations-background-color), var(--program-tile-content-background-color));
+      background: linear-gradient(
+        to top,
+        var(--program-tile-operations-background-color),
+        var(--program-tile-content-background-color)
+      );
     }
   }
 
@@ -148,7 +152,7 @@
 
     &:focus-visible {
       outline: oe.rem(.2) solid var(--focus-indicator-color);
-      outline-offset: oe.rem(-.2);
+      outline-offset: oe.rem(-.4);
     }
   }
 
@@ -166,7 +170,8 @@
     flex: 1;
     transition: color var(--transition-duration--default) linear;
 
-    &:hover, &:focus-visible {
+    &:hover,
+    &:focus-visible {
       text-decoration: none;
     }
 
@@ -176,7 +181,7 @@
     }
 
     &:focus-visible {
-      outline-offset: oe.rem(-.2);
+      outline-offset: oe.rem(-.4);
     }
   }
 
@@ -184,10 +189,9 @@
   &__collapse-icon {
     display: inline-block;
     width: oe.rem(2.1);
-    color: var(--program-tile-chevron-color);
+    color: var(--program-tile-chevron-color, var(--link-color));
     transition: color var(--transition-duration--default) linear;
   }
-
 
   &__view-degree-icon {
     display: inline-block;
@@ -195,5 +199,4 @@
     color: var(--program-tile-chevron-color, var(--link-color));
     transition: color var(--transition-duration--default) linear;
   }
-
 }
