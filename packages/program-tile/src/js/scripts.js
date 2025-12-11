@@ -3,12 +3,11 @@
     const elements = context.querySelectorAll('.program-tile');
     elements.forEach(element => {
       const content = element.querySelector('.program-tile__content');
-      const content_top = content.querySelector('.program-tile__content-top');
       const expand = element.querySelector('.program-tile__expand');
 
       element.addEventListener('component:activate', e => {
         content.removeAttribute('inert');
-        content_top.focus();
+        content.focus();
         if (e?.detail?.disable_animation || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
           content.style['transition-duration'] = '0ms';
           content.style['height'] = null;
