@@ -1,5 +1,6 @@
 {#
   Available variables:
+    color_profile
     icon
     intro_label
     url
@@ -11,7 +12,14 @@
     collapse_label
     view_degree_label
 #}
-<article class="program-tile" aria-label="{{ subject }} {{ degree_type }} rich program tile" tabindex="-1">
+{%- set color_profile = color_profile|default('light') -%}
+
+{%- set classes = [
+  'program-tile',
+  color_profile in ['light', 'dark'] ? 'program-tile--' ~ color_profile,
+]|filter(v => v is not empty) -%}
+
+<article class="{{ classes|join(' ') }}" data-{{ color_profile }} aria-label="{{ subject }} {{ degree_type }} rich program tile" tabindex="-1">
   {%- if icon or intro_label -%}
     <div class="program-tile__intro">
       {%- if icon -%}

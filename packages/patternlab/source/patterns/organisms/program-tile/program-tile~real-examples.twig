@@ -1,0 +1,47 @@
+{% set certificate %}
+  {{- include('@oe/program-tile/program-tile.twig', {
+    id: 'program-subject-program-type',
+    icon: 'fas-handshake-simple',
+    intro_label: 'Human Resources and Change Management',
+    url: '#',
+    subject: 'Human Resources and Employment Relations Foundations',
+    degree_type: 'Graduate Certificate',
+    summary: 'Build your expertise in project management, team facilitation, and Lean Sigma processes while reinforcing basic organization development concepts. This certificate program may provide a pathway toward the MPS in OD&C.',
+    info_bullets: [
+      '<strong>100% Online</strong>',
+      '<strong>Apply by April 15</strong> to start May 18',
+      '<strong>12 Credits</strong> $1037 per credit',
+    ],
+    expand_label: 'Show Details',
+    collapse_label: 'Hide Details',
+    view_degree_label: 'View Certificate',
+  }) -}}
+{% endset %}
+{% set degree %}
+  {{- include('@oe/program-tile/program-tile.twig', {
+    id: 'program-subject-program-type',
+    icon: 'fas-user-doctor',
+    intro_label: 'Nursing',
+    url: '#',
+    subject: 'Nursing',
+    degree_type: 'RN to BSN',
+    summary: 'Advance your knowledge of theory and your clinical skills while making yourself more marketable in the current health care industry. This online degree program is for currently licensed Registered Nurses (RN) with an associate degree or diploma who would like to continue their education with a BSN.',
+    info_bullets: [
+      '<strong>Clinical Experience</strong> – 45 total clinical hours required',
+      '<strong>Apply by March 15</strong> to start May 18',
+      '<strong>12 Credits</strong> $1037 per credit',
+    ],
+    expand_label: 'Show Details',
+    collapse_label: 'Hide Details',
+    view_degree_label: 'View Degree',
+  }) -}}
+{% endset %}
+
+{{- include('@oe/alert/alert.twig', {
+  content: "Grid behaviors still needs to be specced out in Figma",
+  severity: "warning"
+}) -}}
+<br><br>
+{{- include('@oe/grid/grid.twig', {
+  items: [certificate, degree]
+}) -}}
