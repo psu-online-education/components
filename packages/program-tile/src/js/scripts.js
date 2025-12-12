@@ -33,7 +33,6 @@
           content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 800) + 'ms';
           cms.collapse(content);
         }
-        cms.collapse(content);
       });
 
       expand.addEventListener('click', () => {

@@ -6,6 +6,15 @@
   gap: oe.rem(1.5);
   padding-top: oe.rem(2.5);
   background-color: var(--program-tile-content-background-color);
+  height: 100%;
+  max-height: 100%;
+  transition: max-height var(--transition-duration--default) linear;
+
+  &:has([inert]) {
+    // Program tiles must auto-clamp some of their inputs in collapsed state.
+    --program-tile-text-display: -webkit-box;
+    max-height: oe.rem(28);
+  }
 
   &--light {
     --program-tile-content-background-color: var(--white);
@@ -34,6 +43,11 @@
     &-label {
       font-size: var(--font-size--xsmall);
       color: var(--text-color);
+      flex: 1;
+      display: var(--program-tile-text-display);
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
     }
   }
 
@@ -54,14 +68,20 @@
   }
 
   &__subject {
-    display: block;
     font-size: var(--font-size--large);
     font-weight: var(--font-weight--bold);
+    display: var(--program-tile-text-display, block);
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
   }
 
   &__degree-type {
-    display: block;
     font-size: var(--font-size--medium);
+    display: var(--program-tile-text-display, block);
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
   }
 
   &__content {
@@ -106,6 +126,7 @@
     background-color: var(--program-tile-operations-background-color);
     display: flex;
     position: relative;
+    margin-top: auto;
 
     &::before {
       content: "";
