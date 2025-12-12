@@ -23,6 +23,7 @@
     align-items: center;
     margin: 0 oe.rem(2.5);
     gap: oe.rem(.8);
+    line-height: var(--line-height--xsnug);
 
     &-icon {
       font-size: var(--font-size--msmall);
@@ -41,6 +42,7 @@
     margin: 0 oe.rem(2.5);
     text-decoration: underline dotted transparent auto;
     transition: text-decoration-color var(--transition-duration--default) linear;
+    line-height: var(--line-height--xsnug);
 
     &:focus-visible {
       text-decoration: underline dotted transparent auto;
@@ -69,6 +71,7 @@
     flex-direction: column;
     gap: oe.rem(1);
     font-size: var(--font-size--2xsmall);
+    line-height: var(--line-height--snug);
     transition: height .2s linear;
     overflow: hidden;
 
@@ -89,6 +92,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    line-height: var(--line-height--xsnug);
   }
 
   &__info-bullet::before {
