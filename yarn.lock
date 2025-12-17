@@ -1569,7 +1569,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-online-education/base@^3.0, @psu-online-education/base@workspace:packages/base":
+"@psu-online-education/base@^3.0, @psu-online-education/base@^3.0.1, @psu-online-education/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@psu-online-education/base@workspace:packages/base"
   dependencies:
@@ -1756,7 +1756,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/drop-button@workspace:packages/drop-button"
   dependencies:
-    "@psu-online-education/base": ^3.0
+    "@psu-online-education/base": ^3.0.1
   languageName: unknown
   linkType: soft
 
