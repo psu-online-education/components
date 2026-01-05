@@ -20,7 +20,7 @@
 ]|filter(v => v is not empty) -%}
 
 <article class="{{ classes|join(' ') }}" data-{{ color_profile }} aria-label="{{ subject }} {{ degree_type }} rich program tile" tabindex="-1">
-  {%- if icon or intro_label -%}
+  {%- if intro_label -%}
     <div class="program-tile__intro">
       {%- if icon -%}
         <div class="program-tile__intro-icon">
@@ -38,7 +38,7 @@
     <span class="program-tile__subject">{{- subject -}}</span>
     <span class="program-tile__degree-type">{{- degree_type -}}</span>
   </a>
-  {%- if not minimal -%}
+  {%- if summary or info_bullets -%}
     <div class="program-tile__collapsed-operations">
       <button class="program-tile__expand" type="button" aria-expanded="false" aria-controls="{{ id }}">
         <span class="program-tile__expand-icon">
@@ -54,9 +54,11 @@
       </a>
     </div>
     <div class="program-tile__content" id="{{ id }}" tabindex="-1" inert>
-      <div class="program-tile__summary">
-        {{- summary -}}
-      </div>
+      {%- if summary -%}
+        <div class="program-tile__summary">
+          {{- summary -}}
+        </div>
+      {%- endif -%}
       {%- if info_bullets is iterable -%}
         <ul class="program-tile__info-bullets" role="list">
           {%- for info_bullet in info_bullets -%}

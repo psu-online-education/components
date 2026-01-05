@@ -1,6 +1,6 @@
 {% set certificate %}
   {{- include('@oe/program-tile/program-tile.twig', {
-    id: 'program-subject-program-type',
+    id: 'program-subject-program-type-cert',
     icon: 'fas-handshake-simple',
     intro_label: 'Human Resources and Change Management',
     url: '#',
@@ -19,7 +19,7 @@
 {% endset %}
 {% set degree %}
   {{- include('@oe/program-tile/program-tile.twig', {
-    id: 'program-subject-program-type',
+    id: 'program-subject-program-type-degree',
     icon: 'fas-user-doctor',
     intro_label: 'Nursing',
     url: '#',
@@ -36,11 +36,32 @@
     view_degree_label: 'View Degree',
   }) -}}
 {% endset %}
+{% set longest %}
+    {{- include('@oe/program-tile/program-tile.twig', {
+    id: 'program-subject-program-type-longest',
+    icon: 'fas-shield-quartered',
+    intro_label: 'Homeland Security',
+    url: '#',
+    subject: 'Homeland Security – Agricultural Biosecurity and Food Defense Option',
+    degree_type: 'Master of Professional Studies',
+    summary: 'Gain the skills to help defend against natural and manmade threats to our agriculture and food supply chain. This option builds a fundamental understanding of homeland security issues with an emphasis on food science, plant protection, and animal security.',
+    info_bullets: [
+      '<strong>100% Online</strong>',
+      '<strong>Apply by March 1</strong> to start May 18',
+      '<strong>33 Credits</strong> $1037 per credit',
+    ],
+    expand_label: 'Show Details',
+    collapse_label: 'Hide Details',
+    view_degree_label: 'View Degree',
+  }) -}}
+{% endset %}
 
 {{- include('@oe/grid/grid.twig', {
   items: [
-    certificate, degree,certificate, degree,certificate, degree,
-    certificate, degree,certificate, degree,certificate, degree,
-    certificate, degree,certificate, degree,certificate, degree,
+    certificate, degree, longest,
+    longest, certificate, degree,
+    certificate, longest, degree,
+    longest, certificate, degree,
+    certificate, degree, longest,
   ]
 }) -}}
