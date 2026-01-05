@@ -100,6 +100,7 @@
     line-height: var(--line-height--snug);
     transition: height .2s linear;
     overflow: hidden;
+    z-index: 1;
 
     &[inert] {
       mask-image: linear-gradient(to bottom, white, transparent);
@@ -137,7 +138,7 @@
     &::before {
       content: "";
       position: absolute;
-      inset: oe.rem(-1.5) 0 100% 0;
+      inset: oe.rem(-6) 0 100% 0;
       background: linear-gradient(
         to top,
         var(--program-tile-operations-background-color),
