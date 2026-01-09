@@ -49,6 +49,7 @@
         element.addEventListener('component:activate', e => {
           element.style['transition-duration'] = getAnimationDuration(e);
           content.removeAttribute('inert');
+          content.setAttribute('data-not-inert', '');
           content.focus();
         });
 
@@ -64,6 +65,7 @@
         // keyboard interactions do.
         element.addEventListener('component:deactivate', e => {
           element.style['transition-duration'] = getAnimationDuration(e);
+          content.removeAttribute('data-not-inert');
           content.setAttribute('inert', '');
           expand_button.focus();
         });

@@ -1,5 +1,48 @@
 @use "../../../base/src/scss/mixins" as oe;
 
+.pl-js-pattern-example {
+
+}
+
+.grid {
+  container-type: inline-size;
+}
+
+.grid__item {
+  align-self: stretch;
+
+  @container (min-width: 500px) and (max-width: 759px) {
+    // A tile immediately preceeding a collapsed tile in 2 columns.
+    &:nth-child(2n+1):has(+ .grid__item [data-not-inert]) {
+      align-self: flex-start;
+    }
+
+    // A tile immediately following a collapsed tile in 2 columns
+    &:is(.grid__item:nth-child(2n+1):not(:has([inert])) + .grid__item) {
+      align-self: flex-start;
+    }
+  }
+
+  @container (min-width: 760px) {
+
+    // A first column tile preceeding a collapsed tile in 3 columns.
+    &:nth-child(3n+1):has(+ :nth-child(3n+2) [data-not-inert], + :nth-child(3n+2) + :nth-child(3n+3) [data-not-inert]) {
+      align-self: flex-start;
+    }
+
+    // A second column tile preceeding or following a collapsed tile in 3 columns.
+    &:nth-child(3n+2):is(:nth-child(3n+1):not(:has([inert])) + :nth-child(3n+2)),
+    &:nth-child(3n+2):has(+ :nth-child(3n+3) [data-not-inert]) {
+      align-self: flex-start;
+    }
+
+    // A third column tile following a collapsed tile in 3 columns.
+    &:nth-child(3n+3):is(:nth-child(3n+1):not(:has([inert])) + :nth-child(3n+2) + :nth-child(3n+3), :nth-child(3n+1) + :nth-child(3n+2):not(:has([inert])) + :nth-child(3n+3)) {
+      align-self: flex-start;
+    }
+  }
+}
+
 .program-tile {
   display: flex;
   flex-direction: column;
@@ -7,21 +50,6 @@
   background-color: var(--program-tile-content-background-color);
   height: 100%;
   max-height: 100%;
-
-  @media not (prefers-reduced-motion: reduce) {
-    transition: max-height var(--transition-duration--default) linear;
-  }
-
-  @supports(interpolate-size: allow-keywords) {
-    interpolate-size: allow-keywords;
-    max-height: fit-content;
-  }
-
-  &:has([inert]) {
-    // Program tiles must auto-clamp some of their inputs in collapsed state.
-    --program-tile-text-display: -webkit-box;
-    max-height: oe.rem(28);
-  }
 
   &--light {
     --program-tile-content-background-color: var(--white);
@@ -50,10 +78,6 @@
       font-size: var(--font-size--xsmall);
       color: var(--text-color);
       flex: 1;
-      display: var(--program-tile-text-display);
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      overflow: hidden;
     }
   }
 
@@ -74,20 +98,14 @@
   }
 
   &__subject {
+    display: block;
     font-size: var(--font-size--large);
     font-weight: var(--font-weight--bold);
-    display: var(--program-tile-text-display, block);
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
   }
 
   &__degree-type {
+    display: block;
     font-size: var(--font-size--medium);
-    display: var(--program-tile-text-display, block);
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
   }
 
   &__content {
@@ -104,6 +122,7 @@
 
     &[inert] {
       mask-image: linear-gradient(to bottom, white, transparent);
+      max-height: oe.rem(5);
     }
 
     &:focus-visible {
