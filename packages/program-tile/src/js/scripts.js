@@ -1,4 +1,68 @@
 (cms => {
+
+  cms.attach('program-tile-grid', context => {
+    const elements = context.querySelectorAll('.program-tile-grid');
+    elements.forEach(element => {
+
+      const revalidateMaxWidths = () => {
+        const tiles = element.querySelectorAll('.program-tile');
+        const rows = [];
+        let last_y = -1;
+        let i = 0;
+        tiles.forEach(tile => {
+          tile.style.transition = 'none';
+          tile.querySelector('.program-tile__content').style.transition = 'none';
+          const y = tile.getBoundingClientRect().top;
+          if (y !== last_y) {
+            last_y = y;
+            ++i;
+            rows[i] = [tile]
+          }
+          else {
+            rows[i].push(tile);
+          }
+        });
+        rows.forEach(row => {
+          let max = 0;
+          let states = [];
+          row.forEach((tile, index) => {
+            const content = tile.querySelector('.program-tile__content');
+            states[index] = content.hasAttribute('inert');
+            content.setAttribute('inert', '');
+          });
+          row.forEach(tile => {
+            tile.style.maxHeight = 'unset';
+            if (tile.getBoundingClientRect().height > max) {
+              max = tile.getBoundingClientRect().height;
+            }
+          });
+          row.forEach((tile, index) => {
+            tile.style.maxHeight = max + 'px';
+            if (!states[index]) {
+              const content = tile.querySelector('.program-tile__content');
+              content.removeAttribute('inert');
+            }
+            tile.style.transition = 'max-height .2s linear';
+            tile.querySelector('.program-tile__content').style.transition = 'max-height .2s linear';
+          });
+        });
+      };
+
+      let last_width = element.getBoundingClientRect().width;
+      const observer = new ResizeObserver(entries => {
+        if (element.getBoundingClientRect().width === last_width) {
+          return;
+        }
+        last_width = element.getBoundingClientRect().width
+        observer.disconnect();
+        revalidateMaxWidths();
+        observer.observe(element);
+      });
+      revalidateMaxWidths();
+      observer.observe(element);
+    });
+  });
+
   cms.attach('program-tile', context => {
     const elements = context.querySelectorAll('.program-tile');
     elements.forEach(element => {
@@ -47,7 +111,7 @@
         // a general rule mouse interactions do not result in a focus ring, but
         // keyboard interactions do.
         element.addEventListener('component:activate', e => {
-          element.style['transition-duration'] = getAnimationDuration(e);
+          //element.style['transition-duration'] = getAnimationDuration(e);
           content.removeAttribute('inert');
           content.focus();
         });
@@ -63,7 +127,7 @@
         // a general rule mouse interactions do not result in a focus ring, but
         // keyboard interactions do.
         element.addEventListener('component:deactivate', e => {
-          element.style['transition-duration'] = getAnimationDuration(e);
+          //element.style['transition-duration'] = getAnimationDuration(e);
           content.setAttribute('inert', '');
           expand_button.focus();
         });

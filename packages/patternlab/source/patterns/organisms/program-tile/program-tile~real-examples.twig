@@ -2424,6 +2424,9 @@
   {% endset %}
   {% set items = items|merge([item]) %}
 {% endfor %}
-{{- include('@oe/grid/grid.twig', {
-  items: items
-}) -}}
+
+<div class="program-tile-grid">
+  {{- include('@oe/grid/grid.twig', {
+    items: items
+  }) -}}
+</div>
