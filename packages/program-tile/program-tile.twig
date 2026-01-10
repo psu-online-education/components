@@ -14,12 +14,7 @@
 #}
 {%- set color_profile = color_profile|default('light') -%}
 
-{%- set classes = [
-  'program-tile',
-  color_profile in ['light', 'dark'] ? 'program-tile--' ~ color_profile,
-]|filter(v => v is not empty) -%}
-
-<article class="{{ classes|join(' ') }}" data-{{ color_profile }} aria-label="{{ subject }} {{ degree_type }} rich program tile" tabindex="-1">
+<article class="program-tile" data-{{ color_profile }} aria-labelledby="{{ id }}-label" tabindex="-1">
   {%- if intro_label -%}
     <div class="program-tile__intro">
       {%- if icon -%}
@@ -34,52 +29,46 @@
       {%- endif -%}
     </div>
   {%- endif -%}
-  <a class="program-tile__link" href="{{- url -}}">
+  <a class="program-tile__link" href="{{- url -}}" id="{{ id ~ '-label' }}">
     <span class="program-tile__subject">{{- subject -}}</span>
     <span class="program-tile__degree-type">{{- degree_type -}}</span>
   </a>
   {%- if summary or info_bullets -%}
-    <div class="program-tile__collapsed-operations">
-      <button class="program-tile__expand" type="button" aria-expanded="false" aria-controls="{{ id }}">
-        <span class="program-tile__expand-icon">
-          {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-down', expand: true } only -%}
+    <details class="program-tile__details">
+      <div class="program-tile__content">
+        {%- if summary -%}
+          <p class="program-tile__program-summary">
+            {{- summary -}}
+          </p>
+        {%- endif -%}
+        {%- if info_bullets is iterable -%}
+          <ul class="program-tile__info-bullets" role="list">
+            {%- for info_bullet in info_bullets -%}
+              <li class="program-tile__info-bullet text text--size-2xsmall text--height-xsnug">{{- info_bullet -}}</li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </div>
+      <summary class="program-tile__summary">
+        <span class="program-tile__expand">
+          <span class="program-tile__expand-icon">
+            {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-down', expand: true } only -%}
+          </span>
+          <span class="program-tile__expand-label">{{- expand_label|default('Show Details') -}}</span>
         </span>
-        <span class="program-tile__expand-label">{{- expand_label|default('Show Details') -}}</span>
-      </button>
-      <a class="program-tile__view-degree" href="{{- url -}}">
-        <span class="program-tile__view-degree-label">{{- view_degree_label|default('View Degree') -}}</span>
-        <span class="program-tile__view-degree-icon">
-          {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-right', expand: true } only -%}
+        <span class="program-tile__collapse">
+          <span class="program-tile__collapse-icon">
+            {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-up', expand: true } only -%}
+          </span>
+          <span class="program-tile__collapse-label">{{- collapse_label|default('Hide Details') -}}</span>
         </span>
-      </a>
-    </div>
-    <div class="program-tile__content" id="{{ id }}" tabindex="-1" inert>
-      {%- if summary -%}
-        <div class="program-tile__summary">
-          {{- summary -}}
-        </div>
-      {%- endif -%}
-      {%- if info_bullets is iterable -%}
-        <ul class="program-tile__info-bullets" role="list">
-          {%- for info_bullet in info_bullets -%}
-            <li class="program-tile__info-bullet">{{- info_bullet -}}</li>
-          {%- endfor -%}
-        </ul>
-      {%- endif -%}
-    </div>
-    <div class="program-tile__expanded-operations">
-      <button class="program-tile__collapse" type="button" aria-expanded="true" aria-controls="{{ id }}">
-        <span class="program-tile__collapse-icon">
-          {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-up', expand: true } only -%}
-        </span>
-        <span class="program-tile__collapse-label">{{- collapse_label|default('Hide Details') -}}</span>
-      </button>
-      <a class="program-tile__view-degree" href="{{- url -}}">
-        <span class="program-tile__view-degree-label">{{- view_degree_label|default('View Degree') -}}</span>
-        <span class="program-tile__view-degree-icon">
-          {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-right', expand: true } only -%}
-        </span>
-      </a>
-    </div>
+      </summary>
+    </details>
+    <a class="program-tile__view-degree" href="{{- url -}}">
+      <span class="program-tile__view-degree-label">{{- view_degree_label|default('View Degree') -}}</span>
+      <span class="program-tile__view-degree-icon">
+        {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-right', expand: true } only -%}
+      </span>
+    </a>
   {%- endif -%}
 </article>

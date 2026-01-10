@@ -1,70 +1,158 @@
 @use "../../../base/src/scss/mixins" as oe;
 
-.pl-js-pattern-example {
-
-}
-
-.grid {
+.grid:has(.program-tile) {
   container-type: inline-size;
 }
 
-.grid__item {
-  align-self: stretch;
-
-  @container (min-width: 500px) and (max-width: 759px) {
-    // A tile immediately preceeding a collapsed tile in 2 columns.
-    &:nth-child(2n+1):has(+ .grid__item [data-not-inert]) {
-      align-self: flex-start;
-    }
-
-    // A tile immediately following a collapsed tile in 2 columns
-    &:is(.grid__item:nth-child(2n+1):not(:has([inert])) + .grid__item) {
-      align-self: flex-start;
-    }
-  }
-
-  @container (min-width: 760px) {
-
-    // A first column tile preceeding a collapsed tile in 3 columns.
-    &:nth-child(3n+1):has(+ :nth-child(3n+2) [data-not-inert], + :nth-child(3n+2) + :nth-child(3n+3) [data-not-inert]) {
-      align-self: flex-start;
-    }
-
-    // A second column tile preceeding or following a collapsed tile in 3 columns.
-    &:nth-child(3n+2):is(:nth-child(3n+1):not(:has([inert])) + :nth-child(3n+2)),
-    &:nth-child(3n+2):has(+ :nth-child(3n+3) [data-not-inert]) {
-      align-self: flex-start;
-    }
-
-    // A third column tile following a collapsed tile in 3 columns.
-    &:nth-child(3n+3):is(:nth-child(3n+1):not(:has([inert])) + :nth-child(3n+2) + :nth-child(3n+3), :nth-child(3n+1) + :nth-child(3n+2):not(:has([inert])) + :nth-child(3n+3)) {
-      align-self: flex-start;
-    }
-  }
-}
-
 .program-tile {
+
+  // Various tweaks needed for light or dark contexts.
+  --program-tile-content-background-color: var(--if-light, var(--white))
+                                           var(--if-dark, var(--pa-link));
+  --program-tile-box-shadow-color: var(--if-light, var(--nittany-navy))
+                                   var(--if-dark, transparent);
+  --program-tile-operations-background-color: var(--if-light, var(--white))
+                                              var(--if-dark, var(--beaver-blue));
+  --program-tile-link-color: var(--if-light, var(--link-color))
+                             var(--if-dark, var(--white));
+  --program-tile-operations-gradient: var(--if-light, linear-gradient(to top, var(--white), transparent))
+                                      var(--if-dark, linear-gradient(to top, var(--beaver-blue), transparent));
+
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: oe.rem(2.5);
+  gap: oe.rem(1.5);
+  padding: oe.rem(2.5) 0;
   background-color: var(--program-tile-content-background-color);
+  box-shadow: oe.rem(.2) oe.rem(.2) oe.rem(.7) 0 color-mix(in srgb, var(--program-tile-box-shadow-color) 70%, transparent);
   height: 100%;
-  max-height: 100%;
 
-  &--light {
-    --program-tile-content-background-color: var(--white);
-    box-shadow: oe.rem(.2) oe.rem(.2) oe.rem(.7) 0 color-mix(in srgb, var(--nittany-navy) 70%, transparent);
+  @media (scripting: none) {
+    @container (min-width: 500px) and (max-width: 759px) {
+      // Collapse first column if the tile in the second column is open.
+      &:is(:nth-child(2n+1):has(+ :nth-child(2n+2) [open]) > *) {
+        height: min-content;
+      }
+
+      // Collapse second column if the tile in the first column is open.
+      &:is(:nth-child(2n+1):has([open]) + :nth-child(2n+2) > *) {
+        height: min-content;
+      }
+    }
+
+    @container (min-width: 760px) {
+
+      // Collapse first column if the tile in the second column is open.
+      &:is(:nth-child(3n+1):has(+ :nth-child(3n+2) [open]) > *) {
+        height: min-content;
+      }
+
+      // Collapse first column if the tile in the third column is open.
+      &:is(:nth-child(3n+1):has(+ :nth-child(3n+2) + :nth-child(3n+3) [open]) > *) {
+        height: min-content;
+      }
+
+      // Collapse second column if the tile in the first column is open.
+      &:is(:nth-child(3n+1):has([open]) + :nth-child(3n+2) > *) {
+        height: min-content;
+      }
+
+      // Collapse second column if the tile in the third column is open.
+      &:is(:nth-child(3n+2):has(+ :nth-child(3n+3) [open]) > *)  {
+        height: min-content;
+      }
+
+      // Collapse third column if the tile in the first column is open.
+      &:is(:nth-child(3n+1):has([open]) + :nth-child(3n+2) + :nth-child(3n+3) > *) {
+        height: min-content;
+      }
+
+      // Collapse third column if the tile in the second column is open.
+      &:is(:nth-child(3n+1) + :nth-child(3n+2):has([open]) + :nth-child(3n+3) > *) {
+        height: min-content;
+      }
+    }
   }
 
-  &--dark {
-    --program-tile-link-color: var(--white);
-    --program-tile-content-background-color: var(--pa-link);
-    --program-tile-operations-background-color: var(--beaver-blue);
+  @media (scripting: enabled) {
+    @container (min-width: 500px) and (max-width: 759px) {
+      // Collapse first column if the tile in the second column is open.
+      &:is(:nth-child(2n+1):has(+ :nth-child(2n+2) [data-open]) > *) {
+        height: min-content;
+      }
+
+      // Collapse second column if the tile in the first column is open.
+      &:is(:nth-child(2n+1):has([data-open]) + :nth-child(2n+2) > *) {
+        height: min-content;
+      }
+    }
+
+    @container (min-width: 760px) {
+
+      // Collapse first column if the tile in the second column is open.
+      &:is(:nth-child(3n+1):has(+ :nth-child(3n+2) [data-open]) > *) {
+        height: min-content;
+      }
+
+      // Collapse first column if the tile in the third column is open.
+      &:is(:nth-child(3n+1):has(+ :nth-child(3n+2) + :nth-child(3n+3) [data-open]) > *) {
+        height: min-content;
+      }
+
+      // Collapse second column if the tile in the first column is open.
+      &:is(:nth-child(3n+1):has([data-open]) + :nth-child(3n+2) > *) {
+        height: min-content;
+      }
+
+      // Collapse second column if the tile in the third column is open.
+      &:is(:nth-child(3n+2):has(+ :nth-child(3n+3) [data-open]) > *)  {
+        height: min-content;
+      }
+
+      // Collapse third column if the tile in the first column is open.
+      &:is(:nth-child(3n+1):has([data-open]) + :nth-child(3n+2) + :nth-child(3n+3) > *) {
+        height: min-content;
+      }
+
+      // Collapse third column if the tile in the second column is open.
+      &:is(:nth-child(3n+1) + :nth-child(3n+2):has([data-open]) + :nth-child(3n+3) > *) {
+        height: min-content;
+      }
+    }
   }
 
+  // Open state modifiers.
+  &:has([open]) &__summary {
+    margin: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  // Hide the expand button if open, hide collapse button if not open.
+  &:has([open]) &__expand,
+  &:not(:has([open])) &__collapse {
+    display: none;
+  }
+
+  // Show the collapse button if open, show expand button if not open.
+  &:has([open]) &__collapse,
+  &:not(:has([open])) &__expand {
+    display: flex;
+    gap: oe.rem(.8);
+    align-items: center;
+  }
+
+  &:has([open]) &__content {
+    max-height: max-content;
+    pointer-events: revert;
+  }
+
+  // Locked.
   &__intro {
     display: flex;
-    margin: 0 oe.rem(2.5) oe.rem(1.5);
+    margin: 0 oe.rem(2.5);
     gap: oe.rem(.8);
     line-height: var(--line-height--xsnug);
 
@@ -81,9 +169,10 @@
     }
   }
 
+  // Locked.
   &__link {
-    color: var(--program-tile-link-color, var(--link-color));
-    margin: 0 oe.rem(2.5) oe.rem(1.5);
+    color: var(--program-tile-link-color);
+    margin: 0 oe.rem(2.5);
     text-decoration: underline dotted transparent auto;
     transition: text-decoration-color var(--transition-duration--default) linear;
     line-height: var(--line-height--xsnug);
@@ -97,40 +186,57 @@
     }
   }
 
+  // Locked.
   &__subject {
     display: block;
     font-size: var(--font-size--large);
     font-weight: var(--font-weight--bold);
   }
 
+  // Locked.
   &__degree-type {
     display: block;
     font-size: var(--font-size--medium);
   }
 
-  &__content {
-    color: var(--text-color);
-    display: flex;
-    margin: 0 oe.rem(2.5) oe.rem(.4) oe.rem(2.5);
-    flex-direction: column;
-    gap: oe.rem(1);
-    font-size: var(--font-size--2xsmall);
-    line-height: var(--line-height--snug);
-    transition: height .2s linear;
+  // Locked.
+  &__details {
+    padding-bottom: oe.rem(2.5);
+    border: none;
     overflow: hidden;
-    z-index: 1;
 
-    &[inert] {
-      mask-image: linear-gradient(to bottom, white, transparent);
-      max-height: oe.rem(5);
-    }
-
-    &:focus-visible {
-      outline: oe.rem(.2) solid var(--focus-indicator-color);
-      outline-offset: oe.rem(.2);
+    &::details-content {
+      content-visibility: visible !important;
     }
   }
 
+  &__content {
+    pointer-events: none;
+    display: flex;
+    margin: 0 oe.rem(2.5);
+    flex-direction: column;
+    gap: oe.rem(1);
+    max-height: oe.rem(5);
+    padding-bottom: oe.rem(1.5);
+
+    @media (prefers-reduced-motion: no-preference) {
+      interpolate-size: allow-keywords;
+      transition-property: max-height;
+      transition-duration: var(--transition-duration--default);
+      transition-timing-function: linear;
+    }
+
+    // @TODO: Animations are wonky - tweak transitions strategically with javascript.
+  }
+
+  // Locked.
+  &__program-summary {
+    font-size: var(--font-size--2xsmall);
+    line-height: var(--line-height--xsnug);
+    margin-bottom: 0;
+  }
+
+  // Locked.
   &__info-bullets {
     display: flex;
     flex-direction: column;
@@ -138,77 +244,72 @@
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  // Locked.
+  &__info-bullet {
+    font-size: var(--font-size--2xsmall);
     line-height: var(--line-height--xsnug);
-  }
-
-  &__info-bullet::before {
-    margin-right: oe.rem(.5);
-    content: "•";
-    color: var(--accent-color);
-  }
-
-  &__collapsed-operations,
-  &__expanded-operations {
-    background-color: var(--program-tile-operations-background-color);
-    display: flex;
-    position: relative;
-    margin-top: auto;
 
     &::before {
-      content: "";
-      position: absolute;
-      inset: oe.rem(-6) 0 100% 0;
-      background: linear-gradient(
-        to top,
-        var(--program-tile-operations-background-color),
-        var(--program-tile-content-background-color)
-      );
+      margin-right: oe.rem(.5);
+      content: "•";
+      color: var(--accent-color);
     }
   }
 
-  &__collapsed-operations {
-    order: 2;
-
-    &:not(:has(+ [inert])) {
-      display: none;
-    }
-  }
-
-  &__expanded-operations:is([inert] + *) {
-    display: none;
-  }
-
-  &__expand,
-  &__collapse {
-    display: flex;
-    gap: oe.rem(.8);
-    align-items: center;
-    background: transparent;
-    color: var(--text-color);
-    font-family: var(--font-family--default);
-    border: none;
+  // Locked.
+  &__summary {
+    position: absolute;
+    inset: calc(100% - oe.rem(5)) 0 0 0 ;
     padding: oe.rem(1.5) oe.rem(.5) oe.rem(1.5) oe.rem(2.5);
-    margin-right: auto;
-    cursor: pointer;
-    font-weight: var(--font-weight--semibold);
-    font-size: var(--font-size--xsmall);
-    line-height: var(--line-height--xsnug);
-    flex: 1;
-    text-align: left;
-    transition: color var(--transition-duration--default) linear;
+    max-width: 50%;
+    color: var(--text-color);
+    background-color: var(--program-tile-operations-background-color);
+
+    &:focus-visible {
+      background-color: var(--program-tile-operations-background-color);
+      color: var(--text-color);
+    }
 
     &:hover {
+      background-color: var(--program-tile-operations-background-color);
       color: var(--link-color);
       --program-tile-chevron-color: var(--accent-color-semantic);
+
+      &::before {
+        background: var(--program-tile-operations-gradient);
+      }
     }
 
     &:focus-visible {
       outline: oe.rem(.2) solid var(--focus-indicator-color);
       outline-offset: oe.rem(-.4);
     }
+
+    &::before {
+      mask: none;
+      content: "";
+      position: absolute;
+      inset: oe.rem(-6) -100% 100% 0;
+      background: var(--program-tile-operations-gradient);
+      pointer-events: none;
+    }
   }
 
+  // Locked.
+  &__expand, &__collapse {
+    font-family: var(--font-family--default);
+    font-weight: var(--font-weight--semibold);
+    font-size: var(--font-size--xsmall);
+    line-height: var(--line-height--xsnug);
+  }
+
+  // Locked.
   &__view-degree {
+    position: absolute;
+    background-color: var(--program-tile-operations-background-color);
+    inset: calc(100% - 5rem) 0 0 50%;
     color: var(--text-color);
     display: flex;
     gap: oe.rem(.8);
@@ -216,12 +317,10 @@
     text-align: right;
     justify-content: flex-end;
     padding: oe.rem(1.5) oe.rem(2.5) oe.rem(1.5) oe.rem(.5);
-    margin-left: auto;
     font-weight: var(--font-weight--semibold);
     font-size: var(--font-size--xsmall);
     line-height: var(--line-height--xsnug);
     text-decoration: none;
-    flex: 1;
     transition: color var(--transition-duration--default) linear;
 
     &:hover,
@@ -239,16 +338,16 @@
     }
   }
 
+  // Locked.
   &__expand-icon,
   &__collapse-icon {
-    display: inline-block;
     width: oe.rem(2.1);
     color: var(--program-tile-chevron-color, var(--link-color));
     transition: color var(--transition-duration--default) linear;
   }
 
+  // Locked.
   &__view-degree-icon {
-    display: inline-block;
     width: oe.rem(1.2);
     color: var(--program-tile-chevron-color, var(--link-color));
     transition: color var(--transition-duration--default) linear;

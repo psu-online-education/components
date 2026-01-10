@@ -13,6 +13,7 @@ summary {
   line-height: var(--line-height--snug);
   transition: background-color var(--transition-duration--default) linear,
               color var(--transition-duration--default) linear;
+  color: var(--if-light, var(--pa-link)) var(--if-dark, var(--pa-link-light));
 
   // Turn off the native marker.
   &::-webkit-details-marker,
@@ -40,62 +41,28 @@ summary {
     }
   }
 
-  &, &:is([data-light] *) {
-    color: var(--pa-link);
+  &::before {
+    background-color: var(--if-light, var(--pa-link)) var(--if-dark, var(--pa-link-light));
+  }
 
-    &::before {
-      background-color: var(--pa-link);
-    }
-
-    @media (any-hover: hover) {
-      &:hover {
-        color: var(--beaver-blue);
-        background-color: var(--pa-link-light);
-
-        &::before {
-          background-color: var(--beaver-blue);
-        }
-      }
-    }
-
-    &:focus-visible {
-      color: var(--beaver-blue);
-      background-color: var(--pa-link-light);
-      outline: oe.rem(.2) solid var(--pa-link);
-      outline-offset: oe.rem(-.2);
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--if-light, var(--beaver-blue)) var(--if-dark, var(--white));
+      background-color: var(--if-light, var(--pa-link-light)) var(--if-dark, var(--pa-link));
 
       &::before {
-        background-color: var(--beaver-blue);
+        background-color: var(--if-light, var(--beaver-blue)) var(--if-dark, var(--white));
       }
     }
   }
 
-  &:is([data-dark] *) {
-    color: var(--pa-link-light);
-
+  &:focus-visible {
+    color: var(--if-light, var(--beaver-blue)) var(--if-dark, var(--white));
+    background-color: var(--if-light, var(--pa-link-light)) var(--if-dark, var(--pa-link));
+    outline: var(--if-light, oe.rem(.2) solid var(--pa-link)) var(--if-dark, oe.rem(.2) solid var(--pugh-blue));
+    outline-offset: var(--if-light, oe.rem(-.2)) var(--if-dark, 0);
     &::before {
-      background-color: var(--pa-link-light);
-    }
-
-    @media (any-hover: hover) {
-      &:hover {
-        color: var(--white);
-        background-color: var(--pa-link);
-
-        &::before {
-          background-color: var(--white);
-        }
-      }
-    }
-
-    &:focus-visible {
-      color: var(--white);
-      background-color: var(--pa-link);
-      outline: oe.rem(.2) solid var(--pugh-blue);
-
-      &::before {
-        background-color: var(--white);
-      }
+      background-color: var(--if-light, var(--beaver-blue)) var(--if-dark, var(white));
     }
   }
 }
