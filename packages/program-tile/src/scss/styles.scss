@@ -88,16 +88,21 @@
   &__link {
     color: var(--program-tile-link-color, var(--link-color));
     margin: 0 oe.rem(2.5) oe.rem(1.5);
-    text-decoration: underline dotted transparent auto;
+    text-decoration-line: underline;
+    text-decoration-thickness: auto;
+    text-decoration-style: dotted;
+    text-decoration-color: transparent;
     transition: text-decoration-color var(--transition-duration--default) linear;
     line-height: var(--line-height--xsnug);
 
     &:focus-visible {
-      text-decoration: underline dotted transparent auto;
+      text-decoration-color: transparent;
     }
 
     &:hover {
-      text-decoration: underline dotted var(--link-color) auto;
+      text-decoration-color: var(--link-color);
+      text-decoration-style: dotted;
+      text-decoration-thickness: auto;
     }
   }
 
