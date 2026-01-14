@@ -8,6 +8,12 @@
       if (expand_button && collapse_button) {
         const content = element.querySelector('.program-tile__content');
 
+        content.addEventListener('transitionend', () => {
+          if (content.hasAttribute('inert')) {
+            content.removeAttribute('data-open', '');
+          }
+        });
+
         /**
          * Gets the animation duration for the current tile.
          *
@@ -49,7 +55,7 @@
         element.addEventListener('component:activate', e => {
           element.style['transition-duration'] = getAnimationDuration(e);
           content.removeAttribute('inert');
-          content.setAttribute('data-not-inert', '');
+          content.setAttribute('data-open', '');
           content.focus();
         });
 
@@ -65,7 +71,6 @@
         // keyboard interactions do.
         element.addEventListener('component:deactivate', e => {
           element.style['transition-duration'] = getAnimationDuration(e);
-          content.removeAttribute('data-not-inert');
           content.setAttribute('inert', '');
           expand_button.focus();
         });
