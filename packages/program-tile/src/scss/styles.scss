@@ -206,11 +206,16 @@
     line-height: var(--line-height--xsnug);
     flex: 1;
     text-align: left;
-    transition: color var(--transition-duration--default) linear;
+    transition: color var(--transition-duration--default) linear, text-decoration-color var(--transition-duration--default) linear;
+    text-decoration-line: underline;
+    text-decoration-thickness: auto;
+    text-decoration-style: dotted;
+    text-decoration-color: transparent;
 
     &:hover {
       color: var(--link-color);
       --program-tile-chevron-color: var(--accent-color-semantic);
+      text-decoration-color: var(--link-color);
     }
 
     &:focus-visible {
@@ -231,11 +236,13 @@
     font-weight: var(--font-weight--semibold);
     font-size: var(--font-size--xsmall);
     line-height: var(--line-height--xsnug);
-    text-decoration: none;
     flex: 1;
-    transition: color var(--transition-duration--default) linear;
+    transition: color var(--transition-duration--default) linear, text-decoration-color var(--transition-duration--default) linear;
+    text-decoration-line: underline;
+    text-decoration-thickness: auto;
+    text-decoration-style: dotted;
+    text-decoration-color: transparent;
 
-    &:hover,
     &:focus-visible {
       text-decoration: none;
     }
@@ -243,6 +250,11 @@
     &:hover {
       color: var(--link-color);
       --program-tile-chevron-color: var(--accent-color-semantic);
+      text-decoration-color: var(--link-color);
+      text-decoration-style: dotted;
+      text-decoration-thickness: auto;
+      text-decoration-line: underline;
+
     }
 
     &:focus-visible {
