@@ -88,22 +88,25 @@
   &__link {
     color: var(--program-tile-link-color, var(--link-color));
     margin: 0 oe.rem(2.5) oe.rem(1.5);
+    line-height: var(--line-height--xsnug);
+    transition: color var(--transition-duration--default) linear;
+    text-decoration: none;
+
+    &:focus-visible &:hover {
+      text-decoration: none;
+    }
+  }
+
+  // Safari Hack: text decoration does not properly apply to child elements.
+  &__subject, &__degree-type {
+    transition: text-decoration-color var(--transition-duration--default) linear;
     text-decoration-line: underline;
     text-decoration-thickness: auto;
     text-decoration-style: dotted;
     text-decoration-color: transparent;
-    transition: text-decoration-color var(--transition-duration--default) linear;
-    line-height: var(--line-height--xsnug);
 
-    &:focus-visible {
-      text-decoration-color: transparent;
-    }
-
-    &:hover {
+    &:is(:hover > *) {
       text-decoration-color: var(--link-color);
-      text-decoration-style: dotted;
-      text-decoration-thickness: auto;
-      text-decoration-line: underline;
     }
   }
 
@@ -244,7 +247,8 @@
     text-decoration-color: transparent;
 
     &:focus-visible {
-      text-decoration: none;
+      outline-offset: oe.rem(-.4);
+      text-decoration-color: transparent;
     }
 
     &:hover {
@@ -254,11 +258,6 @@
       text-decoration-style: dotted;
       text-decoration-thickness: auto;
       text-decoration-line: underline;
-
-    }
-
-    &:focus-visible {
-      outline-offset: oe.rem(-.4);
     }
   }
 
