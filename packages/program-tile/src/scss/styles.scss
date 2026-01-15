@@ -92,7 +92,7 @@
     transition: color var(--transition-duration--default) linear;
     text-decoration: none;
 
-    &:focus-visible &:hover {
+    &:focus-visible, &:hover {
       text-decoration: none;
     }
   }
