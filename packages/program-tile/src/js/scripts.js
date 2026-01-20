@@ -8,12 +8,6 @@
       if (expand_button && collapse_button) {
         const content = element.querySelector('.program-tile__content');
 
-        content.addEventListener('transitionend', () => {
-          if (content.hasAttribute('inert')) {
-            content.removeAttribute('data-open', '');
-          }
-        });
-
         /**
          * Gets the animation duration for the current tile.
          *
@@ -30,16 +24,17 @@
         const getAnimationDuration = (e) => {
           // Assume no animations are allowed by default.
           let duration = '0ms';
-
-          // If animations are not disabled and the user does not prefer reduced
-          // motion, the target height animation duration will be half a
-          // millisecond for each pixel of tile height.
-          if (!e?.detail?.disable_animation && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          if (!e?.detail?.disable_animation && !window.matchMedia('(prefers-reduced-motion: reduce)').matches && CSS.supports('interpolate-size', 'allow-keywords')) {
+            // If animations are not disabled and the user does not prefer
+            // reduced motion, the target height animation duration will be
+            // half a millisecond for each pixel of tile height.
             duration = content.scrollHeight / 2;
+
+            // Finally, the duration is clamped by the range [200ms, 800ms].
+            duration = Math.min(Math.max(duration, 200), 800) + 'ms';
           }
 
-          // Finally, the duration is clamped by the range [200ms, 800ms].
-          return Math.min(Math.max(duration, 200), 800) + 'ms';
+          return duration;
         };
 
         // On activate, three things happen: the transition duration animation
@@ -70,7 +65,21 @@
         // a general rule mouse interactions do not result in a focus ring, but
         // keyboard interactions do.
         element.addEventListener('component:deactivate', e => {
-          element.style['transition-duration'] = getAnimationDuration(e);
+          const animation_duration = getAnimationDuration(e);
+
+          if (animation_duration > 0) {
+            const listener = () => {
+              content.removeEventListener('transitionend', listener);
+              content.removeAttribute('data-open', '');
+            };
+            content.addEventListener('transitionend', listener);
+          }
+          else {
+            content.removeAttribute('data-open', '');
+          }
+
+
+          element.style['transition-duration'] = animation_duration;
           content.setAttribute('inert', '');
           expand_button.focus();
         });
