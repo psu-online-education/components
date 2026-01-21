@@ -13,47 +13,63 @@
   max-height: 100%;
   overflow: hidden;
 
-    @container (min-width: 500px) and (max-width: 759px) {
-      // Collapse first column if the tile in the second column is open.
-      &:is(:nth-child(2n+1):has(+ :nth-child(2n+2) [data-open]) > *) {
-        height: min-content;
-      }
-
-      // Collapse second column if the tile in the first column is open.
-      &:is(:nth-child(2n+1):has([data-open]) + :nth-child(2n+2) > *) {
-        height: min-content;
-      }
-    }
-
+  // Two column grid behaviors.
+  @container (min-width: 500px) {
     // Collapse first column if the tile in the second column is open.
-    &:is(:nth-child(3n+1):has(+ :nth-child(3n+2) [data-open]) > *) {
-      height: min-content;
-    }
-
-    // Collapse first column if the tile in the third column is open.
-    &:is(:nth-child(3n+1):has(+ :nth-child(3n+2) + :nth-child(3n+3) [data-open]) > *) {
+    &:is(.grid--two-col :nth-child(2n+1):has(+ :nth-child(2n+2) [data-open]) > *) {
       height: min-content;
     }
 
     // Collapse second column if the tile in the first column is open.
-    &:is(:nth-child(3n+1):has([data-open]) + :nth-child(3n+2) > *) {
+    &:is(.grid--two-col :nth-child(2n+1):has([data-open]) + :nth-child(2n+2) > *) {
+      height: min-content;
+    }
+  }
+
+  // Three column grid behaviors.
+  @container (min-width: 500px) and (max-width: 759px) {
+    // Collapse first column if the tile in the second column is open.
+    &:is(.grid--three-col :nth-child(2n+1):has(+ :nth-child(2n+2) [data-open]) > *) {
+      height: min-content;
+    }
+
+    // Collapse second column if the tile in the first column is open.
+    &:is(.grid--three-col :nth-child(2n+1):has([data-open]) + :nth-child(2n+2) > *) {
+      height: min-content;
+    }
+  }
+
+  @container (min-width: 760px) {
+    // Collapse first column if the tile in the second column is open.
+    &:is(.grid--three-col :nth-child(3n+1):has(+ :nth-child(3n+2) [data-open]) > *) {
+      height: min-content;
+    }
+
+    // Collapse first column if the tile in the third column is open.
+    &:is(.grid--three-col :nth-child(3n+1):has(+ :nth-child(3n+2) + :nth-child(3n+3) [data-open]) > *) {
+      height: min-content;
+    }
+
+    // Collapse second column if the tile in the first column is open.
+    &:is(.grid--three-col :nth-child(3n+1):has([data-open]) + :nth-child(3n+2) > *) {
       height: min-content;
     }
 
     // Collapse second column if the tile in the third column is open.
-    &:is(:nth-child(3n+2):has(+ :nth-child(3n+3) [data-open]) > *)  {
+    &:is(.grid--three-col :nth-child(3n+2):has(+ :nth-child(3n+3) [data-open]) > *)  {
       height: min-content;
     }
 
     // Collapse third column if the tile in the first column is open.
-    &:is(:nth-child(3n+1):has([data-open]) + :nth-child(3n+2) + :nth-child(3n+3) > *) {
+    &:is(.grid--three-col :nth-child(3n+1):has([data-open]) + :nth-child(3n+2) + :nth-child(3n+3) > *) {
       height: min-content;
     }
 
     // Collapse third column if the tile in the second column is open.
-    &:is(:nth-child(3n+1) + :nth-child(3n+2):has([data-open]) + :nth-child(3n+3) > *) {
+    &:is(.grid--three-col :nth-child(3n+1) + :nth-child(3n+2):has([data-open]) + :nth-child(3n+3) > *) {
       height: min-content;
     }
+  }
 
   &--light {
     --program-tile-content-background-color: var(--white);

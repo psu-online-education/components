@@ -66,8 +66,7 @@
         // keyboard interactions do.
         element.addEventListener('component:deactivate', e => {
           const animation_duration = getAnimationDuration(e);
-
-          if (animation_duration > 0) {
+          if (animation_duration !== '0ms') {
             const listener = () => {
               content.removeEventListener('transitionend', listener);
               content.removeAttribute('data-open', '');
