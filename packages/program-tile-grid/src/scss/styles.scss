@@ -1,0 +1,58 @@
+@use "../../../base/src/scss/mixins" as oe;
+
+.program-tile-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: oe.rem(2);
+  container-type: inline-size;
+
+  &__item {
+    flex: 1 0 calc((100% / 3) - 2rem);
+    min-width: oe.rem(24);
+
+      @container (min-width: 500px) and (max-width: 759px) {
+    // Collapse first column if the tile in the second column is open.
+    &:is(:nth-child(2n+1):has(+ [data-expanded])) {
+      align-self: flex-start;
+    }
+
+    // Collapse second column if the tile in the first column is open.
+    &:is(:nth-child(2n+1)[data-expanded] + :nth-child(2n+2)) {
+      align-self: flex-start;
+    }
+  }
+
+  @container (min-width: 760px) {
+    // Collapse first column if the tile in the second column is open.
+    &:is(:nth-child(3n+1):has(+ [data-expanded])) {
+      align-self: flex-start;
+    }
+
+    // Collapse first column if the tile in the third column is open.
+    &:is(:nth-child(3n+1):has(+ :nth-child(3n+2) + [data-expanded])) {
+      align-self: flex-start;
+    }
+
+    // Collapse second column if the tile in the first column is open.
+    &:is(:nth-child(3n+1)[data-expanded] + :nth-child(3n+2)) {
+      align-self: flex-start;
+    }
+
+    // Collapse second column if the tile in the third column is open.
+    &:is(:nth-child(3n+2):has(+ [data-expanded]))  {
+      align-self: flex-start;
+    }
+
+    // Collapse third column if the tile in the first column is open.
+    &:is(:nth-child(3n+1)[data-expanded] + :nth-child(3n+2) + :nth-child(3n+3)) {
+      align-self: flex-start;
+    }
+
+    // Collapse third column if the tile in the second column is open.
+    &:is(:nth-child(3n+1) + :nth-child(3n+2)[data-expanded] + :nth-child(3n+3)) {
+      align-self: flex-start;
+    }
+  }
+  }
+}

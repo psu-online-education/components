@@ -2401,8 +2401,9 @@
   }
 ] %}
 
-<div class="program-tile-grid">
-  {% for program in all_programs %}
+{% set tiles = [] %}
+{% for program in all_programs %}
+  {% set tile %}
     {{- include('@oe/program-tile/program-tile.twig', {
       id: (program.subject ~ '-' ~ program.degree_type) | clean_unique_id,
       icon: program.icon,
@@ -2420,5 +2421,8 @@
       collapse_label: 'Hide Details',
       view_degree_label: program.view_degree_label,
     }) -}}
-  {% endfor %}
-</div>
+  {% endset %}
+  {% set tiles = tiles|merge([tile]) %}
+{% endfor %}
+
+{{ include('@oe/program-tile-grid/program-tile-grid.twig') }}

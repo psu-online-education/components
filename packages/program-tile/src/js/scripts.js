@@ -50,8 +50,10 @@
         element.addEventListener('component:activate', e => {
           element.style['transition-duration'] = getAnimationDuration(e);
           content.removeAttribute('inert');
-          content.setAttribute('data-open', '');
           content.focus();
+
+          // Let parent element(s) know that this component was activated.
+          element.dispatchEvent(new CustomEvent('component:activated', { detail: null, bubbles: true}));
         });
 
         // On deactivate, three things happen: the transition duration animation
@@ -69,12 +71,14 @@
           if (animation_duration !== '0ms') {
             const listener = () => {
               content.removeEventListener('transitionend', listener);
-              content.removeAttribute('data-open', '');
+              // Let parent element(s) know that this component was activated.
+              element.dispatchEvent(new CustomEvent('component:deactivated', { detail: null, bubbles: true}));
             };
             content.addEventListener('transitionend', listener);
           }
           else {
-            content.removeAttribute('data-open', '');
+            // Let parent element(s) know that this component was activated.
+            element.dispatchEvent(new CustomEvent('component:deactivated', { detail: null, bubbles: true}));
           }
 
 
