@@ -2401,9 +2401,8 @@
   }
 ] %}
 
-{% set items = [] %}
-{% for program in all_programs %}
-  {% set item %}
+<div class="program-tile-grid">
+  {% for program in all_programs %}
     {{- include('@oe/program-tile/program-tile.twig', {
       id: (program.subject ~ '-' ~ program.degree_type) | clean_unique_id,
       icon: program.icon,
@@ -2421,9 +2420,5 @@
       collapse_label: 'Hide Details',
       view_degree_label: program.view_degree_label,
     }) -}}
-  {% endset %}
-  {% set items = items|merge([item]) %}
-{% endfor %}
-{{- include('@oe/grid/grid.twig', {
-  items: items
-}) -}}
+  {% endfor %}
+</div>
