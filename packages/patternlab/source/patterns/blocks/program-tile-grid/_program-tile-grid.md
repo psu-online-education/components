@@ -17,6 +17,6 @@ grid will react to these events and add state flag attributes to individual
 grid items.
 
 ### Variables
-| Variable | Type   | Required | Description                |
-|----------|--------|----------|----------------------------|
-| tiles    | array  | true     | An array of program tiles. |
+| Variable | Type   | Required | Description                                                                     |
+|----------|--------|----------|---------------------------------------------------------------------------------|
+| tiles    | array  | true     | An array of program tiles (which may be either pre-rendered, or raw twig data). |

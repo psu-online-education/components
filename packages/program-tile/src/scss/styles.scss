@@ -1,28 +1,30 @@
 @use "../../../base/src/scss/mixins" as oe;
 
 .program-tile {
+
+  --program-tile-link-color: var(--link-color);
+  --program-tile-operations-background-color: var(--white);
+
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: oe.rem(2.5);
-  background-color: var(--program-tile-content-background-color);
+  padding: oe.rem(2.5);
+  gap: oe.rem(1.5);
+  background-color: var(--white);
   overflow: hidden;
   height: 100%;
   min-width: oe.rem(24);
-
-  &--light {
-    --program-tile-content-background-color: var(--white);
-    box-shadow: oe.rem(.2) oe.rem(.2) oe.rem(.7) 0 color-mix(in srgb, var(--nittany-navy) 70%, transparent);
-  }
+  box-shadow: oe.rem(.2) oe.rem(.2) oe.rem(.7) 0 color-mix(in srgb, var(--nittany-navy) 70%, transparent);;
 
   &--dark {
     --program-tile-link-color: var(--white);
-    --program-tile-content-background-color: var(--pa-link);
     --program-tile-operations-background-color: var(--beaver-blue);
+    background-color: var(--pa-link);
+    box-shadow: none;
   }
 
   &__intro {
     display: flex;
-    margin: 0 oe.rem(2.5) oe.rem(1.5);
     gap: oe.rem(.8);
     line-height: var(--line-height--xsnug);
 
@@ -40,8 +42,7 @@
   }
 
   &__link {
-    color: var(--program-tile-link-color, var(--link-color));
-    margin: 0 oe.rem(2.5) oe.rem(1.5);
+    color: var(--program-tile-link-color);
     line-height: var(--line-height--xsnug);
     transition: color var(--transition-duration--default) linear;
     text-decoration: none;
@@ -78,7 +79,7 @@
   &__content {
     color: var(--text-color);
     display: flex;
-    margin: 0 oe.rem(2.5) oe.rem(.4) oe.rem(2.5);
+    margin-bottom: oe.rem(3.6);
     flex-direction: column;
     gap: oe.rem(1);
     font-size: var(--font-size--2xsmall);
@@ -86,9 +87,12 @@
     transition: max-height .2s linear;
     max-height: fit-content;
     interpolate-size: allow-keywords;
-
     &[inert] {
       max-height: oe.rem(5);
+    }
+
+    &:not([inert]) {
+      z-index: 1;
     }
 
     &:focus-visible {
@@ -115,31 +119,21 @@
 
   &__collapsed-operations,
   &__expanded-operations {
-    background-color: var(--program-tile-operations-background-color, var(--white));
+    position: absolute;
     display: flex;
-    position: relative;
-    margin-top: auto;
-  }
+    inset: auto 0 0 0;
 
-  &__collapsed-operations {
     &::before {
       content: "";
       position: absolute;
       inset: oe.rem(-6) 0 100% 0;
-      background: linear-gradient(
-        to top,
-        var(--program-tile-operations-background-color, var(--white)),
-        transparent
-      );
+      pointer-events: none;
+      background: linear-gradient(to top, var(--program-tile-operations-background-color), transparent);
     }
   }
 
-  &__collapsed-operations {
-    order: 2;
-
-    &:not(:has(+ [inert])) {
-      display: none;
-    }
+  &__collapsed-operations:not(:has(+ [inert])) {
+    display: none;
   }
 
   &__expanded-operations:is([inert] + *) {
@@ -151,7 +145,7 @@
     display: flex;
     gap: oe.rem(.8);
     align-items: center;
-    background: transparent;
+    background-color: var(--program-tile-operations-background-color);
     color: var(--text-color);
     font-family: var(--font-family--default);
     border: none;
@@ -168,6 +162,7 @@
     text-decoration-thickness: auto;
     text-decoration-style: dotted;
     text-decoration-color: transparent;
+    z-index: 2;
 
     &:hover {
       color: var(--link-color);
@@ -182,6 +177,7 @@
   }
 
   &__view-degree {
+    background-color: var(--program-tile-operations-background-color);
     color: var(--text-color);
     display: flex;
     gap: oe.rem(.8);
@@ -199,6 +195,7 @@
     text-decoration-thickness: auto;
     text-decoration-style: dotted;
     text-decoration-color: transparent;
+    z-index: 2;
 
     &:focus-visible {
       outline-offset: oe.rem(-.4);

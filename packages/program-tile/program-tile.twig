@@ -1,7 +1,7 @@
 {#
   Available variables:
     color_profile
-    icon
+    intro_icon
     intro_label
     url
     subject
@@ -21,9 +21,9 @@
 <article class="{{ classes|join(' ') }}" data-{{ color_profile }} aria-label="{{ subject }} {{ degree_type }} rich program tile" tabindex="-1" data-interactive-component>
   {%- if intro_label -%}
     <div class="program-tile__intro">
-      {%- if icon -%}
+      {%- if intro_icon -%}
         <div class="program-tile__intro-icon">
-          {%- include '@oe/sprite/sprite.twig' with { name: icon } only -%}
+          {%- include '@oe/sprite/sprite.twig' with { name: intro_icon } only -%}
         </div>
       {%- endif -%}
       {%- if intro_label -%}
@@ -38,6 +38,7 @@
     <span class="program-tile__degree-type">{{- degree_type -}}</span>
   </a>
   {%- if summary or info_bullets -%}
+    {% set id = id|default(('program-tile-' ~ subject ~ '-' ~ degree_type)|clean_unique_id) %}
     <div class="program-tile__collapsed-operations">
       <button class="program-tile__expand" type="button" aria-expanded="false" aria-controls="{{ id }}">
         <span class="program-tile__expand-icon">

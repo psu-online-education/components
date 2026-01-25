@@ -1,7 +1,11 @@
 <div class="program-tile-grid">
-  {% for tile in tiles %}
+  {%- for tile in tiles -%}
     <div class="program-tile-grid__item">
-      {{ tile }}
+      {%- if tile is iterable -%}
+        {{- include('@oe/program-tile/program-tile.twig', tile) -}}
+      {%- else -%}
+        {{- tile -}}
+      {%- endif -%}
     </div>
-  {% endfor %}
+  {%- endfor -%}
 </div>
