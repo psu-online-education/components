@@ -4,6 +4,7 @@
 
   --program-tile-link-color: var(--link-color);
   --program-tile-operations-background-color: var(--white);
+  --program-tile-info-bullet-color: var(--sky-blue);
 
   position: relative;
   display: flex;
@@ -19,6 +20,7 @@
   &--dark {
     --program-tile-link-color: var(--white);
     --program-tile-operations-background-color: var(--beaver-blue);
+    --program-tile-info-bullet-color: var(--pugh-blue);
     background-color: var(--pa-link);
     box-shadow: none;
   }
@@ -87,6 +89,7 @@
     transition: max-height .2s linear;
     max-height: fit-content;
     interpolate-size: allow-keywords;
+
     &[inert] {
       max-height: oe.rem(5);
     }
@@ -114,7 +117,7 @@
   &__info-bullet::before {
     margin-right: oe.rem(.5);
     content: "•";
-    color: var(--accent-color);
+    color: var(--program-tile-info-bullet-color);
   }
 
   &__collapsed-operations,
