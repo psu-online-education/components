@@ -86,7 +86,8 @@
     gap: oe.rem(1);
     font-size: var(--font-size--2xsmall);
     line-height: var(--line-height--snug);
-    transition: max-height .2s linear;
+    transition-property: max-height;
+    transition-timing-function: linear;
     max-height: fit-content;
     interpolate-size: allow-keywords;
 

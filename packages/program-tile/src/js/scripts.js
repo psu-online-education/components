@@ -48,7 +48,7 @@
         // a general rule mouse interactions do not result in a focus ring, but
         // keyboard interactions do.
         element.addEventListener('component:activate', e => {
-          element.style['transition-duration'] = getAnimationDuration(e);
+          content.style['transition-duration'] = getAnimationDuration(e);
           content.removeAttribute('inert');
           content.focus();
 
@@ -82,7 +82,7 @@
           }
 
 
-          element.style['transition-duration'] = animation_duration;
+          content.style['transition-duration'] = animation_duration;
           content.setAttribute('inert', '');
           expand_button.focus();
         });
