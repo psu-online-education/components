@@ -15,7 +15,7 @@
   overflow: hidden;
   height: 100%;
   min-width: oe.rem(24);
-  box-shadow: oe.rem(.2) oe.rem(.2) oe.rem(.7) 0 color-mix(in srgb, var(--nittany-navy) 70%, transparent);;
+  box-shadow: oe.rem(.2) oe.rem(.2) oe.rem(.7) 0 color-mix(in srgb, var(--nittany-navy) 70%, transparent);
 
   &--dark {
     --program-tile-link-color: var(--white);
