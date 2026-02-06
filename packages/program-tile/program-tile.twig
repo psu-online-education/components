@@ -6,15 +6,17 @@
     url
     subject
     degree_type
+    code
     summary
     info_bullets
     expand_label
     collapse_label
     view_degree_label
+    section_name
 #}
 {% set id = id|default('program-tile-' ~ subject ~ '-' ~ degree_type) %}
 {% set title_id = (id ~ '-title')|clean_unique_id %}
-{% set content_id = (id ~ '-content')|clean_unique_id %}
+{% set content_id = id|clean_unique_id %}
 
 {%- set color_profile = color_profile|default('light') -%}
 
@@ -23,7 +25,23 @@
   color_profile in ['light', 'dark'] ? 'program-tile--' ~ color_profile,
 ]|filter(v => v is not empty) -%}
 
-<article class="{{ classes|join(' ') }}" data-{{ color_profile }} aria-label="{{ subject }} {{ degree_type }} rich program tile" tabindex="-1" data-interactive-component>
+{%- if section_name -%}
+  {%- set tags = {
+    section_type: 'program_tile',
+  } -%}
+  {%- if code -%}
+    {%- set tags = tags|merge({ program_code: code }) -%}
+  {%- endif -%}
+{%- endif -%}
+
+<article
+  class="{{ classes|join(' ') }}"
+  data-{{ color_profile }}
+  aria-labelledby="{{ title_id }}"
+  tabindex="-1"
+  data-interactive-component
+  {% if section_name %}data-section="{{ section_name }}"{% endif %}
+  {% if tags %}data-section-tags={{ tags|json_encode }}{% endif %}>
   {%- if intro_label -%}
     <div class="program-tile__intro">
       {%- if intro_icon -%}
@@ -44,7 +62,7 @@
   </a>
   {%- if summary or info_bullets -%}
     <div class="program-tile__collapsed-operations">
-      <button class="program-tile__expand" type="button" aria-expanded="false" aria-controls="{{ id }}"  aria-describedby="{{ title_id }}">
+      <button class="program-tile__expand" type="button" aria-expanded="false" aria-controls="{{ content_id }}"  aria-describedby="{{ title_id }}">
         <span class="program-tile__expand-icon">
           {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-down', expand: true } only -%}
         </span>
