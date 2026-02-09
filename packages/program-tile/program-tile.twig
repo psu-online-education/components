@@ -49,11 +49,9 @@
           {%- include '@oe/sprite/sprite.twig' with { name: intro_icon } only -%}
         </div>
       {%- endif -%}
-      {%- if intro_label -%}
-        <div class="program-tile__intro-label">
-          {{- intro_label -}}
-        </div>
-      {%- endif -%}
+      <div class="program-tile__intro-label">
+        {{- intro_label -}}
+      </div>
     </div>
   {%- endif -%}
   <a class="program-tile__link" href="{{- url -}}" id="{{ title_id }}">
@@ -90,7 +88,7 @@
       {%- endif -%}
     </div>
     <div class="program-tile__expanded-operations">
-      <button class="program-tile__collapse" type="button" aria-expanded="true" aria-controls="{{ id }}" aria-describedby="{{ title_id }}">
+      <button class="program-tile__collapse" type="button" aria-expanded="true" aria-controls="{{ content_id }}" aria-describedby="{{ title_id }}">
         <span class="program-tile__collapse-icon">
           {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-up', expand: true } only -%}
         </span>
