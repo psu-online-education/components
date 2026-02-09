@@ -2316,6 +2316,8 @@ __metadata:
   resolution: "@psu-online-education/program-tile@workspace:packages/program-tile"
   dependencies:
     "@psu-online-education/base": ^3.0
+    "@psu-online-education/section-view-tracking": ^1.0
+    "@psu-online-education/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -2342,7 +2344,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-online-education/section-view-tracking@*, @psu-online-education/section-view-tracking@workspace:packages/section-view-tracking":
+"@psu-online-education/section-view-tracking@*, @psu-online-education/section-view-tracking@^1.0, @psu-online-education/section-view-tracking@workspace:packages/section-view-tracking":
   version: 0.0.0-use.local
   resolution: "@psu-online-education/section-view-tracking@workspace:packages/section-view-tracking"
   dependencies:
