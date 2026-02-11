@@ -2307,11 +2307,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-online-education/program-tile-grid@workspace:packages/program-tile-grid"
   dependencies:
-    "@psu-online-education/program-tile": ^1.0
+    "@psu-online-education/program-tile": ^1.0.0-alpha1
   languageName: unknown
   linkType: soft
 
-"@psu-online-education/program-tile@^1.0, @psu-online-education/program-tile@workspace:packages/program-tile":
+"@psu-online-education/program-tile@^1.0.0-alpha1, @psu-online-education/program-tile@workspace:packages/program-tile":
   version: 0.0.0-use.local
   resolution: "@psu-online-education/program-tile@workspace:packages/program-tile"
   dependencies:
