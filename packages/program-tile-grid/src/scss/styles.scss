@@ -1,0 +1,70 @@
+@use "../../../base/src/scss/mixins" as oe;
+
+.program-tile-grid {
+  --program-tile-grid-gap: #{oe.rem(2)};
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--program-tile-grid-gap);
+  container-type: inline-size;
+
+  &__item {
+
+    // For containers less than 50rems, one tile takes up 100%.
+    flex: 1 0 100%;
+
+    // For container sizes from 50 and 76 rems...
+    @container (min-width: #{oe.rem(50)}) and (max-width: #{oe.rem(75.9)}) {
+
+      // Two tiles each taking up 50% minus the gap between.
+      flex-basis: calc(50% - var(--program-tile-grid-gap));
+
+      // Collapse first column if the tile in the second column is open.
+      &:nth-child(2n + 1):has(+ [data-expanded]) {
+        align-self: flex-start;
+      }
+
+      // Collapse second column if the tile in the first column is open.
+      &:nth-child(2n + 1)[data-expanded] + :nth-child(2n + 2) {
+        align-self: flex-start;
+      }
+    }
+
+    // For container sizes greater than or equal to 76rem.
+    @container (min-width: #{oe.rem(76)}) {
+
+      // Three tiles each taking up 33% minus the two gaps between.
+      flex-basis: calc((100% / 3) - (var(--program-tile-grid-gap) * 2));
+
+      // Collapse first column if the tile in the second column is open.
+      &:nth-child(3n + 1):has(+ [data-expanded]) {
+        align-self: flex-start;
+      }
+
+      // Collapse first column if the tile in the third column is open.
+      &:nth-child(3n + 1):has(+ :nth-child(3n + 2) + [data-expanded]) {
+        align-self: flex-start;
+      }
+
+      // Collapse second column if the tile in the first column is open.
+      &:nth-child(3n + 1)[data-expanded] + :nth-child(3n + 2) {
+        align-self: flex-start;
+      }
+
+      // Collapse second column if the tile in the third column is open.
+      &:nth-child(3n + 2):has(+ [data-expanded]) {
+        align-self: flex-start;
+      }
+
+      // Collapse third column if the tile in the first column is open.
+      &:nth-child(3n + 1)[data-expanded] + :nth-child(3n + 2) + :nth-child(3n + 3) {
+        align-self: flex-start;
+      }
+
+      // Collapse third column if the tile in the second column is open.
+      &:nth-child(3n + 1) + :nth-child(3n + 2)[data-expanded] + :nth-child(3n + 3) {
+        align-self: flex-start;
+      }
+    }
+  }
+}

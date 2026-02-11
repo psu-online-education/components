@@ -2303,6 +2303,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-online-education/program-tile-grid@workspace:packages/program-tile-grid":
+  version: 0.0.0-use.local
+  resolution: "@psu-online-education/program-tile-grid@workspace:packages/program-tile-grid"
+  dependencies:
+    "@psu-online-education/program-tile": ^1.0.0-alpha1
+  languageName: unknown
+  linkType: soft
+
+"@psu-online-education/program-tile@^1.0.0-alpha1, @psu-online-education/program-tile@workspace:packages/program-tile":
+  version: 0.0.0-use.local
+  resolution: "@psu-online-education/program-tile@workspace:packages/program-tile"
+  dependencies:
+    "@psu-online-education/base": ^3.0
+    "@psu-online-education/section-view-tracking": ^1.0
+    "@psu-online-education/sprite": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-online-education/quote@*, @psu-online-education/quote@workspace:packages/quote":
   version: 0.0.0-use.local
   resolution: "@psu-online-education/quote@workspace:packages/quote"
@@ -2326,7 +2344,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-online-education/section-view-tracking@*, @psu-online-education/section-view-tracking@workspace:packages/section-view-tracking":
+"@psu-online-education/section-view-tracking@*, @psu-online-education/section-view-tracking@^1.0, @psu-online-education/section-view-tracking@workspace:packages/section-view-tracking":
   version: 0.0.0-use.local
   resolution: "@psu-online-education/section-view-tracking@workspace:packages/section-view-tracking"
   dependencies:

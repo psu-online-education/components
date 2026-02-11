@@ -1,0 +1,12 @@
+{
+  "name": "@psu-online-education/program-tile-grid",
+  "version": "1.0.0-alpha1",
+  "description": "Provides a program tile grid implementation.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-online-education/program-tile": "^1.0.0-alpha1"
+  }
+}

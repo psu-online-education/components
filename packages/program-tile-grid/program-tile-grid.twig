@@ -1,0 +1,15 @@
+{#-
+  Available variables:
+    tiles - an array of either tile data, or pre-rendered tiles
+-#}
+<div class="program-tile-grid">
+  {%- for tile in tiles -%}
+    <div class="program-tile-grid__item">
+      {%- if tile is iterable -%}
+        {{- include('@oe/program-tile/program-tile.twig', tile) -}}
+      {%- else -%}
+        {{- tile -}}
+      {%- endif -%}
+    </div>
+  {%- endfor -%}
+</div>

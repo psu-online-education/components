@@ -1,8 +1,13 @@
-.pl-c-category__description {
-  max-width: unset;
+.pl-c-text-passage,
+.pl-c-text-passage p,
+.pl-c-text-passage ul,
+.pl-c-text-passage ol,
+.pl-c-text-passage li {
+  all: revert;
 }
 
-.pl-c-pattern .pl-c-pattern-info {
-  max-height: 45rem;
-  height: auto;
+.pl-c-category__description {
+  all: revert;
+  margin: 0 auto;
+  padding: 0 var(--page-side-padding);
 }

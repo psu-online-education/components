@@ -1,0 +1,105 @@
+{#
+  Available variables:
+    color_profile
+    intro_icon
+    intro_label
+    url
+    subject
+    degree_type
+    code
+    summary
+    info_bullets
+    expand_label
+    collapse_label
+    view_degree_label
+    section_name
+#}
+{% set id = id|default('program-tile-' ~ subject ~ '-' ~ degree_type) %}
+{% set title_id = (id ~ '-title')|clean_unique_id %}
+{% set content_id = id|clean_unique_id %}
+
+{%- set color_profile = color_profile|default('light') -%}
+
+{%- set classes = [
+  'program-tile',
+  color_profile in ['light', 'dark'] ? 'program-tile--' ~ color_profile,
+]|filter(v => v is not empty) -%}
+
+{%- if section_name -%}
+  {%- set tags = {
+    section_type: 'program_tile',
+  } -%}
+  {%- if code -%}
+    {%- set tags = tags|merge({ program_code: code }) -%}
+  {%- endif -%}
+{%- endif -%}
+
+<article
+  class="{{ classes|join(' ') }}"
+  data-{{ color_profile }}
+  aria-labelledby="{{ title_id }}"
+  tabindex="-1"
+  data-interactive-component
+  {% if section_name %}data-section="{{ section_name }}"{% endif %}
+  {% if tags %}data-section-tags={{ tags|json_encode }}{% endif %}>
+  {%- if intro_label -%}
+    <div class="program-tile__intro">
+      {%- if intro_icon -%}
+        <div class="program-tile__intro-icon">
+          {%- include '@oe/sprite/sprite.twig' with { name: intro_icon } only -%}
+        </div>
+      {%- endif -%}
+      <div class="program-tile__intro-label">
+        {{- intro_label -}}
+      </div>
+    </div>
+  {%- endif -%}
+  <a class="program-tile__link" href="{{- url -}}" id="{{ title_id }}">
+    <span class="program-tile__subject">{{- subject -}}</span>
+    <span class="program-tile__degree-type">{{- degree_type -}}</span>
+  </a>
+  {%- if summary or info_bullets -%}
+    <div class="program-tile__collapsed-operations">
+      <button class="program-tile__expand" type="button" aria-expanded="false" aria-controls="{{ content_id }}"  aria-describedby="{{ title_id }}">
+        <span class="program-tile__expand-icon">
+          {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-down', expand: true } only -%}
+        </span>
+        <span class="program-tile__expand-label">{{- expand_label|default('Show Details') -}}</span>
+      </button>
+      <a class="program-tile__view-degree" href="{{- url -}}" aria-describedby="{{ title_id }}">
+        <span class="program-tile__view-degree-label">{{- view_degree_label|default('View Degree') -}}</span>
+        <span class="program-tile__view-degree-icon">
+          {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-right', expand: true } only -%}
+        </span>
+      </a>
+    </div>
+    <div class="program-tile__content" id="{{ content_id }}" tabindex="-1" inert>
+      {%- if summary -%}
+        <div class="program-tile__summary">
+          {{- summary -}}
+        </div>
+      {%- endif -%}
+      {%- if info_bullets is iterable -%}
+        <ul class="program-tile__info-bullets" role="list">
+          {%- for info_bullet in info_bullets -%}
+            <li class="program-tile__info-bullet">{{- info_bullet -}}</li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+    <div class="program-tile__expanded-operations">
+      <button class="program-tile__collapse" type="button" aria-expanded="true" aria-controls="{{ content_id }}" aria-describedby="{{ title_id }}">
+        <span class="program-tile__collapse-icon">
+          {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-up', expand: true } only -%}
+        </span>
+        <span class="program-tile__collapse-label">{{- collapse_label|default('Hide Details') -}}</span>
+      </button>
+      <a class="program-tile__view-degree" href="{{- url -}}" aria-describedby="{{ title_id }}">
+        <span class="program-tile__view-degree-label">{{- view_degree_label|default('View Degree') -}}</span>
+        <span class="program-tile__view-degree-icon">
+          {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-right', expand: true } only -%}
+        </span>
+      </a>
+    </div>
+  {%- endif -%}
+</article>
