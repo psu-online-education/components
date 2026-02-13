@@ -85,6 +85,8 @@
     "@psu-online-education/parallel-navigation": "*",
     "@psu-online-education/parallel-navigation-item": "*",
     "@psu-online-education/physical-address": "*",
+    "@psu-online-education/program-tile": "^1.0.0-alpha1",
+    "@psu-online-education/program-tile-grid": "^1.0.0-alpha1",
     "@psu-online-education/quote": "*",
     "@psu-online-education/random-item": "*",
     "@psu-online-education/read-more": "*",
