@@ -4,7 +4,7 @@
   --program-tile-grid-gap: #{oe.rem(2)};
   display: grid;
   gap: var(--program-tile-grid-gap);
-  grid-template-columns: repeat(auto-fit, minmax(clamp(oe.rem(24), calc(33% - oe.rem(2)), 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(clamp(oe.rem(24), calc(33% - var(--program-tile-grid-gap)), 100%), 1fr));
 
   container-type: inline-size;
 
