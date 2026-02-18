@@ -49,7 +49,7 @@ Events matching this format:
   "event": "section_view",
   "section_view_title": "{{ section_name }}", 
   "tags": {
-    "section_type": "program_tile",
+    "section_type": "tile",
     "activation_type": "USER_ACTIVATE"
   }
 }
@@ -62,8 +62,8 @@ order to track interactions in more detail.
   "event": "section_view",
   "section_view_title": "{{ section_name }}", 
   "tags": {
-    "section_type": "program_tile",
-    "program_code": "{{ code }}",
+    "section_type": "tile",
+    "prospect_code": "{{ code }}",
     "activation_type": "USER_ACTIVATE"
   }
 }
