@@ -27,10 +27,10 @@
 
 {%- if section_name -%}
   {%- set tags = {
-    section_type: 'program_tile',
+    section_type: 'tile',
   } -%}
   {%- if code -%}
-    {%- set tags = tags|merge({ program_code: code }) -%}
+    {%- set tags = tags|merge({ prospect_code: code }) -%}
   {%- endif -%}
 {%- endif -%}
 

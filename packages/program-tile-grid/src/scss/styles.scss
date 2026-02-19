@@ -2,16 +2,13 @@
 
 .program-tile-grid {
   --program-tile-grid-gap: #{oe.rem(2)};
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
+  display: grid;
   gap: var(--program-tile-grid-gap);
+  grid-template-columns: repeat(auto-fit, minmax(clamp(oe.rem(24), calc(33% - var(--program-tile-grid-gap)), 100%), 1fr));
+
   container-type: inline-size;
 
   &__item {
-
-    // For containers less than 50rems, one tile takes up 100%.
-    flex: 1 0 100%;
 
     // For container sizes from 50 and 76 rems...
     @container (min-width: #{oe.rem(50)}) and (max-width: #{oe.rem(75.9)}) {
@@ -32,9 +29,6 @@
 
     // For container sizes greater than or equal to 76rem.
     @container (min-width: #{oe.rem(76)}) {
-
-      // Three tiles each taking up 33% minus the two gaps between.
-      flex-basis: calc((100% / 3) - (var(--program-tile-grid-gap) * 2));
 
       // Collapse first column if the tile in the second column is open.
       &:nth-child(3n + 1):has(+ [data-expanded]) {
