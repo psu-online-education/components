@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/program-tile-grid",
-  "version": "1.0.0-alpha2",
+  "version": "1.0.0-alpha3",
   "description": "Provides a program tile grid implementation.",
   "publishConfig": {
     "access": "public",

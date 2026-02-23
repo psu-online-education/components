@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/patternlab",
-  "version": "2.0.50",
+  "version": "2.0.51",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -85,6 +85,8 @@
     "@psu-online-education/parallel-navigation": "*",
     "@psu-online-education/parallel-navigation-item": "*",
     "@psu-online-education/physical-address": "*",
+    "@psu-online-education/program-tile": "*",
+    "@psu-online-education/program-tile-grid": "*",
     "@psu-online-education/quote": "*",
     "@psu-online-education/random-item": "*",
     "@psu-online-education/read-more": "*",
