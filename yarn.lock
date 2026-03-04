@@ -2318,6 +2318,7 @@ __metadata:
   resolution: "@psu-online-education/program-tile@workspace:packages/program-tile"
   dependencies:
     "@psu-online-education/base": ^3.0
+    "@psu-online-education/cta-tracking": ^1.0
     "@psu-online-education/section-view-tracking": ^1.0
     "@psu-online-education/sprite": ^2.0
   languageName: unknown
