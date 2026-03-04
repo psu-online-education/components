@@ -54,7 +54,7 @@
       </div>
     </div>
   {%- endif -%}
-  <a class="program-tile__link" href="{{- url -}}" id="{{ title_id }}">
+  <a class="program-tile__link" href="{{- url -}}" id="{{ title_id }}" data-cta-track-sync data-cta-description="View Program" data-cta-placement="Tile">
     <span class="program-tile__subject">{{- subject -}}</span>
     <span class="program-tile__degree-type">{{- degree_type -}}</span>
   </a>
@@ -66,7 +66,7 @@
         </span>
         <span class="program-tile__expand-label">{{- expand_label|default('Show Details') -}}</span>
       </button>
-      <a class="program-tile__view-degree" href="{{- url -}}" aria-describedby="{{ title_id }}">
+      <a class="program-tile__view-degree" href="{{- url -}}" aria-describedby="{{ title_id }}" data-cta-track-sync data-cta-description="View Program" data-cta-placement="Tile">
         <span class="program-tile__view-degree-label">{{- view_degree_label|default('View Degree') -}}</span>
         <span class="program-tile__view-degree-icon">
           {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-right', expand: true } only -%}
@@ -94,7 +94,7 @@
         </span>
         <span class="program-tile__collapse-label">{{- collapse_label|default('Hide Details') -}}</span>
       </button>
-      <a class="program-tile__view-degree" href="{{- url -}}" aria-describedby="{{ title_id }}">
+      <a class="program-tile__view-degree" href="{{- url -}}" aria-describedby="{{ title_id }}" data-cta-track-sync data-cta-description="View Program" data-cta-placement="Tile">
         <span class="program-tile__view-degree-label">{{- view_degree_label|default('View Degree') -}}</span>
         <span class="program-tile__view-degree-icon">
           {%- include '@oe/sprite/sprite.twig' with { name: 'fas-chevron-right', expand: true } only -%}
