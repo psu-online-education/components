@@ -12,7 +12,7 @@
   {%- if classes %} class="{{- classes|join(' ') -}}"{%- endif -%}
   {%- if url %} href="{{ url }}"{%- endif -%}
   {%- if label_clamp %} style="--button-label-clamp: {{- label_clamp -}}"{%- endif -%}
-  {%- if tracking_description and tracking_placement %} data-cta-track-{{ tracking_synchronous ? 'sync' : 'async' }} data-cta-description="{{ tracking_description }}" data-cta-placement="{{ tracking_placement }}"{%- endif -%}
+  {%- if tracking_description and tracking_placement %} data-cta-track-{{ tracking_synchronous ? 'sync' : 'async' }} data-cta-description="{{ tracking_description }}" data-cta-placement="{{ tracking_placement }}" data-cta-url="{{ url }}"{%- endif -%}
 >
   {%- if icon_before -%}
     <span class="button__icon">

@@ -36,7 +36,7 @@
               'event': 'cta-track',
               'cta-description': cta.getAttribute('data-cta-description') ?? 'unknown',
               'cta-placement': cta.getAttribute('data-cta-placement') ?? 'unknown',
-
+              'cta-url': cta.getAttribute('data-cta-url') ?? 'unknown',
               'eventCallback': function(container_id) {
                 if (container_id === cms.gtm_container_id) {
                   resolve();
@@ -77,6 +77,7 @@
             'event': 'cta-track',
             'cta-description': cta.getAttribute('data-cta-description') ?? 'unknown',
             'cta-placement': cta.getAttribute('data-cta-placement') ?? 'unknown',
+            'cta-url': cta.getAttribute('data-cta-url') ?? 'unknown',
           });
         }
       });
