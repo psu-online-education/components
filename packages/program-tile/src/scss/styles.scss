@@ -115,10 +115,16 @@
     line-height: var(--line-height--xsnug);
   }
 
-  &__info-bullet::before {
-    margin-right: oe.rem(.5);
-    content: "•";
-    color: var(--program-tile-info-bullet-color);
+  &__info-bullet {
+    position: relative;
+    padding-left: oe.rem(1);
+
+    &::before {
+      position: absolute;
+      left: 0;
+      content: "•";
+      color: var(--program-tile-info-bullet-color);
+    }
   }
 
   &__collapsed-operations,
