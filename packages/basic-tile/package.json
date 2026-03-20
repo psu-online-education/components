@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/basic-tile",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "Provides a basic tile component.",
   "publishConfig": {
     "access": "public",
