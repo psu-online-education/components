@@ -15,7 +15,9 @@
     </script>
     {% include '@oe/gtm/gtm.twig' %}
     <meta name="viewport" content="width=device-width" />
-    {% include '@oe/webfonts/webfonts.twig' %}
+    {% include '@oe/webfonts/webfonts.twig' with {
+      base_path: ''
+    } %}
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     {{ patternLabHead | raw }}

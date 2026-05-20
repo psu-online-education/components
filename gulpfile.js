@@ -99,6 +99,12 @@ const compile_sprites = function(done) {
   done();
 };
 
+const copy_fonts = (done) => {
+  gulp.src('./packages/webfonts/assets/*.woff2')
+    .pipe(gulp.dest('./packages/patternlab/source/fonts'))
+  done();
+};
+
 /**
  * Watches the sprite component for changes to SVG assets.
  */
@@ -153,13 +159,15 @@ gulp.task('compile_scss', gulp.series(compile_scss, update_build_id));
 gulp.task('compile_js', gulp.series(compile_js, update_build_id));
 gulp.task('compile_sprites', gulp.series(compile_sprites, update_build_id));
 gulp.task('compile_twig', gulp.series(compile_twig, update_build_id));
+gulp.task('copy_fonts', gulp.series(copy_fonts));
 
 gulp.task('compile_all', gulp.series(
   gulp.parallel(
     compile_scss,
     compile_js,
     compile_sprites,
-    compile_twig
+    compile_twig,
+    copy_fonts,
   ),
   update_build_id
 ));
@@ -169,7 +177,8 @@ gulp.task('default', gulp.series(
     compile_scss,
     compile_js,
     compile_sprites,
-    compile_twig
+    compile_twig,
+    copy_fonts,
   ),
   update_build_id,
   gulp.parallel(
@@ -180,5 +189,3 @@ gulp.task('default', gulp.series(
     watch_patternlab
   )
 ));
-
-

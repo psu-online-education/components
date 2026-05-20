@@ -1,12 +1,12 @@
 {
   "name": "@psu-online-education/base",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "The base styles for the OOE design system.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-online-education/webfonts": "^2.0"
+    "@psu-online-education/webfonts": "^3.0"
   }
 }

@@ -1,6 +1,7 @@
 dependencyGraph.json
 packages/patternlab/public
 packages/patternlab/source/patterns/build.json
+packages/patternlab/source/fonts/*.woff2
 
 # Logs
 logs
