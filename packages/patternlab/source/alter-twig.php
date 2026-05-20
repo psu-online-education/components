@@ -18,6 +18,11 @@ function moveKeyBefore($arr, $find, $move) {
 }
 
   function addCustomExtension(Environment $env) {
+
+    $env->addFunction(new TwigFunction('get_current_git_ref', function() {
+      return trim(shell_exec('git rev-parse --abbrev-ref HEAD'));
+    }));
+
     $env->addExtension(new SmartDatetimeExtension);
     $env->addFilter(new TwigFilter('clean_unique_id', function($id) {
         $id = str_replace(' ', '-', $id);
@@ -78,4 +83,3 @@ function moveKeyBefore($arr, $find, $move) {
         return file_get_contents('packages/sprite/dist/sprites.svg');
     }));
 }
-

@@ -16,7 +16,7 @@
     {% include '@oe/gtm/gtm.twig' %}
     <meta name="viewport" content="width=device-width" />
     {% include '@oe/webfonts/webfonts.twig' with {
-      base_path: ''
+      base_path: '/' ~ get_current_git_ref() ~ '/fonts'
     } %}
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
