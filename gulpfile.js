@@ -100,7 +100,7 @@ const compile_sprites = function(done) {
 };
 
 const copy_fonts = (done) => {
-  gulp.src('./packages/webfonts/assets/*.woff2')
+  gulp.src('./packages/webfonts/assets/*.woff2', { encoding: false })
     .pipe(gulp.dest('./packages/patternlab/source/fonts'))
   done();
 };
