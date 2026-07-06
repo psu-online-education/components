@@ -1,6 +1,6 @@
 {
   "name": "@psu-online-education/sprite",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Provides lightweight and efficient imagery.",
   "publishConfig": {
     "access": "public",
