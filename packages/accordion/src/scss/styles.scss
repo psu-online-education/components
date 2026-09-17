@@ -1,16 +1,14 @@
 @use "../../../base/src/scss/mixins" as oe;
-:root {
-  --button-color: var(--beaver-blue);
-  --sprite-color: var(--pa-link);
-  --button-active-color: var(--pa-link);
-  --text-color: var(--text-color--default);
+:root, [data-light] {
+  --accordion-button-color: var(--beaver-blue);
+  --accordion-sprite-color: var(--pa-link);
+  --accordion-button-active-color: var(--pa-link);
 }
 
 [data-dark] {
-  --button-color: var(--pa-link-light);
-  --sprite-color: var(--pa-link-light);
-  --button-active-color: var(--pa-link-light);
-  --text-color: var(--white);
+  --accordion-button-color: var(--pa-link-light);
+  --accordion-sprite-color: var(--pa-link-light);
+  --accordion-button-active-color: var(--pa-link-light);
 
 }
 .accordion {
@@ -47,16 +45,16 @@
     font-size: var(--font-size--default);
     font-weight: var(--font-weight--semibold);
     line-height: var(--line-height--snug);
-    color: var(--button-color);
+    color: var(--accordion-button-color);
     padding: oe.rem(2) 0;
     width: 100%;
     text-align: left;
 
     &:hover, &:focus-visible {
-      color: var(--button-active-color);
+      color: var(--accordion-button-active-color);
 
       .accordion__label {
-        text-decoration-color: var(--button-active-color);
+        text-decoration-color: var(--accordion-button-active-color);
 
         &--label-underline {
           text-decoration-style: solid;
@@ -89,7 +87,7 @@
   }
 
   .accordion__sprite .sprite {
-    color: var(--sprite-color);
+    color: var(--accordion-sprite-color);
 
     height: oe.rem(1.6);
     margin: auto oe.rem(1.5);

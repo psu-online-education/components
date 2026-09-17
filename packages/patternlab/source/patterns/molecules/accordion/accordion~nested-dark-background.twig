@@ -1,4 +1,3 @@
-
 {% set nested_cta_sprite %}
   {% include '@oe/cta/cta-block.twig' with {
     label: 'How to Apply',
@@ -7,9 +6,9 @@
   } only %}
 {% endset %}
 <div data-dark style="background:#001e44">
-    {% include '@oe/accordion/accordion.twig' with {
-        "id": "accordion-default",
-        "label": "Accordion item (default)",
-        "expandable_content": nested_cta_sprite
-    } only %}
+  {% include '@oe/accordion/accordion.twig' with {
+    "id": "accordion-default",
+    "label": "Accordion item (default)",
+    "expandable_content": nested_cta_sprite
+  } only %}
 </div>
