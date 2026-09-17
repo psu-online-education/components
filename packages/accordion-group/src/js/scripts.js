@@ -12,9 +12,7 @@
         const activatedAccordion = e.target.closest('.accordion');
         group.querySelectorAll('.accordion').forEach(child => {
           if (child !== activatedAccordion) {
-            child.dispatchEvent(new CustomEvent('component:deactivate', {
-              detail: e?.detail,
-            }));
+            child.dispatchEvent(new CustomEvent('component:deactivate'));
           }
         });
       }, true);
