@@ -1,4 +1,15 @@
 @use "../../../base/src/scss/mixins" as oe;
+:root, [data-light] {
+  --accordion-button-color: var(--beaver-blue);
+  --accordion-sprite-color: var(--pa-link);
+  --accordion-button-active-color: var(--pa-link);
+}
+
+[data-dark] {
+  --accordion-button-color: var(--pa-link-light);
+  --accordion-sprite-color: var(--pa-link-light);
+  --accordion-button-active-color: var(--pa-link-light);
+}
 
 .accordion {
   min-width: oe.rem(15);
@@ -34,16 +45,16 @@
     font-size: var(--font-size--default);
     font-weight: var(--font-weight--semibold);
     line-height: var(--line-height--snug);
-    color: var(--beaver-blue);
+    color: var(--accordion-button-color);
     padding: oe.rem(2) 0;
     width: 100%;
     text-align: left;
 
     &:hover, &:focus-visible {
-      color: var(--pa-link);
+      color: var(--accordion-button-active-color);
 
       .accordion__label {
-        text-decoration-color: var(--pa-link);
+        text-decoration-color: var(--accordion-button-active-color);
 
         &--label-underline {
           text-decoration-style: solid;
@@ -76,7 +87,8 @@
   }
 
   .accordion__sprite .sprite {
-    color: var(--pa-link);
+    color: var(--accordion-sprite-color);
+
     height: oe.rem(1.6);
     margin: auto oe.rem(1.5);
     transition-property: transform;
@@ -88,6 +100,7 @@
     transition-property: height, margin-bottom, visibility;
     transition-timing-function: ease-in-out;
     visibility: hidden;
+    color: var(--text-color);
 
     &--indent-content {
       margin-left: 3.75%;
@@ -118,5 +131,5 @@
       visibility: inherit;
     }
   }
-}
 
+}
