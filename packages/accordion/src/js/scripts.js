@@ -34,7 +34,7 @@
           button.setAttribute('aria-expanded', 'false');
         }
         else {
-          content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 800) + 'ms';
+          content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight * 5, 2000), 8000) + 'ms';
           accordion.classList.remove('accordion--expanded');
           button.setAttribute('aria-expanded', 'false');
           cms.collapse(content);
