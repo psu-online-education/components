@@ -6,6 +6,7 @@
 {% set classes = [
   'icon-list',
   columns in column_map|keys ? column_map[columns],
+  column_width in ['narrow'] ? 'icon-list--column-width-' ~ column_width,
 ] %}
 {% set element_type = ordered ? 'ol' : 'ul' %}
 <{{ element_type }} class="{{ classes|join(' ') }}" role="list">

@@ -219,6 +219,132 @@
     content: page_content,
   } only %}
 
+  {% set accordion_1_icon_list %}
+    {% set items = [
+      { icon: 'fas-laptop', content: 'Highly respected <u>online degree programs</u>' },
+      { icon: 'fas-certificate', content: 'Earn the same accredited Penn State degree or diploma online as students who attend Penn State on campus' },
+      { icon: 'fa-clock', content: 'Flexibility designed for today’s learners' },
+      { icon: 'fas-family', content: 'Supports goals to balance family responsibilities, advance career, or return to education' },
+    ] %}
+
+    {% include '@oe/icon-list/icon-list.twig' with {
+      columns: 2,
+      column_width: 'narrow',
+      items: items,
+    } only %}
+  {% endset %}
+
+  {% set accordion_2_icon_list %}
+    {% set items = [
+      { icon: 'fas-chalkboard-user', content: 'Learn directly from the same renowned faculty who teach on campus' },
+      { icon: 'fas-book-open-reader', content: 'Engaging curriculum designed specifically for effective online delivery' },
+      { icon: 'fas-graduation-cap', content: 'Benefit from decades of Penn State academic excellence and research' },
+      { icon: 'fas-comments', content: 'Direct access to instructors through active virtual communication and office hours' },
+    ] %}
+
+    {% include '@oe/icon-list/icon-list.twig' with {
+      columns: 2,
+      column_width: 'narrow',
+      items: items,
+    } only %}
+  {% endset %}
+
+  {% set accordion_3_icon_list %}
+    {% set items = [
+      { icon: 'fas-user-group', content: 'Dedicated academic advising and career support tailored for online learners' },
+      { icon: 'fas-handshake-simple', content: 'Comprehensive technical and student support services available when you need them' },
+      { icon: 'fas-lightbulb-on', content: 'Tailored academic resources to help you achieve your personal and professional goals' },
+      { icon: 'fas-building-user', content: 'Connect with a powerful global network of over 750,000 Penn State alumni' },
+    ] %}
+
+    {% include '@oe/icon-list/icon-list.twig' with {
+      columns: 2,
+      column_width: 'narrow',
+      items: items,
+    } only %}
+  {% endset %}
+
+  {% set accordion_4_icon_list %}
+    {% set items = [
+      { icon: 'fas-calendar-days', content: 'Multiple start terms offered throughout the year to fit your timeline' },
+      { icon: 'fa-clock', content: 'Study on your schedule with flexible, asynchronous course delivery' },
+      { icon: 'fas-person-running', content: 'Pace your degree progress to balance work, life, and education' },
+      { icon: 'fas-layer-group', content: 'Options to study full-time or part-time depending on your availability' },
+    ] %}
+
+    {% include '@oe/icon-list/icon-list.twig' with {
+      columns: 2,
+      column_width: 'narrow',
+      items: items,
+    } only %}
+  {% endset %}
+
+  {% set accordion_5_icon_list %}
+    {% set items = [
+      { icon: 'fas-certificate', content: 'Regionally accredited by the Middle States Commission on Higher Education' },
+      { icon: 'fas-building-columns', content: 'Programs hold top discipline-specific accreditations across various fields' },
+      { icon: 'fas-shield-quartered', content: 'Rigorous quality standards trusted and respected by employers nationwide' },
+      { icon: 'fas-list-check', content: 'Earn credentials that hold the exact same prestige as traditional campus degrees' },
+    ] %}
+
+    {% include '@oe/icon-list/icon-list.twig' with {
+      columns: 2,
+      column_width: 'narrow',
+      items: items,
+    } only %}
+  {% endset %}
+
+  {% set overlay_accordion_content %}
+    <div data-dark>
+      {% include '@oe/accordion-group/accordion-group.twig' with {
+        accordions: [
+          {
+            "id": "accordion-group-item-1",
+            "label": "Why Choose Penn State World Campus?",
+            "expandable_content": accordion_1_icon_list
+          },
+          {
+            "id": "accordion-group-item-2",
+            "label": "Online Courses Taught by Penn State Faculty",
+            "expandable_content": accordion_2_icon_list
+          },
+          {
+            "id": "accordion-group-item-3",
+            "label": "Committed to Student Success",
+            "expandable_content": accordion_3_icon_list
+          },
+          {
+            "id": "accordion-group-item-4",
+            "label": "Flexible Start Dates",
+            "expandable_content": accordion_4_icon_list
+          },
+          {
+            "id": "accordion-group-item-5",
+            "label": "Trusted Accreditation",
+            "expandable_content": accordion_5_icon_list
+          },
+        ],
+        single_open: true,
+      } only %}
+    </div>
+  {% endset %}
+
+  {% set overlay_accordion_image %}
+    <picture class="responsive-image responsive-image--feature-banner">
+      <source srcset="https://test.worldcampus.psu.edu/sites/default/files/2026-08/slc7-2320px.jpg 1x" media="(min-width:800px)" type="image/webp" width="1920" height="840">
+      <source srcset="https://test.worldcampus.psu.edu/sites/default/files/2026-08/slc7-2320px.jpg 1x" type="image/webp" width="950" height="534">
+      <img src="https://test.worldcampus.psu.edu/sites/default/files/2026-08/slc7-2320px.jpg" width="1920" height="840" alt="Snowy sidewalk at Penn State's University Park campus" loading="lazy">
+    </picture>
+  {% endset %}
+  {% include '@oe/overlay/overlay.twig' with {
+    image: overlay_accordion_image,
+    content: overlay_accordion_content,
+    overlay_bg_color: "blue-gradient",
+    column_width: "normal",
+    column_align: "left",
+    overlay_width: "wide"
+  } %}
+
   {% set tile_nav_content %}
       {% set tile %}
         {% include '@oe/navigation-tile/navigation-tile.twig' with {

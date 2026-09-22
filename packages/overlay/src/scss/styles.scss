@@ -30,7 +30,6 @@
       max-width: oe.rem(119);
       min-height: oe.rem(50);
       display: flex;
-      justify-content: flex-end;
     }
   }
 
@@ -69,6 +68,18 @@
       }
     }
   }
+
+  &--column-align-left {
+    .overlay__column {
+      justify-content: flex-start;
+    }
+  }
+  &--column-align-right {
+    .overlay__column {
+      justify-content: flex-end;
+    }
+  }
+
 
   &--content-width-wide {
     .overlay__content {
