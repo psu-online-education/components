@@ -4,6 +4,7 @@
 | content             | string | true     | The content to render inside the overlay container.       |
 | overlay_bg_color    | string | false    | May match a documented background color modifier (below). |
 | column_width        | string | false    | May match a documented column with modifier (below).      |
+| column_align        | string | false    | May match a documented column align modifier (below).     |
 | overlay_width       | string | false    | May match a documented overlay width modifier (below).    |
 | background_position | string | false    | May match a documented position modifier (below).         |
 
@@ -17,6 +18,12 @@
 | Width  | Description                          |
 |--------|--------------------------------------|
 | narrow | Displays with a narrow column width. |
+
+## Column alignments
+| Alignment | Description                             |
+|-----------|--------------------------------------   |
+| left      | Aligns the column content to the left.  |
+| right     | Aligns the column content to the right. |
 
 ## Overlay widths
 | Width | Description                         |
