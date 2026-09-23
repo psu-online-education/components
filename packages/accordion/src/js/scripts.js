@@ -11,7 +11,6 @@
       const content = accordion.querySelector('.accordion__expandable-content');
 
       accordion.addEventListener('component:activate', e => {
-
         if (e?.detail?.disable_animation || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
           content.style['transition-duration'] = '0ms';
           content.style['height'] = null;
@@ -19,7 +18,7 @@
           button.setAttribute('aria-expanded', 'true');
         }
         else {
-          content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 2000), 8000) + 'ms';
+          content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight * 5, 2000), 8000) + 'ms';
           accordion.classList.add('accordion--expanded');
           button.setAttribute('aria-expanded', 'true');
           cms.expand(content);
@@ -42,7 +41,6 @@
       });
 
       button.addEventListener('click', () => {
-
         const state = button.getAttribute('aria-expanded');
         if (state === 'true') {
           accordion.dispatchEvent(new CustomEvent('component:deactivate'));

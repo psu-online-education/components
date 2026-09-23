@@ -97,10 +97,20 @@
   }
 
   &__expandable-content {
-    transition-property: height, margin-bottom, visibility;
-    transition-timing-function: ease-in-out;
+    position: relative;
+    overflow: hidden;
     visibility: hidden;
     color: var(--text-color);
+    display: flow-root;
+    transition:
+            height 0.3s ease-in-out,
+            visibility 0s linear 0.3s;
+
+    &::after {
+      content: "";
+      display: block;
+      height: oe.rem(2);
+    }
 
     &--indent-content {
       margin-left: 3.75%;
@@ -126,9 +136,12 @@
       }
     }
 
-   > .accordion__expandable-content {
-      margin-bottom: oe.rem(2);
-      visibility: inherit;
+    > .accordion__expandable-content {
+      visibility: visible;
+
+      transition:
+              height 0.3s ease-in-out,
+              visibility 0s linear 0s;
     }
   }
 
