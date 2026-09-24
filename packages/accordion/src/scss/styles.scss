@@ -103,8 +103,6 @@
     overflow: hidden;
     visibility: hidden;
     color: var(--text-color);
-    display: flow-root;
-
     transition-property: height;
     transition-duration: var(--accordion-transition-duration);
     transition-timing-function: ease-in-out;
