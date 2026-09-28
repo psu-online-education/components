@@ -42,11 +42,6 @@ const compile_twig = done => {
   done();
 };
 
-const compile_images = () => {
-  return gulp.src('packages/patternlab/source/images/**/*')
-    .pipe(gulp.dest('dist/images'));
-};
-
 /**
  * Compiles JS sources into an optimized build artifact.
  */
@@ -158,15 +153,13 @@ gulp.task('compile_scss', gulp.series(compile_scss, update_build_id));
 gulp.task('compile_js', gulp.series(compile_js, update_build_id));
 gulp.task('compile_sprites', gulp.series(compile_sprites, update_build_id));
 gulp.task('compile_twig', gulp.series(compile_twig, update_build_id));
-gulp.task('compile_images', gulp.series(compile_images, update_build_id));
 
 gulp.task('compile_all', gulp.series(
   gulp.parallel(
     compile_scss,
     compile_js,
     compile_sprites,
-    compile_twig,
-    compile_images
+    compile_twig
   ),
   update_build_id
 ));
@@ -176,8 +169,7 @@ gulp.task('default', gulp.series(
     compile_scss,
     compile_js,
     compile_sprites,
-    compile_twig,
-    compile_images
+    compile_twig
   ),
   update_build_id,
   gulp.parallel(
