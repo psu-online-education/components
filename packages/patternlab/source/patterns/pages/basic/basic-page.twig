@@ -331,9 +331,9 @@
 
   {% set overlay_accordion_image %}
     <picture class="responsive-image responsive-image--feature-banner">
-      <source srcset="./images/banner.jpg 1x" media="(min-width:800px)" type="image/webp" width="1920" height="840">
-      <source srcset="./images/banner.jpg 1x" type="image/webp" width="950" height="534">
-      <img src="./images/banner.jpg" width="3840" height="1200" alt="Snowy sidewalk at Penn State's University Park campus" loading="lazy">
+      <source srcset="/images/banner.jpg 1x" media="(min-width:800px)" type="image/webp" width="1920" height="840">
+      <source srcset="/images/banner.jpg 1x" type="image/webp" width="950" height="534">
+      <img src="/images/banner.jpg" width="3840" height="1200" alt="Snowy sidewalk at Penn State's University Park campus" loading="lazy">
     </picture>
   {% endset %}
   {% include '@oe/overlay/overlay.twig' with {
