@@ -38,8 +38,7 @@
 
           accordion.classList.add('accordion--expanded');
           button.setAttribute('aria-expanded', 'true');
-        }
-        else {
+        } else {
           setTransitionDuration();
           content.style.visibility = 'visible';
           accordion.classList.add('accordion--expanded');
@@ -59,8 +58,7 @@
 
           accordion.classList.remove('accordion--expanded');
           button.setAttribute('aria-expanded', 'false');
-        }
-        else {
+        } else {
           const duration = setTransitionDuration();
 
           content.style.visibility = 'visible';
@@ -85,11 +83,10 @@
         }
         else {
           accordion.dispatchEvent(new CustomEvent('component:activate', {
-              detail: {
-                activation_type: 'USER_ACTIVATE',
-              }
-            })
-          );
+            detail: {
+              activation_type: 'USER_ACTIVATE',
+            }
+          }));
         }
       });
     });
