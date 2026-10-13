@@ -1,5 +1,10 @@
 @use "../../../base/src/scss/mixins" as oe;
-
+:root, [data-light] {
+  --icon-list-icon-color: var(--beaver-blue);
+}
+[data-dark] {
+  --icon-list-icon-color: var(--pugh-blue);
+}
 .icon-list {
   list-style-type: none;
   margin: 0 0 oe.rem(-2) 0;
@@ -17,6 +22,10 @@
     column-gap: oe.rem(3);
   }
 
+  &--column-width-narrow {
+    column-width: oe.rem(24);
+  }
+
   &__item {
     break-inside: avoid;
 
@@ -31,7 +40,7 @@
   }
 
   &__icon {
-    color: var(--beaver-blue);
+    color: var(--icon-list-icon-color);
 
     .sprite {
       width: oe.rem(3);
