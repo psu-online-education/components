@@ -21,7 +21,8 @@
 
           accordion.classList.add('accordion--expanded');
           button.setAttribute('aria-expanded', 'true');
-        } else {
+        }
+        else {
           content.style.visibility = 'visible';
           accordion.classList.add('accordion--expanded');
           button.setAttribute('aria-expanded', 'true');
@@ -40,7 +41,8 @@
 
           accordion.classList.remove('accordion--expanded');
           button.setAttribute('aria-expanded', 'false');
-        } else {
+        }
+        else {
           content.style.visibility = 'visible';
           accordion.classList.remove('accordion--expanded');
           button.setAttribute('aria-expanded', 'false');
