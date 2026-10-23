@@ -16,14 +16,12 @@
             '--accordion-transition-duration',
             '0ms'
           );
-          content.style.visibility = 'visible';
           content.style.height = null;
 
           accordion.classList.add('accordion--expanded');
           button.setAttribute('aria-expanded', 'true');
         }
         else {
-          content.style.visibility = 'visible';
           accordion.classList.add('accordion--expanded');
           button.setAttribute('aria-expanded', 'true');
           cms.expand(content);
@@ -37,13 +35,11 @@
             '0ms'
           );
           content.style.height = '0';
-          content.style.visibility = 'hidden';
 
           accordion.classList.remove('accordion--expanded');
           button.setAttribute('aria-expanded', 'false');
         }
         else {
-          content.style.visibility = 'visible';
           accordion.classList.remove('accordion--expanded');
           button.setAttribute('aria-expanded', 'false');
           cms.collapse(content);

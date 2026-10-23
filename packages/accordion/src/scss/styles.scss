@@ -98,12 +98,9 @@
 
   &__expandable-content {
     --accordion-transition-duration: 300ms;
-
-    position: relative;
-    overflow: hidden;
     visibility: hidden;
     color: var(--text-color);
-    transition-property: height;
+    transition-property: height, visibility;
     transition-duration: var(--accordion-transition-duration);
     transition-timing-function: ease-in-out;
 
@@ -136,6 +133,10 @@
       &:focus-visible {
         margin-bottom: oe.rem(.3);
       }
+    }
+
+    > .accordion__expandable-content {
+      visibility: inherit;
     }
   }
 
