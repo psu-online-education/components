@@ -97,25 +97,34 @@
   }
 
   &__expandable-content {
-    transition-property: height, margin-bottom, visibility;
-    transition-timing-function: ease-in-out;
+    --accordion-transition-duration: var(--transition-duration--default);
     visibility: hidden;
     color: var(--text-color);
+    transition-property: height, visibility;
+    transition-duration: var(--accordion-transition-duration);
+    transition-timing-function: ease-in-out;
+
+    &::after {
+      content: "";
+      display: block;
+      height: oe.rem(2);
+    }
 
     &--indent-content {
       margin-left: 3.75%;
     }
   }
 
-  &--expanded {
 
-   > .accordion__button,
-   > .accordion__heading {
+  &--expanded {
+    > .accordion__button,
+    > .accordion__heading {
       .accordion__sprite .sprite {
         transform: rotate(45deg);
       }
 
-      &:hover, &:focus-visible {
+      &:hover,
+      &:focus-visible {
         .accordion__sprite .sprite {
           transform: rotate(45deg) scale(1.25);
         }
@@ -126,8 +135,7 @@
       }
     }
 
-   > .accordion__expandable-content {
-      margin-bottom: oe.rem(2);
+    > .accordion__expandable-content {
       visibility: inherit;
     }
   }

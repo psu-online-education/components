@@ -7,6 +7,7 @@
   'overlay',
   overlay_bg_color in color_profiles|keys ? 'overlay--' ~ overlay_bg_color,
   column_width in ['narrow'] ? 'overlay--column-width-' ~ column_width,
+  column_align in ['left', 'right'] ? 'overlay--column-align-' ~ column_align : 'overlay--column-align-right',
   overlay_width in ['wide'] ? 'overlay--content-width-' ~ overlay_width,
   background_position in ['top-left', 'top-right', 'center-left', 'center-center', 'center-right', 'bottom-left', 'bottom-center', 'bottom-right'] ? 'overlay--background-position--' ~ background_position,
 ]|filter(class => class is not empty) %}
