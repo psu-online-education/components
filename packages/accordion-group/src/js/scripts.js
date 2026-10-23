@@ -11,7 +11,8 @@
 
         const activatedAccordion = e.target.closest('.accordion');
         group.querySelectorAll('.accordion').forEach(child => {
-          if (child !== activatedAccordion) {
+          console.log(child.classList.contains('accordion--expanded'));
+          if (child !== activatedAccordion && child.classList.contains('accordion--expanded')) {
             child.dispatchEvent(new CustomEvent('component:deactivate'));
           }
         });
