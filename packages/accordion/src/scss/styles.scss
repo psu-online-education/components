@@ -97,7 +97,7 @@
   }
 
   &__expandable-content {
-    --accordion-transition-duration: 300ms;
+    --accordion-transition-duration: var(--transition-duration--default);
     visibility: hidden;
     color: var(--text-color);
     transition-property: height, visibility;

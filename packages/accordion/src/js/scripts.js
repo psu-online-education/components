@@ -22,6 +22,10 @@
           button.setAttribute('aria-expanded', 'true');
         }
         else {
+          content.style.setProperty(
+            '--accordion-transition-duration',
+            Math.min(Math.max(content.scrollHeight / 2, 200), 800) + 'ms'
+          );
           accordion.classList.add('accordion--expanded');
           button.setAttribute('aria-expanded', 'true');
           cms.expand(content);
@@ -40,6 +44,10 @@
           button.setAttribute('aria-expanded', 'false');
         }
         else {
+          content.style.setProperty(
+            '--accordion-transition-duration',
+            Math.min(Math.max(content.scrollHeight / 2, 200), 800) + 'ms'
+          );
           accordion.classList.remove('accordion--expanded');
           button.setAttribute('aria-expanded', 'false');
           cms.collapse(content);
