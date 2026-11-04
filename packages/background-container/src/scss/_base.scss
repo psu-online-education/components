@@ -45,7 +45,7 @@
   @each $color, $property in $supported_colors {
     &--#{$color} {
       --background-color: #{$property};
-      background-color: var(--background-color);
+      background: var(--background-color);
     }
   }
 

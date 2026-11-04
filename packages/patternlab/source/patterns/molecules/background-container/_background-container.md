@@ -8,10 +8,11 @@
  | width            | string | false    | May match a documented width modifier (below).            |
 
 ## Colors
-| Color        | Description                        |
-|--------------|------------------------------------|
- | light-grey   | Displays a light-grey background   |
- | beaver-blue  | Displays a beaver-blue background  |
+| Color        | Description                             |
+|--------------|-----------------------------------------|
+ | light-grey   | Displays a light-grey background       |
+ | keystone | Displays in a keystone gradient background |
+ | beaver-blue  | Displays a beaver-blue background      |
 
 ## Background images
 | Image                      | Description                                                                                 |
