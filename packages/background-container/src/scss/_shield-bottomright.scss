@@ -20,6 +20,10 @@
       }
     }
 
+    &.bg--keystone > .bg__sprites > .bg__sprite .sprite {
+      opacity: .4;
+    }
+
     &.bg--beaver-blue > .bg__sprites > .bg__sprite .sprite {
       opacity: .30;
       color: var(--sky-blue);
